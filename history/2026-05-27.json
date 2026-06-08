@@ -1,0 +1,1859 @@
+{
+  "metadata": {
+    "snapshotDate": "2026-05-27",
+    "generatedAt": "2026.05.27 14:52 KST",
+    "baseDate": "2026.05.27 Wed",
+    "windowLabel": "2026.05.26 14:52 - 2026.05.27 14:52 KST",
+    "nextUpdate": "2026.05.28 08:00 KST"
+  },
+  "metrics": {
+    "articles": 127,
+    "blogs": 8,
+    "dedupeRate": "89%",
+    "newAgendas": "+5"
+  },
+  "sourceSignals": [
+    [
+      "AI Times",
+      "100%"
+    ],
+    [
+      "DigitalToday AI",
+      "78%"
+    ],
+    [
+      "Hacker News",
+      "56%"
+    ]
+  ],
+  "monitoredSources": [
+    {
+      "name": "AI Times",
+      "region": "KR",
+      "kind": "RSS",
+      "url": "https://www.aitimes.com/",
+      "feed": "https://cdn.aitimes.com/rss/gn_rss_allArticle.xml"
+    },
+    {
+      "name": "DigitalToday AI",
+      "region": "KR",
+      "kind": "HTML",
+      "url": "https://www.digitaltoday.co.kr/news/articleList.html?sc_section_code=S1N10&view_type=sm"
+    },
+    {
+      "name": "Bloter IT",
+      "region": "KR",
+      "kind": "HTML",
+      "url": "https://www.bloter.net/news/articleList.html?sc_section_code=S1N4&view_type=sm"
+    },
+    {
+      "name": "ZDNet Korea AI",
+      "region": "KR",
+      "kind": "HTML",
+      "url": "https://zdnet.co.kr/search/?kwd=AI"
+    },
+    {
+      "name": "Naver IT",
+      "region": "KR",
+      "kind": "Portal",
+      "url": "https://news.naver.com/section/105"
+    },
+    {
+      "name": "Daum Digital",
+      "region": "KR",
+      "kind": "Portal",
+      "url": "https://news.daum.net/digital"
+    },
+    {
+      "name": "The Verge AI",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+    },
+    {
+      "name": "TechCrunch AI",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "feed": "https://techcrunch.com/category/artificial-intelligence/feed/"
+    },
+    {
+      "name": "OpenAI News",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://openai.com/news/",
+      "feed": "https://openai.com/news/rss.xml"
+    },
+    {
+      "name": "Google AI Blog",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://blog.google/technology/ai/",
+      "feed": "https://blog.google/innovation-and-ai/technology/ai/rss/"
+    },
+    {
+      "name": "MIT Technology Review",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://www.technologyreview.com/",
+      "feed": "https://www.technologyreview.com/feed/"
+    },
+    {
+      "name": "WIRED AI",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://www.wired.com/tag/artificial-intelligence/",
+      "feed": "https://www.wired.com/feed/tag/ai/latest/rss"
+    },
+    {
+      "name": "VentureBeat AI",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://venturebeat.com/category/ai/",
+      "feed": "https://venturebeat.com/category/ai/feed/"
+    },
+    {
+      "name": "Hacker News",
+      "region": "Global",
+      "kind": "RSS",
+      "url": "https://news.ycombinator.com/",
+      "feed": "https://news.ycombinator.com/rss"
+    }
+  ],
+  "collectionQueue": [
+    [
+      "2026.05.28 08:00",
+      "Domestic and global AI source sweep"
+    ],
+    [
+      "2026.05.28 08:15",
+      "Agenda clustering and company signal scoring"
+    ],
+    [
+      "2026.05.28 08:30",
+      "Dashboard data publish"
+    ]
+  ],
+  "impactNotes": [
+    [
+      "Agent",
+      "Agent 제품 경쟁은 자동화 범위뿐 아니라 권한 위임, 실패 복구, 승인 UX의 완성도로 갈립니다.",
+      "#0f8f82"
+    ],
+    [
+      "AI Code",
+      "기업 도입 판단은 라인 수 증가보다 실패 복구, 테스트 통과율, 보안 리뷰 누락 감소 같은 운영 지표로 옮겨갑니다.",
+      "#7a5a26"
+    ],
+    [
+      "Sovereign AI",
+      "글로벌 AI 기업은 지역별 규제, 데이터 거버넌스, 로컬 파트너 번들 전략을 정교화해야 합니다.",
+      "#3f8f4f"
+    ]
+  ],
+  "hotAgendas": [
+    {
+      "rank": 1,
+      "id": "agent",
+      "collectedAt": "2026.05.27 14:52 KST",
+      "title": "자율형 AI Agent가 업무 실행과 보안 통제의 핵심 의제로 부상",
+      "score": 100,
+      "summary": "에이전트가 조회를 넘어 실행, 승인, 감사 로그가 필요한 업무 레이어로 이동하고 있습니다.",
+      "mentions": 105,
+      "sources": [
+        {
+          "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+          "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+          "media": "WIRED AI"
+        },
+        {
+          "title": "Rethinking organizational design in the age of agentic AI",
+          "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+          "media": "MIT Technology Review"
+        },
+        {
+          "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+          "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+          "media": "TechCrunch AI"
+        },
+        {
+          "title": "AI warfare is already here",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines",
+          "media": "The Verge AI"
+        },
+        {
+          "title": "구글, 에이전트 장시간 문제 해결하는 런타임 플랫폼 오픈 공개",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=210930",
+          "media": "AI Times"
+        }
+      ],
+      "sourceCount": 5,
+      "momentum": "+32%",
+      "metric": "5개 매체 보도",
+      "reason": "WIRED AI, MIT Technology Review, TechCrunch AI 등 5개 소스에서 5개 기사 신호가 잡혔고, 키워드 가중 언급이 105회로 묶였습니다.",
+      "whyHot": "WIRED AI, MIT Technology Review, TechCrunch AI 등 5개 소스에서 5개 기사 신호가 잡혔고, 키워드 가중 언급이 105회로 묶였습니다.",
+      "hotness": {
+        "formula": "소스 다양성 + 기사 신호 수 + 키워드 언급 밀도 + 기업 연결성을 함께 반영",
+        "reasons": [
+          {
+            "label": "매체 분산",
+            "value": "5개",
+            "detail": "WIRED AI, MIT Technology Review, TechCrunch AI 등 서로 다른 매체에서 같은 의제가 반복 감지됐습니다."
+          },
+          {
+            "label": "기사 신호",
+            "value": "5건",
+            "detail": "최근 24시간 수집분 중 제목과 요약이 해당 의제와 직접 맞물린 기사입니다."
+          },
+          {
+            "label": "언급 밀도",
+            "value": "105회",
+            "detail": "Agent 및 유사 표현이 제목, 요약, 출처 신호에서 가중치 있게 반복됐습니다."
+          },
+          {
+            "label": "기업 연결",
+            "value": "5곳",
+            "detail": "Google, OpenAI, Anthropic, Naver의 제품, 인프라, 정책 움직임과 연결됩니다."
+          },
+          {
+            "label": "최신성",
+            "value": "7h",
+            "detail": "가장 최근 관련 신호가 약 7시간 전 수집됐습니다."
+          }
+        ]
+      },
+      "keywords": [
+        "#Agent",
+        "#Google",
+        "#agent",
+        "#agents",
+        "#autonomous"
+      ],
+      "hashtags": [
+        "#Agent",
+        "#Google",
+        "#agent",
+        "#agents",
+        "#autonomous"
+      ],
+      "related_companies": [
+        "Google",
+        "OpenAI",
+        "Anthropic",
+        "Naver",
+        "Microsoft"
+      ],
+      "signals": "WIRED AI, MIT Technology Review, TechCrunch AI 중심 5개 신호",
+      "articles": [
+        {
+          "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+          "source": "WIRED AI",
+          "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+          "time": "2026.05.26 19:00"
+        },
+        {
+          "title": "Rethinking organizational design in the age of agentic AI",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+          "time": "2026.05.26 23:54"
+        },
+        {
+          "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+          "source": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+          "time": "2026.05.27 07:32"
+        },
+        {
+          "title": "AI warfare is already here",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines",
+          "time": "2026.05.26 22:29"
+        }
+      ],
+      "brief": {
+        "background": "AI Agent가 이메일, 코드, 브라우저, 업무 도구를 직접 다루기 시작하면서 실행 경계가 제품 설계의 중심이 됐습니다.",
+        "reaction": "플랫폼 기업은 SDK와 런타임을 확장하고, 보안 업계는 샌드박스와 감사 로그를 기본 요구사항으로 제안합니다.",
+        "implication": "Agent 제품 경쟁은 자동화 범위뿐 아니라 권한 위임, 실패 복구, 승인 UX의 완성도로 갈립니다."
+      }
+    },
+    {
+      "rank": 2,
+      "id": "ai-code",
+      "collectedAt": "2026.05.27 14:52 KST",
+      "title": "AI 코딩 도구가 IDE 보조를 넘어 저장소 운영과 배포 검증으로 확장",
+      "score": 96,
+      "summary": "코드 생성보다 이슈 분석, 테스트 수정, PR 리뷰 자동화가 새 관심사로 이동하고 있습니다.",
+      "mentions": 69,
+      "sources": [
+        {
+          "title": "Uber president says AI spending is getting ‘harder to justify’",
+          "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+          "media": "The Verge AI"
+        },
+        {
+          "title": "Sundar Pichai on AI, the future of search, and what’s happening to the web",
+          "url": "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
+          "media": "The Verge AI"
+        },
+        {
+          "title": "The Download: puncturing the AI jobs panic",
+          "url": "https://www.technologyreview.com/2026/05/26/1138028/the-download-ai-jobs-data/",
+          "media": "MIT Technology Review"
+        },
+        {
+          "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+          "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+          "media": "WIRED AI"
+        },
+        {
+          "title": "A reality check on the AI jobs hysteria",
+          "url": "https://www.technologyreview.com/2026/05/26/1137855/a-reality-check-on-the-ai-jobs-hysteria/",
+          "media": "MIT Technology Review"
+        },
+        {
+          "title": "It’s time to address the looming crisis in entry-level work.",
+          "url": "https://www.technologyreview.com/2026/05/26/1137865/its-time-to-address-the-looming-crisis-in-entry-level-work/",
+          "media": "MIT Technology Review"
+        }
+      ],
+      "sourceCount": 3,
+      "momentum": "+27%",
+      "metric": "3개 매체 보도",
+      "reason": "The Verge AI, MIT Technology Review, WIRED AI 등 3개 소스에서 6개 기사 신호가 잡혔고, 키워드 가중 언급이 69회로 묶였습니다.",
+      "whyHot": "The Verge AI, MIT Technology Review, WIRED AI 등 3개 소스에서 6개 기사 신호가 잡혔고, 키워드 가중 언급이 69회로 묶였습니다.",
+      "hotness": {
+        "formula": "소스 다양성 + 기사 신호 수 + 키워드 언급 밀도 + 기업 연결성을 함께 반영",
+        "reasons": [
+          {
+            "label": "매체 분산",
+            "value": "3개",
+            "detail": "The Verge AI, MIT Technology Review, WIRED AI 등 서로 다른 매체에서 같은 의제가 반복 감지됐습니다."
+          },
+          {
+            "label": "기사 신호",
+            "value": "6건",
+            "detail": "최근 24시간 수집분 중 제목과 요약이 해당 의제와 직접 맞물린 기사입니다."
+          },
+          {
+            "label": "언급 밀도",
+            "value": "69회",
+            "detail": "AI Code 및 유사 표현이 제목, 요약, 출처 신호에서 가중치 있게 반복됐습니다."
+          },
+          {
+            "label": "기업 연결",
+            "value": "5곳",
+            "detail": "Google, Meta, OpenAI, Anthropic의 제품, 인프라, 정책 움직임과 연결됩니다."
+          },
+          {
+            "label": "최신성",
+            "value": "11h",
+            "detail": "가장 최근 관련 신호가 약 11시간 전 수집됐습니다."
+          }
+        ]
+      },
+      "keywords": [
+        "#AICode",
+        "#Google",
+        "#Meta",
+        "#code",
+        "#coding"
+      ],
+      "hashtags": [
+        "#AICode",
+        "#Google",
+        "#Meta",
+        "#code",
+        "#coding"
+      ],
+      "related_companies": [
+        "Google",
+        "Meta",
+        "OpenAI",
+        "Anthropic",
+        "Microsoft"
+      ],
+      "signals": "The Verge AI, MIT Technology Review, WIRED AI 중심 6개 신호",
+      "articles": [
+        {
+          "title": "Uber president says AI spending is getting ‘harder to justify’",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+          "time": "2026.05.27 03:51"
+        },
+        {
+          "title": "Sundar Pichai on AI, the future of search, and what’s happening to the web",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
+          "time": "2026.05.27 03:26"
+        },
+        {
+          "title": "The Download: puncturing the AI jobs panic",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/05/26/1138028/the-download-ai-jobs-data/",
+          "time": "2026.05.26 21:10"
+        },
+        {
+          "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+          "source": "WIRED AI",
+          "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+          "time": "2026.05.26 19:00"
+        }
+      ],
+      "brief": {
+        "background": "개발자가 생성형 코딩에 익숙해지면서 병목이 코드 작성에서 검증, 리뷰, 배포 신뢰성으로 이동했습니다.",
+        "reaction": "툴 업체들은 터미널, GitHub, CI를 연결한 장시간 작업 에이전트를 내세우며 팀 단위 생산성 지표를 강조합니다.",
+        "implication": "기업 도입 판단은 라인 수 증가보다 실패 복구, 테스트 통과율, 보안 리뷰 누락 감소 같은 운영 지표로 옮겨갑니다."
+      }
+    },
+    {
+      "rank": 3,
+      "id": "sovereign",
+      "collectedAt": "2026.05.27 14:52 KST",
+      "title": "Sovereign AI와 로컬 클라우드 연합 전략이 공공·산업 AI 의제로 확대",
+      "score": 69,
+      "summary": "정부, 통신사, 클라우드 사업자가 데이터 주권과 자체 모델 확보를 같은 전략으로 묶고 있습니다.",
+      "mentions": 21,
+      "sources": [
+        {
+          "title": "오픈AI가 한국과 일본을 정부용 사이버 신뢰접근 프로그램(GTAC, Government Trusted Access for Cyber) 아시아 첫 파트너로 동시 확정했다",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=669394",
+          "media": "DigitalToday AI"
+        }
+      ],
+      "sourceCount": 1,
+      "momentum": "+22%",
+      "metric": "1개 매체 보도",
+      "reason": "DigitalToday AI 등 1개 소스에서 1개 기사 신호가 잡혔고, 키워드 가중 언급이 21회로 묶였습니다.",
+      "whyHot": "DigitalToday AI 등 1개 소스에서 1개 기사 신호가 잡혔고, 키워드 가중 언급이 21회로 묶였습니다.",
+      "hotness": {
+        "formula": "소스 다양성 + 기사 신호 수 + 키워드 언급 밀도 + 기업 연결성을 함께 반영",
+        "reasons": [
+          {
+            "label": "매체 분산",
+            "value": "1개",
+            "detail": "DigitalToday AI 등 서로 다른 매체에서 같은 의제가 반복 감지됐습니다."
+          },
+          {
+            "label": "기사 신호",
+            "value": "1건",
+            "detail": "최근 24시간 수집분 중 제목과 요약이 해당 의제와 직접 맞물린 기사입니다."
+          },
+          {
+            "label": "언급 밀도",
+            "value": "21회",
+            "detail": "Sovereign AI 및 유사 표현이 제목, 요약, 출처 신호에서 가중치 있게 반복됐습니다."
+          },
+          {
+            "label": "기업 연결",
+            "value": "2곳",
+            "detail": "Google, Naver의 제품, 인프라, 정책 움직임과 연결됩니다."
+          },
+          {
+            "label": "최신성",
+            "value": "1h",
+            "detail": "가장 최근 관련 신호가 약 1시간 전 수집됐습니다."
+          }
+        ]
+      },
+      "keywords": [
+        "#SovereignAI",
+        "#sovereign",
+        "#nationalai",
+        "#localcloud"
+      ],
+      "hashtags": [
+        "#SovereignAI",
+        "#sovereign",
+        "#nationalai",
+        "#localcloud"
+      ],
+      "related_companies": [
+        "Google",
+        "Naver"
+      ],
+      "signals": "DigitalToday AI 중심 1개 신호",
+      "articles": [
+        {
+          "title": "오픈AI가 한국과 일본을 정부용 사이버 신뢰접근 프로그램(GTAC, Government Trusted Access for Cyber) 아시아 첫 파트너로 동시 확정했다",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=669394",
+          "time": "2026.05.27 14:52"
+        }
+      ],
+      "brief": {
+        "background": "AI 인프라가 산업 경쟁력과 안보 이슈로 해석되면서 데이터와 컴퓨트를 국내 통제권 안에 두려는 요구가 커졌습니다.",
+        "reaction": "클라우드 사업자는 현지 리전과 파트너십을 늘리고, 로컬 기업은 산업별 특화 모델과 공공 조달 채널을 노립니다.",
+        "implication": "글로벌 AI 기업은 지역별 규제, 데이터 거버넌스, 로컬 파트너 번들 전략을 정교화해야 합니다."
+      }
+    },
+    {
+      "rank": 4,
+      "id": "on-device",
+      "collectedAt": "2026.05.27 14:52 KST",
+      "title": "온디바이스 AI 경쟁이 NPU, 개인정보, 지연시간 중심으로 재편",
+      "score": 61,
+      "summary": "모바일, PC, 브라우저 업체가 로컬 추론과 개인정보 보호 메시지를 전면에 세우고 있습니다.",
+      "mentions": 18,
+      "sources": [
+        {
+          "title": "This startup is betting India&#8217;s gig economy can train the world&#8217;s robots",
+          "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/",
+          "media": "TechCrunch AI"
+        }
+      ],
+      "sourceCount": 1,
+      "momentum": "+25%",
+      "metric": "1개 매체 보도",
+      "reason": "TechCrunch AI 등 1개 소스에서 1개 기사 신호가 잡혔고, 키워드 가중 언급이 18회로 묶였습니다.",
+      "whyHot": "TechCrunch AI 등 1개 소스에서 1개 기사 신호가 잡혔고, 키워드 가중 언급이 18회로 묶였습니다.",
+      "hotness": {
+        "formula": "소스 다양성 + 기사 신호 수 + 키워드 언급 밀도 + 기업 연결성을 함께 반영",
+        "reasons": [
+          {
+            "label": "매체 분산",
+            "value": "1개",
+            "detail": "TechCrunch AI 등 서로 다른 매체에서 같은 의제가 반복 감지됐습니다."
+          },
+          {
+            "label": "기사 신호",
+            "value": "1건",
+            "detail": "최근 24시간 수집분 중 제목과 요약이 해당 의제와 직접 맞물린 기사입니다."
+          },
+          {
+            "label": "언급 밀도",
+            "value": "18회",
+            "detail": "On-Device 및 유사 표현이 제목, 요약, 출처 신호에서 가중치 있게 반복됐습니다."
+          },
+          {
+            "label": "기업 연결",
+            "value": "2곳",
+            "detail": "Google, Naver의 제품, 인프라, 정책 움직임과 연결됩니다."
+          },
+          {
+            "label": "최신성",
+            "value": "14h",
+            "detail": "가장 최근 관련 신호가 약 14시간 전 수집됐습니다."
+          }
+        ]
+      },
+      "keywords": [
+        "#On-Device",
+        "#on-device",
+        "#ondevice",
+        "#edgeai"
+      ],
+      "hashtags": [
+        "#On-Device",
+        "#on-device",
+        "#ondevice",
+        "#edgeai"
+      ],
+      "related_companies": [
+        "Google",
+        "Naver"
+      ],
+      "signals": "TechCrunch AI 중심 1개 신호",
+      "articles": [
+        {
+          "title": "This startup is betting India&#8217;s gig economy can train the world&#8217;s robots",
+          "source": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/",
+          "time": "2026.05.27 01:00"
+        }
+      ],
+      "brief": {
+        "background": "클라우드 추론 비용과 개인정보 규제가 맞물리며 일부 AI 기능을 기기 내부에서 처리하려는 압력이 커졌습니다.",
+        "reaction": "디바이스 업체는 NPU 성능, 지연시간, 배터리 효율을 묶어 차별화하고 개발자에게 로컬 API를 제공합니다.",
+        "implication": "서비스 사업자는 클라우드, 엣지, 로컬 모델을 상황별로 라우팅하는 제품 구조를 준비해야 합니다."
+      }
+    },
+    {
+      "rank": 5,
+      "id": "evalops",
+      "collectedAt": "2026.05.27 14:52 KST",
+      "title": "AI 평가와 운영 모니터링이 모델 출시 이후의 핵심 통제면으로 이동",
+      "score": 59,
+      "summary": "프롬프트 변경, 모델 교체, 툴 추가에 따른 품질 회귀를 감지하려는 수요가 커지고 있습니다.",
+      "mentions": 18,
+      "sources": [
+        {
+          "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+          "media": "AI Times"
+        }
+      ],
+      "sourceCount": 1,
+      "momentum": "+28%",
+      "metric": "1개 매체 보도",
+      "reason": "AI Times 등 1개 소스에서 1개 기사 신호가 잡혔고, 키워드 가중 언급이 18회로 묶였습니다.",
+      "whyHot": "AI Times 등 1개 소스에서 1개 기사 신호가 잡혔고, 키워드 가중 언급이 18회로 묶였습니다.",
+      "hotness": {
+        "formula": "소스 다양성 + 기사 신호 수 + 키워드 언급 밀도 + 기업 연결성을 함께 반영",
+        "reasons": [
+          {
+            "label": "매체 분산",
+            "value": "1개",
+            "detail": "AI Times 등 서로 다른 매체에서 같은 의제가 반복 감지됐습니다."
+          },
+          {
+            "label": "기사 신호",
+            "value": "1건",
+            "detail": "최근 24시간 수집분 중 제목과 요약이 해당 의제와 직접 맞물린 기사입니다."
+          },
+          {
+            "label": "언급 밀도",
+            "value": "18회",
+            "detail": "EvalOps 및 유사 표현이 제목, 요약, 출처 신호에서 가중치 있게 반복됐습니다."
+          },
+          {
+            "label": "기업 연결",
+            "value": "5곳",
+            "detail": "OpenAI, Anthropic, Google, Naver의 제품, 인프라, 정책 움직임과 연결됩니다."
+          },
+          {
+            "label": "최신성",
+            "value": "22h",
+            "detail": "가장 최근 관련 신호가 약 22시간 전 수집됐습니다."
+          }
+        ]
+      },
+      "keywords": [
+        "#EvalOps",
+        "#eval",
+        "#evaluation",
+        "#benchmark"
+      ],
+      "hashtags": [
+        "#EvalOps",
+        "#eval",
+        "#evaluation",
+        "#benchmark"
+      ],
+      "related_companies": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Naver",
+        "Microsoft"
+      ],
+      "signals": "AI Times 중심 1개 신호",
+      "articles": [
+        {
+          "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+          "time": "2026.05.26 17:00"
+        }
+      ],
+      "brief": {
+        "background": "AI 기능이 프로덕션 워크플로에 들어가며 작은 변경도 품질과 규정 준수 리스크로 이어지게 됐습니다.",
+        "reaction": "플랫폼과 스타트업은 평가 데이터셋, 추적, 실패 재현 기능을 LLMOps의 다음 계층으로 포지셔닝합니다.",
+        "implication": "AI 제품팀은 출시 전 데모보다 운영 중 회귀 감지와 부서별 품질 기준 관리 능력을 먼저 설계해야 합니다."
+      }
+    }
+  ],
+  "companies": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "sector": "Model Platform",
+      "color": "#3563c8",
+      "short": "OA",
+      "focus": "에이전트 플랫폼과 멀티모달",
+      "updatedAt": "2026.05.27 14:52 KST",
+      "keywords": [
+        {
+          "label": "Agent Runtime 표준화",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "Rethinking organizational design in the age of agentic AI",
+              "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 23:54",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "Agent 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "WIRED AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "개발 워크플로 장악",
+          "weight": 98,
+          "color": "#7a5a26",
+          "description": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
+          "termId": "ai-code",
+          "sources": [
+            {
+              "title": "Uber president says AI spending is getting ‘harder to justify’",
+              "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:51",
+              "evidence": "AI Code 시장 신호 기반"
+            },
+            {
+              "title": "Sundar Pichai on AI, the future of search, and what’s happening to the web",
+              "url": "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:26",
+              "evidence": "AI Code 시장 신호 기반"
+            },
+            {
+              "title": "The Download: puncturing the AI jobs panic",
+              "url": "https://www.technologyreview.com/2026/05/26/1138028/the-download-ai-jobs-data/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 21:10",
+              "evidence": "AI Code 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "The Verge AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "label": "평가 자동화 내재화",
+          "weight": 44,
+          "color": "#c54b40",
+          "description": "모델 교체와 프롬프트 변경 전후 품질 회귀를 플랫폼 안에서 검증하게 만드는 전략입니다.",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+              "media": "AI Times",
+              "time": "2026.05.26 17:00",
+              "evidence": "EvalOps 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "AI Times · 시장 신호 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        },
+        {
+          "label": "외부 툴 연결성 확보",
+          "weight": 44,
+          "color": "#3563c8",
+          "description": "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
+          "termId": "mcp",
+          "sources": [],
+          "sourceSummary": "MCP 관련 원문 수집 대기",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+        }
+      ],
+      "stack": [
+        {
+          "title": "Agent Runtime 표준화",
+          "body": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
+          "score": "98",
+          "date": "2026.05.27 14:52",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "Rethinking organizational design in the age of agentic AI",
+              "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 23:54",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "Agent 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "WIRED AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "title": "개발 워크플로 장악",
+          "body": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
+          "score": "98",
+          "date": "2026.05.27 14:52",
+          "termId": "ai-code",
+          "sources": [
+            {
+              "title": "Uber president says AI spending is getting ‘harder to justify’",
+              "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:51",
+              "evidence": "AI Code 시장 신호 기반"
+            },
+            {
+              "title": "Sundar Pichai on AI, the future of search, and what’s happening to the web",
+              "url": "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:26",
+              "evidence": "AI Code 시장 신호 기반"
+            },
+            {
+              "title": "The Download: puncturing the AI jobs panic",
+              "url": "https://www.technologyreview.com/2026/05/26/1138028/the-download-ai-jobs-data/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 21:10",
+              "evidence": "AI Code 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "The Verge AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "title": "평가 자동화 내재화",
+          "body": "모델 교체와 프롬프트 변경 전후 품질 회귀를 플랫폼 안에서 검증하게 만드는 전략입니다.",
+          "score": "44",
+          "date": "2026.05.27 14:52",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+              "media": "AI Times",
+              "time": "2026.05.26 17:00",
+              "evidence": "EvalOps 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "AI Times · 시장 신호 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        }
+      ],
+      "heat": [
+        "Runtime",
+        "Tool Call",
+        "Trace",
+        "Handoff",
+        "Repo Ops",
+        "PR Review",
+        "CI Fix",
+        "IDE",
+        "Regression",
+        "Eval",
+        "Guardrail",
+        "Trace"
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "sector": "Model Provider",
+      "color": "#0f8f82",
+      "short": "AN",
+      "focus": "MCP와 에이전트 개발면",
+      "updatedAt": "2026.05.27 14:52 KST",
+      "keywords": [
+        {
+          "label": "Claude Code 운영화",
+          "weight": 98,
+          "color": "#7a5a26",
+          "description": "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
+          "termId": "ai-code",
+          "sources": [
+            {
+              "title": "Uber president says AI spending is getting ‘harder to justify’",
+              "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:51",
+              "evidence": "회사/제품 직접 언급"
+            },
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "The Verge AI, WIRED AI · 직접 근거 2건",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "label": "권한 있는 Tool Use",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "WIRED AI · 직접 근거 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "MCP 생태계 선점",
+          "weight": 47,
+          "color": "#3563c8",
+          "description": "Claude가 업무 시스템과 연결되는 기본 통로를 MCP 서버와 커넥터 생태계로 넓히고 있습니다.",
+          "termId": "mcp",
+          "sources": [],
+          "sourceSummary": "MCP 관련 원문 수집 대기",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+        },
+        {
+          "label": "안전성 평가 메시지",
+          "weight": 44,
+          "color": "#c54b40",
+          "description": "기업 도입의 불안을 줄이기 위해 모델 성능보다 실패 경계와 평가 체계를 함께 강조합니다.",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+              "media": "AI Times",
+              "time": "2026.05.26 17:00",
+              "evidence": "EvalOps 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "AI Times · 시장 신호 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        }
+      ],
+      "stack": [
+        {
+          "title": "Claude Code 운영화",
+          "body": "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
+          "score": "98",
+          "date": "2026.05.27 14:52",
+          "termId": "ai-code",
+          "sources": [
+            {
+              "title": "Uber president says AI spending is getting ‘harder to justify’",
+              "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:51",
+              "evidence": "회사/제품 직접 언급"
+            },
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "The Verge AI, WIRED AI · 직접 근거 2건",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "title": "권한 있는 Tool Use",
+          "body": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
+          "score": "98",
+          "date": "2026.05.27 14:52",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "WIRED AI · 직접 근거 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "title": "MCP 생태계 선점",
+          "body": "Claude가 업무 시스템과 연결되는 기본 통로를 MCP 서버와 커넥터 생태계로 넓히고 있습니다.",
+          "score": "47",
+          "date": "2026.05.27 14:52",
+          "termId": "mcp",
+          "sources": [],
+          "sourceSummary": "MCP 관련 원문 수집 대기",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+        }
+      ],
+      "heat": [
+        "Claude Code",
+        "Terminal",
+        "Repo",
+        "Test",
+        "Approval",
+        "Audit",
+        "Desktop",
+        "Agent",
+        "MCP Server",
+        "Connector",
+        "Tool Use",
+        "Permission"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "sector": "Cloud & Search",
+      "color": "#d68419",
+      "short": "GO",
+      "focus": "검색 재구성과 온디바이스",
+      "updatedAt": "2026.05.27 14:52 KST",
+      "keywords": [
+        {
+          "label": "검색 수익모델 재설계",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "TechCrunch AI · 직접 근거 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "지역 AI 클라우드 패키징",
+          "weight": 46,
+          "color": "#3f8f4f",
+          "description": "각국 데이터 주권 요구에 맞춰 클라우드 리전, 파트너, 모델 제공 방식을 현지화합니다.",
+          "termId": "sovereign",
+          "sources": [
+            {
+              "title": "오픈AI가 한국과 일본을 정부용 사이버 신뢰접근 프로그램(GTAC, Government Trusted Access for Cyber) 아시아 첫 파트너로 동시 확정했다",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=669394",
+              "media": "DigitalToday AI",
+              "time": "2026.05.27 14:52",
+              "evidence": "Sovereign AI 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 시장 신호 1건",
+          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+        },
+        {
+          "label": "Gemini 온디바이스화",
+          "weight": 44,
+          "color": "#d68419",
+          "description": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
+          "termId": "on-device",
+          "sources": [
+            {
+              "title": "This startup is betting India&#8217;s gig economy can train the world&#8217;s robots",
+              "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 01:00",
+              "evidence": "On-Device 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "TechCrunch AI · 시장 신호 1건",
+          "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+        },
+        {
+          "label": "TPU 원가 우위 방어",
+          "weight": 44,
+          "color": "#c54b40",
+          "description": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+              "media": "AI Times",
+              "time": "2026.05.26 17:00",
+              "evidence": "EvalOps 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "AI Times · 시장 신호 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        }
+      ],
+      "stack": [
+        {
+          "title": "검색 수익모델 재설계",
+          "body": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
+          "score": "98",
+          "date": "2026.05.27 14:52",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "TechCrunch AI · 직접 근거 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "title": "지역 AI 클라우드 패키징",
+          "body": "각국 데이터 주권 요구에 맞춰 클라우드 리전, 파트너, 모델 제공 방식을 현지화합니다.",
+          "score": "46",
+          "date": "2026.05.27 14:52",
+          "termId": "sovereign",
+          "sources": [
+            {
+              "title": "오픈AI가 한국과 일본을 정부용 사이버 신뢰접근 프로그램(GTAC, Government Trusted Access for Cyber) 아시아 첫 파트너로 동시 확정했다",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=669394",
+              "media": "DigitalToday AI",
+              "time": "2026.05.27 14:52",
+              "evidence": "Sovereign AI 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 시장 신호 1건",
+          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+        },
+        {
+          "title": "Gemini 온디바이스화",
+          "body": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
+          "score": "44",
+          "date": "2026.05.27 14:52",
+          "termId": "on-device",
+          "sources": [
+            {
+              "title": "This startup is betting India&#8217;s gig economy can train the world&#8217;s robots",
+              "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 01:00",
+              "evidence": "On-Device 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "TechCrunch AI · 시장 신호 1건",
+          "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+        }
+      ],
+      "heat": [
+        "AI Search",
+        "Ads",
+        "Shopping",
+        "Overview",
+        "Region",
+        "Gov",
+        "Local Cloud",
+        "Data",
+        "Gemini Nano",
+        "Android",
+        "Chrome",
+        "NPU"
+      ]
+    },
+    {
+      "id": "naver",
+      "name": "Naver",
+      "sector": "Korea Platform",
+      "color": "#3f8f4f",
+      "short": "NV",
+      "focus": "소버린 AI와 검색 커머스",
+      "updatedAt": "2026.05.27 14:52 KST",
+      "keywords": [
+        {
+          "label": "검색 커머스 AI 전환",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "Rethinking organizational design in the age of agentic AI",
+              "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 23:54",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "Agent 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "WIRED AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "소버린 AI 영업 확대",
+          "weight": 61,
+          "color": "#3f8f4f",
+          "description": "공공, 금융, 통신 고객에게 국내 데이터와 로컬 클라우드를 묶은 AI 인프라 패키지를 제안합니다.",
+          "termId": "sovereign",
+          "sources": [
+            {
+              "title": "오픈AI가 한국과 일본을 정부용 사이버 신뢰접근 프로그램(GTAC, Government Trusted Access for Cyber) 아시아 첫 파트너로 동시 확정했다",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=669394",
+              "media": "DigitalToday AI",
+              "time": "2026.05.27 14:52",
+              "evidence": "Sovereign AI 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 시장 신호 1건",
+          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+        },
+        {
+          "label": "한국어 데이터 해자",
+          "weight": 44,
+          "color": "#c54b40",
+          "description": "범용 모델 경쟁보다 한국어, 검색 로그, 커머스 문맥의 정밀도를 차별화 포인트로 삼습니다.",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+              "media": "AI Times",
+              "time": "2026.05.26 17:00",
+              "evidence": "EvalOps 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "AI Times · 시장 신호 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        },
+        {
+          "label": "온디바이스 협력 가능성",
+          "weight": 44,
+          "color": "#d68419",
+          "description": "모바일, 브라우저, 차량 등 한국어 개인화가 필요한 접점에서 로컬 추론 파트너십 여지가 있습니다.",
+          "termId": "on-device",
+          "sources": [
+            {
+              "title": "This startup is betting India&#8217;s gig economy can train the world&#8217;s robots",
+              "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 01:00",
+              "evidence": "On-Device 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "TechCrunch AI · 시장 신호 1건",
+          "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+        }
+      ],
+      "stack": [
+        {
+          "title": "검색 커머스 AI 전환",
+          "body": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
+          "score": "98",
+          "date": "2026.05.27 14:52",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "Rethinking organizational design in the age of agentic AI",
+              "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 23:54",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "Agent 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "WIRED AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "title": "소버린 AI 영업 확대",
+          "body": "공공, 금융, 통신 고객에게 국내 데이터와 로컬 클라우드를 묶은 AI 인프라 패키지를 제안합니다.",
+          "score": "61",
+          "date": "2026.05.27 14:52",
+          "termId": "sovereign",
+          "sources": [
+            {
+              "title": "오픈AI가 한국과 일본을 정부용 사이버 신뢰접근 프로그램(GTAC, Government Trusted Access for Cyber) 아시아 첫 파트너로 동시 확정했다",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=669394",
+              "media": "DigitalToday AI",
+              "time": "2026.05.27 14:52",
+              "evidence": "Sovereign AI 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 시장 신호 1건",
+          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+        },
+        {
+          "title": "한국어 데이터 해자",
+          "body": "범용 모델 경쟁보다 한국어, 검색 로그, 커머스 문맥의 정밀도를 차별화 포인트로 삼습니다.",
+          "score": "44",
+          "date": "2026.05.27 14:52",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+              "media": "AI Times",
+              "time": "2026.05.26 17:00",
+              "evidence": "EvalOps 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "AI Times · 시장 신호 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        }
+      ],
+      "heat": [
+        "Search",
+        "Shopping",
+        "Ads",
+        "Creator",
+        "Public",
+        "Finance",
+        "Local Data",
+        "Cloud",
+        "Korean Data",
+        "Search Log",
+        "Commerce",
+        "Quality"
+      ]
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "sector": "Enterprise Stack",
+      "color": "#c54b40",
+      "short": "MS",
+      "focus": "Copilot 운영면과 보안",
+      "updatedAt": "2026.05.27 14:52 KST",
+      "keywords": [
+        {
+          "label": "Copilot 업무 레이어화",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "Rethinking organizational design in the age of agentic AI",
+              "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 23:54",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "Agent 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "WIRED AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "개발자 플랫폼 방어",
+          "weight": 95,
+          "color": "#7a5a26",
+          "description": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
+          "termId": "ai-code",
+          "sources": [
+            {
+              "title": "Uber president says AI spending is getting ‘harder to justify’",
+              "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:51",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "The Verge AI · 직접 근거 1건",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "label": "Graph Grounding 강화",
+          "weight": 44,
+          "color": "#3563c8",
+          "description": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
+          "termId": "mcp",
+          "sources": [],
+          "sourceSummary": "MCP 관련 원문 수집 대기",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+        },
+        {
+          "label": "보안 Copilot 확장",
+          "weight": 44,
+          "color": "#c54b40",
+          "description": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=210938",
+              "media": "AI Times",
+              "time": "2026.05.26 17:00",
+              "evidence": "EvalOps 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "AI Times · 시장 신호 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        }
+      ],
+      "stack": [
+        {
+          "title": "Copilot 업무 레이어화",
+          "body": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
+          "score": "98",
+          "date": "2026.05.27 14:52",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+              "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+              "media": "WIRED AI",
+              "time": "2026.05.26 19:00",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "Rethinking organizational design in the age of agentic AI",
+              "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+              "media": "MIT Technology Review",
+              "time": "2026.05.26 23:54",
+              "evidence": "Agent 시장 신호 기반"
+            },
+            {
+              "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+              "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+              "media": "TechCrunch AI",
+              "time": "2026.05.27 07:32",
+              "evidence": "Agent 시장 신호 기반"
+            }
+          ],
+          "sourceSummary": "WIRED AI, MIT Technology Review · 시장 신호 3건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "title": "개발자 플랫폼 방어",
+          "body": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
+          "score": "95",
+          "date": "2026.05.27 14:52",
+          "termId": "ai-code",
+          "sources": [
+            {
+              "title": "Uber president says AI spending is getting ‘harder to justify’",
+              "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
+              "media": "The Verge AI",
+              "time": "2026.05.27 03:51",
+              "evidence": "회사/제품 직접 언급"
+            }
+          ],
+          "sourceSummary": "The Verge AI · 직접 근거 1건",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "title": "Graph Grounding 강화",
+          "body": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
+          "score": "44",
+          "date": "2026.05.27 14:52",
+          "termId": "mcp",
+          "sources": [],
+          "sourceSummary": "MCP 관련 원문 수집 대기",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+        }
+      ],
+      "heat": [
+        "Office",
+        "Teams",
+        "Workflow",
+        "Agent",
+        "GitHub",
+        "Azure DevOps",
+        "Review",
+        "CI",
+        "Graph",
+        "Identity",
+        "Context",
+        "Permission"
+      ]
+    }
+  ],
+  "keywordData": [
+    {
+      "id": "agent",
+      "label": "Agent",
+      "score": 98,
+      "aliases": [
+        "agent",
+        "agents",
+        "autonomous",
+        "operator",
+        "workflow",
+        "tool use",
+        "computer use"
+      ],
+      "keywords": [
+        "#Agent",
+        "#Google",
+        "#agent",
+        "#agents",
+        "#autonomous"
+      ],
+      "color": "#0f8f82",
+      "description": "툴 실행, 장시간 작업, 승인 게이트가 함께 언급됩니다.",
+      "brief": {
+        "background": "AI Agent가 이메일, 코드, 브라우저, 업무 도구를 직접 다루기 시작하면서 실행 경계가 제품 설계의 중심이 됐습니다.",
+        "reaction": "플랫폼 기업은 SDK와 런타임을 확장하고, 보안 업계는 샌드박스와 감사 로그를 기본 요구사항으로 제안합니다.",
+        "implication": "Agent 제품 경쟁은 자동화 범위뿐 아니라 권한 위임, 실패 복구, 승인 UX의 완성도로 갈립니다."
+      },
+      "signals": "5개 기사 신호 · 5개 소스",
+      "timeline": [
+        {
+          "time": "2026.05.26 19:00",
+          "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+          "type": "WIRED AI",
+          "source": "WIRED AI",
+          "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/"
+        },
+        {
+          "time": "2026.05.26 23:54",
+          "title": "Rethinking organizational design in the age of agentic AI",
+          "type": "MIT Technology Review",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/"
+        },
+        {
+          "time": "2026.05.27 07:32",
+          "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+          "type": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/"
+        },
+        {
+          "time": "2026.05.26 22:29",
+          "title": "AI warfare is already here",
+          "type": "The Verge AI",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines"
+        }
+      ]
+    },
+    {
+      "id": "ai-code",
+      "label": "AI Code",
+      "score": 98,
+      "aliases": [
+        "code",
+        "coding",
+        "developer",
+        "github",
+        "ide",
+        "pull request",
+        "software engineering"
+      ],
+      "keywords": [
+        "#AICode",
+        "#Google",
+        "#Meta",
+        "#code",
+        "#coding"
+      ],
+      "color": "#7a5a26",
+      "description": "코드 생성에서 저장소 운영과 검증 자동화로 관심이 이동합니다.",
+      "brief": {
+        "background": "개발자가 생성형 코딩에 익숙해지면서 병목이 코드 작성에서 검증, 리뷰, 배포 신뢰성으로 이동했습니다.",
+        "reaction": "툴 업체들은 터미널, GitHub, CI를 연결한 장시간 작업 에이전트를 내세우며 팀 단위 생산성 지표를 강조합니다.",
+        "implication": "기업 도입 판단은 라인 수 증가보다 실패 복구, 테스트 통과율, 보안 리뷰 누락 감소 같은 운영 지표로 옮겨갑니다."
+      },
+      "signals": "6개 기사 신호 · 3개 소스",
+      "timeline": [
+        {
+          "time": "2026.05.27 03:51",
+          "title": "Uber president says AI spending is getting ‘harder to justify’",
+          "type": "The Verge AI",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify"
+        },
+        {
+          "time": "2026.05.27 03:26",
+          "title": "Sundar Pichai on AI, the future of search, and what’s happening to the web",
+          "type": "The Verge AI",
+          "source": "The Verge AI",
+          "url": "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web"
+        },
+        {
+          "time": "2026.05.26 21:10",
+          "title": "The Download: puncturing the AI jobs panic",
+          "type": "MIT Technology Review",
+          "source": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/05/26/1138028/the-download-ai-jobs-data/"
+        },
+        {
+          "time": "2026.05.26 19:00",
+          "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+          "type": "WIRED AI",
+          "source": "WIRED AI",
+          "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/"
+        }
+      ]
+    },
+    {
+      "id": "sovereign",
+      "label": "Sovereign AI",
+      "score": 67,
+      "aliases": [
+        "sovereign",
+        "national ai",
+        "local cloud",
+        "data sovereignty",
+        "government",
+        "public sector"
+      ],
+      "keywords": [
+        "#SovereignAI",
+        "#sovereign",
+        "#nationalai",
+        "#localcloud"
+      ],
+      "color": "#3f8f4f",
+      "description": "정부, 통신, 클라우드가 로컬 데이터 주권을 사업화합니다.",
+      "brief": {
+        "background": "AI 인프라가 산업 경쟁력과 안보 이슈로 해석되면서 데이터와 컴퓨트를 국내 통제권 안에 두려는 요구가 커졌습니다.",
+        "reaction": "클라우드 사업자는 현지 리전과 파트너십을 늘리고, 로컬 기업은 산업별 특화 모델과 공공 조달 채널을 노립니다.",
+        "implication": "글로벌 AI 기업은 지역별 규제, 데이터 거버넌스, 로컬 파트너 번들 전략을 정교화해야 합니다."
+      },
+      "signals": "1개 기사 신호 · 1개 소스",
+      "timeline": [
+        {
+          "time": "2026.05.27 14:52",
+          "title": "오픈AI가 한국과 일본을 정부용 사이버 신뢰접근 프로그램(GTAC, Government Trusted Access for Cyber) 아시아 첫 파트너로 동시 확정했다",
+          "type": "DigitalToday AI",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=669394"
+        },
+        {
+          "time": "2026.05.27 14:07",
+          "title": "Sovereign AI 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 13:22",
+          "title": "Sovereign AI 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 12:37",
+          "title": "Sovereign AI 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "on-device",
+      "label": "On-Device",
+      "score": 52,
+      "aliases": [
+        "on-device",
+        "on device",
+        "edge ai",
+        "npu",
+        "local model",
+        "device",
+        "privacy"
+      ],
+      "keywords": [
+        "#On-Device",
+        "#on-device",
+        "#ondevice",
+        "#edgeai"
+      ],
+      "color": "#d68419",
+      "description": "모바일, PC, 브라우저에서 로컬 추론 메시지가 강화됩니다.",
+      "brief": {
+        "background": "클라우드 추론 비용과 개인정보 규제가 맞물리며 일부 AI 기능을 기기 내부에서 처리하려는 압력이 커졌습니다.",
+        "reaction": "디바이스 업체는 NPU 성능, 지연시간, 배터리 효율을 묶어 차별화하고 개발자에게 로컬 API를 제공합니다.",
+        "implication": "서비스 사업자는 클라우드, 엣지, 로컬 모델을 상황별로 라우팅하는 제품 구조를 준비해야 합니다."
+      },
+      "signals": "1개 기사 신호 · 1개 소스",
+      "timeline": [
+        {
+          "time": "2026.05.27 01:00",
+          "title": "This startup is betting India&#8217;s gig economy can train the world&#8217;s robots",
+          "type": "TechCrunch AI",
+          "source": "TechCrunch AI",
+          "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/"
+        },
+        {
+          "time": "2026.05.27 14:07",
+          "title": "On-Device 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 13:22",
+          "title": "On-Device 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 12:37",
+          "title": "On-Device 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "evalops",
+      "label": "EvalOps",
+      "score": 52,
+      "aliases": [
+        "eval",
+        "evaluation",
+        "benchmark",
+        "monitoring",
+        "guardrail",
+        "safety",
+        "red team"
+      ],
+      "keywords": [
+        "#EvalOps",
+        "#eval",
+        "#evaluation",
+        "#benchmark"
+      ],
+      "color": "#c54b40",
+      "description": "모델 도입 이후의 품질 추적과 회귀 테스트가 중요해집니다.",
+      "brief": {
+        "background": "AI 기능이 프로덕션 워크플로에 들어가며 작은 변경도 품질과 규정 준수 리스크로 이어지게 됐습니다.",
+        "reaction": "플랫폼과 스타트업은 평가 데이터셋, 추적, 실패 재현 기능을 LLMOps의 다음 계층으로 포지셔닝합니다.",
+        "implication": "AI 제품팀은 출시 전 데모보다 운영 중 회귀 감지와 부서별 품질 기준 관리 능력을 먼저 설계해야 합니다."
+      },
+      "signals": "1개 기사 신호 · 1개 소스",
+      "timeline": [
+        {
+          "time": "2026.05.26 17:00",
+          "title": "[게시판] 메가존클라우드, 성공회대와 AI 인재 양성 협력 등 단신",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=210938"
+        },
+        {
+          "time": "2026.05.27 14:07",
+          "title": "EvalOps 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 13:22",
+          "title": "EvalOps 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 12:37",
+          "title": "EvalOps 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "mcp",
+      "label": "MCP",
+      "score": 52,
+      "aliases": [
+        "mcp",
+        "model context protocol",
+        "server",
+        "connector",
+        "integration",
+        "tools"
+      ],
+      "keywords": [
+        "#MCP",
+        "#mcp",
+        "#server",
+        "#connector"
+      ],
+      "color": "#3563c8",
+      "description": "외부 시스템 연결 표준으로 빠르게 제품 메시지화되고 있습니다.",
+      "brief": {
+        "background": "AI 앱이 단일 챗봇을 넘어 실제 업무 시스템과 연결되면서 표준화된 컨텍스트·툴 프로토콜 수요가 커졌습니다.",
+        "reaction": "개발자 커뮤니티는 서버 템플릿과 권한 패턴을 빠르게 실험하고, 기업은 내부 데이터 연결의 통제 지점을 검토합니다.",
+        "implication": "엔터프라이즈 AI 도입은 모델 성능만큼 연결 가능한 시스템 범위와 권한 관리 체계에 좌우됩니다."
+      },
+      "signals": "3개 기사 신호 · 2개 소스",
+      "timeline": [
+        {
+          "time": "2026.05.27 14:52",
+          "title": "MCP 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 14:07",
+          "title": "MCP 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 13:22",
+          "title": "MCP 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        },
+        {
+          "time": "2026.05.27 12:37",
+          "title": "MCP 관련 시장 신호 추적 업데이트",
+          "type": "Radar",
+          "source": "Radar",
+          "url": ""
+        }
+      ]
+    }
+  ]
+}

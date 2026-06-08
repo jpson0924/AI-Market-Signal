@@ -1,0 +1,1116 @@
+const colors = ["#0f8f82", "#3563c8", "#d68419", "#c54b40", "#3f8f4f"];
+const appData = window.TECH_AGENDA_DATA || {};
+const asArray = (value, fallback = []) => (Array.isArray(value) ? value : fallback);
+const metadata = appData.metadata || {
+  generatedAt: "2026.05.26 09:20 KST",
+  baseDate: "2026.05.26 Tue",
+  windowLabel: "2026.05.25 09:20 - 2026.05.26 09:20 KST",
+  nextUpdate: "2026.05.26 10:00 KST"
+};
+const metrics = appData.metrics || {
+  articles: 386,
+  blogs: 42,
+  dedupeRate: "91%",
+  newAgendas: "+18"
+};
+const sourceSignals = asArray(appData.sourceSignals, [
+  ["The Verge", "84%"],
+  ["OpenAI Blog", "73%"],
+  ["Hacker News", "66%"]
+]);
+const monitoredSources = asArray(appData.monitoredSources, [
+  { name: "AI Times", region: "KR", kind: "RSS", url: "https://www.aitimes.com/", feed: "https://cdn.aitimes.com/rss/gn_rss_allArticle.xml" },
+  { name: "The Verge AI", region: "Global", kind: "RSS", url: "https://www.theverge.com/ai-artificial-intelligence" },
+  { name: "TechCrunch AI", region: "Global", kind: "RSS", url: "https://techcrunch.com/category/artificial-intelligence/" },
+  { name: "Naver IT", region: "KR", kind: "Portal", url: "https://news.naver.com/section/105" }
+]);
+const collectionQueue = asArray(appData.collectionQueue, [
+  ["2026.05.26 10:00", "AI infra earnings call transcript sweep"],
+  ["2026.05.26 10:15", "GitHub trending repos delta scan"],
+  ["2026.05.26 10:30", "Korean portal tech desk refresh"]
+]);
+const impactNotes = asArray(appData.impactNotes, [
+  ["제품", "에이전트 기능은 단일 기능 출시보다 권한, 로그, 실패 복구 UX를 포함한 운영 경험으로 평가됩니다.", "#0f8f82"],
+  ["시장", "모델 성능 경쟁은 여전히 중요하지만 연결성, 로컬 추론, 지역 규제가 구매 논리를 빠르게 바꾸고 있습니다.", "#d68419"],
+  ["전략", "파트너십 우선순위는 모델 공급자보다 데이터 소스, 업무 시스템, 보안 벤더까지 넓어져야 합니다.", "#3563c8"]
+]);
+
+let hotAgendas = asArray(appData.hotAgendas, [
+  {
+    id: "mcp-expansion",
+    collectedAt: "2026.05.26 09:18 KST",
+    title: "Anthropic의 MCP 생태계 확장 가속화와 오픈소스 서버 라인업 확대",
+    summary: "Claude Code, Desktop Agent, 외부 툴 연결이 하나의 개발자 운영면으로 묶이는 흐름입니다.",
+    mentions: 126,
+    sources: 34,
+    momentum: "+42%",
+    signals: "MCP 서버 18건, 개발자 도구 11건, 파트너십 5건",
+    brief: {
+      background: "AI 앱이 단일 챗봇을 넘어 업무 도구와 직접 연결되면서 표준화된 컨텍스트 프로토콜 수요가 급증했습니다.",
+      reaction: "개발자 커뮤니티는 서버 템플릿과 보안 권한 모델을 빠르게 검증하고 있으며, 빅테크도 호환 레이어를 탐색 중입니다.",
+      implication: "엔터프라이즈 AI 제품은 모델 성능보다 연결 가능한 업무 시스템 범위와 권한 통제가 차별화 포인트가 됩니다."
+    }
+  },
+  {
+    id: "agent-security",
+    collectedAt: "2026.05.26 09:12 KST",
+    title: "빅테크 기업들의 자율형 AI Agent 보안 가이드라인 공동 수립 움직임",
+    summary: "에이전트가 이메일, 코드, 결제 흐름까지 실행하기 시작하며 안전한 실행 경계가 핵심 의제로 떠올랐습니다.",
+    mentions: 103,
+    sources: 29,
+    momentum: "+35%",
+    signals: "보안 권고 9건, 정책 초안 4건, 레드팀 사례 7건",
+    brief: {
+      background: "AI Agent가 조회를 넘어 쓰기, 구매, 배포 같은 실제 행위를 수행하면서 오작동 비용이 커졌습니다.",
+      reaction: "시장에서는 샌드박스, 승인 게이트, 감사 로그를 기본 요구사항으로 보기 시작했고 보안 벤더의 포지셔닝이 빨라졌습니다.",
+      implication: "Agent 플랫폼 경쟁은 워크플로 자동화 속도와 함께 책임 추적, 권한 위임, 롤백 체계의 완성도로 갈립니다."
+    }
+  },
+  {
+    id: "on-device",
+    collectedAt: "2026.05.26 08:55 KST",
+    title: "온디바이스 AI 경쟁이 NPU, 개인정보, 지연시간 중심으로 재편",
+    summary: "모바일과 PC 제조사가 모델 경량화와 로컬 추론 UX를 동시에 전면 배치하고 있습니다.",
+    mentions: 89,
+    sources: 24,
+    momentum: "+28%",
+    signals: "칩셋 발표 6건, SDK 업데이트 8건, 개인정보 메시지 10건",
+    brief: {
+      background: "클라우드 추론 비용과 개인정보 규제가 맞물리며 일부 AI 기능을 기기 내부에서 처리하려는 압력이 커졌습니다.",
+      reaction: "소비자 기기 업체는 배터리, 지연시간, 프라이버시를 묶어 마케팅하고 개발자에게 로컬 모델 API를 열고 있습니다.",
+      implication: "서비스 사업자는 클라우드 모델 하나가 아니라 로컬, 엣지, 서버 모델을 라우팅하는 제품 설계가 필요합니다."
+    }
+  },
+  {
+    id: "sovereign-ai",
+    collectedAt: "2026.05.26 08:30 KST",
+    title: "국가별 Sovereign AI 투자 확대와 로컬 클라우드 연합 전략 부상",
+    summary: "정부, 통신사, 클라우드 사업자가 데이터 주권과 자체 모델 확보를 같은 프레임으로 다루고 있습니다.",
+    mentions: 74,
+    sources: 21,
+    momentum: "+19%",
+    signals: "정부 예산 5건, 클라우드 리전 7건, 로컬 LLM 6건",
+    brief: {
+      background: "AI 인프라가 산업 경쟁력과 안보 이슈로 해석되면서 데이터와 컴퓨트를 국내 통제권 안에 두려는 요구가 강해졌습니다.",
+      reaction: "클라우드 사업자는 현지 파트너십을 늘리고, 각국 기업은 산업별 특화 모델과 공공 조달 채널을 동시에 노립니다.",
+      implication: "글로벌 AI 기업은 단일 SaaS 확장보다 지역별 규제, 데이터 거버넌스, 로컬 파트너 번들 전략을 정교화해야 합니다."
+    }
+  },
+  {
+    id: "ai-code",
+    collectedAt: "2026.05.26 08:05 KST",
+    title: "AI 코딩 도구가 IDE 보조를 넘어 저장소 운영과 배포 검증으로 확장",
+    summary: "코드 생성보다 이슈 triage, 테스트 수정, PR 리뷰 자동화가 새 관심사로 이동하고 있습니다.",
+    mentions: 68,
+    sources: 19,
+    momentum: "+16%",
+    signals: "IDE 플러그인 12건, CI 자동화 5건, 코드 리뷰 사례 9건",
+    brief: {
+      background: "개발자가 생성형 코딩에 익숙해지면서 병목이 코드 작성에서 검증, 리뷰, 배포 신뢰성으로 이동했습니다.",
+      reaction: "툴 업체들은 터미널, GitHub, CI를 연결한 장시간 작업 에이전트를 내세우며 팀 단위 생산성 지표를 강조합니다.",
+      implication: "기업 도입 판단은 라인 수 증가보다 실패 복구, 테스트 통과율, 보안 리뷰 누락 감소 같은 운영 지표로 옮겨갑니다."
+    }
+  }
+]);
+
+const briefFromHot = (index) => (hotAgendas[index] || hotAgendas[0] || {}).brief;
+
+let companies = asArray(appData.companies, [
+  {
+    id: "anthropic",
+    name: "Anthropic",
+    sector: "Model Provider",
+    color: "#0f8f82",
+    short: "AN",
+    focus: "MCP와 에이전트 개발면",
+    updatedAt: "2026.05.26 09:10 KST",
+    keywords: [
+      { label: "MCP", weight: 96, color: "#0f8f82" },
+      { label: "Claude Code", weight: 84, color: "#3563c8" },
+      { label: "Desktop Agent", weight: 70, color: "#d68419" },
+      { label: "Tool Use", weight: 64, color: "#3f8f4f" },
+      { label: "Safety Eval", weight: 48, color: "#c54b40" }
+    ],
+    stack: [
+      ["MCP 서버 확장", "외부 업무 시스템을 Claude 안으로 끌어오는 개발자 생태계 전략이 뚜렷합니다.", "96", "2026.05.26 09:10"],
+      ["Claude Code 운영화", "코딩 보조에서 리포지토리 단위 작업 수행으로 제품 메시지가 이동했습니다.", "84", "2026.05.26 08:45"],
+      ["데스크톱 권한 모델", "개인 업무 환경 접근성이 커지는 만큼 승인과 감사 로그가 동반 의제로 부상했습니다.", "70", "2026.05.25 22:15"]
+    ],
+    heat: ["MCP", "Code", "Agent", "Eval", "Server", "IDE", "Logs", "Policy", "Tool", "Shell", "Docs", "Team"]
+  },
+  {
+    id: "openai",
+    name: "OpenAI",
+    sector: "Model Platform",
+    color: "#3563c8",
+    short: "OA",
+    focus: "에이전트 플랫폼과 멀티모달",
+    updatedAt: "2026.05.26 09:05 KST",
+    keywords: [
+      { label: "Agents SDK", weight: 90, color: "#3563c8" },
+      { label: "Realtime", weight: 76, color: "#0f8f82" },
+      { label: "Responses API", weight: 72, color: "#d68419" },
+      { label: "EvalOps", weight: 58, color: "#c54b40" },
+      { label: "Video Gen", weight: 51, color: "#3f8f4f" }
+    ],
+    stack: [
+      ["Agents SDK", "모델 호출보다 상태, 툴, 핸드오프를 관리하는 앱 프레임워크로 무게가 실립니다.", "90", "2026.05.26 09:05"],
+      ["Realtime UX", "음성, 화면, 이벤트 입력을 묶어 에이전트 인터페이스를 더 연속적으로 만들고 있습니다.", "76", "2026.05.26 08:20"],
+      ["평가 자동화", "엔터프라이즈 도입의 병목인 신뢰성 검증을 플랫폼 내부 기능으로 흡수합니다.", "58", "2026.05.25 18:40"]
+    ],
+    heat: ["SDK", "Voice", "Eval", "API", "Video", "Store", "Tool", "Safety", "Router", "Fine-tune", "Trace", "Apps"]
+  },
+  {
+    id: "google",
+    name: "Google",
+    sector: "Cloud & Search",
+    color: "#d68419",
+    short: "GO",
+    focus: "검색 재구성과 온디바이스",
+    updatedAt: "2026.05.26 08:50 KST",
+    keywords: [
+      { label: "Gemini", weight: 91, color: "#d68419" },
+      { label: "AI Overviews", weight: 79, color: "#3563c8" },
+      { label: "On-Device", weight: 74, color: "#0f8f82" },
+      { label: "TPU", weight: 61, color: "#c54b40" },
+      { label: "Workspace AI", weight: 49, color: "#3f8f4f" }
+    ],
+    stack: [
+      ["검색 AI 재편", "검색 결과 페이지가 답변, 쇼핑, 광고 경험을 동시에 바꾸는 압력 지점입니다.", "91", "2026.05.26 08:50"],
+      ["로컬 Gemini", "Android와 Chrome 생태계에서 지연시간과 개인정보 메시지를 선점하려는 움직임입니다.", "74", "2026.05.26 07:55"],
+      ["TPU 스택", "모델 경쟁을 클라우드 원가와 인프라 락인 전략까지 연결합니다.", "61", "2026.05.25 23:10"]
+    ],
+    heat: ["Search", "Gemini", "Ads", "TPU", "Android", "Chrome", "Cloud", "Workspace", "NPU", "Maps", "YouTube", "Vertex"]
+  },
+  {
+    id: "naver",
+    name: "Naver",
+    sector: "Korea Platform",
+    color: "#3f8f4f",
+    short: "NV",
+    focus: "소버린 AI와 검색 커머스",
+    updatedAt: "2026.05.26 08:35 KST",
+    keywords: [
+      { label: "HyperCLOVA X", weight: 88, color: "#3f8f4f" },
+      { label: "Sovereign AI", weight: 80, color: "#0f8f82" },
+      { label: "Search Commerce", weight: 66, color: "#d68419" },
+      { label: "Public Cloud", weight: 55, color: "#3563c8" },
+      { label: "Korean Data", weight: 50, color: "#c54b40" }
+    ],
+    stack: [
+      ["소버린 AI", "국내 데이터와 공공 클라우드 요구를 묶어 로컬 AI 인프라 사업성을 강화합니다.", "80", "2026.05.26 08:35"],
+      ["검색 커머스 AI", "광고, 쇼핑, 콘텐츠 추천을 생성형 검색 경험 안에서 재배치하려는 흐름입니다.", "66", "2026.05.26 07:30"],
+      ["한국어 데이터 우위", "범용 모델 경쟁보다 로컬 언어와 산업 문맥의 정밀도를 차별화합니다.", "50", "2026.05.25 20:25"]
+    ],
+    heat: ["Korean", "Search", "Cloud", "Gov", "Commerce", "Data", "LLM", "Maps", "Creator", "Ad", "Public", "B2B"]
+  },
+  {
+    id: "microsoft",
+    name: "Microsoft",
+    sector: "Enterprise Stack",
+    color: "#c54b40",
+    short: "MS",
+    focus: "Copilot 운영면과 보안",
+    updatedAt: "2026.05.26 09:00 KST",
+    keywords: [
+      { label: "Copilot", weight: 94, color: "#c54b40" },
+      { label: "Graph Grounding", weight: 78, color: "#3563c8" },
+      { label: "Agent Builder", weight: 72, color: "#0f8f82" },
+      { label: "Security Copilot", weight: 62, color: "#d68419" },
+      { label: "Azure AI", weight: 54, color: "#3f8f4f" }
+    ],
+    stack: [
+      ["Copilot 확장", "업무 데이터와 Office UX를 한데 묶어 AI를 기본 업무 레이어로 밀고 있습니다.", "94", "2026.05.26 09:00"],
+      ["Graph Grounding", "기업 내부 문맥을 모델 응답 품질과 권한 통제의 핵심 자산으로 활용합니다.", "78", "2026.05.26 08:05"],
+      ["보안 Copilot", "보안 운영 자동화가 에이전트 도입의 초기 지불 의사가 높은 영역으로 부상했습니다.", "62", "2026.05.25 21:45"]
+    ],
+    heat: ["Copilot", "Graph", "Azure", "Defender", "Teams", "Office", "Agent", "Identity", "SOC", "Data", "Fabric", "Dev"]
+  }
+]);
+
+let keywordData = asArray(appData.keywordData, [
+  {
+    id: "agent",
+    label: "Agent",
+    score: 98,
+    color: "#0f8f82",
+    description: "툴 실행, 장시간 작업, 승인 게이트가 함께 언급됩니다.",
+    brief: briefFromHot(1),
+    signals: "에이전트 SDK 14건, 보안 정책 9건, 업무 자동화 사례 17건",
+    timeline: [
+      ["2026.05.26 09:10", "OpenAI와 Microsoft 파트너사가 엔터프라이즈 에이전트 템플릿을 확대", "플랫폼"],
+      ["2026.05.26 08:35", "보안 업계가 브라우저 조작형 에이전트의 승인 로그 표준을 제안", "보안"],
+      ["2026.05.26 07:50", "개발자 커뮤니티에서 장시간 코딩 에이전트의 비용 제어 방식 논의 증가", "개발자"],
+      ["2026.05.25 23:20", "클라우드 사업자가 에이전트 런타임 과금 단위를 세분화", "인프라"]
+    ]
+  },
+  {
+    id: "mcp",
+    label: "MCP",
+    score: 93,
+    color: "#3563c8",
+    description: "외부 시스템 연결 표준으로 빠르게 제품 메시지화되고 있습니다.",
+    brief: briefFromHot(0),
+    signals: "서버 템플릿 18건, IDE 통합 7건, 보안 권한 논의 6건",
+    timeline: [
+      ["2026.05.26 09:25", "Anthropic 생태계 문서와 커뮤니티 서버 목록 업데이트가 동시 확산", "프로토콜"],
+      ["2026.05.26 08:40", "오픈소스 저장소에서 MCP 서버 스타터가 인기 저장소로 상승", "오픈소스"],
+      ["2026.05.26 07:30", "기업 내부 데이터 연결 시 권한 범위를 좁히는 패턴 논의 증가", "보안"],
+      ["2026.05.25 21:55", "개발 툴 벤더들이 MCP 지원 여부를 로드맵에 반영", "파트너"]
+    ]
+  },
+  {
+    id: "on-device",
+    label: "On-Device",
+    score: 86,
+    color: "#d68419",
+    description: "모바일, PC, 브라우저에서 로컬 추론 메시지가 강화됩니다.",
+    brief: briefFromHot(2),
+    signals: "NPU 벤치마크 8건, 프라이버시 메시지 10건, SDK 릴리스 5건",
+    timeline: [
+      ["2026.05.26 09:05", "PC 제조사가 로컬 AI 기능을 배터리 효율 지표와 함께 발표", "디바이스"],
+      ["2026.05.26 08:10", "모바일 OS 업데이트에서 개인화 추론의 온디바이스 처리 비중 확대", "모바일"],
+      ["2026.05.26 07:10", "브라우저 내 경량 모델 API 논의가 개발자 포럼에서 재점화", "웹"],
+      ["2026.05.25 22:40", "칩셋 업체가 NPU 최적화 모델 카탈로그를 공개", "반도체"]
+    ]
+  },
+  {
+    id: "sovereign",
+    label: "Sovereign AI",
+    score: 79,
+    color: "#3f8f4f",
+    description: "정부, 통신, 클라우드가 로컬 데이터 주권을 사업화합니다.",
+    brief: briefFromHot(3),
+    signals: "공공 조달 5건, 로컬 클라우드 7건, 국가 AI 펀드 4건",
+    timeline: [
+      ["2026.05.26 09:00", "아시아권 정부가 공공 AI 인프라 조달 기준에 데이터 주권 항목 추가", "정책"],
+      ["2026.05.26 08:15", "통신사와 클라우드사가 산업 특화 LLM 공동 영업을 확대", "파트너십"],
+      ["2026.05.26 06:45", "로컬 언어 데이터셋 품질 평가가 국가 AI 프로젝트의 핵심 KPI로 부상", "데이터"],
+      ["2026.05.25 20:50", "글로벌 모델 사업자의 현지 리전 투자 발표가 이어짐", "클라우드"]
+    ]
+  },
+  {
+    id: "evalops",
+    label: "EvalOps",
+    score: 72,
+    color: "#c54b40",
+    description: "모델 도입 이후의 품질 추적과 회귀 테스트가 중요해집니다.",
+    brief: {
+      background: "AI 기능이 프로덕션 워크플로에 들어가며 프롬프트 변경, 모델 교체, 툴 추가가 모두 품질 리스크가 됐습니다.",
+      reaction: "플랫폼과 스타트업은 평가 데이터셋, 추적, 실패 재현 기능을 묶어 LLMOps의 다음 계층으로 포지셔닝합니다.",
+      implication: "AI 제품팀은 출시 전 데모보다 운영 중 회귀 감지와 부서별 품질 기준 관리 능력을 먼저 설계해야 합니다."
+    },
+    signals: "평가 프레임워크 6건, 추적 도구 8건, 고객 사례 5건",
+    timeline: [
+      ["2026.05.26 09:15", "AI 플랫폼이 프롬프트 변경 전후 회귀 리포트를 기본 기능으로 추가", "품질"],
+      ["2026.05.26 08:05", "금융권 사례에서 모델 답변 감사 로그가 구매 조건으로 언급", "엔터프라이즈"],
+      ["2026.05.26 07:20", "오픈소스 평가 하네스가 멀티턴 시나리오 지원을 확대", "오픈소스"],
+      ["2026.05.25 22:35", "모니터링 업체가 hallucination rate와 task success를 결합한 지표 공개", "운영"]
+    ]
+  },
+  {
+    id: "ai-code",
+    label: "AI Code",
+    score: 69,
+    color: "#7a5a26",
+    description: "코드 생성에서 저장소 운영과 검증 자동화로 관심이 이동합니다.",
+    brief: briefFromHot(4),
+    signals: "PR 자동화 7건, CI 수정 5건, IDE 확장 12건",
+    timeline: [
+      ["2026.05.26 09:30", "개발 툴 업체가 이슈 분석부터 테스트 수정까지 이어지는 에이전트 플로우를 공개", "개발툴"],
+      ["2026.05.26 08:45", "기업 사례에서 AI 코드 리뷰의 보안 누락 감소 효과가 언급", "보안"],
+      ["2026.05.26 07:15", "오픈소스 프로젝트가 자동 PR triage 봇의 운영 규칙을 정비", "커뮤니티"],
+      ["2026.05.25 21:00", "CI 로그를 읽고 실패 테스트를 수정하는 기능이 주요 비교 항목으로 등장", "운영"]
+    ]
+  }
+]);
+
+let activeCompanyId = companies[0]?.id || "naver";
+let activeKeywordId = "agent";
+let lastFocus = null;
+
+const byId = (id) => document.getElementById(id);
+const activeCompany = () => companies.find((company) => company.id === activeCompanyId);
+const activeKeyword = () => keywordData.find((keyword) => keyword.id === activeKeywordId);
+const escapeHtml = (value = "") =>
+  String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+const normalizeTimelineItem = (entry) => {
+  if (Array.isArray(entry)) {
+    return {
+      time: entry[0],
+      title: entry[1],
+      type: entry[2],
+      url: entry[3] || "",
+      source: entry[4] || entry[2] || "Source"
+    };
+  }
+  return {
+    time: entry.time,
+    title: entry.title,
+    type: entry.type || entry.source,
+    url: entry.url || "",
+    source: entry.source || entry.type || "Source"
+  };
+};
+const normalizeTag = (value = "") =>
+  String(value)
+    .replace(/^#/, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9가-힣]/g, "");
+const displayTag = (value = "") => {
+  const tag = String(value).trim();
+  return tag.startsWith("#") ? tag : `#${tag}`;
+};
+const getAgendaSources = (agenda) => {
+  if (!agenda) return [];
+  if (Array.isArray(agenda.sources)) {
+    return agenda.sources
+      .map((source) => ({
+        title: source.title || source.media || "원문 기사",
+        url: source.url || source.link || "",
+        media: source.media || source.source || "Source"
+      }))
+      .filter((source) => source.url);
+  }
+  return (agenda.articles || [])
+    .map((article) => ({
+      title: article.title || "원문 기사",
+      url: article.url || article.link || "",
+      media: article.media || article.source || "Source"
+    }))
+    .filter((source) => source.url);
+};
+const getAgendaSourceCount = (agenda) => {
+  if (!agenda) return 0;
+  if (typeof agenda.sourceCount === "number") return agenda.sourceCount;
+  if (Array.isArray(agenda.sources)) return agenda.sources.length;
+  if (typeof agenda.sources === "number") return agenda.sources;
+  return getAgendaSources(agenda).length;
+};
+const getAgendaKeywords = (agenda) => {
+  const values = agenda?.keywords || agenda?.hashtags || (agenda?.id ? [agenda.id] : []);
+  return [...new Set(values.map(displayTag))].slice(0, 6);
+};
+const getAgendaReason = (agenda) =>
+  agenda?.reason ||
+  agenda?.whyHot ||
+  agenda?.signals ||
+  "최근 기사 신호와 키워드 언급량이 함께 상승했습니다.";
+const getAgendaScore = (agenda) =>
+  typeof agenda?.score === "number" ? agenda.score : Math.min(100, Math.max(40, Math.round((agenda?.mentions || 60) / 1.4)));
+const getHotnessBreakdown = (agenda) => {
+  if (Array.isArray(agenda?.hotness?.reasons) && agenda.hotness.reasons.length) return agenda.hotness.reasons;
+  const sourceCount = getAgendaSourceCount(agenda);
+  const articleCount = getAgendaSources(agenda).length || Math.min(sourceCount, 4);
+  const mentions = agenda?.mentions || getAgendaScore(agenda);
+  const companyCount = Array.isArray(agenda?.related_companies) ? agenda.related_companies.length : 0;
+  return [
+    {
+      label: "매체 분산",
+      value: `${sourceCount}개`,
+      detail: "서로 다른 매체에서 같은 의제가 반복 감지됐습니다."
+    },
+    {
+      label: "기사 신호",
+      value: `${articleCount}건`,
+      detail: "최근 수집 기사 중 직접 관련성이 높은 원문입니다."
+    },
+    {
+      label: "언급 밀도",
+      value: `${mentions}회`,
+      detail: "제목과 요약에서 핵심 키워드가 가중치 있게 반복됐습니다."
+    },
+    {
+      label: "기업 연결",
+      value: companyCount ? `${companyCount}곳` : "추적 중",
+      detail: "주요 기업의 제품, 정책, 인프라 움직임과 연결됩니다."
+    }
+  ];
+};
+
+function renderMeta() {
+  byId("syncTime").textContent = `${metadata.generatedAt} 수집`;
+  byId("dateStrip").innerHTML = [
+    ["기준일", metadata.baseDate],
+    ["분석 기간", metadata.windowLabel],
+    ["다음 갱신", metadata.nextUpdate]
+  ]
+    .map(
+      ([label, value]) => `
+        <div>
+          <span class="date-label">${label}</span>
+          <b>${value}</b>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderMetrics() {
+  byId("metricGrid").innerHTML = [
+    [metrics.articles, "분석 기사"],
+    [metrics.blogs, "테크 블로그"],
+    [metrics.dedupeRate, "중복 제거율"],
+    [metrics.newAgendas, "신규 의제"]
+  ]
+    .map(
+      ([value, label]) => `
+        <div class="metric-card">
+          <span class="metric-value">${value}</span>
+          <span class="metric-label">${label}</span>
+        </div>
+      `
+    )
+    .join("");
+
+  byId("sourceStack").innerHTML = sourceSignals
+    .map(
+      ([name, width]) => `
+        <div class="source-row">
+          <span>${name}</span>
+          <b style="--w: ${width}"></b>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderActionBoard() {
+  const agenda = hotAgendas[0];
+  const sources = getAgendaSources(agenda);
+  const primarySource = sources.find((source) => !String(source.title).includes("수집 대기"));
+  const relatedCompany = companies.find((company) => (agenda?.related_companies || []).includes(company.name)) || companies[0];
+  const companySignal = relatedCompany?.keywords?.[0];
+  const agendaTitle = agenda?.title || "오늘의 핵심 의제";
+
+  byId("actionBoard").innerHTML = [
+    {
+      label: "뉴스에서 할 일",
+      body: `“${agendaTitle}”이 우리 제품의 권한, 연동, 리스크 설계에 주는 영향은 무엇인가?`
+    },
+    {
+      label: "먼저 읽을 원문",
+      body: primarySource
+        ? `${primarySource.media} · ${primarySource.title}`
+        : "오늘 수집분에서 직접 원문이 부족합니다. 뉴스 모달의 판단 근거와 수집 링크를 먼저 확인하세요.",
+      href: primarySource?.url
+    },
+    {
+      label: "맥락으로 이어보기",
+      body: companySignal
+        ? `${relatedCompany.name}: ${companySignal.label} · ${companySignal.sourceSummary || "근거 수집 중"}`
+        : "회사별 근거 레이더에서 직접 근거가 붙은 신호를 우선 확인합니다."
+    }
+  ]
+    .map(
+      (item) => `
+        <div class="action-item">
+          <b>${escapeHtml(item.label)}</b>
+          <p>${escapeHtml(item.body)}</p>
+          ${item.href ? `<a href="${escapeHtml(item.href)}" target="_blank" rel="noopener noreferrer">원문 열기</a>` : ""}
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderSourceLinks() {
+  const regionOrder = ["KR", "Global"];
+  byId("sourceLinks").innerHTML = monitoredSources
+    .slice()
+    .sort((a, b) => regionOrder.indexOf(a.region) - regionOrder.indexOf(b.region) || a.name.localeCompare(b.name))
+    .map(
+      (source) => `
+        <a class="source-link" href="${escapeHtml(source.url || source.feed)}" target="_blank" rel="noopener noreferrer">
+          <span>
+            <b>${escapeHtml(source.name)}</b>
+            <em>${escapeHtml(source.region)} · ${escapeHtml(source.kind || "Link")}</em>
+          </span>
+          <strong>원문</strong>
+        </a>
+      `
+    )
+    .join("");
+}
+
+function renderHotList() {
+  byId("hotList").innerHTML = hotAgendas
+    .map((agenda, index) => {
+      const hashtags = getAgendaKeywords(agenda);
+      const sourceCount = getAgendaSourceCount(agenda);
+      const score = getAgendaScore(agenda);
+      const metric = agenda.metric || agenda.momentum || `${sourceCount}개 매체`;
+      const hotness = getHotnessBreakdown(agenda).slice(0, 3);
+      return `
+        <li>
+          <article class="hot-item" tabindex="0" role="button" data-agenda-id="${agenda.id}" aria-label="${escapeHtml(`${agenda.title} 브리핑 열기`)}" style="--agenda-color:${colors[index % colors.length]}">
+            <span class="rank-badge">${index + 1}</span>
+            <span class="hot-copy">
+              <h3>${escapeHtml(agenda.title)}</h3>
+              <p>${escapeHtml(agenda.summary || "")}</p>
+              <span class="hot-reason">
+                <b>왜 중요한가</b>
+                <span>${escapeHtml(getAgendaReason(agenda))}</span>
+              </span>
+              <span class="hot-evidence" aria-label="뉴스 중요도 판단 근거">
+                ${hotness
+                  .map(
+                    (item) => `
+                      <span>
+                        <b>${escapeHtml(item.label)}</b>
+                        <em>${escapeHtml(item.value)}</em>
+                      </span>
+                    `
+                  )
+                  .join("")}
+              </span>
+              <span class="hot-tags" aria-label="관련 해시태그">
+                ${hashtags
+                  .map((tag) => `<button class="hot-tag" type="button" data-hot-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`)
+                  .join("")}
+              </span>
+              <span class="hot-meta">
+                <span class="date-badge">${escapeHtml(agenda.collectedAt || metadata.generatedAt)}</span>
+                <span>${sourceCount}개 매체 · ${escapeHtml(agenda.mentions || score)}회 신호</span>
+              </span>
+            </span>
+            <span class="hot-metrics">
+              <span class="signal-badge">${escapeHtml(metric)}</span>
+              <span class="score-badge">${score}점</span>
+            </span>
+          </article>
+        </li>
+      `;
+    })
+    .join("");
+}
+
+function renderCompanyCards() {
+  byId("companyCards").innerHTML = companies
+    .map((company) => {
+      const topSignal = company.keywords?.[0];
+      const score = Math.round(topSignal?.weight || 0);
+      const summary = topSignal?.sourceSummary || "원문 신호 대기";
+      return `
+        <button class="company-card ${company.id === activeCompanyId ? "active" : ""}" type="button" data-company-id="${company.id}" style="--company-color:${company.color}">
+          <span class="company-card-head">
+            <span class="company-logo">${company.short}</span>
+            <span>
+              <b>${escapeHtml(company.name)}</b>
+              <em>${escapeHtml(company.sector)}</em>
+            </span>
+          </span>
+          <span class="company-focus">${escapeHtml(company.focus)}</span>
+          <span class="company-card-foot">
+            <span>
+              <em>Top signal</em>
+              <strong>${escapeHtml(topSignal?.label || "아젠다 수집 중")}</strong>
+            </span>
+            <b>${score || "--"}</b>
+          </span>
+          <span class="company-meter" aria-hidden="true"><i style="width:${score || 8}%"></i></span>
+          <span class="company-proof">${escapeHtml(summary)}</span>
+        </button>
+      `;
+    })
+    .join("");
+}
+
+function companyKeywordDescription(company, keyword) {
+  const matchingKeyword = keywordData.find(
+    (item) => normalizeTag(item.label) === normalizeTag(keyword.label) || item.id === keyword.termId
+  );
+  const matchingStack = company.stack.find((entry) => {
+    const title = Array.isArray(entry) ? entry[0] : entry.title;
+    return normalizeTag(title).includes(normalizeTag(keyword.label));
+  });
+  const matchingStackBody = Array.isArray(matchingStack) ? matchingStack?.[1] : matchingStack?.body;
+  return (
+    keyword.description ||
+    matchingKeyword?.description ||
+    matchingStackBody ||
+    `${company.name}의 제품 메시지와 기사 신호에서 반복적으로 잡히는 추진 키워드입니다.`
+  );
+}
+
+function normalizeCompanyStackItem(entry, company) {
+  if (Array.isArray(entry)) {
+    return {
+      title: entry[0],
+      body: entry[1],
+      score: entry[2],
+      date: entry[3],
+      sourceSummary: "근거 원문 수집 대기",
+      takeaway: `${company.name}의 제품, 파트너십, 리스크 관점에서 후속 확인이 필요합니다.`,
+      sources: []
+    };
+  }
+  return {
+    title: entry.title,
+    body: entry.body,
+    score: entry.score,
+    date: entry.date,
+    termId: entry.termId,
+    sourceSummary: entry.sourceSummary || "근거 원문 수집 대기",
+    takeaway: entry.takeaway || `${company.name}의 제품, 파트너십, 리스크 관점에서 후속 확인이 필요합니다.`,
+    sources: entry.sources || []
+  };
+}
+
+function renderCompanyView() {
+  const company = activeCompany();
+  byId("companyName").textContent = company.name;
+  byId("companySector").textContent = company.sector;
+  byId("companyUpdated").textContent = `업데이트 ${company.updatedAt}`;
+
+  byId("wordCloud").innerHTML = company.keywords
+    .map((keyword) => {
+      const description = companyKeywordDescription(company, keyword);
+      return `
+        <button class="word" type="button" data-keyword-label="${escapeHtml(keyword.label)}" style="--word-color:${keyword.color}">
+          <span class="word-top">
+            <b>${escapeHtml(keyword.label)}</b>
+            <em>${Math.round(keyword.weight)}</em>
+          </span>
+          <span class="word-desc">${escapeHtml(description)}</span>
+          <span class="word-source">
+            <b>근거</b>
+            <em>${escapeHtml(keyword.sourceSummary || "원문 수집 대기")}</em>
+          </span>
+          <span class="word-action">${escapeHtml(keyword.takeaway || "전략, 제품, 리스크 관점의 후속 확인이 필요합니다.")}</span>
+        </button>
+      `;
+    })
+    .join("");
+
+  byId("companyHeatmap").innerHTML = company.heat
+    .map((label, index) => {
+      const intensity = 22 + ((index * 17 + company.name.length * 9) % 58);
+      const color = colors[index % colors.length];
+      return `<div class="heat-cell" style="--intensity:${intensity}%; --cell-color:${color}"><span>${label}</span></div>`;
+    })
+    .join("");
+
+  byId("agendaStack").innerHTML = company.stack
+    .map((entry, index) => {
+      const item = normalizeCompanyStackItem(entry, company);
+      const sourceCount = item.sources.length;
+      return `
+        <button class="stack-item" type="button" data-stack-index="${index}">
+          <span class="stack-top">
+            <h3>${escapeHtml(item.title)}</h3>
+            <span class="tag-pill">${escapeHtml(item.score)}</span>
+          </span>
+          <span class="stack-date">${escapeHtml(item.date)} KST</span>
+          <span class="stack-source">
+            <b>근거</b>
+            <em>${escapeHtml(item.sourceSummary)}</em>
+            <strong>${sourceCount ? `원문 ${sourceCount}건` : "원문 대기"}</strong>
+          </span>
+          <p>${escapeHtml(item.body)}</p>
+          <span class="stack-action">
+            <b>활용 포인트</b>
+            <em>${escapeHtml(item.takeaway)}</em>
+          </span>
+        </button>
+      `;
+    })
+    .join("");
+}
+
+function renderKeywordMap() {
+  byId("keywordMap").innerHTML = keywordData
+    .map((keyword) => {
+      const size = 18 + keyword.score / 9;
+      return `
+        <button class="keyword-bubble ${keyword.id === activeKeywordId ? "active" : ""}" type="button" data-keyword-id="${keyword.id}" style="--keyword-color:${keyword.color}; --bubble-size:${size}px">
+          <b>${keyword.label}</b>
+          <span>${keyword.description}</span>
+          <strong class="keyword-score">${keyword.score}</strong>
+        </button>
+      `;
+    })
+    .join("");
+}
+
+function renderTimeline() {
+  const keyword = activeKeyword();
+  byId("timelineEyebrow").textContent = keyword.label;
+  const firstItem = normalizeTimelineItem(keyword.timeline[0]);
+  byId("timelineWindow").textContent = `${firstItem.time} KST 기준 최신순`;
+  byId("timeline").innerHTML = keyword.timeline
+    .map((entry, index) => {
+      const item = normalizeTimelineItem(entry);
+      const sourceLabel = item.source || item.type || "Source";
+      const summaryText = `${keyword.label} 관련 신호가 시장 내러티브와 기업 액션으로 연결되고 있습니다.`;
+      const cardBody = `
+            <span class="timeline-meta">
+              <span class="date-badge">${escapeHtml(item.time)} KST</span>
+              <span>${escapeHtml(sourceLabel)}</span>
+            </span>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(summaryText)}</p>
+            <span class="origin-label">${item.url ? "원문 열기" : "브리핑 보기"}</span>
+      `;
+
+      return `
+        <div class="timeline-item" style="--timeline-color:${keyword.color}">
+          ${
+            item.url
+              ? `<a class="timeline-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" data-timeline-index="${index}">${cardBody}</a>`
+              : `<button class="timeline-link" type="button" data-timeline-brief-index="${index}">${cardBody}</button>`
+          }
+          <button class="timeline-brief" type="button" data-timeline-brief-index="${index}">AI Briefing ⚡</button>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function renderImpact() {
+  byId("impactCopy").innerHTML = impactNotes
+    .map(
+      ([title, body, color]) => `
+        <div style="--accent:${color}">
+          <b>${title}</b>
+          <p>${body}</p>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderQueue() {
+  byId("queueList").innerHTML = collectionQueue
+    .map(([time, label]) => `<div><span>${time}</span><b>${label}</b></div>`)
+    .join("");
+}
+
+function renderModalSources(sources = []) {
+  const container = byId("modalSourceLinks");
+  const links = sources.slice(0, 5);
+  container.hidden = !links.length;
+  container.innerHTML = links.length
+    ? `
+      <span class="footer-label">대표 원문</span>
+      <div>
+        ${links
+          .map(
+            (source) => `
+              <a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">
+                <b>${escapeHtml(source.media || "Source")}</b>
+                <span>${escapeHtml(source.title || "원문 보기")}</span>
+              </a>
+            `
+          )
+          .join("")}
+      </div>
+    `
+    : "";
+}
+
+function renderModalHotness(hotness = []) {
+  const container = byId("modalHotness");
+  const reasons = hotness.slice(0, 4);
+  container.hidden = !reasons.length;
+  container.innerHTML = reasons.length
+    ? `
+      <span class="footer-label">중요도 판단 근거</span>
+      <div>
+        ${reasons
+          .map(
+            (item) => `
+              <span>
+                <b>${escapeHtml(item.label)}</b>
+                <strong>${escapeHtml(item.value)}</strong>
+                <em>${escapeHtml(item.detail || "")}</em>
+              </span>
+            `
+          )
+          .join("")}
+      </div>
+    `
+    : "";
+}
+
+function openBrief({
+  title,
+  eyebrow = "Deep Dive",
+  brief,
+  signals,
+  date = "2026.05.26 09:20 KST",
+  sources = [],
+  hotness = []
+}) {
+  const safeBrief = brief || {
+    background: "관련 기사 신호를 기준으로 아젠다 맥락을 재구성했습니다.",
+    reaction: "시장 반응은 소스 수, 기업 언급, 키워드 밀도의 결합으로 추정했습니다.",
+    implication: "원문 확인과 함께 제품, 투자, 파트너십 관점의 후속 검토가 필요합니다."
+  };
+  lastFocus = document.activeElement;
+  byId("modalEyebrow").textContent = eyebrow;
+  byId("modalTitle").textContent = title;
+  byId("modalDate").textContent = date;
+  byId("modalSignals").textContent = signals;
+  byId("briefLines").innerHTML = [
+    ["발생 배경", safeBrief.background, "#0f8f82"],
+    ["시장의 반응", safeBrief.reaction, "#d68419"],
+    ["전략적 시사점", safeBrief.implication, "#3563c8"]
+  ]
+    .map(
+      ([label, body, color]) => `
+        <div class="brief-line" style="--accent:${color}">
+          <b>${label}</b>
+          <p>${body}</p>
+        </div>
+      `
+    )
+    .join("");
+  renderModalHotness(hotness);
+  renderModalSources(sources);
+  byId("modalBackdrop").hidden = false;
+  byId("closeModal").focus();
+}
+
+function closeBrief() {
+  byId("modalBackdrop").hidden = true;
+  if (lastFocus) lastFocus.focus();
+}
+
+function setView(view) {
+  document.querySelectorAll(".segment").forEach((button) => {
+    const active = button.dataset.view === view;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+  byId("companyView").classList.toggle("active", view === "company");
+  byId("keywordView").classList.toggle("active", view === "keyword");
+}
+
+function findKeywordByTag(tag) {
+  const target = normalizeTag(tag);
+  return keywordData.find((keyword) => {
+    const candidates = [keyword.id, keyword.label, ...(keyword.aliases || []), ...(keyword.keywords || [])].map(normalizeTag);
+    return candidates.some((candidate) => candidate === target || candidate.includes(target) || target.includes(candidate));
+  });
+}
+
+function focusKeywordFromTag(tag) {
+  const matched = findKeywordByTag(tag);
+  setView("keyword");
+  if (matched) activeKeywordId = matched.id;
+  renderKeywordMap();
+  renderTimeline();
+
+  document.querySelector(".workspace-section").scrollIntoView({ behavior: "smooth", block: "start" });
+  window.requestAnimationFrame(() => {
+    const bubble = [...byId("keywordMap").querySelectorAll("[data-keyword-id]")].find(
+      (button) => button.dataset.keywordId === activeKeywordId
+    );
+    if (!bubble) return;
+    bubble.classList.add("hash-focus");
+    bubble.focus({ preventScroll: true });
+    window.setTimeout(() => bubble.classList.remove("hash-focus"), 1400);
+  });
+}
+
+function formatKst(date) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour12: false,
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Asia/Seoul"
+  }).formatToParts(date);
+  const value = (type) => parts.find((part) => part.type === type).value;
+  return `${value("year")}.${value("month")}.${value("day")} ${value("hour")}:${value("minute")}`;
+}
+
+function bindEvents() {
+  byId("hotList").addEventListener("click", (event) => {
+    const tag = event.target.closest("[data-hot-tag]");
+    if (tag) {
+      event.stopPropagation();
+      focusKeywordFromTag(tag.dataset.hotTag);
+      return;
+    }
+    const item = event.target.closest("[data-agenda-id]");
+    if (!item) return;
+    const agenda = hotAgendas.find((candidate) => candidate.id === item.dataset.agendaId);
+    openBrief({
+      title: agenda.title,
+      eyebrow: "Hot Agenda",
+      brief: agenda.brief,
+      signals: getAgendaReason(agenda),
+      date: agenda.collectedAt,
+      sources: getAgendaSources(agenda),
+      hotness: getHotnessBreakdown(agenda)
+    });
+  });
+  byId("hotList").addEventListener("keydown", (event) => {
+    if (!["Enter", " "].includes(event.key)) return;
+    if (event.target.closest("[data-hot-tag]")) return;
+    const item = event.target.closest("[data-agenda-id]");
+    if (!item) return;
+    event.preventDefault();
+    const agenda = hotAgendas.find((candidate) => candidate.id === item.dataset.agendaId);
+    openBrief({
+      title: agenda.title,
+      eyebrow: "Hot Agenda",
+      brief: agenda.brief,
+      signals: getAgendaReason(agenda),
+      date: agenda.collectedAt,
+      sources: getAgendaSources(agenda),
+      hotness: getHotnessBreakdown(agenda)
+    });
+  });
+
+  byId("companyCards").addEventListener("click", (event) => {
+    const card = event.target.closest("[data-company-id]");
+    if (!card) return;
+    activeCompanyId = card.dataset.companyId;
+    renderCompanyCards();
+    renderCompanyView();
+  });
+
+  byId("wordCloud").addEventListener("click", (event) => {
+    const word = event.target.closest("[data-keyword-label]");
+    if (!word) return;
+    const company = activeCompany();
+    const keyword = company.keywords.find((item) => item.label === word.dataset.keywordLabel);
+    const relatedKeyword = keywordData.find((item) => item.id === keyword?.termId);
+    openBrief({
+      title: `${company.name}: ${word.dataset.keywordLabel}`,
+      eyebrow: "Company Agenda",
+      brief: {
+        background: keyword?.description || relatedKeyword?.description || `${company.name} 관련 추진 의제입니다.`,
+        reaction: keyword?.sourceSummary
+          ? `${keyword.sourceSummary}에서 이 방향의 신호가 잡혔습니다.`
+          : relatedKeyword?.signals || "관련 시장 신호를 추적 중입니다.",
+        implication: keyword?.takeaway || relatedKeyword?.brief?.implication || "제품, 파트너십, 리스크 관점의 후속 확인이 필요합니다."
+      },
+      signals: keyword?.sourceSummary || `${company.name} 관련 키워드 가중치 상위권 · ${company.stack.length}개 강한 추진 신호`,
+      date: company.updatedAt,
+      sources: keyword?.sources || []
+    });
+  });
+
+  byId("agendaStack").addEventListener("click", (event) => {
+    const target = event.target.closest("[data-stack-index]");
+    if (!target) return;
+    const company = activeCompany();
+    const item = normalizeCompanyStackItem(company.stack[Number(target.dataset.stackIndex)], company);
+    const relatedKeyword = keywordData.find((keyword) => keyword.id === item.termId);
+    openBrief({
+      title: `${company.name} · ${item.title}`,
+      eyebrow: "Agenda Stack",
+      brief: {
+        background: item.body,
+        reaction: `${item.sourceSummary}에서 확인된 신호를 바탕으로 한 회사별 해석입니다.`,
+        implication: item.takeaway || relatedKeyword?.brief?.implication || "제품, 파트너십, 리스크 관점의 후속 확인이 필요합니다."
+      },
+      signals: item.sourceSummary,
+      date: `${item.date} KST`,
+      sources: item.sources
+    });
+  });
+
+  document.querySelectorAll(".segment").forEach((button) => {
+    button.addEventListener("click", () => setView(button.dataset.view));
+  });
+
+  byId("keywordMap").addEventListener("click", (event) => {
+    const bubble = event.target.closest("[data-keyword-id]");
+    if (!bubble) return;
+    activeKeywordId = bubble.dataset.keywordId;
+    renderKeywordMap();
+    renderTimeline();
+  });
+
+  byId("timeline").addEventListener("click", (event) => {
+    const item = event.target.closest("[data-timeline-brief-index]");
+    if (!item) return;
+    const keyword = activeKeyword();
+    const timelineItem = normalizeTimelineItem(keyword.timeline[Number(item.dataset.timelineBriefIndex)]);
+    openBrief({
+      title: timelineItem.title,
+      eyebrow: `${keyword.label} Timeline`,
+      brief: keyword.brief,
+      signals: keyword.signals,
+      date: `${timelineItem.time} KST`,
+      sources: timelineItem.url
+        ? [{ title: timelineItem.title, url: timelineItem.url, media: timelineItem.source || timelineItem.type }]
+        : []
+    });
+  });
+
+  byId("companyBriefButton").addEventListener("click", () => {
+    const company = activeCompany();
+    openBrief({
+      title: `${company.name}의 현재 아젠다`,
+      eyebrow: "Company Deep Dive",
+      brief: hotAgendas[0].brief,
+      signals: `${company.keywords.map((keyword) => keyword.label).join(", ")}`,
+      date: company.updatedAt
+    });
+  });
+
+  byId("keywordBriefButton").addEventListener("click", () => {
+    const keyword = activeKeyword();
+    const timelineItem = normalizeTimelineItem(keyword.timeline[0]);
+    openBrief({
+      title: `${keyword.label} 시장 브리핑`,
+      eyebrow: "Keyword Deep Dive",
+      brief: keyword.brief,
+      signals: keyword.signals,
+      date: `${timelineItem.time} KST`
+    });
+  });
+
+  byId("closeModal").addEventListener("click", closeBrief);
+  byId("modalBackdrop").addEventListener("click", (event) => {
+    if (event.target.id === "modalBackdrop") closeBrief();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !byId("modalBackdrop").hidden) closeBrief();
+  });
+
+  byId("refreshButton").addEventListener("click", () => {
+    byId("syncTime").textContent = `${formatKst(new Date())} KST 데이터 확인`;
+    const dot = document.querySelector(".pulse-dot");
+    dot.classList.remove("flash");
+    window.requestAnimationFrame(() => dot.classList.add("flash"));
+    window.setTimeout(() => window.location.reload(), 260);
+  });
+
+  byId("saveBriefButton").addEventListener("click", () => {
+    byId("saveBriefButton").textContent = "저장됨";
+    window.setTimeout(() => {
+      byId("saveBriefButton").textContent = "브리핑 저장";
+    }, 1200);
+  });
+}
+
+function init() {
+  renderMeta();
+  renderMetrics();
+  renderActionBoard();
+  renderHotList();
+  renderCompanyCards();
+  renderCompanyView();
+  renderKeywordMap();
+  renderTimeline();
+  renderImpact();
+  renderQueue();
+  renderSourceLinks();
+  bindEvents();
+}
+
+init();

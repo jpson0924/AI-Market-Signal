@@ -1,0 +1,1662 @@
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const jsOutputPath = resolve(rootDir, "agenda-data.js");
+const jsonOutputPath = resolve(rootDir, "agenda-data.json");
+const historyDir = resolve(rootDir, "history");
+const KST_OFFSET_MS = 9 * 60 * 60 * 1000;
+const colors = ["#0f8f82", "#3563c8", "#d68419", "#c54b40", "#3f8f4f", "#7a5a26"];
+
+const sources = [
+  {
+    name: "AI Times",
+    region: "KR",
+    kind: "RSS",
+    url: "https://www.aitimes.com/",
+    feed: "https://cdn.aitimes.com/rss/gn_rss_allArticle.xml"
+  },
+  {
+    name: "DigitalToday AI",
+    region: "KR",
+    kind: "HTML",
+    url: "https://www.digitaltoday.co.kr/news/articleList.html?sc_section_code=S1N10&view_type=sm",
+    mode: "html"
+  },
+  {
+    name: "Bloter IT",
+    region: "KR",
+    kind: "HTML",
+    url: "https://www.bloter.net/news/articleList.html?sc_section_code=S1N4&view_type=sm",
+    mode: "html"
+  },
+  {
+    name: "ZDNet Korea AI",
+    region: "KR",
+    kind: "HTML",
+    url: "https://zdnet.co.kr/search/?kwd=AI",
+    mode: "html"
+  },
+  {
+    name: "Naver IT",
+    region: "KR",
+    kind: "Portal",
+    url: "https://news.naver.com/section/105"
+  },
+  {
+    name: "Daum Digital",
+    region: "KR",
+    kind: "Portal",
+    url: "https://news.daum.net/digital"
+  },
+  {
+    name: "The Verge AI",
+    region: "Global",
+    kind: "RSS",
+    url: "https://www.theverge.com/ai-artificial-intelligence",
+    feed: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+  },
+  {
+    name: "TechCrunch AI",
+    region: "Global",
+    kind: "RSS",
+    url: "https://techcrunch.com/category/artificial-intelligence/",
+    feed: "https://techcrunch.com/category/artificial-intelligence/feed/"
+  },
+  {
+    name: "OpenAI News",
+    region: "Global",
+    kind: "RSS",
+    url: "https://openai.com/news/",
+    feed: "https://openai.com/news/rss.xml"
+  },
+  {
+    name: "Google AI Blog",
+    region: "Global",
+    kind: "RSS",
+    url: "https://blog.google/technology/ai/",
+    feed: "https://blog.google/innovation-and-ai/technology/ai/rss/"
+  },
+  {
+    name: "MIT Technology Review",
+    region: "Global",
+    kind: "RSS",
+    url: "https://www.technologyreview.com/",
+    feed: "https://www.technologyreview.com/feed/"
+  },
+  {
+    name: "WIRED AI",
+    region: "Global",
+    kind: "RSS",
+    url: "https://www.wired.com/tag/artificial-intelligence/",
+    feed: "https://www.wired.com/feed/tag/ai/latest/rss"
+  },
+  {
+    name: "VentureBeat AI",
+    region: "Global",
+    kind: "RSS",
+    url: "https://venturebeat.com/category/ai/",
+    feed: "https://venturebeat.com/category/ai/feed/"
+  },
+  {
+    name: "Hacker News",
+    region: "Global",
+    kind: "RSS",
+    url: "https://news.ycombinator.com/",
+    feed: "https://news.ycombinator.com/rss"
+  }
+];
+
+const agendaTerms = [
+  {
+    id: "agent",
+    label: "Agent",
+    aliases: ["agent", "agents", "autonomous", "operator", "workflow", "tool use", "computer use"],
+    color: "#0f8f82",
+    title: "자율형 AI Agent가 업무 실행과 보안 통제의 핵심 의제로 부상",
+    summary: "에이전트가 조회를 넘어 실행, 승인, 감사 로그가 필요한 업무 레이어로 이동하고 있습니다.",
+    description: "툴 실행, 장시간 작업, 승인 게이트가 함께 언급됩니다.",
+    brief: {
+      background: "AI Agent가 이메일, 코드, 브라우저, 업무 도구를 직접 다루기 시작하면서 실행 경계가 제품 설계의 중심이 됐습니다.",
+      reaction: "플랫폼 기업은 SDK와 런타임을 확장하고, 보안 업계는 샌드박스와 감사 로그를 기본 요구사항으로 제안합니다.",
+      implication: "Agent 제품 경쟁은 자동화 범위뿐 아니라 권한 위임, 실패 복구, 승인 UX의 완성도로 갈립니다."
+    }
+  },
+  {
+    id: "mcp",
+    label: "MCP",
+    aliases: ["mcp", "model context protocol", "server", "connector", "integration", "tools"],
+    color: "#3563c8",
+    title: "MCP와 외부 도구 연결 표준이 AI 앱 생태계 확장의 관문으로 부상",
+    summary: "모델과 사내 시스템, 개발 도구, 데이터 소스를 안전하게 연결하는 표준화 흐름이 강해지고 있습니다.",
+    description: "외부 시스템 연결 표준으로 빠르게 제품 메시지화되고 있습니다.",
+    brief: {
+      background: "AI 앱이 단일 챗봇을 넘어 실제 업무 시스템과 연결되면서 표준화된 컨텍스트·툴 프로토콜 수요가 커졌습니다.",
+      reaction: "개발자 커뮤니티는 서버 템플릿과 권한 패턴을 빠르게 실험하고, 기업은 내부 데이터 연결의 통제 지점을 검토합니다.",
+      implication: "엔터프라이즈 AI 도입은 모델 성능만큼 연결 가능한 시스템 범위와 권한 관리 체계에 좌우됩니다."
+    }
+  },
+  {
+    id: "on-device",
+    label: "On-Device",
+    aliases: ["on-device", "on device", "edge ai", "npu", "local model", "device", "privacy"],
+    color: "#d68419",
+    title: "온디바이스 AI 경쟁이 NPU, 개인정보, 지연시간 중심으로 재편",
+    summary: "모바일, PC, 브라우저 업체가 로컬 추론과 개인정보 보호 메시지를 전면에 세우고 있습니다.",
+    description: "모바일, PC, 브라우저에서 로컬 추론 메시지가 강화됩니다.",
+    brief: {
+      background: "클라우드 추론 비용과 개인정보 규제가 맞물리며 일부 AI 기능을 기기 내부에서 처리하려는 압력이 커졌습니다.",
+      reaction: "디바이스 업체는 NPU 성능, 지연시간, 배터리 효율을 묶어 차별화하고 개발자에게 로컬 API를 제공합니다.",
+      implication: "서비스 사업자는 클라우드, 엣지, 로컬 모델을 상황별로 라우팅하는 제품 구조를 준비해야 합니다."
+    }
+  },
+  {
+    id: "sovereign",
+    label: "Sovereign AI",
+    aliases: ["sovereign", "national ai", "local cloud", "data sovereignty", "government", "public sector"],
+    color: "#3f8f4f",
+    title: "Sovereign AI와 로컬 클라우드 연합 전략이 공공·산업 AI 의제로 확대",
+    summary: "정부, 통신사, 클라우드 사업자가 데이터 주권과 자체 모델 확보를 같은 전략으로 묶고 있습니다.",
+    description: "정부, 통신, 클라우드가 로컬 데이터 주권을 사업화합니다.",
+    brief: {
+      background: "AI 인프라가 산업 경쟁력과 안보 이슈로 해석되면서 데이터와 컴퓨트를 국내 통제권 안에 두려는 요구가 커졌습니다.",
+      reaction: "클라우드 사업자는 현지 리전과 파트너십을 늘리고, 로컬 기업은 산업별 특화 모델과 공공 조달 채널을 노립니다.",
+      implication: "글로벌 AI 기업은 지역별 규제, 데이터 거버넌스, 로컬 파트너 번들 전략을 정교화해야 합니다."
+    }
+  },
+  {
+    id: "evalops",
+    label: "EvalOps",
+    aliases: ["eval", "evaluation", "benchmark", "monitoring", "guardrail", "safety", "red team"],
+    color: "#c54b40",
+    title: "AI 평가와 운영 모니터링이 모델 출시 이후의 핵심 통제면으로 이동",
+    summary: "프롬프트 변경, 모델 교체, 툴 추가에 따른 품질 회귀를 감지하려는 수요가 커지고 있습니다.",
+    description: "모델 도입 이후의 품질 추적과 회귀 테스트가 중요해집니다.",
+    brief: {
+      background: "AI 기능이 프로덕션 워크플로에 들어가며 작은 변경도 품질과 규정 준수 리스크로 이어지게 됐습니다.",
+      reaction: "플랫폼과 스타트업은 평가 데이터셋, 추적, 실패 재현 기능을 LLMOps의 다음 계층으로 포지셔닝합니다.",
+      implication: "AI 제품팀은 출시 전 데모보다 운영 중 회귀 감지와 부서별 품질 기준 관리 능력을 먼저 설계해야 합니다."
+    }
+  },
+  {
+    id: "ai-code",
+    label: "AI Code",
+    aliases: ["code", "coding", "developer", "github", "ide", "pull request", "software engineering"],
+    color: "#7a5a26",
+    title: "AI 코딩 도구가 IDE 보조를 넘어 저장소 운영과 배포 검증으로 확장",
+    summary: "코드 생성보다 이슈 분석, 테스트 수정, PR 리뷰 자동화가 새 관심사로 이동하고 있습니다.",
+    description: "코드 생성에서 저장소 운영과 검증 자동화로 관심이 이동합니다.",
+    brief: {
+      background: "개발자가 생성형 코딩에 익숙해지면서 병목이 코드 작성에서 검증, 리뷰, 배포 신뢰성으로 이동했습니다.",
+      reaction: "툴 업체들은 터미널, GitHub, CI를 연결한 장시간 작업 에이전트를 내세우며 팀 단위 생산성 지표를 강조합니다.",
+      implication: "기업 도입 판단은 라인 수 증가보다 실패 복구, 테스트 통과율, 보안 리뷰 누락 감소 같은 운영 지표로 옮겨갑니다."
+    }
+  }
+];
+
+const companies = [
+  {
+    id: "openai",
+    name: "OpenAI",
+    sector: "Model Platform",
+    color: "#3563c8",
+    short: "OA",
+    focus: "에이전트 플랫폼과 멀티모달",
+    terms: ["agent", "evalops", "ai-code", "mcp"],
+    agendas: [
+      {
+        label: "Agent Runtime 표준화",
+        term: "agent",
+        description: "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
+        heat: ["Runtime", "Tool Call", "Trace", "Handoff"]
+      },
+      {
+        label: "평가 자동화 내재화",
+        term: "evalops",
+        description: "모델 교체와 프롬프트 변경 전후 품질 회귀를 플랫폼 안에서 검증하게 만드는 전략입니다.",
+        heat: ["Regression", "Eval", "Guardrail", "Trace"]
+      },
+      {
+        label: "개발 워크플로 장악",
+        term: "ai-code",
+        description: "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
+        heat: ["Repo Ops", "PR Review", "CI Fix", "IDE"]
+      },
+      {
+        label: "외부 툴 연결성 확보",
+        term: "mcp",
+        description: "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
+        heat: ["Connector", "Tool", "Context", "API"]
+      }
+    ]
+  },
+  {
+    id: "anthropic",
+    name: "Anthropic",
+    sector: "Model Provider",
+    color: "#0f8f82",
+    short: "AN",
+    focus: "MCP와 에이전트 개발면",
+    terms: ["mcp", "agent", "ai-code", "evalops"],
+    agendas: [
+      {
+        label: "MCP 생태계 선점",
+        term: "mcp",
+        description: "Claude가 업무 시스템과 연결되는 기본 통로를 MCP 서버와 커넥터 생태계로 넓히고 있습니다.",
+        heat: ["MCP Server", "Connector", "Tool Use", "Permission"]
+      },
+      {
+        label: "Claude Code 운영화",
+        term: "ai-code",
+        description: "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
+        heat: ["Claude Code", "Terminal", "Repo", "Test"]
+      },
+      {
+        label: "권한 있는 Tool Use",
+        term: "agent",
+        description: "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
+        heat: ["Approval", "Audit", "Desktop", "Agent"]
+      },
+      {
+        label: "안전성 평가 메시지",
+        term: "evalops",
+        description: "기업 도입의 불안을 줄이기 위해 모델 성능보다 실패 경계와 평가 체계를 함께 강조합니다.",
+        heat: ["Safety Eval", "Red Team", "Policy", "Logs"]
+      }
+    ]
+  },
+  {
+    id: "google",
+    name: "Google",
+    sector: "Cloud & Search",
+    color: "#d68419",
+    short: "GO",
+    focus: "검색 재구성과 온디바이스",
+    terms: ["on-device", "agent", "evalops", "sovereign"],
+    agendas: [
+      {
+        label: "검색 수익모델 재설계",
+        term: "agent",
+        description: "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
+        heat: ["AI Search", "Ads", "Shopping", "Overview"]
+      },
+      {
+        label: "Gemini 온디바이스화",
+        term: "on-device",
+        description: "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
+        heat: ["Gemini Nano", "Android", "Chrome", "NPU"]
+      },
+      {
+        label: "TPU 원가 우위 방어",
+        term: "evalops",
+        description: "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
+        heat: ["TPU", "Vertex", "Cost", "Cloud"]
+      },
+      {
+        label: "지역 AI 클라우드 패키징",
+        term: "sovereign",
+        description: "각국 데이터 주권 요구에 맞춰 클라우드 리전, 파트너, 모델 제공 방식을 현지화합니다.",
+        heat: ["Region", "Gov", "Local Cloud", "Data"]
+      }
+    ]
+  },
+  {
+    id: "naver",
+    name: "Naver",
+    sector: "Korea Platform",
+    color: "#3f8f4f",
+    short: "NV",
+    focus: "소버린 AI와 검색 커머스",
+    terms: ["sovereign", "on-device", "agent", "evalops"],
+    agendas: [
+      {
+        label: "소버린 AI 영업 확대",
+        term: "sovereign",
+        description: "공공, 금융, 통신 고객에게 국내 데이터와 로컬 클라우드를 묶은 AI 인프라 패키지를 제안합니다.",
+        heat: ["Public", "Finance", "Local Data", "Cloud"]
+      },
+      {
+        label: "한국어 데이터 해자",
+        term: "evalops",
+        description: "범용 모델 경쟁보다 한국어, 검색 로그, 커머스 문맥의 정밀도를 차별화 포인트로 삼습니다.",
+        heat: ["Korean Data", "Search Log", "Commerce", "Quality"]
+      },
+      {
+        label: "검색 커머스 AI 전환",
+        term: "agent",
+        description: "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
+        heat: ["Search", "Shopping", "Ads", "Creator"]
+      },
+      {
+        label: "온디바이스 협력 가능성",
+        term: "on-device",
+        description: "모바일, 브라우저, 차량 등 한국어 개인화가 필요한 접점에서 로컬 추론 파트너십 여지가 있습니다.",
+        heat: ["Mobile", "Browser", "Vehicle", "Personalization"]
+      }
+    ]
+  },
+  {
+    id: "kakao",
+    name: "Kakao",
+    sector: "Korea Platform",
+    color: "#8a6d1f",
+    short: "KK",
+    focus: "메신저 기반 AI와 커머스",
+    terms: ["agent", "evalops", "sovereign", "ai-code"],
+    agendas: [
+      {
+        label: "카카오톡 AI 접점 확대",
+        term: "agent",
+        description: "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
+        heat: ["KakaoTalk", "Channel", "Commerce", "Assistant"]
+      },
+      {
+        label: "개인화 데이터 안전성",
+        term: "evalops",
+        description: "대화와 생활 데이터 기반 서비스가 커질수록 동의, 보관, 추천 품질 관리가 핵심 리스크가 됩니다.",
+        heat: ["Consent", "Privacy", "Personalization", "Quality"]
+      },
+      {
+        label: "로컬 플랫폼 방어",
+        term: "sovereign",
+        description: "글로벌 AI 앱이 국내 생활 플랫폼 접점을 잠식하지 못하도록 로컬 맥락과 제휴 자산을 묶어야 합니다.",
+        heat: ["Local Context", "Partner", "Map", "Payment"]
+      },
+      {
+        label: "창작·광고 자동화",
+        term: "ai-code",
+        description: "콘텐츠 제작, 광고 문안, 쇼핑 운영 자동화가 소상공인과 브랜드 고객의 지불 의사로 이어질 수 있습니다.",
+        heat: ["Creator", "Ad", "Shopping", "SMB"]
+      }
+    ]
+  },
+  {
+    id: "sktelecom",
+    name: "SK Telecom",
+    sector: "Telco AI",
+    color: "#c54b40",
+    short: "SK",
+    focus: "통신 AI와 데이터센터",
+    terms: ["agent", "on-device", "sovereign", "evalops"],
+    agendas: [
+      {
+        label: "통신형 AI 에이전트",
+        term: "agent",
+        description: "통화, 일정, 고객센터, 멤버십 접점을 묶어 통신사형 개인·기업 에이전트로 확장할 수 있습니다.",
+        heat: ["A.", "Call", "Membership", "Agent"]
+      },
+      {
+        label: "AI 데이터센터 사업화",
+        term: "sovereign",
+        description: "GPU, 전력, 네트워크를 결합한 국내 AI 인프라 수요를 통신 자산으로 흡수하려는 흐름입니다.",
+        heat: ["AIDC", "GPU", "Network", "Power"]
+      },
+      {
+        label: "반도체·디지털 트윈 협력",
+        term: "on-device",
+        description: "제조 현장과 반도체 공정에 AI 시뮬레이션과 디지털 트윈을 붙여 B2B 레퍼런스를 만들고 있습니다.",
+        heat: ["Digital Twin", "Semiconductor", "Factory", "NVIDIA"]
+      },
+      {
+        label: "엔터프라이즈 AX 패키징",
+        term: "evalops",
+        description: "기업 고객에게 모델보다 상담, 보안, 품질 운영을 묶은 AX 패키지로 판매하는 전략이 중요합니다.",
+        heat: ["AX", "AICC", "Security", "Ops"]
+      }
+    ]
+  },
+  {
+    id: "samsung",
+    name: "Samsung",
+    sector: "Device & Chip",
+    color: "#3563c8",
+    short: "SS",
+    focus: "온디바이스 AI와 반도체",
+    terms: ["on-device", "evalops", "agent", "sovereign"],
+    agendas: [
+      {
+        label: "Galaxy AI 온디바이스화",
+        term: "on-device",
+        description: "스마트폰의 실시간 번역, 요약, 개인화 기능이 로컬 추론과 프라이버시 메시지의 대표 접점입니다.",
+        heat: ["Galaxy AI", "NPU", "Privacy", "Mobile"]
+      },
+      {
+        label: "AI 반도체 공급망",
+        term: "on-device",
+        description: "HBM, 메모리, 파운드리 수요가 AI 서비스 원가와 공급 안정성을 좌우하는 사업 변수입니다.",
+        heat: ["HBM", "Memory", "Foundry", "NPU"]
+      },
+      {
+        label: "가전·로봇 AI 접점",
+        term: "agent",
+        description: "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 서비스 번들과 데이터 접점이 새로 열립니다.",
+        heat: ["Home AI", "Robot", "TV", "Appliance"]
+      },
+      {
+        label: "기기 내 데이터 거버넌스",
+        term: "evalops",
+        description: "개인 데이터가 기기에서 처리될수록 모델 업데이트, 권한, 안전성 평가 체계가 구매 조건이 됩니다.",
+        heat: ["On-device Eval", "Permission", "Update", "Safety"]
+      }
+    ]
+  },
+  {
+    id: "lgai",
+    name: "LG AI Research",
+    sector: "Industrial AI",
+    color: "#9a3f5d",
+    short: "LG",
+    focus: "산업 특화 모델과 제조 AI",
+    terms: ["evalops", "agent", "sovereign", "on-device"],
+    agendas: [
+      {
+        label: "EXAONE 산업 모델",
+        term: "evalops",
+        description: "범용 챗봇보다 제조, 화학, 바이오 같은 그룹 산업 데이터를 잘 다루는 특화 모델 전략입니다.",
+        heat: ["EXAONE", "Manufacturing", "Chemistry", "Bio"]
+      },
+      {
+        label: "제조 현장 자동화",
+        term: "agent",
+        description: "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
+        heat: ["Inspection", "Factory", "Anomaly", "Workflow"]
+      },
+      {
+        label: "기업 데이터 폐쇄망",
+        term: "sovereign",
+        description: "민감한 산업 데이터는 클라우드보다 사내망과 전용 모델 운영 요구가 강해질 수 있습니다.",
+        heat: ["Private Data", "On-prem", "Governance", "B2B"]
+      },
+      {
+        label: "멀티모달 R&D",
+        term: "on-device",
+        description: "이미지, 센서, 문서 데이터를 함께 읽는 모델이 산업 AI 정확도와 자동화 범위를 넓힙니다.",
+        heat: ["Vision", "Sensor", "Document", "Multimodal"]
+      }
+    ]
+  },
+  {
+    id: "kt",
+    name: "KT",
+    sector: "Telco Cloud",
+    color: "#7a5a26",
+    short: "KT",
+    focus: "통신 AX와 공공 클라우드",
+    terms: ["agent", "sovereign", "evalops", "on-device"],
+    agendas: [
+      {
+        label: "AICC·상담 자동화",
+        term: "agent",
+        description: "콜센터, 영업, 고객 응대를 AI가 처리하면서 통신사의 B2B AX 매출화가 빨라질 수 있습니다.",
+        heat: ["AICC", "Contact Center", "Sales", "Agent"]
+      },
+      {
+        label: "공공·금융 AI 클라우드",
+        term: "sovereign",
+        description: "국내 데이터 보관과 보안 요구가 강한 고객에게 로컬 클라우드와 모델 운영을 묶어 제안합니다.",
+        heat: ["Public", "Finance", "Cloud", "Compliance"]
+      },
+      {
+        label: "망 데이터 기반 품질 운영",
+        term: "evalops",
+        description: "네트워크와 고객 운영 데이터를 AI 서비스 품질, 장애 예측, 보안 운영으로 연결할 수 있습니다.",
+        heat: ["Network Data", "Ops", "SOC", "Quality"]
+      },
+      {
+        label: "엣지 AI 접점",
+        term: "on-device",
+        description: "통신망과 엣지 인프라를 활용하면 지연시간이 중요한 산업 현장 AI에 강점이 생깁니다.",
+        heat: ["Edge", "5G", "Latency", "Factory"]
+      }
+    ]
+  },
+  {
+    id: "upstage",
+    name: "Upstage",
+    sector: "AI Startup",
+    color: "#0f8f82",
+    short: "UP",
+    focus: "문서 AI와 기업 LLM",
+    terms: ["ai-code", "agent", "evalops", "sovereign"],
+    agendas: [
+      {
+        label: "문서 AI 업무 자동화",
+        term: "agent",
+        description: "계약서, 청구서, 내부 문서 처리 자동화는 기업이 바로 비용 절감을 체감하는 AI 영역입니다.",
+        heat: ["Document AI", "OCR", "Invoice", "Contract"]
+      },
+      {
+        label: "Solar LLM 기업 API",
+        term: "sovereign",
+        description: "한국어와 기업 문서에 최적화된 모델 API로 글로벌 모델 의존도를 낮추는 선택지가 됩니다.",
+        heat: ["Solar", "Korean LLM", "API", "Enterprise"]
+      },
+      {
+        label: "평가 기반 도입 설득",
+        term: "evalops",
+        description: "벤치마크와 PoC 결과를 구매 논리로 연결해야 스타트업의 엔터프라이즈 영업이 쉬워집니다.",
+        heat: ["Benchmark", "PoC", "Accuracy", "Eval"]
+      },
+      {
+        label: "개발자 워크플로 연동",
+        term: "ai-code",
+        description: "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
+        heat: ["API", "SDK", "Search", "Workflow"]
+      }
+    ]
+  },
+  {
+    id: "rebellions",
+    name: "Rebellions",
+    sector: "AI Semiconductor",
+    color: "#d68419",
+    short: "RB",
+    focus: "국산 AI 가속기와 추론 원가",
+    terms: ["on-device", "sovereign", "evalops", "agent"],
+    agendas: [
+      {
+        label: "국산 AI 칩 공급",
+        term: "on-device",
+        description: "국내 데이터센터의 추론 원가와 공급망 리스크를 낮추는 대안으로 AI 가속기 수요가 커집니다.",
+        heat: ["AI Chip", "Inference", "NPU", "Datacenter"]
+      },
+      {
+        label: "통신·클라우드 협력",
+        term: "sovereign",
+        description: "통신사와 클라우드 사업자가 국산 칩을 채택하면 소버린 AI 인프라 논리가 강해집니다.",
+        heat: ["Telco", "Cloud", "Sovereign", "Rack"]
+      },
+      {
+        label: "모델 최적화 생태계",
+        term: "evalops",
+        description: "칩 성능은 모델 압축, 서빙, 벤치마크 툴과 묶일 때 실제 구매 이유가 됩니다.",
+        heat: ["Optimization", "Serving", "Benchmark", "SDK"]
+      },
+      {
+        label: "온프레미스 AI 수요",
+        term: "agent",
+        description: "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
+        heat: ["On-prem", "Private AI", "Security", "B2B"]
+      }
+    ]
+  },
+  {
+    id: "furiosa",
+    name: "FuriosaAI",
+    sector: "AI Semiconductor",
+    color: "#3f8f4f",
+    short: "FA",
+    focus: "저전력 추론 칩",
+    terms: ["on-device", "evalops", "sovereign", "agent"],
+    agendas: [
+      {
+        label: "저전력 추론 원가",
+        term: "on-device",
+        description: "GPU 의존도가 높아질수록 전력 대비 추론 성능은 AI 서비스 마진의 핵심 지표가 됩니다.",
+        heat: ["Low Power", "Inference", "TCO", "Server"]
+      },
+      {
+        label: "서버 생태계 확장",
+        term: "sovereign",
+        description: "국산 칩이 서버, 클라우드, SI 파트너와 묶여야 실제 도입 가능한 인프라 대안이 됩니다.",
+        heat: ["Server", "Cloud", "Partner", "Deployment"]
+      },
+      {
+        label: "벤치마크 신뢰 확보",
+        term: "evalops",
+        description: "칩 도입은 성능 수치보다 실제 모델 워크로드에서 검증된 벤치마크와 안정성이 중요합니다.",
+        heat: ["Benchmark", "Workload", "Stability", "SDK"]
+      },
+      {
+        label: "전용 AI 어플라이언스",
+        term: "agent",
+        description: "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
+        heat: ["Appliance", "Edge", "Factory", "Private"]
+      }
+    ]
+  },
+  {
+    id: "wrtn",
+    name: "Wrtn",
+    sector: "AI Service",
+    color: "#7b61c9",
+    short: "WR",
+    focus: "개인·소상공인 AI 앱",
+    terms: ["agent", "ai-code", "evalops", "sovereign"],
+    agendas: [
+      {
+        label: "B2C AI 슈퍼앱",
+        term: "agent",
+        description: "검색, 작성, 요약, 자동화를 한 앱 안에 묶어 일반 사용자 접점을 넓히는 전략입니다.",
+        heat: ["Super App", "Search", "Write", "Automation"]
+      },
+      {
+        label: "소상공인 업무 자동화",
+        term: "agent",
+        description: "마케팅 문구, 고객 응대, 예약, 콘텐츠 운영은 작지만 반복적인 지불 의사가 있는 영역입니다.",
+        heat: ["SMB", "Marketing", "CS", "Reservation"]
+      },
+      {
+        label: "콘텐츠 생성 워크플로",
+        term: "ai-code",
+        description: "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
+        heat: ["Content", "Image", "Video", "Workflow"]
+      },
+      {
+        label: "사용자 데이터 신뢰",
+        term: "evalops",
+        description: "개인 업무 데이터를 다루는 서비스일수록 보관, 삭제, 추천 투명성 메시지가 중요합니다.",
+        heat: ["User Data", "Trust", "Deletion", "Consent"]
+      }
+    ]
+  },
+  {
+    id: "fasoo",
+    name: "Fasoo AI",
+    sector: "Security AI",
+    color: "#c54b40",
+    short: "FS",
+    focus: "문서 보안과 기업 AX",
+    terms: ["evalops", "agent", "sovereign", "ai-code"],
+    agendas: [
+      {
+        label: "문서 보안 AI",
+        term: "evalops",
+        description: "기업 문서와 민감정보를 AI가 다룰 때 접근권한, 추적, 유출 방지가 구매 조건이 됩니다.",
+        heat: ["DRM", "DLP", "Audit", "Policy"]
+      },
+      {
+        label: "글로벌 AX 영업",
+        term: "agent",
+        description: "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
+        heat: ["AX", "US", "Manufacturing", "Finance"]
+      },
+      {
+        label: "데이터 거버넌스 번들",
+        term: "sovereign",
+        description: "AI 도입 전 데이터 분류, 권한, 보존 정책을 정리하는 보안 번들이 중요해집니다.",
+        heat: ["Governance", "Classification", "Retention", "Permission"]
+      },
+      {
+        label: "문서 워크플로 자동화",
+        term: "ai-code",
+        description: "검토, 요약, 승인, 배포를 문서 보안 체계 안에서 자동화하면 기존 고객 기반을 확장할 수 있습니다.",
+        heat: ["Review", "Summary", "Approval", "Workflow"]
+      }
+    ]
+  },
+  {
+    id: "microsoft",
+    name: "Microsoft",
+    sector: "Enterprise Stack",
+    color: "#c54b40",
+    short: "MS",
+    focus: "Copilot 운영면과 보안",
+    terms: ["agent", "evalops", "ai-code", "mcp"],
+    agendas: [
+      {
+        label: "Copilot 업무 레이어화",
+        term: "agent",
+        description: "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
+        heat: ["Office", "Teams", "Workflow", "Agent"]
+      },
+      {
+        label: "Graph Grounding 강화",
+        term: "mcp",
+        description: "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
+        heat: ["Graph", "Identity", "Context", "Permission"]
+      },
+      {
+        label: "보안 Copilot 확장",
+        term: "evalops",
+        description: "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
+        heat: ["SOC", "Defender", "Audit", "Policy"]
+      },
+      {
+        label: "개발자 플랫폼 방어",
+        term: "ai-code",
+        description: "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
+        heat: ["GitHub", "Azure DevOps", "Review", "CI"]
+      }
+    ]
+  }
+];
+
+const companyPriority = [
+  "naver",
+  "kakao",
+  "sktelecom",
+  "samsung",
+  "lgai",
+  "kt",
+  "upstage",
+  "rebellions",
+  "furiosa",
+  "wrtn",
+  "fasoo",
+  "openai",
+  "anthropic",
+  "google",
+  "microsoft"
+];
+
+function decodeXml(value = "") {
+  return value
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&#x27;/g, "'")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function tag(block, name) {
+  const match = block.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${name}>`, "i"));
+  return match ? decodeXml(match[1]) : "";
+}
+
+function parseFeed(xml, sourceName) {
+  const blocks = [...xml.matchAll(/<item[\s\S]*?<\/item>/gi)].map((match) => match[0]);
+  const entries = blocks.length ? blocks : [...xml.matchAll(/<entry[\s\S]*?<\/entry>/gi)].map((match) => match[0]);
+
+  return entries
+    .map((block) => {
+      const rawLink = tag(block, "link");
+      const hrefMatch = block.match(/<link[^>]+href="([^"]+)"/i);
+      const published = tag(block, "pubDate") || tag(block, "updated") || tag(block, "published");
+      const publishedAt = published ? new Date(published) : new Date();
+      return {
+        source: sourceName,
+        title: tag(block, "title"),
+        summary: tag(block, "description") || tag(block, "summary") || tag(block, "content:encoded"),
+        link: hrefMatch ? hrefMatch[1] : rawLink,
+        publishedAt: Number.isNaN(publishedAt.getTime()) ? new Date() : publishedAt
+      };
+    })
+    .filter((item) => item.title);
+}
+
+function absoluteUrl(url, baseUrl) {
+  try {
+    return new URL(url, baseUrl).toString();
+  } catch {
+    return "";
+  }
+}
+
+function cleanTitle(value) {
+  const cleaned = decodeXml(value)
+    .replace(/^\[[^\]]+\]\s*/g, "")
+    .replace(/^[가-힣]{2,4}\s?기자\s*/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (cleaned.length <= 96) return cleaned;
+  const sentenceEnd = cleaned.slice(0, 120).search(/[.!?。]|다\./);
+  if (sentenceEnd > 28 && sentenceEnd < 96) return cleaned.slice(0, sentenceEnd + 1);
+  return `${cleaned.slice(0, 92).trim()}...`;
+}
+
+function parseHtmlLinks(html, source) {
+  const anchors = [...html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
+  return anchors
+    .map((match) => {
+      const link = absoluteUrl(decodeXml(match[1]), source.url);
+      const title = cleanTitle(match[2]);
+      return {
+        source: source.name,
+        title,
+        summary: title,
+        link,
+        publishedAt: new Date()
+      };
+    })
+    .filter((item) => item.link && item.title.length >= 12)
+    .filter((item) => {
+      const haystack = `${item.title} ${item.link}`.toLowerCase();
+      return /ai|인공지능|생성형|챗gpt|openai|anthropic|google|naver|agent|mcp|llm|클라우드|반도체|보안|로봇|데이터/.test(haystack);
+    })
+    .slice(0, 30);
+}
+
+async function fetchSource(source) {
+  if (!source.feed && source.mode !== "html") return [];
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
+  try {
+    const response = await fetch(source.feed || source.url, {
+      headers: { "user-agent": "SignalDesk/1.0" },
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+    const body = await response.text();
+    return source.mode === "html" ? parseHtmlLinks(body, source) : parseFeed(body, source.name);
+  } catch (error) {
+    console.warn(`[warn] ${source.name}: ${error.message}`);
+    return [];
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function uniqByTitle(items) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const key = item.title.toLowerCase().replace(/[^a-z0-9가-힣]/g, "").slice(0, 90);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function scoreArticle(article, term) {
+  const title = article.title.toLowerCase();
+  const body = `${article.title} ${article.summary}`.toLowerCase();
+  return term.aliases.reduce((score, alias) => {
+    const lowered = alias.toLowerCase();
+    if (title.includes(lowered)) return score + 3;
+    if (body.includes(lowered)) return score + 1;
+    return score;
+  }, 0);
+}
+
+function scoreTerms(articles) {
+  return agendaTerms
+    .map((term) => {
+      const matches = articles
+        .map((article) => ({ article, score: scoreArticle(article, term) }))
+        .filter((match) => match.score > 0)
+        .sort((a, b) => b.score - a.score || b.article.publishedAt - a.article.publishedAt);
+
+      const score = matches.reduce((sum, match) => sum + match.score, 0);
+      const sourceCount = new Set(matches.map((match) => match.article.source)).size;
+      return { ...term, matches, score, sourceCount };
+    })
+    .sort((a, b) => b.score - a.score || b.sourceCount - a.sourceCount);
+}
+
+const koreaBusinessRules = [
+  {
+    label: "한국 직접성",
+    weight: 36,
+    keywords: [
+      "한국",
+      "국내",
+      "네이버",
+      "naver",
+      "카카오",
+      "kakao",
+      "삼성",
+      "samsung",
+      "sk",
+      "skt",
+      "kt",
+      "lg",
+      "현대",
+      "쿠팡",
+      "토스",
+      "업스테이지",
+      "뤼튼",
+      "리벨리온",
+      "퓨리오사",
+      "파수",
+      "더존",
+      "한글과컴퓨터",
+      "스마일게이트",
+      "개인정보보호위원회",
+      "과기정통부",
+      "금융위"
+    ],
+    detail: "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+  },
+  {
+    label: "사업화 신호",
+    weight: 22,
+    keywords: ["출시", "상용화", "도입", "투자", "인수", "파트너십", "법인", "공략", "시장", "고객", "매출", "요금", "엔터프라이즈", "b2b", "ax", "솔루션"],
+    detail: "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+  },
+  {
+    label: "규제·리스크",
+    weight: 22,
+    keywords: ["개인정보", "규제", "보안", "저작권", "소송", "감사", "정책", "가이드라인", "유출", "안전", "심의", "compliance"],
+    detail: "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
+  },
+  {
+    label: "인프라·원가",
+    weight: 18,
+    keywords: ["데이터센터", "gpu", "npu", "반도체", "클라우드", "aws", "azure", "엔비디아", "nvidia", "전력", "칩", "서버", "tpu"],
+    detail: "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
+  },
+  {
+    label: "산업 적용",
+    weight: 16,
+    keywords: ["금융", "의료", "헬스케어", "제조", "리테일", "게임", "커머스", "물류", "반도체", "자동차", "공공"],
+    detail: "실제 산업 적용과 고객 세그먼트 확장을 보여줍니다."
+  },
+  {
+    label: "인재·생태계",
+    weight: 8,
+    keywords: ["교육", "대학", "인재", "연구", "kaist", "카이스트"],
+    detail: "채용, 인재 공급, 산학 생태계 관점에서 참고할 신호입니다."
+  },
+  {
+    label: "플랫폼 경쟁",
+    weight: 14,
+    keywords: ["openai", "anthropic", "google", "microsoft", "aws", "claude", "gemini", "copilot", "codex", "오픈ai", "앤트로픽", "구글"],
+    detail: "국내 사업자가 의존하거나 경쟁해야 하는 글로벌 플랫폼 변화입니다."
+  }
+];
+
+function businessRelevanceForArticle(article, generatedAt = new Date()) {
+  const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
+  const hits = koreaBusinessRules
+    .map((rule) => {
+      let matched = rule.keywords.filter((keyword) => haystack.includes(keyword.toLowerCase()));
+      if (rule.label === "사업화 신호" && /대학|kaist|카이스트|교육/.test(haystack)) {
+        matched = matched.filter((keyword) => !["투자", "시장"].includes(keyword));
+      }
+      return {
+        ...rule,
+        matched
+      };
+    })
+    .filter((rule) => rule.matched.length);
+  const sourceBoost = /AI Times|DigitalToday|Bloter|ZDNet Korea|Naver|Daum/.test(article.source) ? 10 : 0;
+  const hours = Math.max(1, Math.round((generatedAt.getTime() - article.publishedAt.getTime()) / 36e5));
+  const recencyBoost = hours <= 24 ? 8 : hours <= 72 ? 4 : 0;
+  const rawScore = hits.reduce((sum, rule) => sum + rule.weight, sourceBoost + recencyBoost);
+  const score = Math.min(100, rawScore);
+
+  return {
+    score,
+    level: score >= 70 ? "높음" : score >= 45 ? "중간" : "낮음",
+    reasons: hits.slice(0, 3).map((rule) => ({
+      label: rule.label,
+      value: rule.matched.slice(0, 2).join(", "),
+      detail: rule.detail
+    }))
+  };
+}
+
+function isAiBusinessArticle(article) {
+  const haystack = `${article.title} ${article.summary}`.toLowerCase();
+  return /ai|인공지능|생성형|llm|에이전트|agent|오픈ai|openai|앤트로픽|anthropic|클로드|claude|gemini|제미나이|copilot|코파일럿|codex|npu|gpu|데이터센터|디지털 트윈|로봇|robot|모델|챗봇|chatbot|머신러닝|딥러닝/.test(haystack);
+}
+
+function aggregateBusinessRelevance(matches, generatedAt) {
+  const scored = matches
+    .map((match) => ({
+      ...match,
+      businessRelevance: businessRelevanceForArticle(match.article, generatedAt)
+    }))
+    .sort(
+      (a, b) =>
+        b.businessRelevance.score - a.businessRelevance.score ||
+        b.score - a.score ||
+        b.article.publishedAt - a.article.publishedAt
+    );
+  const topScore = scored[0]?.businessRelevance.score || 0;
+  const averageTop = scored.length
+    ? Math.round(scored.slice(0, 3).reduce((sum, item) => sum + item.businessRelevance.score, 0) / Math.min(scored.length, 3))
+    : 0;
+  const reasons = scored.flatMap((item) => item.businessRelevance.reasons).slice(0, 3);
+  return {
+    score: Math.max(topScore, averageTop),
+    level: Math.max(topScore, averageTop) >= 70 ? "높음" : Math.max(topScore, averageTop) >= 45 ? "중간" : "낮음",
+    reasons,
+    matches: scored
+  };
+}
+
+function kstParts(date) {
+  const shifted = new Date(date.getTime() + KST_OFFSET_MS);
+  return {
+    year: shifted.getUTCFullYear(),
+    month: String(shifted.getUTCMonth() + 1).padStart(2, "0"),
+    day: String(shifted.getUTCDate()).padStart(2, "0"),
+    hour: String(shifted.getUTCHours()).padStart(2, "0"),
+    minute: String(shifted.getUTCMinutes()).padStart(2, "0"),
+    weekday: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][shifted.getUTCDay()]
+  };
+}
+
+function formatKst(date) {
+  const part = kstParts(date);
+  return `${part.year}.${part.month}.${part.day} ${part.hour}:${part.minute}`;
+}
+
+function formatKstDate(date) {
+  const part = kstParts(date);
+  return `${part.year}.${part.month}.${part.day} ${part.weekday}`;
+}
+
+function formatKstKey(date) {
+  const part = kstParts(date);
+  return `${part.year}-${part.month}-${part.day}`;
+}
+
+function nextKstMorning(date) {
+  const shifted = new Date(date.getTime() + KST_OFFSET_MS);
+  const next = new Date(Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate(), 8, 0, 0));
+  if (shifted.getUTCHours() >= 8) next.setUTCDate(next.getUTCDate() + 1);
+  return new Date(next.getTime() - KST_OFFSET_MS);
+}
+
+function widthPercent(value, max) {
+  const width = Math.max(24, Math.round((value / Math.max(max, 1)) * 100));
+  return `${width}%`;
+}
+
+function hashtagsForTerm(term, matches) {
+  const companyTags = ["OpenAI", "Anthropic", "Google", "Naver", "Microsoft", "NVIDIA", "Notion", "Meta"]
+    .filter((name) => matches.some(({ article }) => `${article.title} ${article.summary}`.toLowerCase().includes(name.toLowerCase())))
+    .slice(0, 2);
+  const aliasTags = term.aliases
+    .filter((alias) => alias.length <= 18)
+    .map((alias) => alias.replace(/\s+/g, ""))
+    .slice(0, 3);
+  return [...new Set([term.label.replace(/\s+/g, ""), ...companyTags, ...aliasTags])]
+    .slice(0, 5)
+    .map((tag) => `#${tag}`);
+}
+
+function relatedCompaniesForTerm(term, matches) {
+  const knownCompanies = [
+    ...companies.map((company) => company.name),
+    "NVIDIA",
+    "Meta",
+    "Apple",
+    "Amazon",
+    "Samsung",
+    "Kakao",
+    "SK Telecom"
+  ];
+  const haystack = matches
+    .slice(0, 12)
+    .map(({ article }) => `${article.title} ${article.summary}`)
+    .join(" ")
+    .toLowerCase();
+  const mentioned = knownCompanies.filter((name) => haystack.includes(name.toLowerCase()));
+  const strategic = companies.filter((company) => company.terms.includes(term.id)).map((company) => company.name);
+  return [...new Set([...mentioned, ...strategic])].slice(0, 5);
+}
+
+function sourcesForTerm(term, matches) {
+  const articleSources = matches
+    .slice(0, 6)
+    .map(({ article }) => ({
+      title: article.title,
+      url: article.link,
+      media: article.source,
+      time: formatKst(article.publishedAt)
+    }))
+    .filter((source) => source.title && source.url);
+
+  if (articleSources.length) return articleSources;
+
+  return sources.slice(0, 3).map((source) => ({
+    title: `${term.label} 레이더 수집 대기`,
+    url: source.url,
+    media: source.name
+  }));
+}
+
+function sourcesForCompanyAgenda(company, agenda, termSignal, allArticles = []) {
+  const matches = termSignal.matches || [];
+  const productNeedles = {
+    openai: ["OpenAI", "ChatGPT", "Codex", "Agents SDK", "Responses API", "Sora"],
+    anthropic: ["Anthropic", "Claude", "Claude Code", "MCP"],
+    google: ["Google", "Gemini", "AI Overviews", "Android", "Chrome", "TPU", "Vertex"],
+    naver: ["Naver", "네이버", "HyperCLOVA", "CLOVA", "클로바"],
+    kakao: ["Kakao", "카카오", "카카오톡", "KoGPT", "카나나"],
+    sktelecom: ["SK Telecom", "SKT", "에이닷", "A.", "SK하이닉스", "SK hynix"],
+    samsung: ["Samsung", "삼성", "Galaxy AI", "갤럭시 AI", "HBM"],
+    lgai: ["LG AI", "LG AI Research", "EXAONE", "엑사원", "LG"],
+    kt: ["KT", "케이티", "AICC", "믿음"],
+    upstage: ["Upstage", "업스테이지", "Solar", "솔라"],
+    rebellions: ["Rebellions", "리벨리온", "ATOM", "Rebel"],
+    furiosa: ["Furiosa", "FuriosaAI", "퓨리오사", "Warboy", "RNGD"],
+    wrtn: ["Wrtn", "뤼튼"],
+    fasoo: ["Fasoo", "파수", "심볼로직", "Symbologic"],
+    microsoft: ["Microsoft", "Copilot", "Graph", "Office", "Teams", "Defender", "GitHub", "Azure", "Windows"]
+  };
+  const needles = [company.name, company.id, ...(productNeedles[company.id] || [])]
+    .map((value) => String(value).toLowerCase())
+    .filter((value) => value.length > 2);
+  const directMatches = matches.filter(({ article }) => {
+    const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
+    return needles.some((needle) => haystack.includes(needle));
+  });
+  const companyWideMatches = allArticles
+    .map((article) => ({ article, score: 0 }))
+    .filter(({ article }) => {
+      const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
+      return needles.some((needle) => haystack.includes(needle));
+    });
+  const selected = (directMatches.length ? directMatches : companyWideMatches).slice(0, 3);
+  const evidence = directMatches.length
+    ? "회사/제품 직접 언급"
+    : "회사 최신 원문 신호";
+
+  return selected.map(({ article }) => ({
+    title: article.title,
+    url: article.link,
+    media: article.source,
+    time: formatKst(article.publishedAt),
+    evidence
+  }));
+}
+
+function sourceSummaryForCompanyAgenda(sources, termSignal, company) {
+  if (!sources.length) return `${company.name} 직접 원문 수집 대기`;
+  const media = [...new Set(sources.map((source) => source.media))].slice(0, 2).join(", ");
+  const directCount = sources.filter((source) => source.evidence === "회사/제품 직접 언급").length;
+  const companyCount = sources.filter(
+    (source) => source.evidence === "회사/제품 직접 언급" || source.evidence === "회사 최신 원문 신호"
+  ).length;
+  const basis = directCount ? "직접 근거" : companyCount ? "회사 원문" : "시장 신호";
+  return `${media} · ${basis} ${sources.length}건`;
+}
+
+function takeawayForCompanyAgenda(company, agenda, termId) {
+  const guide = {
+    agent: "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요.",
+    mcp: "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요.",
+    "ai-code": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요.",
+    evalops: "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요.",
+    "on-device": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요.",
+    sovereign: "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+  };
+  return agenda.takeaway || guide[termId] || `${company.name}의 ${agenda.label} 움직임이 제품, 파트너십, 리스크에 주는 영향을 점검하세요.`;
+}
+
+function whyHotForTerm(term, matches, sourceCount, mentions) {
+  const sources = [...new Set(matches.slice(0, 5).map((match) => match.article.source))];
+  if (!matches.length) {
+    return `${term.label} 관련 키워드가 상시 추적 대상에 올라와 있어 기본 레이더에 유지됩니다.`;
+  }
+  return `${sources.slice(0, 3).join(", ")} 등 ${sourceCount}개 소스에서 ${matches.length}개 기사 신호가 잡혔고, 키워드 가중 언급이 ${mentions}회로 묶였습니다.`;
+}
+
+function hotnessForTerm({ term, matches, sourceCount, mentions, relatedCompanies, sourceLinks, businessRelevance }) {
+  const sourceNames = [...new Set(matches.slice(0, 6).map((match) => match.article.source))];
+  const recentHours = matches.length
+    ? Math.max(1, Math.round((Date.now() - Math.max(...matches.map((match) => match.article.publishedAt.getTime()))) / 36e5))
+    : null;
+
+  return {
+    formula: "소스 다양성 + 기사 신호 수 + 키워드 언급 밀도 + 기업 연결성을 함께 반영",
+    reasons: [
+      {
+        label: "사업 임팩트",
+        value: `${businessRelevance.score}점`,
+        detail: businessRelevance.reasons[0]?.detail || "한국 AI 사업 관점의 직접성, 사업화, 규제, 인프라 신호를 반영했습니다."
+      },
+      {
+        label: "매체 분산",
+        value: `${sourceCount}개`,
+        detail: sourceNames.length
+          ? `${sourceNames.slice(0, 3).join(", ")} 등 서로 다른 매체에서 같은 의제가 반복 감지됐습니다.`
+          : "기본 추적 소스에서 상시 모니터링 중인 의제입니다."
+      },
+      {
+        label: "기사 신호",
+        value: `${Math.max(matches.length, sourceLinks.length)}건`,
+        detail: "최근 24시간 수집분 중 제목과 요약이 해당 의제와 직접 맞물린 기사입니다."
+      },
+      {
+        label: "언급 밀도",
+        value: `${mentions}회`,
+        detail: `${term.label} 및 유사 표현이 제목, 요약, 출처 신호에서 가중치 있게 반복됐습니다.`
+      },
+      {
+        label: "기업 연결",
+        value: `${relatedCompanies.length}곳`,
+        detail: `${relatedCompanies.slice(0, 4).join(", ")}의 제품, 인프라, 정책 움직임과 연결됩니다.`
+      },
+      {
+        label: "최신성",
+        value: recentHours ? `${recentHours}h` : "상시",
+        detail: recentHours ? `가장 최근 관련 신호가 약 ${recentHours}시간 전 수집됐습니다.` : "최신 기사 수집 전에도 추적해야 하는 상시 레이더 의제입니다."
+      }
+    ]
+  };
+}
+
+function hashId(value) {
+  let hash = 0;
+  for (const char of value) hash = (hash << 5) - hash + char.charCodeAt(0);
+  return Math.abs(hash).toString(36);
+}
+
+function relatedCompaniesForArticle(article) {
+  const knownCompanies = [
+    ...companies.map((company) => company.name),
+    "NVIDIA",
+    "Meta",
+    "Apple",
+    "Amazon",
+    "Samsung",
+    "Kakao",
+    "SK Telecom"
+  ];
+  const haystack = `${article.title} ${article.summary}`.toLowerCase();
+  return knownCompanies.filter((name) => haystack.includes(name.toLowerCase())).slice(0, 5);
+}
+
+function hashtagsForArticle(article) {
+  const topicTags = agendaTerms
+    .filter((term) => scoreArticle(article, term) > 0)
+    .map((term) => term.label.replace(/\s+/g, ""));
+  const companyTags = relatedCompaniesForArticle(article);
+  return [...new Set(["News", ...topicTags, ...companyTags])]
+    .slice(0, 5)
+    .map((tag) => `#${tag}`);
+}
+
+function hotnessForArticle(article, generatedAt, businessRelevance) {
+  const hours = Math.max(1, Math.round((generatedAt.getTime() - article.publishedAt.getTime()) / 36e5));
+  return {
+    formula: "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+    reasons: [
+      {
+        label: "사업 임팩트",
+        value: `${businessRelevance.score}점`,
+        detail: businessRelevance.reasons[0]?.detail || "한국 AI 사업자에게 영향을 줄 수 있는 사업, 규제, 인프라 신호를 반영했습니다."
+      },
+      {
+        label: "수집 시각",
+        value: `${hours}h`,
+        detail: `약 ${hours}시간 전 발행 또는 수집된 최신 원문입니다.`
+      },
+      {
+        label: "원문 소스",
+        value: article.source,
+        detail: `${article.source}에서 직접 수집한 기사 링크가 있습니다.`
+      },
+      {
+        label: "직접 원문",
+        value: "1건",
+        detail: "기본 추적 의제가 아니라 실제 원문 기사 단위로 표시한 신호입니다."
+      },
+      {
+        label: "확인 필요",
+        value: "우선",
+        detail: "의제 클러스터가 약할 때는 원문을 먼저 읽고 판단하도록 노출합니다."
+      }
+    ]
+  };
+}
+
+function buildNewsAgenda(article, generatedAt, index, businessRelevance = businessRelevanceForArticle(article, generatedAt)) {
+  const relatedCompanies = relatedCompaniesForArticle(article);
+  const summary =
+    article.summary && article.summary !== article.title
+      ? cleanTitle(article.summary)
+      : "최근 수집된 원문 신호입니다. 제목과 출처를 기준으로 우선 확인할 뉴스입니다.";
+  return {
+    rank: index + 1,
+    id: `news-${index + 1}-${hashId(article.link || article.title)}`,
+    collectedAt: `${formatKst(generatedAt)} KST`,
+    title: article.title,
+    score: Math.max(58, Math.min(98, businessRelevance.score + 18 - index * 3)),
+    summary,
+    mentions: 1,
+    sources: [
+      {
+        title: article.title,
+        url: article.link,
+        media: article.source,
+        time: formatKst(article.publishedAt)
+      }
+    ],
+    sourceCount: 1,
+    momentum: "NEW",
+    metric: "원문 1건",
+    reason: `${article.source} 최신 원문이며 한국 AI 사업 임팩트 ${businessRelevance.score}점으로 분류됐습니다.`,
+    whyHot: `${article.source} 최신 원문이며 한국 AI 사업 임팩트 ${businessRelevance.score}점으로 분류됐습니다.`,
+    businessRelevance,
+    hotness: hotnessForArticle(article, generatedAt, businessRelevance),
+    keywords: hashtagsForArticle(article),
+    hashtags: hashtagsForArticle(article),
+    related_companies: relatedCompanies,
+    signals: `${article.source} 최신 원문 신호`,
+    articles: [
+      {
+        title: article.title,
+        source: article.source,
+        url: article.link,
+        time: formatKst(article.publishedAt)
+      }
+    ],
+    brief: {
+      background: `${article.source}에서 수집된 최신 원문 신호입니다.`,
+      reaction: "관련 의제 클러스터가 충분하지 않을 때는 자동 해석보다 원문 확인 우선으로 표시합니다.",
+      implication: "회사별 근거 레이더나 키워드 타임라인과 연결해 제품, 투자, 리스크 관점의 후속 판단을 진행하세요."
+    }
+  };
+}
+
+function buildHotAgendas(scoredTerms, generatedAt, articles) {
+  const terms = scoredTerms
+    .map((term) => {
+      const businessRelevance = aggregateBusinessRelevance(term.matches, generatedAt);
+      return {
+        ...term,
+        matches: businessRelevance.matches,
+        businessRelevance
+      };
+    })
+    .filter((term) => term.score > 0 && term.matches.length && term.businessRelevance.score >= 45)
+    .sort((a, b) => b.businessRelevance.score - a.businessRelevance.score || b.score - a.score || b.sourceCount - a.sourceCount)
+    .slice(0, 5);
+  const termAgendas = terms.map((term, index) => {
+    const topSources = [...new Set(term.matches.slice(0, 6).map((match) => match.article.source))].slice(0, 3);
+    const mentions = Math.max(18, term.score * 6 + term.sourceCount * 3);
+    const sourceCount = Math.max(term.sourceCount, topSources.length || 3);
+    const sourceLinks = sourcesForTerm(term, term.matches);
+    const score = Math.min(100, Math.max(58, Math.round(62 + term.score * 3 + sourceCount * 2 - index * 2)));
+    const reason = whyHotForTerm(term, term.matches, sourceCount, mentions);
+    const keywords = hashtagsForTerm(term, term.matches);
+    const relatedCompanies = relatedCompaniesForTerm(term, term.matches);
+    const hotness = hotnessForTerm({
+      term,
+      matches: term.matches,
+      sourceCount,
+      mentions,
+      relatedCompanies,
+      sourceLinks,
+      businessRelevance: term.businessRelevance
+    });
+    return {
+      rank: index + 1,
+      id: term.id,
+      collectedAt: `${formatKst(generatedAt)} KST`,
+      title: term.title,
+      score,
+      summary: term.summary,
+      mentions,
+      sources: sourceLinks,
+      sourceCount,
+      momentum: `+${Math.min(48, 12 + index * 3 + term.sourceCount * 4)}%`,
+      metric: `${sourceCount}개 매체 보도`,
+      reason,
+      whyHot: reason,
+      businessRelevance: {
+        score: term.businessRelevance.score,
+        level: term.businessRelevance.level,
+        reasons: term.businessRelevance.reasons
+      },
+      hotness,
+      keywords,
+      hashtags: keywords,
+      related_companies: relatedCompanies,
+      signals: topSources.length
+        ? `${topSources.join(", ")} 중심 ${term.matches.length}개 신호`
+        : `${term.label} 관련 기본 추적 신호`,
+      articles: term.matches.slice(0, 4).map(({ article }) => ({
+        title: article.title,
+        source: article.source,
+        url: article.link,
+        time: formatKst(article.publishedAt)
+      })),
+      brief: term.brief
+    };
+  });
+
+  if (termAgendas.length >= 5) return termAgendas;
+
+  const usedUrls = new Set(termAgendas.flatMap((agenda) => agenda.sources.map((source) => source.url)));
+  const rankedArticles = articles
+    .map((article) => ({
+      article,
+      businessRelevance: businessRelevanceForArticle(article, generatedAt)
+    }))
+    .filter(({ article, businessRelevance }) => article.link && article.title && isAiBusinessArticle(article) && businessRelevance.score >= 45)
+    .sort(
+      (a, b) =>
+        b.businessRelevance.score - a.businessRelevance.score ||
+        b.article.publishedAt - a.article.publishedAt
+    );
+  const latestNewsArticles = [];
+  for (const item of rankedArticles) {
+    if (usedUrls.has(item.article.link)) continue;
+    usedUrls.add(item.article.link);
+    latestNewsArticles.push(item);
+    if (latestNewsArticles.length >= 5 - termAgendas.length) break;
+  }
+  const latestNews = latestNewsArticles.map(({ article, businessRelevance }, index) =>
+    buildNewsAgenda(article, generatedAt, termAgendas.length + index, businessRelevance)
+  );
+
+  return [...termAgendas, ...latestNews].map((agenda, index) => ({ ...agenda, rank: index + 1 }));
+}
+
+function buildCompanies(scoredTerms, generatedAt, articles = []) {
+  const scoreMap = new Map(scoredTerms.map((term) => [term.id, term.score]));
+  const signalMap = new Map(scoredTerms.map((term) => [term.id, term]));
+  const labelMap = new Map(agendaTerms.map((term) => [term.id, term]));
+
+  return companies.map((company) => {
+    const ranked = company.agendas
+      .map((agenda, index) => {
+        const termId = agenda.term;
+        const term = labelMap.get(termId);
+        const termSignal = signalMap.get(termId) || { ...term, matches: [], score: 0, sourceCount: 0 };
+        const evidenceSources = sourcesForCompanyAgenda(company, agenda, termSignal, articles);
+        const rawScore = evidenceSources.length ? scoreMap.get(termId) || 1 : Math.max(1, (scoreMap.get(termId) || 1) * 0.45);
+        return {
+          label: agenda.label,
+          weight: Math.min(98, Math.max(44, rawScore * 7 + 40 - index * 5)),
+          color: term.color,
+          description: agenda.description,
+          heat: agenda.heat || [agenda.label, ...term.aliases.slice(0, 3)],
+          sources: evidenceSources,
+          sourceSummary: sourceSummaryForCompanyAgenda(evidenceSources, term, company),
+          takeaway: takeawayForCompanyAgenda(company, agenda, termId),
+          termId,
+          term
+        };
+      })
+      .sort((a, b) => b.weight - a.weight);
+
+    return {
+      id: company.id,
+      name: company.name,
+      sector: company.sector,
+      color: company.color,
+      short: company.short,
+      focus: company.focus,
+      updatedAt: `${formatKst(generatedAt)} KST`,
+      keywords: ranked.slice(0, 5).map(({ label, weight, color, description, termId, sources, sourceSummary, takeaway }) => ({
+        label,
+        weight,
+        color,
+        description,
+        termId,
+        sources,
+        sourceSummary,
+        takeaway
+      })),
+      stack: ranked.slice(0, 3).map(({ label, description, weight, termId, sources, sourceSummary, takeaway }) => ({
+        title: label,
+        body: description,
+        score: String(Math.round(weight)),
+        date: formatKst(generatedAt),
+        termId,
+        sources,
+        sourceSummary,
+        takeaway
+      })),
+      heat: ranked.flatMap(({ heat }) => heat).slice(0, 12)
+    };
+  }).sort((a, b) => companyPriority.indexOf(a.id) - companyPriority.indexOf(b.id));
+}
+
+function buildKeywordData(scoredTerms, generatedAt) {
+  return scoredTerms.slice(0, 6).map((term, index) => {
+    const score = Math.min(98, Math.max(52, term.score * 7 + 50 - index * 2));
+    const timeline = term.matches.slice(0, 4).map(({ article }) => ({
+      time: formatKst(article.publishedAt),
+      title: article.title,
+      type: article.source,
+      source: article.source,
+      url: article.link
+    }));
+
+    while (timeline.length < 4) {
+      timeline.push({
+        time: formatKst(new Date(generatedAt.getTime() - timeline.length * 45 * 60 * 1000)),
+        title: `${term.label} 관련 시장 신호 추적 업데이트`,
+        type: "Radar",
+        source: "Radar",
+        url: ""
+      });
+    }
+
+    return {
+      id: term.id,
+      label: term.label,
+      score,
+      aliases: term.aliases,
+      keywords: hashtagsForTerm(term, term.matches),
+      color: term.color,
+      description: term.description,
+      brief: term.brief,
+      signals: `${term.matches.length || 3}개 기사 신호 · ${term.sourceCount || 2}개 소스`,
+      timeline
+    };
+  });
+}
+
+function sourceSignalsFromArticles(articles) {
+  const counts = new Map();
+  for (const article of articles) counts.set(article.source, (counts.get(article.source) || 0) + 1);
+  const ranked = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3);
+  const max = ranked[0]?.[1] || 1;
+  return ranked.map(([name, count]) => [name, widthPercent(count, max)]);
+}
+
+function buildData(articles, rawCount) {
+  const generatedAt = new Date();
+  const start = new Date(generatedAt.getTime() - 24 * 60 * 60 * 1000);
+  const nextUpdate = nextKstMorning(generatedAt);
+  const recent = articles.filter((article) => article.publishedAt >= start);
+  const usableArticles = recent.length >= 12 ? recent : articles.slice(0, 80);
+  const scoredTerms = scoreTerms(usableArticles);
+  const hotAgendas = buildHotAgendas(scoredTerms, generatedAt, usableArticles);
+
+  return {
+    metadata: {
+      snapshotDate: formatKstKey(generatedAt),
+      generatedAt: `${formatKst(generatedAt)} KST`,
+      baseDate: formatKstDate(generatedAt),
+      windowLabel: `${formatKst(start)} - ${formatKst(generatedAt)} KST`,
+      nextUpdate: `${formatKst(nextUpdate)} KST`
+    },
+    metrics: {
+      articles: usableArticles.length,
+      blogs: new Set(usableArticles.map((article) => article.source)).size,
+      dedupeRate: `${Math.round((1 - usableArticles.length / Math.max(rawCount, usableArticles.length, 1)) * 100)}%`,
+      newAgendas: `+${hotAgendas.length}`
+    },
+    sourceSignals: sourceSignalsFromArticles(usableArticles),
+    monitoredSources: sources.map(({ name, region, kind, url, feed }) => ({ name, region, kind, url, feed })),
+    collectionQueue: [
+      [`${formatKst(nextUpdate)}`, "Domestic and global AI source sweep"],
+      [`${formatKst(new Date(nextUpdate.getTime() + 15 * 60 * 1000))}`, "Agenda clustering and company signal scoring"],
+      [`${formatKst(new Date(nextUpdate.getTime() + 30 * 60 * 1000))}`, "Dashboard data publish"]
+    ],
+    impactNotes: scoredTerms.slice(0, 3).map((term) => [
+      term.label,
+      term.brief.implication,
+      term.color
+    ]),
+    hotAgendas,
+    companies: buildCompanies(scoredTerms, generatedAt, usableArticles),
+    keywordData: buildKeywordData(scoredTerms, generatedAt)
+  };
+}
+
+async function existingData() {
+  try {
+    const source = await readFile(jsOutputPath, "utf8");
+    const match = source.match(/window\.TECH_AGENDA_DATA\s*=\s*([\s\S]*?);\s*$/);
+    return match ? JSON.parse(match[1]) : null;
+  } catch {
+    return null;
+  }
+}
+
+function compactSnapshot(data) {
+  return {
+    date: data.metadata?.snapshotDate || "",
+    metadata: data.metadata,
+    metrics: data.metrics,
+    sourceSignals: data.sourceSignals,
+    hotAgendas: data.hotAgendas,
+    companies: data.companies,
+    keywordData: data.keywordData
+  };
+}
+
+async function writeSnapshotAndLoadRecent(latestData, limit = 3) {
+  await mkdir(historyDir, { recursive: true });
+  const snapshotDate = latestData.metadata.snapshotDate;
+  const snapshotPath = resolve(historyDir, `${snapshotDate}.json`);
+  await writeFile(snapshotPath, `${JSON.stringify(latestData, null, 2)}\n`);
+
+  const files = (await readdir(historyDir))
+    .filter((file) => /^\d{4}-\d{2}-\d{2}\.json$/.test(file))
+    .sort()
+    .reverse()
+    .slice(0, limit);
+
+  const snapshots = [];
+  for (const file of files) {
+    try {
+      const snapshot = JSON.parse(await readFile(resolve(historyDir, file), "utf8"));
+      snapshots.push(compactSnapshot(snapshot));
+    } catch (error) {
+      console.warn(`[warn] Could not read history/${file}: ${error.message}`);
+    }
+  }
+  return snapshots;
+}
+
+async function main() {
+  const rawItems = (await Promise.all(sources.map(fetchSource))).flat();
+  const articles = uniqByTitle(rawItems).sort((a, b) => b.publishedAt - a.publishedAt);
+
+  if (!articles.length) {
+    const previous = await existingData();
+    if (previous) {
+      console.warn("[warn] No fresh feed items. Keeping existing agenda-data.js.");
+      return;
+    }
+    throw new Error("No feed items could be fetched, and no existing data file was found.");
+  }
+
+  const latestData = buildData(articles, rawItems.length);
+  const days = await writeSnapshotAndLoadRecent(latestData, 3);
+  const data = {
+    ...latestData,
+    days
+  };
+  const json = JSON.stringify(data, null, 2);
+  await writeFile(jsOutputPath, `window.TECH_AGENDA_DATA = ${json};\n`);
+  await writeFile(jsonOutputPath, `${json}\n`);
+  console.log(
+    `[ok] Updated agenda data with ${data.metrics.articles} articles from ${data.metrics.blogs} sources. Main file keeps ${days.length} day snapshots.`
+  );
+}
+
+main().catch((error) => {
+  console.error(`[error] ${error.message}`);
+  process.exitCode = 1;
+});

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Monitoring Desk</title>
+    <link rel="stylesheet" href="styles.css?v=202606041842" />
+    <script src="agenda-data.js?v=202606041842"></script>
+    <script>
+      window.AI_MONITORING_DESK_PUBLIC_URL = "https://f725895e2ccf9ebd-61-98-119-137.serveousercontent.com/";
+    </script>
+    <script src="app.js?v=202606041842" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">AI Monitoring Desk</p>
+            <h1>AI Monitoring Desk</h1>
+            <p class="brand-subtitle">뉴스·블로그 신호를 오늘의 판단거리로 바꾸는 브리핑 툴</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="sync-status" aria-live="polite">
+            <span class="pulse-dot"></span>
+            <span id="syncTime">2026.05.26 09:20 KST 수집</span>
+          </div>
+          <button class="icon-button" id="refreshButton" type="button" title="피드 새로고침" aria-label="피드 새로고침">
+            <span aria-hidden="true">↻</span>
+          </button>
+          <button class="icon-button" id="shareButton" type="button" title="공유 링크 복사" aria-label="공유 링크 복사">
+            <span aria-hidden="true">↗</span>
+          </button>
+          <button class="share-action-button" id="shareTextButton" type="button">
+            <span aria-hidden="true">↗</span>
+            <b>공유하기</b>
+          </button>
+          <button class="icon-button" type="button" title="수집 설정" aria-label="수집 설정">
+            <span aria-hidden="true">⚙</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="share-strip" id="shareStrip" hidden aria-label="외부 공유 링크">
+        <span class="share-strip-label">공유 링크</span>
+        <a id="publicShareLink" href="#" target="_blank" rel="noopener noreferrer"></a>
+        <button class="small-action" id="copyPublicShareButton" type="button">복사</button>
+      </div>
+
+      <main>
+        <section class="date-strip" id="dateStrip" aria-label="수집 기준일">
+          <div>
+            <span class="date-label">기준일</span>
+            <b>2026.05.26 Tue</b>
+          </div>
+          <div>
+            <span class="date-label">분석 기간</span>
+            <b>2026.05.25 09:20 - 2026.05.26 09:20 KST</b>
+          </div>
+          <div>
+            <span class="date-label">다음 갱신</span>
+            <b>2026.05.26 10:00 KST</b>
+          </div>
+        </section>
+
+        <section class="overview-grid" aria-label="오늘 액션과 주요 아젠다">
+          <aside class="panel signal-panel" aria-label="수집 신호">
+            <div class="panel-heading compact">
+              <div>
+                <p class="eyebrow">Decision Board</p>
+                <h2>오늘 바로 볼 액션</h2>
+              </div>
+              <span class="freshness-chip" id="freshnessChip">Updated just now</span>
+            </div>
+            <div class="action-board" id="actionBoard" aria-label="뉴스 기반 액션"></div>
+            <div class="metric-grid" id="metricGrid">
+              <div class="metric-card">
+                <span class="metric-value">386</span>
+                <span class="metric-label">분석 기사</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">42</span>
+                <span class="metric-label">테크 블로그</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">91%</span>
+                <span class="metric-label">중복 제거율</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">+18</span>
+                <span class="metric-label">신규 의제</span>
+              </div>
+            </div>
+            <div class="source-stack" id="sourceStack" aria-label="상위 소스">
+              <div class="source-row">
+                <span>The Verge</span>
+                <b style="--w: 84%"></b>
+              </div>
+              <div class="source-row">
+                <span>OpenAI Blog</span>
+                <b style="--w: 73%"></b>
+              </div>
+              <div class="source-row">
+                <span>Hacker News</span>
+                <b style="--w: 66%"></b>
+              </div>
+            </div>
+          </aside>
+
+          <article class="panel hot-agenda-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Live Korea AI · Last 24h</p>
+                <h2>국내 AI 핫 뉴스</h2>
+              </div>
+              <span class="panel-chip">Korea First</span>
+            </div>
+            <ol class="hot-list" id="hotList"></ol>
+          </article>
+        </section>
+
+        <section class="workspace-section">
+          <div class="workspace-header">
+            <div>
+              <p class="eyebrow">Korea AI Business Radar</p>
+              <h2>국내 AI 사업 레이더</h2>
+            </div>
+            <div class="segmented-control" role="tablist" aria-label="레이더 보기 전환">
+              <button class="segment active" id="companyTab" type="button" role="tab" aria-selected="true" data-view="company">
+                회사별
+              </button>
+              <button class="segment" id="keywordTab" type="button" role="tab" aria-selected="false" data-view="keyword">
+                키워드별
+              </button>
+            </div>
+          </div>
+
+          <div class="view active" id="companyView" role="tabpanel" aria-labelledby="companyTab">
+            <div class="company-strip" id="companyCards" aria-label="회사 선택"></div>
+
+            <div class="radar-layout">
+              <article class="panel radar-panel">
+                <div class="panel-heading">
+                  <div>
+                    <p class="eyebrow" id="companySector">Model Provider</p>
+                    <h2 id="companyName">Anthropic</h2>
+                    <p class="panel-date" id="companyUpdated">업데이트 2026.05.26 09:10</p>
+                  </div>
+                  <button class="small-action" id="companyBriefButton" type="button">Deep Dive</button>
+                </div>
+                <div class="signal-stack" id="wordCloud" aria-label="회사별 추진 키워드 스택"></div>
+                <div class="heatmap" id="companyHeatmap" aria-label="회사별 아젠다 히트맵"></div>
+              </article>
+
+              <aside class="panel detail-panel">
+                <div class="panel-heading compact">
+                  <div>
+                    <p class="eyebrow">Evidence Stack</p>
+                    <h2>근거 · 활용 포인트</h2>
+                  </div>
+                </div>
+                <div class="stack-list" id="agendaStack"></div>
+              </aside>
+            </div>
+          </div>
+
+          <div class="view" id="keywordView" role="tabpanel" aria-labelledby="keywordTab">
+            <div class="keyword-layout">
+              <article class="panel keyword-map-panel">
+                <div class="panel-heading">
+                  <div>
+                    <p class="eyebrow">Accumulated Attention</p>
+                    <h2>키워드 맥락 맵</h2>
+                  </div>
+              <span class="panel-actions">
+                <button class="small-action collapse-toggle" type="button" data-collapse-panel="keyword-map-panel">접기</button>
+                <button class="small-action" id="keywordBriefButton" type="button">Deep Dive</button>
+              </span>
+            </div>
+            <div class="keyword-map" id="keywordMap" aria-label="키워드별 시장 관심도"></div>
+          </article>
+
+              <aside class="panel timeline-panel">
+                <div class="panel-heading compact">
+                  <div>
+                    <p class="eyebrow" id="timelineEyebrow">Agent</p>
+                    <h2>관련 원문 타임라인</h2>
+                    <p class="panel-date" id="timelineWindow">2026.05.26 기준 최신순</p>
+                  </div>
+                </div>
+                <div class="timeline" id="timeline"></div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="lower-grid" aria-label="운영 현황">
+          <article class="panel stream-panel collapsible-panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="eyebrow">Collector Queue</p>
+                <h2>다음 수집 큐</h2>
+              </div>
+              <button class="small-action collapse-toggle" type="button" data-collapse-panel="stream-panel">접기</button>
+            </div>
+            <div class="queue-list" id="queueList">
+              <div><span>2026.05.26 10:00</span><b>AI infra earnings call transcript sweep</b></div>
+              <div><span>2026.05.26 10:15</span><b>GitHub trending repos delta scan</b></div>
+              <div><span>2026.05.26 10:30</span><b>Korean portal tech desk refresh</b></div>
+            </div>
+          </article>
+
+          <article class="panel impact-panel collapsible-panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="eyebrow">So What Board</p>
+                <h2>오늘의 실무 시사점</h2>
+              </div>
+              <button class="small-action collapse-toggle" type="button" data-collapse-panel="impact-panel">접기</button>
+            </div>
+            <div class="impact-copy" id="impactCopy"></div>
+          </article>
+
+          <article class="panel source-link-panel collapsible-panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="eyebrow">Source Watchlist</p>
+                <h2>국내외 수집 링크</h2>
+              </div>
+              <button class="small-action collapse-toggle" type="button" data-collapse-panel="source-link-panel">접기</button>
+            </div>
+            <div class="source-links" id="sourceLinks"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <section class="brief-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="icon-button modal-close" id="closeModal" type="button" title="닫기" aria-label="브리핑 닫기">
+          <span aria-hidden="true">×</span>
+        </button>
+        <p class="eyebrow" id="modalEyebrow">Deep Dive</p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-date" id="modalDate">2026.05.26 09:20 KST</p>
+        <div class="brief-lines" id="briefLines"></div>
+        <div class="modal-hotness" id="modalHotness" hidden></div>
+        <div class="modal-source-links" id="modalSourceLinks" hidden></div>
+        <div class="brief-footer">
+          <div>
+            <span class="footer-label">관련 신호</span>
+            <p id="modalSignals"></p>
+          </div>
+          <div class="modal-actions">
+            <button class="small-action" id="shareBriefButton" type="button">공유하기</button>
+            <button class="small-action" id="saveBriefButton" type="button">브리핑 저장</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
