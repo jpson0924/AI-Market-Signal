@@ -939,7 +939,7 @@ function articleDetailSummary(article, businessRelevance) {
   const sourceDetail =
     cleanedSummary && cleanedSummary !== title && !compactSummary.startsWith(compactTitle)
       ? truncateSentence(cleanedSummary, 142)
-      : truncateSentence(`${title} 이슈로, ${frame.detail}`, 184);
+      : truncateSentence(`${frame.detail} ${frame.why}`, 184);
   const reason = businessRelevance.reasons[0]?.label ? `판정 근거: ${businessRelevance.reasons[0].label}.` : "";
   return truncateSentence(`${sourceDetail} ${reason}`, 190);
 }
