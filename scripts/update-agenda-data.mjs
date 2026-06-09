@@ -829,7 +829,7 @@ function imageFromHtml(value = "") {
 function usableImageUrl(url = "") {
   const imageUrl = String(url).trim();
   if (!/^https?:\/\//i.test(imageUrl)) return "";
-  if (/(?:spacer|sprite|blank|1x1|transparent|logo|favicon)/i.test(imageUrl)) return "";
+  if (/(?:spacer|sprite|blank|1x1|transparent|logo|favicon|profile_photo)/i.test(imageUrl)) return "";
   return imageUrl;
 }
 
@@ -873,6 +873,66 @@ function absoluteUrl(url, baseUrl) {
   } catch {
     return "";
   }
+}
+
+function attrsFromTag(tagHtml = "") {
+  const attrs = {};
+  for (const match of tagHtml.matchAll(/([:\w-]+)\s*=\s*["']([^"']*)["']/g)) {
+    attrs[match[1].toLowerCase()] = decodeXml(match[2]);
+  }
+  return attrs;
+}
+
+function imageFromArticleHtml(html = "", baseUrl = "") {
+  const candidates = [];
+  const metaKeys = new Set(["og:image", "og:image:url", "twitter:image", "twitter:image:src", "thumbnail", "image"]);
+
+  for (const match of html.matchAll(/<meta\b[^>]*>/gi)) {
+    const attrs = attrsFromTag(match[0]);
+    const key = String(attrs.property || attrs.name || attrs.itemprop || "").toLowerCase();
+    if (metaKeys.has(key) && attrs.content) candidates.push(attrs.content);
+  }
+
+  for (const match of html.matchAll(/<link\b[^>]*>/gi)) {
+    const attrs = attrsFromTag(match[0]);
+    if (String(attrs.rel || "").toLowerCase() === "image_src" && attrs.href) candidates.push(attrs.href);
+  }
+
+  for (const match of html.matchAll(/"image"\s*:\s*(?:"([^"]+)"|\[\s*"([^"]+)")/gi)) {
+    candidates.push(match[1] || match[2]);
+  }
+
+  for (const candidate of candidates) {
+    const imageUrl = usableImageUrl(absoluteUrl(candidate, baseUrl));
+    if (imageUrl) return imageUrl;
+  }
+
+  return "";
+}
+
+async function fetchArticleImage(url = "") {
+  if (!url) return "";
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 9000);
+  try {
+    const response = await fetch(url, {
+      headers: { "user-agent": "MarketSignalBot/1.0" },
+      signal: controller.signal
+    });
+    if (!response.ok) return "";
+    const contentType = response.headers.get("content-type") || "";
+    if (contentType && !/html|xml|text/i.test(contentType)) return "";
+    const html = await response.text();
+    return imageFromArticleHtml(html, response.url || url);
+  } catch {
+    return "";
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function weakImageUrl(url = "") {
+  return /(?:news\.google|googleusercontent\.com|gstatic\.com)/i.test(url);
 }
 
 function cleanTitle(value) {
@@ -948,47 +1008,7 @@ const articleFrames = [
   }
 ];
 
-const topicImages = [
-  {
-    pattern: /젠슨|jensen|huang|엔비디아|nvidia|피지컬\s*ai|로보틱스|로봇/i,
-    url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=480&q=80",
-    alt: "로봇과 피지컬 AI를 연상시키는 관련 이미지",
-    credit: "피지컬 AI"
-  },
-  {
-    pattern: /ai\s*(?:반도체|칩)|hbm|gpu|npu|가속기|파운드리|메모리/i,
-    url: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=480&q=80",
-    alt: "AI 반도체와 칩 공급망을 연상시키는 관련 이미지",
-    credit: "AI 반도체"
-  },
-  {
-    pattern: /데이터센터|클라우드|ai\s*팩토리|인프라|aidc/i,
-    url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=480&q=80",
-    alt: "데이터센터와 AI 인프라를 연상시키는 관련 이미지",
-    credit: "AI 인프라"
-  },
-  {
-    pattern: /보안|kisa|개인정보|유출|위협|감사|권한|통제|복원력|사이버/i,
-    url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=480&q=80",
-    alt: "사이버 보안과 통제 체계를 연상시키는 관련 이미지",
-    credit: "AI 보안"
-  },
-  {
-    pattern: /엔터프라이즈|파트너|협력|도입|상용화|솔루션|ax|si|영업/i,
-    url: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=480&q=80",
-    alt: "엔터프라이즈 AI 협업을 연상시키는 관련 이미지",
-    credit: "엔터프라이즈 AI"
-  },
-  {
-    pattern: /ai|인공지능|llm|agent|모델|데이터/i,
-    url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=480&q=80",
-    alt: "AI 기술과 회로를 연상시키는 관련 이미지",
-    credit: "AI 시장"
-  }
-];
-
 function agendaImageForArticle(article) {
-  const haystack = `${article.title} ${article.summary} ${article.source}`;
   const feedImage = usableImageUrl(article.imageUrl);
   if (feedImage) {
     return {
@@ -997,11 +1017,10 @@ function agendaImageForArticle(article) {
       imageCredit: article.source
     };
   }
-  const fallback = topicImages.find((image) => image.pattern.test(haystack)) || topicImages[topicImages.length - 1];
   return {
-    imageUrl: fallback.url,
-    imageAlt: fallback.alt,
-    imageCredit: fallback.credit
+    imageUrl: "",
+    imageAlt: "",
+    imageCredit: ""
   };
 }
 
@@ -1838,6 +1857,98 @@ function buildNewsAgenda(article, generatedAt, index, businessRelevance = busine
   };
 }
 
+async function imageFromSource(source, cache, blocked = new Set()) {
+  if (!source?.url) return null;
+  let imageUrl = cache.get(source.url);
+  if (typeof imageUrl === "undefined") {
+    imageUrl = await fetchArticleImage(source.url);
+    cache.set(source.url, imageUrl);
+  }
+  if (!imageUrl || blocked.has(imageUrl)) return null;
+  return {
+    imageUrl,
+    imageAlt: `${source.media || "원문"} 기사 대표 이미지`,
+    imageCredit: source.media || "원문 이미지"
+  };
+}
+
+async function imageFromRelatedArticles(agenda, articles, cache, blocked = new Set()) {
+  const agendaSources = new Set((agenda.sources || []).map((source) => source.url).filter(Boolean));
+  const candidates = articles
+    .filter((article) => article.link && !agendaSources.has(article.link) && articleTopicBucket(article) === agenda.topicBucket)
+    .sort((a, b) => businessRelevanceForArticle(b).score - businessRelevanceForArticle(a).score || b.publishedAt - a.publishedAt)
+    .slice(0, 10);
+
+  for (const article of candidates) {
+    const feedImage = usableImageUrl(article.imageUrl);
+    if (feedImage && !blocked.has(feedImage) && !weakImageUrl(feedImage)) {
+      return {
+        imageUrl: feedImage,
+        imageAlt: `${article.source} 관련 기사 대표 이미지`,
+        imageCredit: `${article.source} 관련 기사`
+      };
+    }
+  }
+
+  for (const article of candidates.slice(0, 5)) {
+    let imageUrl = cache.get(article.link);
+    if (typeof imageUrl === "undefined") {
+      imageUrl = await fetchArticleImage(article.link);
+      cache.set(article.link, imageUrl);
+    }
+    if (!imageUrl || blocked.has(imageUrl) || weakImageUrl(imageUrl)) continue;
+    return {
+      imageUrl,
+      imageAlt: `${article.source} 관련 기사 대표 이미지`,
+      imageCredit: `${article.source} 관련 기사`
+    };
+  }
+
+  return null;
+}
+
+function setAgendaImage(agenda, image) {
+  agenda.imageUrl = image?.imageUrl || "";
+  agenda.imageAlt = image?.imageAlt || "";
+  agenda.imageCredit = image?.imageCredit || "";
+  if (Array.isArray(agenda.articles) && agenda.articles[0]) {
+    agenda.articles[0].imageUrl = agenda.imageUrl;
+  }
+}
+
+async function enrichHotAgendaImages(data, articles = []) {
+  const cache = new Map();
+  const usedImages = new Set();
+  for (const agenda of data.hotAgendas || []) {
+    const currentImage = usableImageUrl(agenda.imageUrl);
+    const blocked = new Set([...usedImages]);
+    if (currentImage && weakImageUrl(currentImage)) blocked.add(currentImage);
+    if (currentImage && !weakImageUrl(currentImage) && !usedImages.has(currentImage)) {
+      usedImages.add(currentImage);
+      continue;
+    }
+
+    const sources = Array.isArray(agenda.sources) ? agenda.sources : [];
+    let replacement = null;
+    for (const source of sources.slice(0, 3)) {
+      replacement = await imageFromSource(source, cache, blocked);
+      if (replacement && !weakImageUrl(replacement.imageUrl)) break;
+    }
+    if (!replacement || weakImageUrl(replacement.imageUrl)) {
+      replacement = await imageFromRelatedArticles(agenda, articles, cache, blocked);
+    }
+
+    if (replacement && !usedImages.has(replacement.imageUrl)) {
+      setAgendaImage(agenda, replacement);
+      usedImages.add(replacement.imageUrl);
+    } else if (currentImage && !usedImages.has(currentImage) && !weakImageUrl(currentImage)) {
+      usedImages.add(currentImage);
+    } else {
+      setAgendaImage(agenda, null);
+    }
+  }
+}
+
 function articleTopicBucket(article) {
   const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
   if (/(젠슨\s*황|jensen\s*huang|엔비디아|nvidia)/i.test(haystack) && /(방한|한국|korea|피지컬|로보틱스|로봇|게임|회동|크래프톤|삼성|sk|현대|네이버|lg)/i.test(haystack)) return "nvidia-korea";
@@ -2557,6 +2668,7 @@ async function main() {
   }
 
   const latestData = buildData(articles, rawItems.length);
+  await enrichHotAgendaImages(latestData, articles);
   const days = await writeSnapshotAndLoadRecent(latestData, 3);
   const data = {
     ...latestData,

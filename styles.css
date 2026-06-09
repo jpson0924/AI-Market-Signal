@@ -502,6 +502,10 @@ main {
   content: "";
 }
 
+.hot-item.no-thumb {
+  grid-template-columns: auto minmax(0, 1fr) minmax(88px, auto);
+}
+
 .hot-list li:nth-child(2) .hot-item::before {
   background: var(--blue);
 }
@@ -782,19 +786,6 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.hot-thumb.empty {
-  display: grid;
-  place-items: center;
-}
-
-.hot-thumb.empty span {
-  color: var(--teal-deep);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .hot-origin {

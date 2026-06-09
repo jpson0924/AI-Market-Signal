@@ -696,7 +696,7 @@ function renderHotList() {
       const imageCredit = agenda.imageCredit || getAgendaSources(agenda)[0]?.media || "관련 이미지";
       return `
         <li>
-          <article class="hot-item" tabindex="0" role="button" data-agenda-id="${agenda.id}" aria-label="${escapeHtml(`${agenda.title} 브리핑 열기`)}" style="--agenda-color:${colors[index % colors.length]}">
+          <article class="hot-item ${imageUrl ? "" : "no-thumb"}" tabindex="0" role="button" data-agenda-id="${agenda.id}" aria-label="${escapeHtml(`${agenda.title} 브리핑 열기`)}" style="--agenda-color:${colors[index % colors.length]}">
             <span class="rank-badge">${index + 1}</span>
             <span class="hot-copy">
               <span class="hot-kicker">
@@ -723,14 +723,14 @@ function renderHotList() {
                 <span>${sourceCount}개 매체 · ${escapeHtml(agenda.mentions || score)}회 신호</span>
               </span>
             </span>
-            <span class="hot-thumb ${imageUrl ? "" : "empty"}">
-              ${
-                imageUrl
-                  ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(imageAlt)}" loading="lazy" />`
-                  : `<span>Signal</span>`
-              }
+            ${
+              imageUrl
+                ? `<span class="hot-thumb">
+              <img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(imageAlt)}" loading="lazy" />
               <em>${escapeHtml(imageCredit)}</em>
-            </span>
+            </span>`
+                : ""
+            }
             <span class="hot-metrics">
               <span class="signal-badge">${escapeHtml(metric)}</span>
               <span class="score-badge">${score}점</span>
