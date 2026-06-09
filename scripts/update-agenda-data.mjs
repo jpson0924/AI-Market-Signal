@@ -930,6 +930,63 @@ function articleFrame(article) {
   );
 }
 
+function articleSpecificDetail(article, frame) {
+  const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
+  const rules = [
+    {
+      pattern: /쇼맨십|게임회동|뒷얘기|삼겹살|회동/i,
+      detail:
+        "행사성 회동과 실제 피지컬 AI 협력 사이의 간극을 짚는 신호입니다. 후속 발표가 제품 계약, GPU 공급, 공동 PoC로 이어졌는지 확인해야 합니다."
+    },
+    {
+      pattern: /ai\s*팩토리|중심지|의존\s*탈피|엔비디아\s*의존/i,
+      detail:
+        "한국이 AI 팩토리 거점으로 부상하는 동시에 엔비디아 의존 리스크가 커진다는 신호입니다. 대체 인프라와 국산 칩 활용 가능성을 같이 봐야 합니다."
+    },
+    {
+      pattern: /휴머노이드|로봇.*간담회|업계\s*간담회/i,
+      detail:
+        "정부가 휴머노이드·로봇 AI 생태계의 정책 수요를 직접 수렴하는 신호입니다. 로봇 데이터, 부품, 안전 인증, 실증 예산으로 이어질지 확인해야 합니다."
+    },
+    {
+      pattern: /k-ai\s*반도체|성장\s*포럼|과기정통부.*반도체/i,
+      detail:
+        "정부가 K-AI 반도체를 산업 육성 의제로 다시 끌어올리는 신호입니다. 조달, 실증, 국산 NPU 채택 조건이 생기는지 봐야 합니다."
+    },
+    {
+      pattern: /델|dell|파트너.*수익|사이버\s*복원력|클라우드\s*현대화/i,
+      detail:
+        "엔터프라이즈 AI 도입이 파트너 수익, 보안 복원력, 클라우드 현대화 패키지로 묶이는 신호입니다. SI·리셀러 채널 전략에 반영할 만합니다."
+    },
+    {
+      pattern: /lg cns|aind|에이전틱\s*ai|개발\s*플랫폼/i,
+      detail:
+        "SI 기업이 AI를 개발·운영 자동화 플랫폼으로 제품화하는 신호입니다. 내부 개발 생산성보다 고객 IT 전환 패키지로 팔릴 가능성을 봐야 합니다."
+    },
+    {
+      pattern: /gpu.*확충|베라루빈|네이버.*삼성.*엘리스|정부\s*gpu/i,
+      detail:
+        "정부 GPU 확충 사업이 민간 클라우드·AI 인프라 업체 선정으로 구체화되는 신호입니다. 조달 일정과 운영 주체를 확인해야 합니다."
+    },
+    {
+      pattern: /skt|sk텔레콤|aidc|gw급|ai\s*인프라\s*동맹/i,
+      detail:
+        "통신사가 엔비디아와 AI 데이터센터 사업을 결합하는 신호입니다. 전력, 네트워크, GPU 운영 역량이 B2B 판매 포인트가 됩니다."
+    },
+    {
+      pattern: /hbm|파운드리|메모리/i,
+      detail:
+        "AI 인프라 경쟁이 HBM·메모리·파운드리 공급망으로 번지는 신호입니다. 원가와 공급 안정성 리스크를 함께 봐야 합니다."
+    },
+    {
+      pattern: /보안|감사|권한|사이버|복원력/i,
+      detail:
+        "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다."
+    }
+  ];
+  return rules.find((rule) => rule.pattern.test(haystack))?.detail || `${frame.detail} ${frame.why}`;
+}
+
 function articleDetailSummary(article, businessRelevance) {
   const frame = articleFrame(article);
   const title = cleanTitle(stripKnownSourceSuffix(article.title, article.source));
@@ -939,7 +996,7 @@ function articleDetailSummary(article, businessRelevance) {
   const sourceDetail =
     cleanedSummary && cleanedSummary !== title && !compactSummary.startsWith(compactTitle)
       ? truncateSentence(cleanedSummary, 142)
-      : truncateSentence(`${frame.detail} ${frame.why}`, 184);
+      : truncateSentence(articleSpecificDetail(article, frame), 184);
   const reason = businessRelevance.reasons[0]?.label ? `판정 근거: ${businessRelevance.reasons[0].label}.` : "";
   return truncateSentence(`${sourceDetail} ${reason}`, 190);
 }
