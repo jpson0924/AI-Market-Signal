@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Market Signal</title>
-    <link rel="stylesheet" href="styles.css?v=202606091523" />
-    <script src="agenda-data.js?v=202606091523"></script>
+    <script>
+      (() => {
+        const saved = localStorage.getItem("marketSignal.theme");
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css?v=202606091531" />
+    <script src="agenda-data.js?v=202606091531"></script>
     <script>
       window.AI_MONITORING_DESK_PUBLIC_URL = "https://jpson0924.github.io/AI-Market-Signal/";
     </script>
-    <script src="app.js?v=202606091523" defer></script>
+    <script src="app.js?v=202606091531" defer></script>
   </head>
   <body>
     <div class="app-shell">
@@ -38,6 +45,10 @@
             <span aria-hidden="true">↗</span>
             <b>공유하기</b>
           </button>
+          <div class="theme-switch" role="group" aria-label="화면 테마 선택">
+            <button type="button" data-theme-option="light" aria-pressed="true">라이트</button>
+            <button type="button" data-theme-option="dark" aria-pressed="false">다크</button>
+          </div>
           <button class="icon-button" type="button" title="수집 설정" aria-label="수집 설정">
             <span aria-hidden="true">⚙</span>
           </button>

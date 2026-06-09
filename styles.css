@@ -29,6 +29,26 @@
     "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d1118;
+  --surface: #151a24;
+  --surface-soft: #111722;
+  --surface-tint: #1b2433;
+  --ink: #edf1f7;
+  --muted: #99a5b5;
+  --line: #293243;
+  --line-strong: #3a4658;
+  --teal: #7fa4e8;
+  --teal-deep: #dbe7ff;
+  --blue: #a99cf4;
+  --amber: #d19a66;
+  --red: #e08b91;
+  --green: #9badbd;
+  --shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -46,6 +66,14 @@ body {
     linear-gradient(180deg, rgba(63, 95, 143, 0.1) 0, transparent 285px),
     linear-gradient(90deg, rgba(90, 79, 143, 0.045) 0 1px, transparent 1px 72px),
     linear-gradient(180deg, rgba(182, 107, 53, 0.035) 0 1px, transparent 1px 72px),
+    var(--bg);
+}
+
+:root[data-theme="dark"] body {
+  background:
+    linear-gradient(180deg, rgba(127, 164, 232, 0.12) 0, transparent 285px),
+    linear-gradient(90deg, rgba(169, 156, 244, 0.06) 0 1px, transparent 1px 72px),
+    linear-gradient(180deg, rgba(209, 154, 102, 0.05) 0 1px, transparent 1px 72px),
     var(--bg);
 }
 
@@ -249,6 +277,40 @@ h3 {
 
 .share-action-button b {
   font: inherit;
+}
+
+.theme-switch {
+  display: inline-flex;
+  gap: 2px;
+  min-height: 38px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.theme-switch button {
+  min-width: 48px;
+  min-height: 30px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 5px;
+  color: var(--muted);
+  background: transparent;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.theme-switch button[aria-pressed="true"] {
+  color: #ffffff;
+  background: var(--teal-deep);
+  box-shadow: var(--shadow-soft);
+}
+
+.theme-switch button:focus-visible {
+  outline: 2px solid rgba(63, 95, 143, 0.48);
+  outline-offset: 2px;
 }
 
 .share-strip {
@@ -2575,6 +2637,131 @@ main {
   color: var(--ink);
   font-size: 13px;
   line-height: 1.5;
+}
+
+:root[data-theme="dark"] .brand-mark,
+:root[data-theme="dark"] .sync-status,
+:root[data-theme="dark"] .theme-switch,
+:root[data-theme="dark"] .share-strip,
+:root[data-theme="dark"] .panel,
+:root[data-theme="dark"] .date-strip div,
+:root[data-theme="dark"] .hot-item,
+:root[data-theme="dark"] .metric-card,
+:root[data-theme="dark"] .action-item,
+:root[data-theme="dark"] .company-card,
+:root[data-theme="dark"] .signal-row,
+:root[data-theme="dark"] .stack-item,
+:root[data-theme="dark"] .timeline-link,
+:root[data-theme="dark"] .search-insight-grid div,
+:root[data-theme="dark"] .search-result-item,
+:root[data-theme="dark"] .search-empty,
+:root[data-theme="dark"] .company-news-item,
+:root[data-theme="dark"] .source-link,
+:root[data-theme="dark"] .modal-hotness span,
+:root[data-theme="dark"] .modal-source-links a,
+:root[data-theme="dark"] .brief-modal {
+  border-color: var(--line);
+  background: rgba(21, 26, 36, 0.92);
+}
+
+:root[data-theme="dark"] .panel {
+  background: rgba(18, 23, 32, 0.9);
+}
+
+:root[data-theme="dark"] .date-strip div,
+:root[data-theme="dark"] .signal-panel,
+:root[data-theme="dark"] .metric-card,
+:root[data-theme="dark"] .hot-reason,
+:root[data-theme="dark"] .timeline-takeaway,
+:root[data-theme="dark"] .modal-hotness,
+:root[data-theme="dark"] .modal-source-links,
+:root[data-theme="dark"] .brief-line {
+  background: var(--surface-soft);
+}
+
+:root[data-theme="dark"] .icon-button,
+:root[data-theme="dark"] .small-action,
+:root[data-theme="dark"] .share-action-button,
+:root[data-theme="dark"] .signal-search-form input,
+:root[data-theme="dark"] .history-chip,
+:root[data-theme="dark"] .score-badge,
+:root[data-theme="dark"] .date-badge {
+  border-color: var(--line-strong);
+  color: var(--ink);
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .icon-button:hover,
+:root[data-theme="dark"] .icon-button:focus-visible,
+:root[data-theme="dark"] .small-action:hover,
+:root[data-theme="dark"] .small-action:focus-visible,
+:root[data-theme="dark"] .share-action-button:hover,
+:root[data-theme="dark"] .share-action-button:focus-visible {
+  border-color: rgba(127, 164, 232, 0.62);
+  background: var(--surface-tint);
+}
+
+:root[data-theme="dark"] .share-action-button,
+:root[data-theme="dark"] .panel-chip,
+:root[data-theme="dark"] .freshness-chip,
+:root[data-theme="dark"] .signal-badge,
+:root[data-theme="dark"] .calendar-label,
+:root[data-theme="dark"] .history-chip.active,
+:root[data-theme="dark"] .query-chip,
+:root[data-theme="dark"] .origin-label,
+:root[data-theme="dark"] .impact-action,
+:root[data-theme="dark"] .search-facets em {
+  color: var(--teal-deep);
+  background: rgba(127, 164, 232, 0.13);
+}
+
+:root[data-theme="dark"] .search-submit,
+:root[data-theme="dark"] .theme-switch button[aria-pressed="true"],
+:root[data-theme="dark"] .timeline-brief {
+  color: #0d1118;
+  background: var(--teal);
+}
+
+:root[data-theme="dark"] .hot-copy p,
+:root[data-theme="dark"] .hot-reason span,
+:root[data-theme="dark"] .stack-source,
+:root[data-theme="dark"] .company-proof,
+:root[data-theme="dark"] .company-card em,
+:root[data-theme="dark"] .signal-desc,
+:root[data-theme="dark"] .timeline-takeaway,
+:root[data-theme="dark"] .impact-copy p,
+:root[data-theme="dark"] .modal-hotness em,
+:root[data-theme="dark"] .modal-source-links span,
+:root[data-theme="dark"] .share-strip a,
+:root[data-theme="dark"] .search-result-item p {
+  color: var(--muted);
+}
+
+:root[data-theme="dark"] .hot-tag,
+:root[data-theme="dark"] .pin-badge {
+  border-color: var(--line);
+  color: var(--ink);
+  background: var(--surface-tint);
+}
+
+:root[data-theme="dark"] .hot-tag[data-tag-type="action"] {
+  color: #ffd4a5;
+  background: rgba(209, 154, 102, 0.16);
+}
+
+:root[data-theme="dark"] .hot-tag[data-tag-type="tech"],
+:root[data-theme="dark"] .hot-tag[data-tag-type="company"] {
+  color: var(--teal-deep);
+  background: rgba(127, 164, 232, 0.14);
+}
+
+:root[data-theme="dark"] .hot-tag[data-tag-type="risk"] {
+  color: #ffc0c5;
+  background: rgba(224, 139, 145, 0.15);
+}
+
+:root[data-theme="dark"] .brief-modal {
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.48);
 }
 
 @keyframes pulseFlash {

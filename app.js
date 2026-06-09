@@ -334,10 +334,12 @@ let activeSignalQuery = "";
 let signalSearchMatches = [];
 let lastFocus = null;
 const savedQueryStorageKey = "marketSignal.savedQueries";
+const themeStorageKey = "marketSignal.theme";
 
 const byId = (id) => document.getElementById(id);
 const activeCompany = () => companies.find((company) => company.id === activeCompanyId);
 const activeKeyword = () => keywordData.find((keyword) => keyword.id === activeKeywordId) || keywordData[0];
+const currentTheme = () => (document.documentElement.dataset.theme === "dark" ? "dark" : "light");
 const escapeHtml = (value = "") =>
   String(value)
     .replace(/&/g, "&amp;")
@@ -559,6 +561,16 @@ function getSavedQueries() {
 
 function setSavedQueries(values) {
   localStorage.setItem(savedQueryStorageKey, JSON.stringify(values.slice(0, 8)));
+}
+
+function applyTheme(theme, persist = true) {
+  const nextTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.dataset.theme = nextTheme;
+  if (persist) localStorage.setItem(themeStorageKey, nextTheme);
+  document.querySelectorAll("[data-theme-option]").forEach((button) => {
+    const selected = button.dataset.themeOption === nextTheme;
+    button.setAttribute("aria-pressed", String(selected));
+  });
 }
 
 function flattenSignalItems() {
@@ -1571,6 +1583,10 @@ function bindEvents() {
   byId("shareTextButton").addEventListener("click", (event) => copyShareLink(event.currentTarget, "복사됨"));
   byId("copyPublicShareButton").addEventListener("click", (event) => copyShareLink(event.currentTarget, "복사됨"));
 
+  document.querySelectorAll("[data-theme-option]").forEach((button) => {
+    button.addEventListener("click", () => applyTheme(button.dataset.themeOption));
+  });
+
   byId("signalSearchForm").addEventListener("submit", (event) => {
     event.preventDefault();
     const query = byId("signalSearchInput").value.trim();
@@ -1754,6 +1770,7 @@ function bindEvents() {
 }
 
 function init() {
+  applyTheme(currentTheme(), false);
   renderDashboard();
   applyDefaultMobileCollapse();
   bindEvents();
