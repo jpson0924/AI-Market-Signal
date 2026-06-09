@@ -814,6 +814,35 @@ function stripKnownSourceSuffix(value = "", source = "") {
     .replace(/\s+-\s+(?:v\.daum\.net|m\.news\.naver\.com|news\.naver\.com|네이버뉴스|naver news|google news|daum|다음뉴스)$/i, "");
 }
 
+function attrFromTag(block = "", tagName = "", attrName = "") {
+  const tagMatch = block.match(new RegExp(`<${tagName}\\b([^>]*)>`, "i"));
+  if (!tagMatch) return "";
+  const attrMatch = tagMatch[1].match(new RegExp(`${attrName}=["']([^"']+)["']`, "i"));
+  return attrMatch ? decodeXml(attrMatch[1]) : "";
+}
+
+function imageFromHtml(value = "") {
+  const imgMatch = decodeXml(value).match(/<img\b[^>]*\bsrc=["']([^"']+)["']/i);
+  return imgMatch ? decodeXml(imgMatch[1]) : "";
+}
+
+function usableImageUrl(url = "") {
+  const imageUrl = String(url).trim();
+  if (!/^https?:\/\//i.test(imageUrl)) return "";
+  if (/(?:spacer|sprite|blank|1x1|transparent|logo|favicon)/i.test(imageUrl)) return "";
+  return imageUrl;
+}
+
+function imageFromFeedBlock(block = "", summary = "") {
+  return (
+    usableImageUrl(attrFromTag(block, "media:content", "url")) ||
+    usableImageUrl(attrFromTag(block, "media:thumbnail", "url")) ||
+    usableImageUrl(attrFromTag(block, "enclosure", "url")) ||
+    usableImageUrl(imageFromHtml(summary)) ||
+    ""
+  );
+}
+
 function parseFeed(xml, sourceName) {
   const blocks = [...xml.matchAll(/<item[\s\S]*?<\/item>/gi)].map((match) => match[0]);
   const entries = blocks.length ? blocks : [...xml.matchAll(/<entry[\s\S]*?<\/entry>/gi)].map((match) => match[0]);
@@ -825,11 +854,13 @@ function parseFeed(xml, sourceName) {
       const published = tag(block, "pubDate") || tag(block, "updated") || tag(block, "published");
       const publishedAt = published ? new Date(published) : new Date();
       const source = tag(block, "source") || sourceName;
+      const summary = tag(block, "description") || tag(block, "summary") || tag(block, "content:encoded");
       return {
         source,
         title: cleanTitle(stripKnownSourceSuffix(tag(block, "title"), source)),
-        summary: tag(block, "description") || tag(block, "summary") || tag(block, "content:encoded"),
+        summary,
         link: hrefMatch ? hrefMatch[1] : rawLink,
+        imageUrl: imageFromFeedBlock(block, summary),
         publishedAt: Number.isNaN(publishedAt.getTime()) ? new Date() : publishedAt
       };
     })
@@ -917,6 +948,63 @@ const articleFrames = [
   }
 ];
 
+const topicImages = [
+  {
+    pattern: /젠슨|jensen|huang|엔비디아|nvidia|피지컬\s*ai|로보틱스|로봇/i,
+    url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=480&q=80",
+    alt: "로봇과 피지컬 AI를 연상시키는 관련 이미지",
+    credit: "피지컬 AI"
+  },
+  {
+    pattern: /ai\s*(?:반도체|칩)|hbm|gpu|npu|가속기|파운드리|메모리/i,
+    url: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=480&q=80",
+    alt: "AI 반도체와 칩 공급망을 연상시키는 관련 이미지",
+    credit: "AI 반도체"
+  },
+  {
+    pattern: /데이터센터|클라우드|ai\s*팩토리|인프라|aidc/i,
+    url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=480&q=80",
+    alt: "데이터센터와 AI 인프라를 연상시키는 관련 이미지",
+    credit: "AI 인프라"
+  },
+  {
+    pattern: /보안|kisa|개인정보|유출|위협|감사|권한|통제|복원력|사이버/i,
+    url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=480&q=80",
+    alt: "사이버 보안과 통제 체계를 연상시키는 관련 이미지",
+    credit: "AI 보안"
+  },
+  {
+    pattern: /엔터프라이즈|파트너|협력|도입|상용화|솔루션|ax|si|영업/i,
+    url: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=480&q=80",
+    alt: "엔터프라이즈 AI 협업을 연상시키는 관련 이미지",
+    credit: "엔터프라이즈 AI"
+  },
+  {
+    pattern: /ai|인공지능|llm|agent|모델|데이터/i,
+    url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=480&q=80",
+    alt: "AI 기술과 회로를 연상시키는 관련 이미지",
+    credit: "AI 시장"
+  }
+];
+
+function agendaImageForArticle(article) {
+  const haystack = `${article.title} ${article.summary} ${article.source}`;
+  const feedImage = usableImageUrl(article.imageUrl);
+  if (feedImage) {
+    return {
+      imageUrl: feedImage,
+      imageAlt: `${article.source} 기사 관련 이미지`,
+      imageCredit: article.source
+    };
+  }
+  const fallback = topicImages.find((image) => image.pattern.test(haystack)) || topicImages[topicImages.length - 1];
+  return {
+    imageUrl: fallback.url,
+    imageAlt: fallback.alt,
+    imageCredit: fallback.credit
+  };
+}
+
 function articleFrame(article) {
   const haystack = `${article.title} ${article.summary} ${article.source}`;
   return (
@@ -930,61 +1018,113 @@ function articleFrame(article) {
   );
 }
 
-function articleSpecificDetail(article, frame) {
+function articleSpecificSignal(article, frame) {
   const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
   const rules = [
     {
       pattern: /쇼맨십|게임회동|뒷얘기|삼겹살|회동/i,
       detail:
-        "행사성 회동과 실제 피지컬 AI 협력 사이의 간극을 짚는 신호입니다. 후속 발표가 제품 계약, GPU 공급, 공동 PoC로 이어졌는지 확인해야 합니다."
+        "행사성 회동과 실제 피지컬 AI 협력 사이의 간극을 짚는 신호입니다. 후속 발표가 제품 계약, GPU 공급, 공동 PoC로 이어졌는지 확인해야 합니다.",
+      owner: "사업개발",
+      question: "이 회동이 실제 파트너십인가, 아니면 관계 형성 이벤트인가?",
+      task: "후속 계약, 공동 PoC, GPU 공급 언급이 있는지 원문에 표시하고 행사성 노출이면 관망 처리하세요.",
+      check: "후속 발표, 계약 주체, 공동 PoC, GPU 공급 조건"
     },
     {
       pattern: /ai\s*팩토리|중심지|의존\s*탈피|엔비디아\s*의존/i,
       detail:
-        "한국이 AI 팩토리 거점으로 부상하는 동시에 엔비디아 의존 리스크가 커진다는 신호입니다. 대체 인프라와 국산 칩 활용 가능성을 같이 봐야 합니다."
+        "한국이 AI 팩토리 거점으로 부상하는 동시에 엔비디아 의존 리스크가 커진다는 신호입니다. 대체 인프라와 국산 칩 활용 가능성을 같이 봐야 합니다.",
+      owner: "인프라/전략",
+      question: "우리 서비스 원가가 엔비디아 의존 리스크에 얼마나 노출돼 있나?",
+      task: "GPU 의존도, 국산 NPU 대체안, 클라우드 단가를 오늘 비용표에 반영하세요.",
+      check: "GPU 조달 주체, 대체 인프라, 국산 칩 채택 가능성"
     },
     {
       pattern: /휴머노이드|로봇.*간담회|업계\s*간담회/i,
       detail:
-        "정부가 휴머노이드·로봇 AI 생태계의 정책 수요를 직접 수렴하는 신호입니다. 로봇 데이터, 부품, 안전 인증, 실증 예산으로 이어질지 확인해야 합니다."
+        "정부가 휴머노이드·로봇 AI 생태계의 정책 수요를 직접 수렴하는 신호입니다. 로봇 데이터, 부품, 안전 인증, 실증 예산으로 이어질지 확인해야 합니다.",
+      owner: "신사업/정책",
+      question: "로봇·피지컬 AI가 우리 고객군에서 올해 PoC가 가능한 영역인가?",
+      task: "로봇 AI 실증 예산, 안전 인증, 데이터 확보 요구를 사업 기회로 분리하세요.",
+      check: "참여 기업, 정부 예산, 실증 일정, 인증 요구"
     },
     {
       pattern: /k-ai\s*반도체|성장\s*포럼|과기정통부.*반도체/i,
       detail:
-        "정부가 K-AI 반도체를 산업 육성 의제로 다시 끌어올리는 신호입니다. 조달, 실증, 국산 NPU 채택 조건이 생기는지 봐야 합니다."
+        "정부가 K-AI 반도체를 산업 육성 의제로 다시 끌어올리는 신호입니다. 조달, 실증, 국산 NPU 채택 조건이 생기는지 봐야 합니다.",
+      owner: "인프라/공공영업",
+      question: "국산 AI 반도체가 비용 절감 옵션인지, 조달 필수 조건인지 구분됐나?",
+      task: "국산 NPU 조달·검증 조건을 공공 제안서 체크리스트에 추가하세요.",
+      check: "조달 조건, 검증 지표, 지원 예산, 참여 기업"
     },
     {
       pattern: /델|dell|파트너.*수익|사이버\s*복원력|클라우드\s*현대화/i,
       detail:
-        "엔터프라이즈 AI 도입이 파트너 수익, 보안 복원력, 클라우드 현대화 패키지로 묶이는 신호입니다. SI·리셀러 채널 전략에 반영할 만합니다."
+        "엔터프라이즈 AI 도입이 파트너 수익, 보안 복원력, 클라우드 현대화 패키지로 묶이는 신호입니다. SI·리셀러 채널 전략에 반영할 만합니다.",
+      owner: "채널/영업",
+      question: "우리 제안은 모델 기능이 아니라 운영 책임과 채널 수익을 설명하고 있나?",
+      task: "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요.",
+      check: "파트너 혜택, 보안 요구, 클라우드 전환 범위"
     },
     {
       pattern: /lg cns|aind|에이전틱\s*ai|개발\s*플랫폼/i,
       detail:
-        "SI 기업이 AI를 개발·운영 자동화 플랫폼으로 제품화하는 신호입니다. 내부 개발 생산성보다 고객 IT 전환 패키지로 팔릴 가능성을 봐야 합니다."
+        "SI 기업이 AI를 개발·운영 자동화 플랫폼으로 제품화하는 신호입니다. 내부 개발 생산성보다 고객 IT 전환 패키지로 팔릴 가능성을 봐야 합니다.",
+      owner: "제품/엔터프라이즈",
+      question: "우리는 에이전틱 개발 플랫폼과 경쟁/연동 중 어느 쪽인가?",
+      task: "개발·운영 자동화 기능을 고객 IT 전환 패키지로 설명할 수 있는지 점검하세요.",
+      check: "자동화 범위, 운영 책임, 모델 파트너, 도입 고객"
     },
     {
       pattern: /gpu.*확충|베라루빈|네이버.*삼성.*엘리스|정부\s*gpu/i,
       detail:
-        "정부 GPU 확충 사업이 민간 클라우드·AI 인프라 업체 선정으로 구체화되는 신호입니다. 조달 일정과 운영 주체를 확인해야 합니다."
+        "정부 GPU 확충 사업이 민간 클라우드·AI 인프라 업체 선정으로 구체화되는 신호입니다. 조달 일정과 운영 주체를 확인해야 합니다.",
+      owner: "인프라/전략",
+      question: "정부 GPU 확충이 우리 조달 비용과 공공 영업 조건을 바꾸나?",
+      task: "선정 사업자, 공급 일정, 이용 단가를 인프라 조달 시나리오에 반영하세요.",
+      check: "선정 기업, GPU 규모, 서비스 개시일, 이용 단가"
     },
     {
       pattern: /skt|sk텔레콤|aidc|gw급|ai\s*인프라\s*동맹/i,
       detail:
-        "통신사가 엔비디아와 AI 데이터센터 사업을 결합하는 신호입니다. 전력, 네트워크, GPU 운영 역량이 B2B 판매 포인트가 됩니다."
+        "통신사가 엔비디아와 AI 데이터센터 사업을 결합하는 신호입니다. 전력, 네트워크, GPU 운영 역량이 B2B 판매 포인트가 됩니다.",
+      owner: "B2B 전략",
+      question: "통신사 AI 데이터센터가 우리 고객 제안의 경쟁자 또는 파트너인가?",
+      task: "전력, 네트워크, GPU 운영 역량을 기준으로 협업/경쟁 포인트를 나누세요.",
+      check: "데이터센터 규모, 엔비디아 협력 범위, 타깃 고객, 과금 구조"
     },
     {
       pattern: /hbm|파운드리|메모리/i,
       detail:
-        "AI 인프라 경쟁이 HBM·메모리·파운드리 공급망으로 번지는 신호입니다. 원가와 공급 안정성 리스크를 함께 봐야 합니다."
+        "AI 인프라 경쟁이 HBM·메모리·파운드리 공급망으로 번지는 신호입니다. 원가와 공급 안정성 리스크를 함께 봐야 합니다.",
+      owner: "인프라/재무",
+      question: "HBM·메모리 수급 변화가 추론 단가와 공급 안정성을 흔드나?",
+      task: "클라우드 단가, 장기 예약, 대체 벤더 옵션을 원가 시나리오에 업데이트하세요.",
+      check: "공급 업체, 생산 일정, 단가 변화, 클라우드 반영 여부"
     },
     {
       pattern: /보안|감사|권한|사이버|복원력/i,
       detail:
-        "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다."
+        "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다.",
+      owner: "보안/제품",
+      question: "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+      task: "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+      check: "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제"
     }
   ];
-  return rules.find((rule) => rule.pattern.test(haystack))?.detail || `${frame.detail} ${frame.why}`;
+  return (
+    rules.find((rule) => rule.pattern.test(haystack)) || {
+      detail: `${frame.detail} ${frame.why}`,
+      owner: "전략",
+      question: `${frame.topic} 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?`,
+      task: frame.next,
+      check: "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
+    }
+  );
+}
+
+function articleSpecificDetail(article, frame) {
+  return articleSpecificSignal(article, frame).detail;
 }
 
 function articleDetailSummary(article, businessRelevance) {
@@ -1003,12 +1143,17 @@ function articleDetailSummary(article, businessRelevance) {
 
 function articleActionBrief(article) {
   const frame = articleFrame(article);
+  const signal = articleSpecificSignal(article, frame);
   return {
     topic: frame.topic,
     why: frame.why,
-    decision: `${frame.topic} 이슈가 우리 제품, 고객 제안, 파트너십 우선순위를 바꾸는지 오늘 판정하세요.`,
-    nextStep: frame.next,
-    sourceCheck: "원문에서 발표 주체, 협력 범위, 실제 적용 산업, 후속 일정이 있는지 확인하세요."
+    owner: signal.owner,
+    decision: signal.question,
+    question: signal.question,
+    task: signal.task,
+    nextStep: signal.task,
+    sourceCheck: signal.check,
+    evidenceChecklist: signal.check
   };
 }
 
@@ -1033,11 +1178,14 @@ function parseHtmlLinks(html, source) {
     .map((match) => {
       const link = absoluteUrl(decodeXml(match[1]), source.url);
       const title = cleanTitle(match[2]);
+      const rawImage = imageFromHtml(match[0]);
+      const imageUrl = rawImage ? usableImageUrl(absoluteUrl(rawImage, source.url)) : "";
       return {
         source: source.name,
         title,
         summary: title,
         link,
+        imageUrl,
         publishedAt: new Date()
       };
     })
@@ -1644,6 +1792,7 @@ function buildNewsAgenda(article, generatedAt, index, businessRelevance = busine
   const summary = articleDetailSummary(article, businessRelevance);
   const reason = hotReasonForArticle(article, businessRelevance);
   const actionBrief = articleActionBrief(article);
+  const image = agendaImageForArticle(article);
   return {
     rank: index + 1,
     id: `news-${index + 1}-${hashId(article.link || article.title)}`,
@@ -1665,6 +1814,9 @@ function buildNewsAgenda(article, generatedAt, index, businessRelevance = busine
     metric: pinned ? "Pinned Hot" : "원문 1건",
     pinned,
     topicBucket: bucket,
+    imageUrl: image.imageUrl,
+    imageAlt: image.imageAlt,
+    imageCredit: image.imageCredit,
     reason,
     whyHot: reason,
     actionBrief,

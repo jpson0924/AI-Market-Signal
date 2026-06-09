@@ -610,35 +610,41 @@ function renderActionBoard() {
   const actionBrief = agenda?.actionBrief || {
     topic: agendaTags || "핵심 AI 신호",
     why: getAgendaReason(agenda),
-    decision: `${truncateText(agendaTitle, 46)} 이슈가 우리 제품, 고객 제안, 파트너십 우선순위를 바꾸는지 판단하세요.`,
-    nextStep: "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하고 담당 액션을 정하세요.",
-    sourceCheck: "기사 제목만 보지 말고 협력 범위, 적용 산업, 후속 일정이 있는지 확인하세요."
+    owner: "전략",
+    question: `${truncateText(agendaTitle, 46)} 이슈가 우리 제품, 고객 제안, 파트너십 우선순위를 바꾸나요?`,
+    task: "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하고 담당 액션을 정하세요.",
+    sourceCheck: "기사 제목만 보지 말고 협력 범위, 적용 산업, 후속 일정이 있는지 확인하세요.",
+    evidenceChecklist: "발표 주체, 적용 산업, 후속 계약 가능성"
   };
+  const owner = actionBrief.owner || "전략";
+  const question = actionBrief.question || actionBrief.decision || `${agendaTitle} 이슈를 오늘 판단하세요.`;
+  const task = actionBrief.task || actionBrief.nextStep || "원문을 읽고 후속 액션을 정하세요.";
+  const checklist = actionBrief.evidenceChecklist || actionBrief.sourceCheck || "발표 주체, 협력 범위, 적용 산업, 후속 일정";
 
   byId("actionBoard").innerHTML = [
     {
-      label: "이슈 판정",
-      body: actionBrief.decision,
-      next: actionBrief.nextStep,
-      context: "왜 지금",
+      label: "판단 질문",
+      body: question,
+      next: task,
+      context: owner,
       why: actionBrief.why
     },
     {
-      label: "근거 확인",
+      label: "원문 체크",
       body: primarySource
-        ? `${primarySource.media} 원문에서 ${actionBrief.sourceCheck || "발표 주체, 협력 범위, 적용 산업을 확인하세요."}`
+        ? `${primarySource.media} 원문에서 ${checklist} 항목을 확인하세요.`
         : "오늘 수집분에서 직접 원문이 부족합니다. 뉴스 모달의 판단 근거와 수집 링크를 먼저 확인하세요.",
       next: primarySource ? truncateText(primarySource.title, 64) : "원문 확보 후 다시 판단",
       href: primarySource?.url,
-      context: "근거 확인"
+      context: primarySource?.media || "근거"
     },
     {
-      label: "회사 전략 연결",
+      label: "사업 연결",
       body: companySignal
-        ? `${relatedCompany.name}의 ${companySignal.label} 신호와 비교하세요. ${companySignal.sourceSummary || "근거 수집 중"} 기준으로 경쟁사/파트너 영향도를 보세요.`
+        ? `${relatedCompany.name}의 ${companySignal.label} 신호와 연결해 고객 제안, 파트너십, 원가 영향 중 어디에 걸리는지 비교하세요.`
         : "회사별 근거 레이더에서 직접 원문이 붙은 신호를 우선 확인합니다.",
-      next: companySignal?.takeaway || "회사별 레이더에서 직접 근거가 붙은 전략 신호만 우선 확인",
-      context: "후속 액션"
+      next: companySignal?.takeaway || task,
+      context: relatedCompany?.name || "회사 영향"
     }
   ]
     .map(
@@ -685,6 +691,9 @@ function renderHotList() {
       const sourceCount = getAgendaSourceCount(agenda);
       const score = getAgendaScore(agenda);
       const metric = agenda.metric || agenda.momentum || `${sourceCount}개 매체`;
+      const imageUrl = agenda.imageUrl || agenda.thumbnail || "";
+      const imageAlt = agenda.imageAlt || `${agenda.title} 관련 이미지`;
+      const imageCredit = agenda.imageCredit || getAgendaSources(agenda)[0]?.media || "관련 이미지";
       return `
         <li>
           <article class="hot-item" tabindex="0" role="button" data-agenda-id="${agenda.id}" aria-label="${escapeHtml(`${agenda.title} 브리핑 열기`)}" style="--agenda-color:${colors[index % colors.length]}">
@@ -713,6 +722,14 @@ function renderHotList() {
               <span class="hot-meta">
                 <span>${sourceCount}개 매체 · ${escapeHtml(agenda.mentions || score)}회 신호</span>
               </span>
+            </span>
+            <span class="hot-thumb ${imageUrl ? "" : "empty"}">
+              ${
+                imageUrl
+                  ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(imageAlt)}" loading="lazy" />`
+                  : `<span>Signal</span>`
+              }
+              <em>${escapeHtml(imageCredit)}</em>
             </span>
             <span class="hot-metrics">
               <span class="signal-badge">${escapeHtml(metric)}</span>
