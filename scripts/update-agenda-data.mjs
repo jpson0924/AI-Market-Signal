@@ -8,6 +8,7 @@ const cssPath = resolve(rootDir, "styles.css");
 const appPath = resolve(rootDir, "app.js");
 const jsOutputPath = resolve(rootDir, "agenda-data.js");
 const jsonOutputPath = resolve(rootDir, "agenda-data.json");
+const restoredHtmlPath = resolve(rootDir, "signal-desk-screen-share-restored.html");
 const shareHtmlPath = resolve(rootDir, "signal-desk-screen-share.html");
 const shareTextPath = resolve(rootDir, "signal-desk-screen-share.txt");
 const historyDir = resolve(rootDir, "history");
@@ -1100,6 +1101,16 @@ function formatKstKey(date) {
   return `${part.year}-${part.month}-${part.day}`;
 }
 
+function formatAssetVersion(date) {
+  const part = kstParts(date);
+  return `${part.year}${part.month}${part.day}${part.hour}${part.minute}`;
+}
+
+function assetVersionFromGeneratedAt(value) {
+  const match = String(value).match(/^(\d{4})\.(\d{2})\.(\d{2}) (\d{2}):(\d{2})/);
+  return match ? `${match[1]}${match[2]}${match[3]}${match[4]}${match[5]}` : formatAssetVersion(new Date());
+}
+
 function nextKstMorning(date) {
   const shifted = new Date(date.getTime() + KST_OFFSET_MS);
   const next = new Date(Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate(), 8, 0, 0));
@@ -2099,6 +2110,18 @@ async function rebuildShareHtml() {
   await writeFile(shareTextPath, html);
 }
 
+async function refreshHtmlAssetVersions(version) {
+  for (const htmlPath of [indexPath, restoredHtmlPath]) {
+    const html = await readFile(htmlPath, "utf8");
+    const nextHtml = html
+      .replace(/href="styles\.css(?:\?v=[^"]*)?"/, `href="styles.css?v=${version}"`)
+      .replace(/src="agenda-data\.js(?:\?v=[^"]*)?"/, `src="agenda-data.js?v=${version}"`)
+      .replace(/src="app\.js(?:\?v=[^"]*)?"/, `src="app.js?v=${version}"`);
+
+    await writeFile(htmlPath, nextHtml);
+  }
+}
+
 async function main() {
   const rawItems = (await Promise.all(sources.map(fetchSource))).flat();
   const articles = uniqByTitle(rawItems).sort((a, b) => b.publishedAt - a.publishedAt);
@@ -2121,6 +2144,7 @@ async function main() {
   const json = JSON.stringify(data, null, 2);
   await writeFile(jsOutputPath, `window.TECH_AGENDA_DATA = ${json};\n`);
   await writeFile(jsonOutputPath, `${json}\n`);
+  await refreshHtmlAssetVersions(assetVersionFromGeneratedAt(data.metadata.generatedAt));
   await rebuildShareHtml();
   console.log(
     `[ok] Updated agenda data with ${data.metrics.articles} articles from ${data.metrics.blogs} sources. Main file keeps ${days.length} day snapshots. Share HTML rebuilt.`
