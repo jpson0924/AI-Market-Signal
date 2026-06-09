@@ -931,7 +931,7 @@ main {
 }
 
 .signal-search-panel {
-  margin-top: 18px;
+  margin: 18px 0;
 }
 
 .signal-search-panel::before {
