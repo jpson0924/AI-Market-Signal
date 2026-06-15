@@ -5,9 +5,12 @@ on:
     branches:
       - main
   schedule:
-    # 08:20 KST primary run, with a 09:20 KST backup in case GitHub delays or skips one queue.
+    # KST morning retries. GitHub scheduled workflows can be delayed or occasionally skipped.
     - cron: "20 23 * * *"
+    - cron: "50 23 * * *"
     - cron: "20 0 * * *"
+    - cron: "50 0 * * *"
+    - cron: "20 1 * * *"
   workflow_dispatch:
 
 permissions:
@@ -42,10 +45,26 @@ jobs:
           node --check app.js
           node --check scripts/update-agenda-data.mjs
 
+      - name: Check scheduled freshness
+        id: freshness
+        if: github.event_name == 'schedule'
+        run: |
+          TODAY="$(date +%F)"
+          SNAPSHOT="$(node -e "const fs=require('fs'); const data=JSON.parse(fs.readFileSync('agenda-data.json','utf8')); console.log(data.metadata?.snapshotDate || '')")"
+          if [ "$SNAPSHOT" = "$TODAY" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Already updated for $TODAY."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Current snapshot is $SNAPSHOT; updating for $TODAY."
+          fi
+
       - name: Update agenda data
+        if: github.event_name != 'schedule' || steps.freshness.outputs.skip != 'true'
         run: node scripts/update-agenda-data.mjs
 
       - name: Commit updated data
+        if: github.event_name != 'schedule' || steps.freshness.outputs.skip != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -58,6 +77,7 @@ jobs:
           fi
 
       - name: Build Pages artifact
+        if: github.event_name != 'schedule' || steps.freshness.outputs.skip != 'true'
         run: |
           rm -rf dist
           mkdir -p dist
@@ -66,13 +86,16 @@ jobs:
           touch dist/.nojekyll
 
       - name: Configure Pages
+        if: github.event_name != 'schedule' || steps.freshness.outputs.skip != 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: github.event_name != 'schedule' || steps.freshness.outputs.skip != 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
       - name: Deploy to GitHub Pages
+        if: github.event_name != 'schedule' || steps.freshness.outputs.skip != 'true'
         id: deployment
         uses: actions/deploy-pages@v4
