@@ -2028,7 +2028,9 @@ async function enrichHotAgendaImages(data, articles = []) {
 function articleTopicBucket(article) {
   const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
   if (/(젠슨\s*황|jensen\s*huang|엔비디아|nvidia)/i.test(haystack) && /(방한|한국|korea|피지컬|로보틱스|로봇|게임|회동|크래프톤|삼성|sk|현대|네이버|lg)/i.test(haystack)) return "nvidia-korea";
+  if (/ai\s*안전|ai\s*safety|오픈ai.*안전|openai.*safety|앤트로픽.*안전|anthropic.*safety|앤트로픽.*보안|빅테크\s*협력망|안전\s*동맹|보안\s*동맹|ai\s*동맹.*안전|민주국가.*ai\s*동맹|g7.*ai\s*동맹|안전.*공동\s*대응|안전.*보안.*맞손/i.test(haystack)) return "ai-safety-policy";
   if (/앤트로픽|anthropic|글래스윙|glasswing|kisa|사이버\s*보안/i.test(haystack)) return "anthropic-security";
+  if (/ai\s*데이터센터|데이터센터.*특별법|특별법.*데이터센터|전력\s*특례|인허가.*일괄처리|aidc/i.test(haystack)) return "ai-datacenter-policy";
   if (/ai\s*(?:반도체|칩)|hbm|gpu|npu|칩셋|가속기|퓨리오사|리벨리온|국산.*반도체|반도체.*포럼/i.test(haystack)) return "ai-chip";
   if (isExplicitAppleArticle(article)) return "apple";
   if (/네이버|naver|소버린|hyperclova|하이퍼클로바/i.test(haystack)) return "naver";
@@ -2046,17 +2048,50 @@ function isMarketSpeculationArticle(article) {
 
 function hasConcreteBusinessAction(article) {
   const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
-  return /계약|공급|도입|출시|런칭|상용화|협력 체결|mou|공동 개발|전략적 투자|투자 유치|추가 투자|인수|m&a|정책|예산|조달|사업 선정|국산화|전면 도입|공개|발표|파트너십|고객사|수주|구축/.test(
+  return /계약|공급(?!망)|납품|도입|출시|런칭|상용화|협력 체결|mou|공동 개발|전략적 투자|투자 유치|추가 투자|인수|m&a|정책|예산|조달|사업 선정|국산화|전면 도입|공개|발표|파트너십|고객사|수주|구축/.test(
     haystack
   );
 }
 
+function isLowSignalSource(article) {
+  return /naver blog|블로그/i.test(article.source || "");
+}
+
+function isRoundupOrEventArticle(article) {
+  const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
+  const title = cleanTitle(article.title).toLowerCase();
+  const roundupFrame = /단신|종합|브리핑|모음|한자리에|이모저모/.test(title);
+  const eventFrame = /행사|공모전|세미나|컨퍼런스|박람회|전시회|밋업|웨비나|참가자 모집|개최/.test(title);
+  const hardSignal = /특별법|하위법령|전략적 투자|투자 유치|추가 투자|인수|m&a|계약|수주|공급(?!망)|납품|상용화|전면 도입|사업 선정|조달|예산/.test(haystack);
+  return roundupFrame || (eventFrame && !hardSignal);
+}
+
+function isPersonalNarrativeArticle(article) {
+  const title = cleanTitle(article.title).toLowerCase();
+  return /최초\s*경고자|연구원|제보|발단|인터뷰|일문일답|비하인드|사연|말말말/.test(title);
+}
+
+function isConsumerProductPricingArticle(article) {
+  const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
+  const consumerFrame = /아이폰|iphone|스마트폰|갤럭시|소비자\s*가격|출고가|팀\s*쿡|가격\s*인상/.test(haystack);
+  const pricingFrame = /가격|출고가|폭등|팀\s*쿡|아이폰|iphone/.test(haystack);
+  const aiPlatformSignal = /apple intelligence|애플\s*인텔리전스|온디바이스|private cloud compute|개발자\s*api|app intents|siri/.test(haystack);
+  return consumerFrame && pricingFrame && !aiPlatformSignal;
+}
+
 function isWeakTopNewsArticle(article) {
   const haystack = `${article.title} ${article.summary} ${article.source}`.toLowerCase();
-  const blogFrame = /naver blog|블로그/.test(haystack);
+  const blogFrame = isLowSignalSource(article) || /naver blog|블로그/.test(haystack);
   const eventColorFrame = /말말말|깜짝\s*선물|화제의|뒷얘기|삼겹살|회동.*후일담|관심 집중/.test(haystack);
   const concreteAction = hasConcreteBusinessAction(article);
-  return isMarketSpeculationArticle(article) || (blogFrame && !concreteAction) || (eventColorFrame && !concreteAction);
+  return (
+    isMarketSpeculationArticle(article) ||
+    blogFrame ||
+    isRoundupOrEventArticle(article) ||
+    isConsumerProductPricingArticle(article) ||
+    (isPersonalNarrativeArticle(article) && !/수출\s*통제|제재|소송|규제|가이드라인|정부\s*조사/.test(haystack)) ||
+    (eventColorFrame && !concreteAction)
+  );
 }
 
 function strategicImportanceScore(article) {
@@ -2071,6 +2106,10 @@ function strategicImportanceScore(article) {
 
   const researchOnly = /대학|kaist|카이스트|논문|연구진|개발/.test(haystack) && !hasConcreteBusinessAction(article);
   if (researchOnly) score -= 24;
+  if (isLowSignalSource(article)) score -= 54;
+  if (isRoundupOrEventArticle(article)) score -= 46;
+  if (isConsumerProductPricingArticle(article)) score -= 50;
+  if (isPersonalNarrativeArticle(article)) score -= 24;
   if (isWeakTopNewsArticle(article)) score -= 34;
 
   return Math.max(-40, Math.min(110, score));
@@ -2117,6 +2156,9 @@ function latestArticleScore(article, businessRelevance, generatedAt) {
   const titlePenalty = /deepfake|nudes|celebrity gossip|rumor/i.test(haystack) ? 22 : 0;
   const marketSpeculationPenalty = isMarketSpeculationArticle(article) ? 72 : 0;
   const weakTopNewsPenalty = isWeakTopNewsArticle(article) ? 46 : 0;
+  const lowSignalPenalty = isLowSignalSource(article) || isRoundupOrEventArticle(article) ? 80 : 0;
+  const consumerPricingPenalty = isConsumerProductPricingArticle(article) ? 72 : 0;
+  const narrativePenalty = isPersonalNarrativeArticle(article) ? 26 : 0;
   const lowImportancePenalty = strategicScore < 18 ? 30 : 0;
   return (
     businessRelevance.score * 0.86 +
@@ -2129,6 +2171,9 @@ function latestArticleScore(article, businessRelevance, generatedAt) {
     titlePenalty -
     marketSpeculationPenalty -
     weakTopNewsPenalty -
+    lowSignalPenalty -
+    consumerPricingPenalty -
+    narrativePenalty -
     lowImportancePenalty
   );
 }
@@ -2153,7 +2198,8 @@ function buildHotAgendas(scoredTerms, generatedAt, articles) {
         isAiBusinessArticle(article) &&
         businessRelevance.score >= 52 &&
         (strategicScore >= 18 || businessRelevance.score >= 82) &&
-        !isMarketSpeculationArticle(article)
+        !isMarketSpeculationArticle(article) &&
+        !isWeakTopNewsArticle(article)
     )
     .sort(
       (a, b) =>
@@ -2268,7 +2314,8 @@ function buildHotAgendas(scoredTerms, generatedAt, articles) {
         isAiBusinessArticle(article) &&
         businessRelevance.score >= 45 &&
         (strategicScore >= 12 || businessRelevance.score >= 74) &&
-        !isMarketSpeculationArticle(article)
+        !isMarketSpeculationArticle(article) &&
+        !isWeakTopNewsArticle(article)
     )
     .sort(
       (a, b) =>
