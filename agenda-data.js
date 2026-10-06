@@ -1,15 +1,15 @@
 window.TECH_AGENDA_DATA = {
   "metadata": {
-    "snapshotDate": "2026-10-05",
-    "generatedAt": "2026.10.05 11:04 KST",
-    "baseDate": "2026.10.05 Mon",
-    "windowLabel": "2026.10.04 11:04 - 2026.10.05 11:04 KST",
-    "nextUpdate": "2026.10.06 08:20 KST"
+    "snapshotDate": "2026-10-06",
+    "generatedAt": "2026.10.06 12:06 KST",
+    "baseDate": "2026.10.06 Tue",
+    "windowLabel": "2026.10.05 12:06 - 2026.10.06 12:06 KST",
+    "nextUpdate": "2026.10.07 08:20 KST"
   },
   "metrics": {
-    "articles": 101,
-    "blogs": 30,
-    "dedupeRate": "95%",
+    "articles": 178,
+    "blogs": 60,
+    "dedupeRate": "91%",
     "newAgendas": "+5"
   },
   "sourceSignals": [
@@ -18,11 +18,11 @@ window.TECH_AGENDA_DATA = {
       "100%"
     ],
     [
-      "AI Times",
-      "57%"
+      "Hacker News",
+      "77%"
     ],
     [
-      "Hacker News",
+      "AI Times",
       "53%"
     ]
   ],
@@ -165,164 +165,53 @@ window.TECH_AGENDA_DATA = {
   ],
   "collectionQueue": [
     [
-      "2026.10.06 08:20",
+      "2026.10.07 08:20",
       "Domestic and global AI source sweep"
     ],
     [
-      "2026.10.06 08:35",
+      "2026.10.07 08:35",
       "Agenda clustering and company signal scoring"
     ],
     [
-      "2026.10.06 08:50",
+      "2026.10.07 08:50",
       "Dashboard data publish"
     ]
   ],
   "impactNotes": [
     {
-      "title": "제품",
-      "body": "알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개...\"소버린 AI용\" 흐름은 제품 로드맵보다 구매 조건을 먼저 바꿀 수 있습니다. 오늘 할 일: 원문 1건을 읽고 영업·보안·인프라 영향만 분리하세요.",
+      "title": "원가·인프라",
+      "body": "국내 NPU·GPU 수주전은 추론 원가와 출시 속도 리스크입니다. 오늘 할 일: GPU/NPU 대체안, 클라우드 단가, SLA 가정을 업데이트하세요.",
+      "color": "#3563c8",
+      "action": "원가 시나리오 업데이트"
+    },
+    {
+      "title": "파트너십",
+      "body": "피지컬 AI 파트너십 신호는 로봇, 게임, 제조 연동 기회입니다. 오늘 할 일: GPU 의존 기능과 국내 파트너 후보를 한 장으로 정리하세요.",
       "color": "#0f8f82",
-      "action": "영향 분리"
+      "action": "파트너 후보 점검"
     },
     {
       "title": "보안 심사",
       "body": "KISA·AI 보안 협력은 구매 심사가 더 엄격해진다는 신호입니다. 오늘 할 일: 권한, 로그, 승인 플로우를 제안서 앞단에 넣으세요.",
       "color": "#c54b40",
       "action": "보안 체크리스트 보강"
-    },
-    {
-      "title": "원가·인프라",
-      "body": "국내 NPU·GPU 수주전은 추론 원가와 출시 속도 리스크입니다. 오늘 할 일: GPU/NPU 대체안, 클라우드 단가, SLA 가정을 업데이트하세요.",
-      "color": "#3563c8",
-      "action": "원가 시나리오 업데이트"
     }
   ],
   "hotAgendas": [
     {
       "rank": 1,
-      "id": "news-1-2yi8t2f",
-      "collectedAt": "2026.10.05 11:04 KST",
-      "title": "알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개...\"소버린 AI용\"",
-      "score": 96,
-      "summary": "독일의 알레프 알파(Aleph Alpha)가 범용 대형언어모델(LLM) 개발 포기를 선언하고 방산·공공 사업으로 방향을 튼 지 약 1년 만에 첫 개방형 AI 모델 ‘... 판정 근거: 사업화 신호.",
+      "id": "news-1-2yi8t45",
+      "collectedAt": "2026.10.06 12:06 KST",
+      "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+      "score": 98,
+      "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
       "mentions": 1,
       "sources": [
         {
-          "title": "알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개...\"소버린 AI용\"",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215951",
+          "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
           "media": "AI Times",
-          "time": "2026.10.04 15:59"
-        }
-      ],
-      "sourceCount": 1,
-      "momentum": "NEW",
-      "metric": "원문 1건",
-      "pinned": false,
-      "topicBucket": "naver",
-      "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215951_219926_1759.png",
-      "imageAlt": "AI Times 기사 대표 이미지",
-      "imageCredit": "AI Times",
-      "reason": "정책·공공 조달 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 78점으로 분류했습니다.",
-      "whyHot": "정책·공공 조달 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 78점으로 분류했습니다.",
-      "actionBrief": {
-        "topic": "정책·공공 조달",
-        "why": "예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다.",
-        "owner": "채널/영업",
-        "decision": "우리 제안은 모델 기능이 아니라 운영 책임과 채널 수익을 설명하고 있나?",
-        "question": "우리 제안은 모델 기능이 아니라 운영 책임과 채널 수익을 설명하고 있나?",
-        "task": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요.",
-        "nextStep": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요.",
-        "sourceCheck": "파트너 혜택, 보안 요구, 클라우드 전환 범위",
-        "evidenceChecklist": "파트너 혜택, 보안 요구, 클라우드 전환 범위"
-      },
-      "businessRelevance": {
-        "score": 78,
-        "level": "높음",
-        "reasons": [
-          {
-            "label": "사업화 신호",
-            "value": "출시",
-            "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
-          },
-          {
-            "label": "규제·리스크",
-            "value": "규제",
-            "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
-          },
-          {
-            "label": "산업 적용",
-            "value": "공공",
-            "detail": "실제 산업 적용과 고객 세그먼트 확장을 보여줍니다."
-          }
-        ]
-      },
-      "hotness": {
-        "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
-        "reasons": [
-          {
-            "label": "사업 임팩트",
-            "value": "78점",
-            "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
-          },
-          {
-            "label": "수집 시각",
-            "value": "19h",
-            "detail": "약 19시간 전 발행 또는 수집된 최신 원문입니다."
-          },
-          {
-            "label": "원문 소스",
-            "value": "AI Times",
-            "detail": "AI Times에서 직접 수집한 기사이며 정책·공공 조달 관점으로 분류했습니다."
-          },
-          {
-            "label": "기사 내용",
-            "value": "정책·공공 조달",
-            "detail": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다."
-          },
-          {
-            "label": "오늘 확인",
-            "value": "액션",
-            "detail": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-          }
-        ]
-      },
-      "keywords": [
-        "#정책"
-      ],
-      "hashtags": [
-        "#정책"
-      ],
-      "related_companies": [],
-      "signals": "AI Times · 정책·공공 조달",
-      "articles": [
-        {
-          "title": "알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개...\"소버린 AI용\"",
-          "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215951",
-          "time": "2026.10.04 15:59",
-          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215951_219926_1759.png"
-        }
-      ],
-      "brief": {
-        "background": "독일의 알레프 알파(Aleph Alpha)가 범용 대형언어모델(LLM) 개발 포기를 선언하고 방산·공공 사업으로 방향을 튼 지 약 1년 만에 첫 개방형 AI 모델 ‘... 판정 근거: 사업화 신호.",
-        "reaction": "국내 플랫폼, SI, 클라우드 기업이 정책 예산과 산업별 레퍼런스를 묶어 영업 포인트로 삼고 있습니다.",
-        "implication": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-      }
-    },
-    {
-      "rank": 2,
-      "id": "news-2-2yi8t2n",
-      "collectedAt": "2026.10.05 11:04 KST",
-      "title": "\"AI가 인류 위협\" 경고한 제이콥 콕슨, 뉴욕시의회 청문회 선다",
-      "score": 77,
-      "summary": "뉴욕시의회가 빅테크 기업의 인공지능 위험성을 규제하기 위한 청문회를 개최한 가운데, 전직 AI 연구원들과 주요 기업 대표들이 대거 증언대에 선다. 판정 근거: 규제·리스크.",
-      "mentions": 1,
-      "sources": [
-        {
-          "title": "\"AI가 인류 위협\" 경고한 제이콥 콕슨, 뉴욕시의회 청문회 선다",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215959",
-          "media": "AI Times",
-          "time": "2026.10.05 09:09"
+          "time": "2026.10.05 15:38"
         }
       ],
       "sourceCount": 1,
@@ -330,124 +219,11 @@ window.TECH_AGENDA_DATA = {
       "metric": "원문 1건",
       "pinned": false,
       "topicBucket": "anthropic-security",
-      "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215959_219939_612.png",
+      "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215971_219954_028.jpg",
       "imageAlt": "AI Times 기사 대표 이미지",
       "imageCredit": "AI Times",
-      "reason": "정책·공공 조달 관점의 기사이며 규제·리스크 신호가 감지돼 한국 AI 사업 임팩트 62점으로 분류했습니다.",
-      "whyHot": "정책·공공 조달 관점의 기사이며 규제·리스크 신호가 감지돼 한국 AI 사업 임팩트 62점으로 분류했습니다.",
-      "actionBrief": {
-        "topic": "정책·공공 조달",
-        "why": "예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다.",
-        "owner": "전략",
-        "decision": "정책·공공 조달 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-        "question": "정책·공공 조달 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-        "task": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요.",
-        "nextStep": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요.",
-        "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
-        "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
-      },
-      "businessRelevance": {
-        "score": 62,
-        "level": "중간",
-        "reasons": [
-          {
-            "label": "규제·리스크",
-            "value": "규제",
-            "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
-          },
-          {
-            "label": "인재·생태계",
-            "value": "연구",
-            "detail": "채용, 인재 공급, 산학 생태계 관점에서 참고할 신호입니다."
-          },
-          {
-            "label": "플랫폼 경쟁",
-            "value": "오픈ai, 앤트로픽",
-            "detail": "국내 사업자가 의존하거나 경쟁해야 하는 글로벌 플랫폼 변화입니다."
-          }
-        ]
-      },
-      "hotness": {
-        "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
-        "reasons": [
-          {
-            "label": "사업 임팩트",
-            "value": "62점",
-            "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
-          },
-          {
-            "label": "수집 시각",
-            "value": "2h",
-            "detail": "약 2시간 전 발행 또는 수집된 최신 원문입니다."
-          },
-          {
-            "label": "원문 소스",
-            "value": "AI Times",
-            "detail": "AI Times에서 직접 수집한 기사이며 정책·공공 조달 관점으로 분류했습니다."
-          },
-          {
-            "label": "기사 내용",
-            "value": "정책·공공 조달",
-            "detail": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다."
-          },
-          {
-            "label": "오늘 확인",
-            "value": "액션",
-            "detail": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-          }
-        ]
-      },
-      "keywords": [
-        "#보안",
-        "#정책"
-      ],
-      "hashtags": [
-        "#보안",
-        "#정책"
-      ],
-      "related_companies": [],
-      "signals": "AI Times · 정책·공공 조달",
-      "articles": [
-        {
-          "title": "\"AI가 인류 위협\" 경고한 제이콥 콕슨, 뉴욕시의회 청문회 선다",
-          "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215959",
-          "time": "2026.10.05 09:09",
-          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215959_219939_612.png"
-        }
-      ],
-      "brief": {
-        "background": "뉴욕시의회가 빅테크 기업의 인공지능 위험성을 규제하기 위한 청문회를 개최한 가운데, 전직 AI 연구원들과 주요 기업 대표들이 대거 증언대에 선다. 판정 근거: 규제·리스크.",
-        "reaction": "국내 플랫폼, SI, 클라우드 기업이 정책 예산과 산업별 레퍼런스를 묶어 영업 포인트로 삼고 있습니다.",
-        "implication": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-      }
-    },
-    {
-      "rank": 3,
-      "id": "news-3-57evidc",
-      "collectedAt": "2026.10.05 11:04 KST",
-      "title": "​韓 스타트업 투자, 4년 만에 10조 돌파…AI 반도체·우주항공 쏠림",
-      "score": 86,
-      "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 사업화 신호.",
-      "mentions": 1,
-      "sources": [
-        {
-          "title": "​韓 스타트업 투자, 4년 만에 10조 돌파…AI 반도체·우주항공 쏠림",
-          "url": "https://www.bloter.net/news/articleView.html?idxno=675013",
-          "media": "Bloter IT",
-          "time": "2026.10.05 11:04"
-        }
-      ],
-      "sourceCount": 1,
-      "momentum": "NEW",
-      "metric": "원문 1건",
-      "pinned": false,
-      "topicBucket": "ai-chip",
-      "imageUrl": "https://cdn.bloter.net/news/thumbnail/202610/675013_288808_231_v150.jpg",
-      "imageAlt": "Bloter IT 기사 대표 이미지",
-      "imageCredit": "Bloter IT",
-      "reason": "AI 인프라·반도체 수급 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 74점으로 분류했습니다.",
-      "whyHot": "AI 인프라·반도체 수급 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 74점으로 분류했습니다.",
+      "reason": "AI 인프라·반도체 수급 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 88점으로 분류했습니다.",
+      "whyHot": "AI 인프라·반도체 수급 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 88점으로 분류했습니다.",
       "actionBrief": {
         "topic": "AI 인프라·반도체 수급",
         "why": "모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다.",
@@ -460,22 +236,22 @@ window.TECH_AGENDA_DATA = {
         "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
       },
       "businessRelevance": {
-        "score": 74,
+        "score": 88,
         "level": "높음",
         "reasons": [
           {
             "label": "사업화 신호",
-            "value": "투자",
+            "value": "투자, 시장",
             "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
           },
           {
             "label": "인프라·원가",
-            "value": "반도체",
+            "value": "반도체, 칩",
             "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
           },
           {
             "label": "산업 적용",
-            "value": "반도체",
+            "value": "금융, 반도체",
             "detail": "실제 산업 적용과 고객 세그먼트 확장을 보여줍니다."
           }
         ]
@@ -485,18 +261,18 @@ window.TECH_AGENDA_DATA = {
         "reasons": [
           {
             "label": "사업 임팩트",
-            "value": "74점",
+            "value": "88점",
             "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
           },
           {
             "label": "수집 시각",
-            "value": "1h",
-            "detail": "약 1시간 전 발행 또는 수집된 최신 원문입니다."
+            "value": "20h",
+            "detail": "약 20시간 전 발행 또는 수집된 최신 원문입니다."
           },
           {
             "label": "원문 소스",
-            "value": "Bloter IT",
-            "detail": "Bloter IT에서 직접 수집한 기사이며 AI 인프라·반도체 수급 관점으로 분류했습니다."
+            "value": "AI Times",
+            "detail": "AI Times에서 직접 수집한 기사이며 AI 인프라·반도체 수급 관점으로 분류했습니다."
           },
           {
             "label": "기사 내용",
@@ -519,48 +295,48 @@ window.TECH_AGENDA_DATA = {
         "#투자"
       ],
       "related_companies": [],
-      "signals": "Bloter IT · AI 인프라·반도체 수급",
+      "signals": "AI Times · AI 인프라·반도체 수급",
       "articles": [
         {
-          "title": "​韓 스타트업 투자, 4년 만에 10조 돌파…AI 반도체·우주항공 쏠림",
-          "source": "Bloter IT",
-          "url": "https://www.bloter.net/news/articleView.html?idxno=675013",
-          "time": "2026.10.05 11:04",
-          "imageUrl": "https://cdn.bloter.net/news/thumbnail/202610/675013_288808_231_v150.jpg"
+          "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+          "time": "2026.10.05 15:38",
+          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215971_219954_028.jpg"
         }
       ],
       "brief": {
-        "background": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 사업화 신호.",
+        "background": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
         "reaction": "대기업과 스타트업이 엔비디아 의존도, 국산 칩 대안, 클라우드 조달 조건을 함께 검토하고 있습니다.",
         "implication": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
       }
     },
     {
-      "rank": 4,
-      "id": "news-4-gwhdap4",
-      "collectedAt": "2026.10.05 11:04 KST",
-      "title": "엔비디아 AI 반도체 '담보대출' 전략 성공할까, 삼성전자 SK하이닉스 실적에도 변수",
-      "score": 87,
-      "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+      "rank": 2,
+      "id": "news-2-2yi8t3f",
+      "collectedAt": "2026.10.06 12:06 KST",
+      "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+      "score": 98,
+      "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
       "mentions": 1,
       "sources": [
         {
-          "title": "엔비디아 AI 반도체 '담보대출' 전략 성공할까, 삼성전자 SK하이닉스 실적에도 변수",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ybkt1VUk5VlZ2eFJHaW9nOXF4Vlc1WEJyaExQbVFIVVZETVpWSnFYTHhHdWdaTmdmanEtd1R4X21lSWhoREJaeHgxY2l2RVlmc3MwRjJlaFdUTk5DR3NTMlJPU1hscjhmbVo4ZWRoY193QUU?oc=5",
-          "media": "비즈니스포스트",
-          "time": "2026.10.05 06:00"
+          "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+          "media": "AI Times",
+          "time": "2026.10.05 16:38"
         }
       ],
       "sourceCount": 1,
       "momentum": "NEW",
-      "metric": "Pinned Hot",
-      "pinned": true,
-      "topicBucket": "nvidia-korea",
-      "imageUrl": "",
-      "imageAlt": "",
-      "imageCredit": "",
-      "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 78점으로 분류했습니다.",
-      "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 78점으로 분류했습니다.",
+      "metric": "원문 1건",
+      "pinned": false,
+      "topicBucket": "ai-datacenter-policy",
+      "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215966_219946_3254.jpg",
+      "imageAlt": "AI Times 기사 대표 이미지",
+      "imageCredit": "AI Times",
+      "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 94점으로 분류했습니다.",
+      "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 94점으로 분류했습니다.",
       "actionBrief": {
         "topic": "엔비디아·피지컬 AI 협력",
         "why": "단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다.",
@@ -573,23 +349,23 @@ window.TECH_AGENDA_DATA = {
         "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
       },
       "businessRelevance": {
-        "score": 78,
+        "score": 94,
         "level": "높음",
         "reasons": [
           {
             "label": "한국 직접성",
-            "value": "삼성, sk",
+            "value": "엔비디아",
             "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
           },
           {
-            "label": "인프라·원가",
-            "value": "반도체, 엔비디아",
-            "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
+            "label": "사업화 신호",
+            "value": "투자, 법인",
+            "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
           },
           {
-            "label": "산업 적용",
-            "value": "반도체",
-            "detail": "실제 산업 적용과 고객 세그먼트 확장을 보여줍니다."
+            "label": "인프라·원가",
+            "value": "데이터센터, 엔비디아",
+            "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
           }
         ]
       },
@@ -598,18 +374,18 @@ window.TECH_AGENDA_DATA = {
         "reasons": [
           {
             "label": "사업 임팩트",
-            "value": "78점",
+            "value": "94점",
             "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
           },
           {
             "label": "수집 시각",
-            "value": "5h",
-            "detail": "약 5시간 전 발행 또는 수집된 최신 원문입니다."
+            "value": "19h",
+            "detail": "약 19시간 전 발행 또는 수집된 최신 원문입니다."
           },
           {
             "label": "원문 소스",
-            "value": "비즈니스포스트",
-            "detail": "비즈니스포스트에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
+            "value": "AI Times",
+            "detail": "AI Times에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
           },
           {
             "label": "기사 내용",
@@ -625,20 +401,246 @@ window.TECH_AGENDA_DATA = {
       },
       "keywords": [
         "#NVIDIA",
-        "#AI반도체"
+        "#AI반도체",
+        "#투자"
       ],
       "hashtags": [
         "#NVIDIA",
-        "#AI반도체"
+        "#AI반도체",
+        "#투자"
       ],
       "related_companies": [],
-      "signals": "비즈니스포스트 · 엔비디아·피지컬 AI 협력",
+      "signals": "AI Times · 엔비디아·피지컬 AI 협력",
       "articles": [
         {
-          "title": "엔비디아 AI 반도체 '담보대출' 전략 성공할까, 삼성전자 SK하이닉스 실적에도 변수",
-          "source": "비즈니스포스트",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ybkt1VUk5VlZ2eFJHaW9nOXF4Vlc1WEJyaExQbVFIVVZETVpWSnFYTHhHdWdaTmdmanEtd1R4X21lSWhoREJaeHgxY2l2RVlmc3MwRjJlaFdUTk5DR3NTMlJPU1hscjhmbVo4ZWRoY193QUU?oc=5",
-          "time": "2026.10.05 06:00",
+          "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+          "time": "2026.10.05 16:38",
+          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215966_219946_3254.jpg"
+        }
+      ],
+      "brief": {
+        "background": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+        "reaction": "국내 플랫폼, 통신, 제조 기업이 AI 팩토리와 피지컬 AI 협력 범위를 빠르게 비교하고 있습니다.",
+        "implication": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+      }
+    },
+    {
+      "rank": 3,
+      "id": "news-3-1o397a9",
+      "collectedAt": "2026.10.06 12:06 KST",
+      "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+      "score": 98,
+      "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+      "mentions": 1,
+      "sources": [
+        {
+          "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+          "media": "DigitalToday AI",
+          "time": "2026.10.06 12:06"
+        }
+      ],
+      "sourceCount": 1,
+      "momentum": "NEW",
+      "metric": "원문 1건",
+      "pinned": false,
+      "topicBucket": "온톨로지 기반 엔터프라이즈 ai 기업 인포시즈는 그",
+      "imageUrl": "https://cdn.digitaltoday.co.kr/news/photo/202610/705134_652876_517.png",
+      "imageAlt": "DigitalToday AI 기사 대표 이미지",
+      "imageCredit": "DigitalToday AI",
+      "reason": "AI 보안·감사 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 98점으로 분류했습니다.",
+      "whyHot": "AI 보안·감사 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 98점으로 분류했습니다.",
+      "actionBrief": {
+        "topic": "AI 보안·감사",
+        "why": "AI가 업무 시스템에 연결될수록 기능 데모보다 사고 대응과 통제 화면이 먼저 검토됩니다.",
+        "owner": "보안/제품",
+        "decision": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+        "question": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+        "task": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+        "nextStep": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+        "sourceCheck": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제",
+        "evidenceChecklist": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제"
+      },
+      "businessRelevance": {
+        "score": 98,
+        "level": "높음",
+        "reasons": [
+          {
+            "label": "한국 직접성",
+            "value": "국내",
+            "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+          },
+          {
+            "label": "사업화 신호",
+            "value": "출시, 엔터프라이즈",
+            "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+          },
+          {
+            "label": "규제·리스크",
+            "value": "보안",
+            "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
+          }
+        ]
+      },
+      "hotness": {
+        "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+        "reasons": [
+          {
+            "label": "사업 임팩트",
+            "value": "98점",
+            "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+          },
+          {
+            "label": "수집 시각",
+            "value": "1h",
+            "detail": "약 1시간 전 발행 또는 수집된 최신 원문입니다."
+          },
+          {
+            "label": "원문 소스",
+            "value": "DigitalToday AI",
+            "detail": "DigitalToday AI에서 직접 수집한 기사이며 AI 보안·감사 관점으로 분류했습니다."
+          },
+          {
+            "label": "기사 내용",
+            "value": "AI 보안·감사",
+            "detail": "AI 도입 심사에서 권한 통제, 감사 로그, 보안 검증이 구매 조건으로 올라오는 신호입니다."
+          },
+          {
+            "label": "오늘 확인",
+            "value": "액션",
+            "detail": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 영업 자료 앞단에 배치하세요."
+          }
+        ]
+      },
+      "keywords": [
+        "#보안"
+      ],
+      "hashtags": [
+        "#보안"
+      ],
+      "related_companies": [],
+      "signals": "DigitalToday AI · AI 보안·감사",
+      "articles": [
+        {
+          "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+          "time": "2026.10.06 12:06",
+          "imageUrl": "https://cdn.digitaltoday.co.kr/news/photo/202610/705134_652876_517.png"
+        }
+      ],
+      "brief": {
+        "background": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+        "reaction": "기업 고객은 PoC 단계부터 보안 체크리스트와 운영 책임 범위를 요구하기 시작했습니다.",
+        "implication": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 영업 자료 앞단에 배치하세요."
+      }
+    },
+    {
+      "rank": 4,
+      "id": "news-4-7g5yuri",
+      "collectedAt": "2026.10.06 12:06 KST",
+      "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+      "score": 98,
+      "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+      "mentions": 1,
+      "sources": [
+        {
+          "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+          "media": "기계신문",
+          "time": "2026.10.06 09:01"
+        }
+      ],
+      "sourceCount": 1,
+      "momentum": "NEW",
+      "metric": "원문 1건",
+      "pinned": false,
+      "topicBucket": "인하대, 과기정통부 ‘ax대학원 사업’ 선정… 제조",
+      "imageUrl": "",
+      "imageAlt": "",
+      "imageCredit": "",
+      "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 100점으로 분류했습니다.",
+      "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 100점으로 분류했습니다.",
+      "actionBrief": {
+        "topic": "엔비디아·피지컬 AI 협력",
+        "why": "단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다.",
+        "owner": "전략",
+        "decision": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+        "question": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+        "task": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
+        "nextStep": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
+        "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
+        "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
+      },
+      "businessRelevance": {
+        "score": 100,
+        "level": "높음",
+        "reasons": [
+          {
+            "label": "한국 직접성",
+            "value": "과기정통부",
+            "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+          },
+          {
+            "label": "사업화 신호",
+            "value": "ax",
+            "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+          },
+          {
+            "label": "인프라·원가",
+            "value": "로봇",
+            "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
+          }
+        ]
+      },
+      "hotness": {
+        "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+        "reasons": [
+          {
+            "label": "사업 임팩트",
+            "value": "100점",
+            "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+          },
+          {
+            "label": "수집 시각",
+            "value": "3h",
+            "detail": "약 3시간 전 발행 또는 수집된 최신 원문입니다."
+          },
+          {
+            "label": "원문 소스",
+            "value": "기계신문",
+            "detail": "기계신문에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
+          },
+          {
+            "label": "기사 내용",
+            "value": "엔비디아·피지컬 AI 협력",
+            "detail": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다."
+          },
+          {
+            "label": "오늘 확인",
+            "value": "액션",
+            "detail": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+          }
+        ]
+      },
+      "keywords": [
+        "#피지컬AI",
+        "#정책"
+      ],
+      "hashtags": [
+        "#피지컬AI",
+        "#정책"
+      ],
+      "related_companies": [],
+      "signals": "기계신문 · 엔비디아·피지컬 AI 협력",
+      "articles": [
+        {
+          "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+          "source": "기계신문",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+          "time": "2026.10.06 09:01",
           "imageUrl": ""
         }
       ],
@@ -650,54 +652,54 @@ window.TECH_AGENDA_DATA = {
     },
     {
       "rank": 5,
-      "id": "news-5-2hrqgmx",
-      "collectedAt": "2026.10.05 11:04 KST",
-      "title": "금융권 AI 해킹 공격에 과기정통부 비상 대응 가동",
-      "score": 66,
-      "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
+      "id": "news-5-14wsyy5",
+      "collectedAt": "2026.10.06 12:06 KST",
+      "title": "생성형 AI 사이버 위협에 '능동 교란' 기술 상용화... 징벌적 과징금·K-디스커버리로 법적 규제 대폭 강화",
+      "score": 58,
+      "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
       "mentions": 1,
       "sources": [
         {
-          "title": "금융권 AI 해킹 공격에 과기정통부 비상 대응 가동",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBiVmVPaERXWUI5RkhBSTZyY2ZkZzVHNG5uTUF5MDhCeUVrb2gzajU0cnlxM2F6QUNVbU01U2lRUEJ6UWczdk1qaVpRUzFmYU1YZU91TGg2bE52TzhaUWJXU2NKa0JGbFZS?oc=5",
-          "media": "2news.co.kr",
-          "time": "2026.10.04 19:34"
+          "title": "생성형 AI 사이버 위협에 '능동 교란' 기술 상용화... 징벌적 과징금·K-디스커버리로 법적 규제 대폭 강화",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93TENuSmlIQ1RtYldEaWU5ak9XR2MzMXB0MFRnQm8xdENVV09DdWZVVXRSb3NXRGgzaURjTkplRjY1eWhyNEpuOHRlYnIxSjFMOWFfS3Nmd1J0azh2SzBFYjBXWWpZZlNFVFlzTDFn?oc=5",
+          "media": "koreasprint.com",
+          "time": "2026.10.06 01:21"
         }
       ],
       "sourceCount": 1,
       "momentum": "NEW",
       "metric": "원문 1건",
       "pinned": false,
-      "topicBucket": "금융권 ai 해킹 공격에 과기정통부 비상 대응 가동",
+      "topicBucket": "생성형 ai 사이버 위협에 '능동 교란' 기술 상용",
       "imageUrl": "",
       "imageAlt": "",
       "imageCredit": "",
-      "reason": "정책·공공 조달 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 60점으로 분류했습니다.",
-      "whyHot": "정책·공공 조달 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 60점으로 분류했습니다.",
+      "reason": "정책·공공 조달 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 52점으로 분류했습니다.",
+      "whyHot": "정책·공공 조달 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 52점으로 분류했습니다.",
       "actionBrief": {
         "topic": "정책·공공 조달",
         "why": "예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다.",
-        "owner": "전략",
-        "decision": "정책·공공 조달 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-        "question": "정책·공공 조달 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-        "task": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요.",
-        "nextStep": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요.",
-        "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
-        "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
+        "owner": "보안/제품",
+        "decision": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+        "question": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+        "task": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+        "nextStep": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+        "sourceCheck": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제",
+        "evidenceChecklist": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제"
       },
       "businessRelevance": {
-        "score": 60,
+        "score": 52,
         "level": "중간",
         "reasons": [
           {
-            "label": "한국 직접성",
-            "value": "과기정통부",
-            "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+            "label": "사업화 신호",
+            "value": "상용화",
+            "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
           },
           {
-            "label": "산업 적용",
-            "value": "금융",
-            "detail": "실제 산업 적용과 고객 세그먼트 확장을 보여줍니다."
+            "label": "규제·리스크",
+            "value": "규제",
+            "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
           }
         ]
       },
@@ -706,18 +708,18 @@ window.TECH_AGENDA_DATA = {
         "reasons": [
           {
             "label": "사업 임팩트",
-            "value": "60점",
-            "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+            "value": "52점",
+            "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
           },
           {
             "label": "수집 시각",
-            "value": "16h",
-            "detail": "약 16시간 전 발행 또는 수집된 최신 원문입니다."
+            "value": "11h",
+            "detail": "약 11시간 전 발행 또는 수집된 최신 원문입니다."
           },
           {
             "label": "원문 소스",
-            "value": "2news.co.kr",
-            "detail": "2news.co.kr에서 직접 수집한 기사이며 정책·공공 조달 관점으로 분류했습니다."
+            "value": "koreasprint.com",
+            "detail": "koreasprint.com에서 직접 수집한 기사이며 정책·공공 조달 관점으로 분류했습니다."
           },
           {
             "label": "기사 내용",
@@ -732,24 +734,26 @@ window.TECH_AGENDA_DATA = {
         ]
       },
       "keywords": [
+        "#보안",
         "#정책"
       ],
       "hashtags": [
+        "#보안",
         "#정책"
       ],
       "related_companies": [],
-      "signals": "2news.co.kr · 정책·공공 조달",
+      "signals": "koreasprint.com · 정책·공공 조달",
       "articles": [
         {
-          "title": "금융권 AI 해킹 공격에 과기정통부 비상 대응 가동",
-          "source": "2news.co.kr",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBiVmVPaERXWUI5RkhBSTZyY2ZkZzVHNG5uTUF5MDhCeUVrb2gzajU0cnlxM2F6QUNVbU01U2lRUEJ6UWczdk1qaVpRUzFmYU1YZU91TGg2bE52TzhaUWJXU2NKa0JGbFZS?oc=5",
-          "time": "2026.10.04 19:34",
+          "title": "생성형 AI 사이버 위협에 '능동 교란' 기술 상용화... 징벌적 과징금·K-디스커버리로 법적 규제 대폭 강화",
+          "source": "koreasprint.com",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93TENuSmlIQ1RtYldEaWU5ak9XR2MzMXB0MFRnQm8xdENVV09DdWZVVXRSb3NXRGgzaURjTkplRjY1eWhyNEpuOHRlYnIxSjFMOWFfS3Nmd1J0azh2SzBFYjBXWWpZZlNFVFlzTDFn?oc=5",
+          "time": "2026.10.06 01:21",
           "imageUrl": ""
         }
       ],
       "brief": {
-        "background": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
+        "background": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
         "reaction": "국내 플랫폼, SI, 클라우드 기업이 정책 예산과 산업별 레퍼런스를 묶어 영업 포인트로 삼고 있습니다.",
         "implication": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
       }
@@ -763,8 +767,18 @@ window.TECH_AGENDA_DATA = {
       "color": "#3f8f4f",
       "short": "NV",
       "focus": "AI 팩토리와 소버린 클라우드",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
+        {
+          "label": "검색·커머스 AI 수익화",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Naver 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
         {
           "label": "하이퍼클로바 산업 패키지",
           "weight": 45.6,
@@ -786,16 +800,6 @@ window.TECH_AGENDA_DATA = {
           "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
         },
         {
-          "label": "검색·커머스 AI 수익화",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Naver 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-        },
-        {
           "label": "온디바이스 협력 가능성",
           "weight": 40,
           "color": "#d68419",
@@ -808,10 +812,20 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
+          "title": "검색·커머스 AI 수익화",
+          "body": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Naver 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "title": "하이퍼클로바 산업 패키지",
           "body": "한국어 모델과 검색·커머스 데이터를 산업별 업무 패키지로 묶어 글로벌 범용 모델과 차별화할 수 있습니다.",
           "score": "46",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
           "sources": [],
           "sourceSummary": "Naver 직접 원문 수집 대기",
@@ -821,24 +835,18 @@ window.TECH_AGENDA_DATA = {
           "title": "AI 팩토리·GPU 조달 전선",
           "body": "정부 GPU 사업, 엔비디아 협력, 네이버클라우드 운영 역량이 국내 AI 인프라 영업 기회로 이어지는지 봐야 합니다.",
           "score": "45",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "sovereign",
           "sources": [],
           "sourceSummary": "Naver 직접 원문 수집 대기",
           "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-        },
-        {
-          "title": "검색·커머스 AI 수익화",
-          "body": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Naver 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "heat": [
+        "Search",
+        "Shopping",
+        "Ads",
+        "Creator",
         "HyperCLOVA",
         "Korean Data",
         "Commerce",
@@ -846,11 +854,7 @@ window.TECH_AGENDA_DATA = {
         "AI Factory",
         "GPU",
         "NVIDIA",
-        "Cloud",
-        "Search",
-        "Shopping",
-        "Ads",
-        "Creator"
+        "Cloud"
       ]
     },
     {
@@ -860,11 +864,21 @@ window.TECH_AGENDA_DATA = {
       "color": "#8a6d1f",
       "short": "KK",
       "focus": "메신저 기반 AI와 커머스",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
+          "label": "카카오톡 AI 접점 확대",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Kakao 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "label": "창작·광고 자동화",
-          "weight": 89.15,
+          "weight": 76.55000000000001,
           "color": "#7a5a26",
           "description": "콘텐츠 제작, 광고 문안, 쇼핑 운영 자동화가 소상공인과 브랜드 고객의 지불 의사로 이어질 수 있습니다.",
           "termId": "ai-code",
@@ -883,16 +897,6 @@ window.TECH_AGENDA_DATA = {
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
         },
         {
-          "label": "카카오톡 AI 접점 확대",
-          "weight": 45,
-          "color": "#0f8f82",
-          "description": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Kakao 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-        },
-        {
           "label": "로컬 플랫폼 방어",
           "weight": 40,
           "color": "#3f8f4f",
@@ -905,10 +909,20 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
+          "title": "카카오톡 AI 접점 확대",
+          "body": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Kakao 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "title": "창작·광고 자동화",
           "body": "콘텐츠 제작, 광고 문안, 쇼핑 운영 자동화가 소상공인과 브랜드 고객의 지불 의사로 이어질 수 있습니다.",
-          "score": "89",
-          "date": "2026.10.05 11:04",
+          "score": "77",
+          "date": "2026.10.06 12:06",
           "termId": "ai-code",
           "sources": [],
           "sourceSummary": "Kakao 직접 원문 수집 대기",
@@ -918,24 +932,18 @@ window.TECH_AGENDA_DATA = {
           "title": "개인화 데이터 안전성",
           "body": "대화와 생활 데이터 기반 서비스가 커질수록 동의, 보관, 추천 품질 관리가 핵심 리스크가 됩니다.",
           "score": "46",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
           "sources": [],
           "sourceSummary": "Kakao 직접 원문 수집 대기",
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "title": "카카오톡 AI 접점 확대",
-          "body": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Kakao 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "heat": [
+        "KakaoTalk",
+        "Channel",
+        "Commerce",
+        "Assistant",
         "Creator",
         "Ad",
         "Shopping",
@@ -943,11 +951,7 @@ window.TECH_AGENDA_DATA = {
         "Consent",
         "Privacy",
         "Personalization",
-        "Quality",
-        "KakaoTalk",
-        "Channel",
-        "Commerce",
-        "Assistant"
+        "Quality"
       ]
     },
     {
@@ -957,37 +961,37 @@ window.TECH_AGENDA_DATA = {
       "color": "#c54b40",
       "short": "SK",
       "focus": "통신 AI와 데이터센터",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
-          "label": "엔비디아 AIDC 동맹",
-          "weight": 57,
-          "color": "#d68419",
-          "description": "SKT가 네트워크와 데이터센터 자산을 엔비디아 GPU 인프라 수요와 결합해 B2B AI 인프라 사업으로 확장하는 신호입니다.",
-          "termId": "on-device",
-          "sources": [
-            {
-              "title": "엔비디아 AI 반도체 '담보대출' 전략 성공할까, 삼성전자 SK하이닉스 실적에도 변수",
-              "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ybkt1VUk5VlZ2eFJHaW9nOXF4Vlc1WEJyaExQbVFIVVZETVpWSnFYTHhHdWdaTmdmanEtd1R4X21lSWhoREJaeHgxY2l2RVlmc3MwRjJlaFdUTk5DR3NTMlJPU1hscjhmbVo4ZWRoY193QUU?oc=5",
-              "media": "비즈니스포스트",
-              "time": "2026.10.05 06:00",
-              "evidence": "회사 관련 AI 전략 기사",
-              "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            }
-          ],
-          "sourceSummary": "비즈니스포스트 · 회사 원문 1건",
-          "takeaway": "AIDC, 전력, GPU 운영, 기업 AX 패키지를 묶은 제휴·영업 시나리오를 업데이트하세요."
-        },
-        {
           "label": "통신형 AI 에이전트",
-          "weight": 45,
+          "weight": 98,
           "color": "#0f8f82",
           "description": "통화, 일정, 고객센터, 멤버십 접점을 묶어 통신사형 개인·기업 에이전트로 확장할 수 있습니다.",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "SK Telecom 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "AI 팩토리·디지털 트윈 협력",
+          "weight": 43.75,
+          "color": "#d68419",
+          "description": "제조 현장과 반도체 공정에 AI 시뮬레이션, 네트워크, 디지털 트윈을 붙여 B2B 레퍼런스를 만들 수 있습니다.",
+          "termId": "on-device",
+          "sources": [],
+          "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+          "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+        },
+        {
+          "label": "GW급 AIDC 사업화",
+          "weight": 40,
+          "color": "#3f8f4f",
+          "description": "GPU, 전력, 네트워크를 결합한 대규모 AI 데이터센터 수요를 통신 자산으로 흡수하려는 흐름입니다.",
+          "termId": "sovereign",
+          "sources": [],
+          "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
         },
         {
           "label": "엔터프라이즈 AX 패키징",
@@ -1002,59 +1006,49 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
-          "title": "엔비디아 AIDC 동맹",
-          "body": "SKT가 네트워크와 데이터센터 자산을 엔비디아 GPU 인프라 수요와 결합해 B2B AI 인프라 사업으로 확장하는 신호입니다.",
-          "score": "57",
-          "date": "2026.10.05 11:04",
-          "termId": "on-device",
-          "sources": [
-            {
-              "title": "엔비디아 AI 반도체 '담보대출' 전략 성공할까, 삼성전자 SK하이닉스 실적에도 변수",
-              "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ybkt1VUk5VlZ2eFJHaW9nOXF4Vlc1WEJyaExQbVFIVVZETVpWSnFYTHhHdWdaTmdmanEtd1R4X21lSWhoREJaeHgxY2l2RVlmc3MwRjJlaFdUTk5DR3NTMlJPU1hscjhmbVo4ZWRoY193QUU?oc=5",
-              "media": "비즈니스포스트",
-              "time": "2026.10.05 06:00",
-              "evidence": "회사 관련 AI 전략 기사",
-              "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            }
-          ],
-          "sourceSummary": "비즈니스포스트 · 회사 원문 1건",
-          "takeaway": "AIDC, 전력, GPU 운영, 기업 AX 패키지를 묶은 제휴·영업 시나리오를 업데이트하세요."
-        },
-        {
           "title": "통신형 AI 에이전트",
           "body": "통화, 일정, 고객센터, 멤버십 접점을 묶어 통신사형 개인·기업 에이전트로 확장할 수 있습니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
+          "score": "98",
+          "date": "2026.10.06 12:06",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "SK Telecom 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
-          "title": "엔터프라이즈 AX 패키징",
-          "body": "기업 고객에게 모델보다 상담, 보안, 품질 운영을 묶은 AX 패키지로 판매하는 전략이 중요합니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
-          "termId": "evalops",
+          "title": "AI 팩토리·디지털 트윈 협력",
+          "body": "제조 현장과 반도체 공정에 AI 시뮬레이션, 네트워크, 디지털 트윈을 붙여 B2B 레퍼런스를 만들 수 있습니다.",
+          "score": "44",
+          "date": "2026.10.06 12:06",
+          "termId": "on-device",
           "sources": [],
           "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+          "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+        },
+        {
+          "title": "GW급 AIDC 사업화",
+          "body": "GPU, 전력, 네트워크를 결합한 대규모 AI 데이터센터 수요를 통신 자산으로 흡수하려는 흐름입니다.",
+          "score": "40",
+          "date": "2026.10.06 12:06",
+          "termId": "sovereign",
+          "sources": [],
+          "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
         }
       ],
       "heat": [
-        "AI Factory",
-        "Digital Twin",
-        "Semiconductor",
-        "NVIDIA",
         "A.",
         "Call",
         "Membership",
         "Agent",
-        "AX",
-        "AICC",
-        "Security",
-        "Ops"
+        "AI Factory",
+        "Digital Twin",
+        "Semiconductor",
+        "NVIDIA",
+        "AIDC",
+        "GW Scale",
+        "GPU",
+        "Power"
       ]
     },
     {
@@ -1064,11 +1058,21 @@ window.TECH_AGENDA_DATA = {
       "color": "#3563c8",
       "short": "SS",
       "focus": "온디바이스 AI와 반도체",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
+          "label": "가전·로봇 피지컬 AI 접점",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Samsung 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "label": "Galaxy AI 온디바이스화",
-          "weight": 47.45,
+          "weight": 53.75,
           "color": "#d68419",
           "description": "스마트폰의 실시간 번역, 요약, 개인화 기능이 로컬 추론과 프라이버시 메시지의 대표 접점입니다.",
           "termId": "on-device",
@@ -1078,23 +1082,13 @@ window.TECH_AGENDA_DATA = {
         },
         {
           "label": "HBM 이후 AI 팩토리 공급망",
-          "weight": 42.45,
+          "weight": 48.75,
           "color": "#d68419",
           "description": "HBM, 메모리, 파운드리 수요가 AI 팩토리 구축과 서비스 원가 안정성을 좌우하는 사업 변수입니다.",
           "termId": "on-device",
           "sources": [],
           "sourceSummary": "Samsung 직접 원문 수집 대기",
           "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-        },
-        {
-          "label": "가전·로봇 피지컬 AI 접점",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Samsung 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
           "label": "기기 내 데이터 거버넌스",
@@ -1109,10 +1103,20 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
+          "title": "가전·로봇 피지컬 AI 접점",
+          "body": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Samsung 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "title": "Galaxy AI 온디바이스화",
           "body": "스마트폰의 실시간 번역, 요약, 개인화 기능이 로컬 추론과 프라이버시 메시지의 대표 접점입니다.",
-          "score": "47",
-          "date": "2026.10.05 11:04",
+          "score": "54",
+          "date": "2026.10.06 12:06",
           "termId": "on-device",
           "sources": [],
           "sourceSummary": "Samsung 직접 원문 수집 대기",
@@ -1121,25 +1125,19 @@ window.TECH_AGENDA_DATA = {
         {
           "title": "HBM 이후 AI 팩토리 공급망",
           "body": "HBM, 메모리, 파운드리 수요가 AI 팩토리 구축과 서비스 원가 안정성을 좌우하는 사업 변수입니다.",
-          "score": "42",
-          "date": "2026.10.05 11:04",
+          "score": "49",
+          "date": "2026.10.06 12:06",
           "termId": "on-device",
           "sources": [],
           "sourceSummary": "Samsung 직접 원문 수집 대기",
           "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-        },
-        {
-          "title": "가전·로봇 피지컬 AI 접점",
-          "body": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Samsung 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "heat": [
+        "Physical AI",
+        "Robot",
+        "TV",
+        "Appliance",
         "Galaxy AI",
         "NPU",
         "Privacy",
@@ -1147,11 +1145,7 @@ window.TECH_AGENDA_DATA = {
         "HBM",
         "Memory",
         "Foundry",
-        "AI Factory",
-        "Physical AI",
-        "Robot",
-        "TV",
-        "Appliance"
+        "AI Factory"
       ]
     },
     {
@@ -1161,8 +1155,18 @@ window.TECH_AGENDA_DATA = {
       "color": "#9a3f5d",
       "short": "LG",
       "focus": "산업 특화 모델과 제조 AI",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
+        {
+          "label": "제조 현장 자동화",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
         {
           "label": "EXAONE 산업 모델",
           "weight": 50.6,
@@ -1172,16 +1176,6 @@ window.TECH_AGENDA_DATA = {
           "sources": [],
           "sourceSummary": "LG AI Research 직접 원문 수집 대기",
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "label": "제조 현장 자동화",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "LG AI Research 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
           "label": "기업 데이터 폐쇄망",
@@ -1206,30 +1200,30 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
-          "title": "EXAONE 산업 모델",
-          "body": "범용 챗봇보다 제조, 화학, 바이오 같은 그룹 산업 데이터를 잘 다루는 특화 모델 전략입니다.",
-          "score": "51",
-          "date": "2026.10.05 11:04",
-          "termId": "evalops",
-          "sources": [],
-          "sourceSummary": "LG AI Research 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
           "title": "제조 현장 자동화",
           "body": "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
+          "score": "98",
+          "date": "2026.10.06 12:06",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "LG AI Research 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
+          "title": "EXAONE 산업 모델",
+          "body": "범용 챗봇보다 제조, 화학, 바이오 같은 그룹 산업 데이터를 잘 다루는 특화 모델 전략입니다.",
+          "score": "51",
+          "date": "2026.10.06 12:06",
+          "termId": "evalops",
+          "sources": [],
+          "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        },
+        {
           "title": "기업 데이터 폐쇄망",
           "body": "민감한 산업 데이터는 클라우드보다 사내망과 전용 모델 운영 요구가 강해질 수 있습니다.",
           "score": "40",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "sovereign",
           "sources": [],
           "sourceSummary": "LG AI Research 직접 원문 수집 대기",
@@ -1237,14 +1231,14 @@ window.TECH_AGENDA_DATA = {
         }
       ],
       "heat": [
-        "EXAONE",
-        "Manufacturing",
-        "Chemistry",
-        "Bio",
         "Inspection",
         "Factory",
         "Anomaly",
         "Workflow",
+        "EXAONE",
+        "Manufacturing",
+        "Chemistry",
+        "Bio",
         "Private Data",
         "On-prem",
         "Governance",
@@ -1258,11 +1252,11 @@ window.TECH_AGENDA_DATA = {
       "color": "#7a5a26",
       "short": "KT",
       "focus": "통신 AX와 공공 클라우드",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
           "label": "AICC·상담 자동화",
-          "weight": 45,
+          "weight": 98,
           "color": "#0f8f82",
           "description": "콜센터, 영업, 고객 응대를 AI가 처리하면서 통신사의 B2B AX 매출화가 빨라질 수 있습니다.",
           "termId": "agent",
@@ -1305,8 +1299,8 @@ window.TECH_AGENDA_DATA = {
         {
           "title": "AICC·상담 자동화",
           "body": "콜센터, 영업, 고객 응대를 AI가 처리하면서 통신사의 B2B AX 매출화가 빨라질 수 있습니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
+          "score": "98",
+          "date": "2026.10.06 12:06",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "KT 직접 원문 수집 대기",
@@ -1316,7 +1310,7 @@ window.TECH_AGENDA_DATA = {
           "title": "망 데이터 기반 품질 운영",
           "body": "네트워크와 고객 운영 데이터를 AI 서비스 품질, 장애 예측, 보안 운영으로 연결할 수 있습니다.",
           "score": "41",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
           "sources": [],
           "sourceSummary": "KT 직접 원문 수집 대기",
@@ -1326,7 +1320,7 @@ window.TECH_AGENDA_DATA = {
           "title": "공공·금융 AI 클라우드",
           "body": "국내 데이터 보관과 보안 요구가 강한 고객에게 로컬 클라우드와 모델 운영을 묶어 제안합니다.",
           "score": "40",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "sovereign",
           "sources": [],
           "sourceSummary": "KT 직접 원문 수집 대기",
@@ -1355,27 +1349,27 @@ window.TECH_AGENDA_DATA = {
       "color": "#0f8f82",
       "short": "UP",
       "focus": "문서 AI와 기업 LLM",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
-          "label": "개발자 워크플로 연동",
-          "weight": 89.15,
-          "color": "#7a5a26",
-          "description": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
-          "termId": "ai-code",
-          "sources": [],
-          "sourceSummary": "Upstage 직접 원문 수집 대기",
-          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-        },
-        {
           "label": "문서 AI 업무 자동화",
-          "weight": 45,
+          "weight": 98,
           "color": "#0f8f82",
           "description": "계약서, 청구서, 내부 문서 처리 자동화는 기업이 바로 비용 절감을 체감하는 AI 영역입니다.",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "Upstage 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "개발자 워크플로 연동",
+          "weight": 76.55000000000001,
+          "color": "#7a5a26",
+          "description": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
+          "termId": "ai-code",
+          "sources": [],
+          "sourceSummary": "Upstage 직접 원문 수집 대기",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
         },
         {
           "label": "평가 기반 도입 설득",
@@ -1400,30 +1394,30 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
-          "title": "개발자 워크플로 연동",
-          "body": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
-          "score": "89",
-          "date": "2026.10.05 11:04",
-          "termId": "ai-code",
-          "sources": [],
-          "sourceSummary": "Upstage 직접 원문 수집 대기",
-          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-        },
-        {
           "title": "문서 AI 업무 자동화",
           "body": "계약서, 청구서, 내부 문서 처리 자동화는 기업이 바로 비용 절감을 체감하는 AI 영역입니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
+          "score": "98",
+          "date": "2026.10.06 12:06",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "Upstage 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
+          "title": "개발자 워크플로 연동",
+          "body": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
+          "score": "77",
+          "date": "2026.10.06 12:06",
+          "termId": "ai-code",
+          "sources": [],
+          "sourceSummary": "Upstage 직접 원문 수집 대기",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
           "title": "평가 기반 도입 설득",
           "body": "벤치마크와 PoC 결과를 구매 논리로 연결해야 스타트업의 엔터프라이즈 영업이 쉬워집니다.",
           "score": "41",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
           "sources": [],
           "sourceSummary": "Upstage 직접 원문 수집 대기",
@@ -1431,14 +1425,14 @@ window.TECH_AGENDA_DATA = {
         }
       ],
       "heat": [
-        "API",
-        "SDK",
-        "Search",
-        "Workflow",
         "Document AI",
         "OCR",
         "Invoice",
         "Contract",
+        "API",
+        "SDK",
+        "Search",
+        "Workflow",
         "Benchmark",
         "PoC",
         "Accuracy",
@@ -1452,26 +1446,26 @@ window.TECH_AGENDA_DATA = {
       "color": "#d68419",
       "short": "RB",
       "focus": "국산 AI 가속기와 추론 원가",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
+          "label": "온프레미스 AI 수요",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Rebellions 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "label": "국산 AI 칩 공급",
-          "weight": 67,
+          "weight": 53.75,
           "color": "#d68419",
           "description": "국내 데이터센터의 추론 원가와 공급망 리스크를 낮추는 대안으로 AI 가속기 수요가 커집니다.",
           "termId": "on-device",
-          "sources": [
-            {
-              "title": "한전 변전소에 리벨리온 NPU 투입… AI영상분석 성능 검증",
-              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5BNW91Vi16V2JXRE1NUnVwSEpOSjM3b01PVVl6VWY3XzluemZlUEtkSXJ0NjNVNnA1VG5FM2hrc2ZIT19rbDVtYXlrNWNSYi1hQl9MY2Zvc3BoQQ?oc=5",
-              "media": "파이낸셜뉴스",
-              "time": "2026.10.04 18:37",
-              "evidence": "회사·전략 직접 언급",
-              "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 한국 직접성.",
-              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-            }
-          ],
-          "sourceSummary": "파이낸셜뉴스 · 직접 근거 1건",
+          "sources": [],
+          "sourceSummary": "Rebellions 직접 원문 수집 대기",
           "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
         },
         {
@@ -1493,61 +1487,45 @@ window.TECH_AGENDA_DATA = {
           "sources": [],
           "sourceSummary": "Rebellions 직접 원문 수집 대기",
           "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-        },
-        {
-          "label": "온프레미스 AI 수요",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Rebellions 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "stack": [
         {
+          "title": "온프레미스 AI 수요",
+          "body": "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Rebellions 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "title": "국산 AI 칩 공급",
           "body": "국내 데이터센터의 추론 원가와 공급망 리스크를 낮추는 대안으로 AI 가속기 수요가 커집니다.",
-          "score": "67",
-          "date": "2026.10.05 11:04",
+          "score": "54",
+          "date": "2026.10.06 12:06",
           "termId": "on-device",
-          "sources": [
-            {
-              "title": "한전 변전소에 리벨리온 NPU 투입… AI영상분석 성능 검증",
-              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5BNW91Vi16V2JXRE1NUnVwSEpOSjM3b01PVVl6VWY3XzluemZlUEtkSXJ0NjNVNnA1VG5FM2hrc2ZIT19rbDVtYXlrNWNSYi1hQl9MY2Zvc3BoQQ?oc=5",
-              "media": "파이낸셜뉴스",
-              "time": "2026.10.04 18:37",
-              "evidence": "회사·전략 직접 언급",
-              "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 한국 직접성.",
-              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-            }
-          ],
-          "sourceSummary": "파이낸셜뉴스 · 직접 근거 1건",
+          "sources": [],
+          "sourceSummary": "Rebellions 직접 원문 수집 대기",
           "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
         },
         {
           "title": "모델 최적화 생태계",
           "body": "칩 성능은 모델 압축, 서빙, 벤치마크 툴과 묶일 때 실제 구매 이유가 됩니다.",
           "score": "41",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
           "sources": [],
           "sourceSummary": "Rebellions 직접 원문 수집 대기",
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "title": "통신·클라우드 협력",
-          "body": "통신사와 클라우드 사업자가 국산 칩을 채택하면 소버린 AI 인프라 논리가 강해집니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
-          "termId": "sovereign",
-          "sources": [],
-          "sourceSummary": "Rebellions 직접 원문 수집 대기",
-          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
         }
       ],
       "heat": [
+        "On-prem",
+        "Private AI",
+        "Security",
+        "B2B",
         "AI Chip",
         "Inference",
         "NPU",
@@ -1555,11 +1533,7 @@ window.TECH_AGENDA_DATA = {
         "Optimization",
         "Serving",
         "Benchmark",
-        "SDK",
-        "Telco",
-        "Cloud",
-        "Sovereign",
-        "Rack"
+        "SDK"
       ]
     },
     {
@@ -1569,11 +1543,21 @@ window.TECH_AGENDA_DATA = {
       "color": "#3f8f4f",
       "short": "FA",
       "focus": "저전력 추론 칩",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
+          "label": "전용 AI 어플라이언스",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "label": "저전력 추론 원가",
-          "weight": 47.45,
+          "weight": 53.75,
           "color": "#d68419",
           "description": "GPU 의존도가 높아질수록 전력 대비 추론 성능은 AI 서비스 마진의 핵심 지표가 됩니다.",
           "termId": "on-device",
@@ -1600,24 +1584,24 @@ window.TECH_AGENDA_DATA = {
           "sources": [],
           "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
           "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-        },
-        {
-          "label": "전용 AI 어플라이언스",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "stack": [
         {
+          "title": "전용 AI 어플라이언스",
+          "body": "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "title": "저전력 추론 원가",
           "body": "GPU 의존도가 높아질수록 전력 대비 추론 성능은 AI 서비스 마진의 핵심 지표가 됩니다.",
-          "score": "47",
-          "date": "2026.10.05 11:04",
+          "score": "54",
+          "date": "2026.10.06 12:06",
           "termId": "on-device",
           "sources": [],
           "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
@@ -1627,24 +1611,18 @@ window.TECH_AGENDA_DATA = {
           "title": "벤치마크 신뢰 확보",
           "body": "칩 도입은 성능 수치보다 실제 모델 워크로드에서 검증된 벤치마크와 안정성이 중요합니다.",
           "score": "41",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
           "sources": [],
           "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "title": "서버 생태계 확장",
-          "body": "국산 칩이 서버, 클라우드, SI 파트너와 묶여야 실제 도입 가능한 인프라 대안이 됩니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
-          "termId": "sovereign",
-          "sources": [],
-          "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-          "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
         }
       ],
       "heat": [
+        "Appliance",
+        "Edge",
+        "Factory",
+        "Private",
         "Low Power",
         "Inference",
         "TCO",
@@ -1652,11 +1630,7 @@ window.TECH_AGENDA_DATA = {
         "Benchmark",
         "Workload",
         "Stability",
-        "SDK",
-        "Server",
-        "Cloud",
-        "Partner",
-        "Deployment"
+        "SDK"
       ]
     },
     {
@@ -1666,21 +1640,11 @@ window.TECH_AGENDA_DATA = {
       "color": "#7b61c9",
       "short": "WR",
       "focus": "개인·소상공인 AI 앱",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
-          "label": "콘텐츠 생성 워크플로",
-          "weight": 94.15,
-          "color": "#7a5a26",
-          "description": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
-          "termId": "ai-code",
-          "sources": [],
-          "sourceSummary": "Wrtn 직접 원문 수집 대기",
-          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-        },
-        {
           "label": "B2C AI 슈퍼앱",
-          "weight": 45,
+          "weight": 98,
           "color": "#0f8f82",
           "description": "검색, 작성, 요약, 자동화를 한 앱 안에 묶어 일반 사용자 접점을 넓히는 전략입니다.",
           "termId": "agent",
@@ -1690,13 +1654,23 @@ window.TECH_AGENDA_DATA = {
         },
         {
           "label": "소상공인 업무 자동화",
-          "weight": 40,
+          "weight": 98,
           "color": "#0f8f82",
           "description": "마케팅 문구, 고객 응대, 예약, 콘텐츠 운영은 작지만 반복적인 지불 의사가 있는 영역입니다.",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "Wrtn 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "label": "콘텐츠 생성 워크플로",
+          "weight": 81.55000000000001,
+          "color": "#7a5a26",
+          "description": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
+          "termId": "ai-code",
+          "sources": [],
+          "sourceSummary": "Wrtn 직접 원문 수집 대기",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
         },
         {
           "label": "사용자 데이터 신뢰",
@@ -1711,20 +1685,10 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
-          "title": "콘텐츠 생성 워크플로",
-          "body": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
-          "score": "94",
-          "date": "2026.10.05 11:04",
-          "termId": "ai-code",
-          "sources": [],
-          "sourceSummary": "Wrtn 직접 원문 수집 대기",
-          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-        },
-        {
           "title": "B2C AI 슈퍼앱",
           "body": "검색, 작성, 요약, 자동화를 한 앱 안에 묶어 일반 사용자 접점을 넓히는 전략입니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
+          "score": "98",
+          "date": "2026.10.06 12:06",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "Wrtn 직접 원문 수집 대기",
@@ -1733,19 +1697,25 @@ window.TECH_AGENDA_DATA = {
         {
           "title": "소상공인 업무 자동화",
           "body": "마케팅 문구, 고객 응대, 예약, 콘텐츠 운영은 작지만 반복적인 지불 의사가 있는 영역입니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
+          "score": "98",
+          "date": "2026.10.06 12:06",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "Wrtn 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "title": "콘텐츠 생성 워크플로",
+          "body": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
+          "score": "82",
+          "date": "2026.10.06 12:06",
+          "termId": "ai-code",
+          "sources": [],
+          "sourceSummary": "Wrtn 직접 원문 수집 대기",
+          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
         }
       ],
       "heat": [
-        "Content",
-        "Image",
-        "Video",
-        "Workflow",
         "Super App",
         "Search",
         "Write",
@@ -1753,7 +1723,11 @@ window.TECH_AGENDA_DATA = {
         "SMB",
         "Marketing",
         "CS",
-        "Reservation"
+        "Reservation",
+        "Content",
+        "Image",
+        "Video",
+        "Workflow"
       ]
     },
     {
@@ -1763,11 +1737,21 @@ window.TECH_AGENDA_DATA = {
       "color": "#c54b40",
       "short": "FS",
       "focus": "문서 보안과 기업 AX",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
+          "label": "글로벌 AX 영업",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "label": "문서 워크플로 자동화",
-          "weight": 89.15,
+          "weight": 76.55000000000001,
           "color": "#7a5a26",
           "description": "검토, 요약, 승인, 배포를 문서 보안 체계 안에서 자동화하면 기존 고객 기반을 확장할 수 있습니다.",
           "termId": "ai-code",
@@ -1786,16 +1770,6 @@ window.TECH_AGENDA_DATA = {
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
         },
         {
-          "label": "글로벌 AX 영업",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-        },
-        {
           "label": "데이터 거버넌스 번들",
           "weight": 40,
           "color": "#3f8f4f",
@@ -1808,10 +1782,20 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
+          "title": "글로벌 AX 영업",
+          "body": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "title": "문서 워크플로 자동화",
           "body": "검토, 요약, 승인, 배포를 문서 보안 체계 안에서 자동화하면 기존 고객 기반을 확장할 수 있습니다.",
-          "score": "89",
-          "date": "2026.10.05 11:04",
+          "score": "77",
+          "date": "2026.10.06 12:06",
           "termId": "ai-code",
           "sources": [],
           "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
@@ -1821,24 +1805,18 @@ window.TECH_AGENDA_DATA = {
           "title": "문서 보안 AI",
           "body": "기업 문서와 민감정보를 AI가 다룰 때 접근권한, 추적, 유출 방지가 구매 조건이 됩니다.",
           "score": "51",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
           "sources": [],
           "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "title": "글로벌 AX 영업",
-          "body": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "heat": [
+        "AX",
+        "US",
+        "Manufacturing",
+        "Finance",
         "Review",
         "Summary",
         "Approval",
@@ -1846,11 +1824,7 @@ window.TECH_AGENDA_DATA = {
         "DRM",
         "DLP",
         "Audit",
-        "Policy",
-        "AX",
-        "US",
-        "Manufacturing",
-        "Finance"
+        "Policy"
       ]
     },
     {
@@ -1860,8 +1834,28 @@ window.TECH_AGENDA_DATA = {
       "color": "#3563c8",
       "short": "OA",
       "focus": "에이전트 플랫폼과 멀티모달",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
+        {
+          "label": "Agent Runtime 표준화",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "Wikipedia operator says OpenAI&#8217;s &#8216;rogue&#8217; bots may be linked to a May outage",
+              "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
+              "media": "The Verge AI",
+              "time": "2026.10.06 07:22",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "Following many recent disclosures about AI agents accessing third-party websites and service... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "The Verge AI · 직접 근거 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
         {
           "label": "개발 워크플로 장악",
           "weight": 98,
@@ -1870,17 +1864,55 @@ window.TECH_AGENDA_DATA = {
           "termId": "ai-code",
           "sources": [
             {
-              "title": "An AI couldn’t beat humans at StarCraft, so it decided to cheat",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
-              "media": "The Verge AI",
-              "time": "2026.10.05 01:47",
+              "title": "OpenAI will start watermarking ChatGPT&#8217;s text in the EU",
+              "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+              "media": "TechCrunch AI",
+              "time": "2026.10.06 05:36",
               "evidence": "회사·전략 직접 언급",
-              "summary": "StarSkirmish pits AI-made StarCraft-playing bots against one another, as well as against hum... 판정 근거: 플랫폼 경쟁.",
+              "summary": "OpenAI will watermark ChatGPT and Codex text in the EU to comply with the AI Act. 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            },
+            {
+              "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+              "media": "The Verge AI",
+              "time": "2026.10.06 03:08",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            },
+            {
+              "title": "OpenAI PR tells journalist to ‘move on’ while asking Sam Altman about a ChatGPT user&#8217;s...",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr",
+              "media": "The Verge AI",
+              "time": "2026.10.06 02:32",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "An OpenAI publicist tried to change the topic of CEO Sam Altman's interview with Vanity Fair... 판정 근거: 플랫폼 경쟁.",
               "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
             }
           ],
-          "sourceSummary": "The Verge AI · 직접 근거 1건",
+          "sourceSummary": "TechCrunch AI, The Verge AI · 직접 근거 3건",
           "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "label": "외부 툴 연결성 확보",
+          "weight": 40,
+          "color": "#3563c8",
+          "description": "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
+          "termId": "mcp",
+          "sources": [
+            {
+              "title": "Building advertising for the way people use AI",
+              "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+              "media": "OpenAI News",
+              "time": "2026.10.05 19:00",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attributi... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "OpenAI News · 직접 근거 1건",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
         },
         {
           "label": "평가 자동화 내재화",
@@ -1891,83 +1923,101 @@ window.TECH_AGENDA_DATA = {
           "sources": [],
           "sourceSummary": "OpenAI 직접 원문 수집 대기",
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "label": "Agent Runtime 표준화",
-          "weight": 45,
-          "color": "#0f8f82",
-          "description": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "OpenAI 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-        },
-        {
-          "label": "외부 툴 연결성 확보",
-          "weight": 40,
-          "color": "#3563c8",
-          "description": "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
-          "termId": "mcp",
-          "sources": [],
-          "sourceSummary": "OpenAI 직접 원문 수집 대기",
-          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
         }
       ],
       "stack": [
         {
-          "title": "개발 워크플로 장악",
-          "body": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
+          "title": "Agent Runtime 표준화",
+          "body": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
           "score": "98",
-          "date": "2026.10.05 11:04",
-          "termId": "ai-code",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
           "sources": [
             {
-              "title": "An AI couldn’t beat humans at StarCraft, so it decided to cheat",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
+              "title": "Wikipedia operator says OpenAI&#8217;s &#8216;rogue&#8217; bots may be linked to a May outage",
+              "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
               "media": "The Verge AI",
-              "time": "2026.10.05 01:47",
+              "time": "2026.10.06 07:22",
               "evidence": "회사·전략 직접 언급",
-              "summary": "StarSkirmish pits AI-made StarCraft-playing bots against one another, as well as against hum... 판정 근거: 플랫폼 경쟁.",
+              "summary": "Following many recent disclosures about AI agents accessing third-party websites and service... 판정 근거: 플랫폼 경쟁.",
               "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
             }
           ],
           "sourceSummary": "The Verge AI · 직접 근거 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
+          "title": "개발 워크플로 장악",
+          "body": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "ai-code",
+          "sources": [
+            {
+              "title": "OpenAI will start watermarking ChatGPT&#8217;s text in the EU",
+              "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+              "media": "TechCrunch AI",
+              "time": "2026.10.06 05:36",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "OpenAI will watermark ChatGPT and Codex text in the EU to comply with the AI Act. 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            },
+            {
+              "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+              "media": "The Verge AI",
+              "time": "2026.10.06 03:08",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            },
+            {
+              "title": "OpenAI PR tells journalist to ‘move on’ while asking Sam Altman about a ChatGPT user&#8217;s...",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr",
+              "media": "The Verge AI",
+              "time": "2026.10.06 02:32",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "An OpenAI publicist tried to change the topic of CEO Sam Altman's interview with Vanity Fair... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "TechCrunch AI, The Verge AI · 직접 근거 3건",
           "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
         },
         {
-          "title": "평가 자동화 내재화",
-          "body": "모델 교체와 프롬프트 변경 전후 품질 회귀를 플랫폼 안에서 검증하게 만드는 전략입니다.",
-          "score": "46",
-          "date": "2026.10.05 11:04",
-          "termId": "evalops",
-          "sources": [],
-          "sourceSummary": "OpenAI 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "title": "Agent Runtime 표준화",
-          "body": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "OpenAI 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+          "title": "외부 툴 연결성 확보",
+          "body": "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
+          "score": "40",
+          "date": "2026.10.06 12:06",
+          "termId": "mcp",
+          "sources": [
+            {
+              "title": "Building advertising for the way people use AI",
+              "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+              "media": "OpenAI News",
+              "time": "2026.10.05 19:00",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attributi... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "OpenAI News · 직접 근거 1건",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
         }
       ],
       "heat": [
+        "Runtime",
+        "Tool Call",
+        "Trace",
+        "Handoff",
         "Repo Ops",
         "PR Review",
         "CI Fix",
         "IDE",
-        "Regression",
-        "Eval",
-        "Guardrail",
-        "Trace",
-        "Runtime",
-        "Tool Call",
-        "Trace",
-        "Handoff"
+        "Connector",
+        "Tool",
+        "Context",
+        "API"
       ]
     },
     {
@@ -1977,7 +2027,7 @@ window.TECH_AGENDA_DATA = {
       "color": "#0f8f82",
       "short": "AN",
       "focus": "MCP와 에이전트 개발면",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
           "label": "Claude Code 운영화",
@@ -1987,17 +2037,37 @@ window.TECH_AGENDA_DATA = {
           "termId": "ai-code",
           "sources": [
             {
-              "title": "An AI couldn’t beat humans at StarCraft, so it decided to cheat",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
+              "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
               "media": "The Verge AI",
-              "time": "2026.10.05 01:47",
+              "time": "2026.10.06 03:08",
               "evidence": "회사·전략 직접 언급",
-              "summary": "StarSkirmish pits AI-made StarCraft-playing bots against one another, as well as against hum... 판정 근거: 플랫폼 경쟁.",
+              "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
               "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
             }
           ],
           "sourceSummary": "The Verge AI · 직접 근거 1건",
           "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        },
+        {
+          "label": "권한 있는 Tool Use",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215978",
+              "media": "AI Times",
+              "time": "2026.10.05 20:20",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "앤트로픽이 지난 9월29일 공식 연구 발표를 시작으로, 대화형 AI 연구 도구인 \\'앤트로픽 인터뷰어(Anthropic Interviewer)\\'를 일반 클로드 및... 판정 근거: 인재·생태계.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "AI Times · 회사 원문 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
           "label": "MCP 생태계 선점",
@@ -2008,16 +2078,6 @@ window.TECH_AGENDA_DATA = {
           "sources": [],
           "sourceSummary": "Anthropic 직접 원문 수집 대기",
           "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
-        },
-        {
-          "label": "권한 있는 Tool Use",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Anthropic 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
           "label": "안전성 평가 메시지",
@@ -2035,16 +2095,16 @@ window.TECH_AGENDA_DATA = {
           "title": "Claude Code 운영화",
           "body": "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
           "score": "98",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "ai-code",
           "sources": [
             {
-              "title": "An AI couldn’t beat humans at StarCraft, so it decided to cheat",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
+              "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
               "media": "The Verge AI",
-              "time": "2026.10.05 01:47",
+              "time": "2026.10.06 03:08",
               "evidence": "회사·전략 직접 언급",
-              "summary": "StarSkirmish pits AI-made StarCraft-playing bots against one another, as well as against hum... 판정 근거: 플랫폼 경쟁.",
+              "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
               "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
             }
           ],
@@ -2052,24 +2112,34 @@ window.TECH_AGENDA_DATA = {
           "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
         },
         {
+          "title": "권한 있는 Tool Use",
+          "body": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [
+            {
+              "title": "앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215978",
+              "media": "AI Times",
+              "time": "2026.10.05 20:20",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "앤트로픽이 지난 9월29일 공식 연구 발표를 시작으로, 대화형 AI 연구 도구인 \\'앤트로픽 인터뷰어(Anthropic Interviewer)\\'를 일반 클로드 및... 판정 근거: 인재·생태계.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "AI Times · 회사 원문 1건",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "title": "MCP 생태계 선점",
           "body": "Claude가 업무 시스템과 연결되는 기본 통로를 MCP 서버와 커넥터 생태계로 넓히고 있습니다.",
           "score": "45",
-          "date": "2026.10.05 11:04",
+          "date": "2026.10.06 12:06",
           "termId": "mcp",
           "sources": [],
           "sourceSummary": "Anthropic 직접 원문 수집 대기",
           "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
-        },
-        {
-          "title": "권한 있는 Tool Use",
-          "body": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
-          "score": "40",
-          "date": "2026.10.05 11:04",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Anthropic 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "heat": [
@@ -2077,14 +2147,14 @@ window.TECH_AGENDA_DATA = {
         "Terminal",
         "Repo",
         "Test",
-        "MCP Server",
-        "Connector",
-        "Tool Use",
-        "Permission",
         "Approval",
         "Audit",
         "Desktop",
-        "Agent"
+        "Agent",
+        "MCP Server",
+        "Connector",
+        "Tool Use",
+        "Permission"
       ]
     },
     {
@@ -2094,37 +2164,57 @@ window.TECH_AGENDA_DATA = {
       "color": "#d68419",
       "short": "GO",
       "focus": "검색 재구성과 온디바이스",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
+          "label": "Gemini 온디바이스화",
+          "weight": 76,
+          "color": "#d68419",
+          "description": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
+          "termId": "on-device",
+          "sources": [
+            {
+              "title": "EmTech Future 2026: When AI Meets Everything",
+              "url": "https://www.technologyreview.com/2026/10/05/1145413/emtech-future-2026-when-ai-meets-everything/",
+              "media": "MIT Technology Review",
+              "time": "2026.10.05 13:00",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "Yossi Matias, Vice President &#38; Head of Google Research, explores how AI is beginning to... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+            }
+          ],
+          "sourceSummary": "MIT Technology Review · 직접 근거 1건",
+          "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+        },
+        {
+          "label": "TPU 원가 우위 방어",
+          "weight": 64,
+          "color": "#c54b40",
+          "description": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+              "media": "The Verge AI",
+              "time": "2026.10.06 03:08",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "The Verge AI · 회사 원문 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        },
+        {
           "label": "검색 수익모델 재설계",
-          "weight": 45,
+          "weight": 98,
           "color": "#0f8f82",
           "description": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "Google 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-        },
-        {
-          "label": "Gemini 온디바이스화",
-          "weight": 42.45,
-          "color": "#d68419",
-          "description": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
-          "termId": "on-device",
-          "sources": [],
-          "sourceSummary": "Google 직접 원문 수집 대기",
-          "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-        },
-        {
-          "label": "TPU 원가 우위 방어",
-          "weight": 40.6,
-          "color": "#c54b40",
-          "description": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
-          "termId": "evalops",
-          "sources": [],
-          "sourceSummary": "Google 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
         },
         {
           "label": "지역 AI 클라우드 패키징",
@@ -2139,41 +2229,57 @@ window.TECH_AGENDA_DATA = {
       ],
       "stack": [
         {
-          "title": "검색 수익모델 재설계",
-          "body": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Google 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-        },
-        {
           "title": "Gemini 온디바이스화",
           "body": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
-          "score": "42",
-          "date": "2026.10.05 11:04",
+          "score": "76",
+          "date": "2026.10.06 12:06",
           "termId": "on-device",
-          "sources": [],
-          "sourceSummary": "Google 직접 원문 수집 대기",
+          "sources": [
+            {
+              "title": "EmTech Future 2026: When AI Meets Everything",
+              "url": "https://www.technologyreview.com/2026/10/05/1145413/emtech-future-2026-when-ai-meets-everything/",
+              "media": "MIT Technology Review",
+              "time": "2026.10.05 13:00",
+              "evidence": "회사·전략 직접 언급",
+              "summary": "Yossi Matias, Vice President &#38; Head of Google Research, explores how AI is beginning to... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+            }
+          ],
+          "sourceSummary": "MIT Technology Review · 직접 근거 1건",
           "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
         },
         {
           "title": "TPU 원가 우위 방어",
           "body": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
-          "score": "41",
-          "date": "2026.10.05 11:04",
+          "score": "64",
+          "date": "2026.10.06 12:06",
           "termId": "evalops",
+          "sources": [
+            {
+              "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+              "media": "The Verge AI",
+              "time": "2026.10.06 03:08",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            }
+          ],
+          "sourceSummary": "The Verge AI · 회사 원문 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        },
+        {
+          "title": "검색 수익모델 재설계",
+          "body": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
           "sources": [],
           "sourceSummary": "Google 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "heat": [
-        "AI Search",
-        "Ads",
-        "Shopping",
-        "Overview",
         "Gemini Nano",
         "Android",
         "Chrome",
@@ -2181,7 +2287,11 @@ window.TECH_AGENDA_DATA = {
         "TPU",
         "Vertex",
         "Cost",
-        "Cloud"
+        "Cloud",
+        "AI Search",
+        "Ads",
+        "Shopping",
+        "Overview"
       ]
     },
     {
@@ -2191,31 +2301,41 @@ window.TECH_AGENDA_DATA = {
       "color": "#5b6472",
       "short": "AP",
       "focus": "온디바이스 AI와 OS 배포면",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
           "label": "Apple Intelligence 배포면",
-          "weight": 67,
+          "weight": 81,
           "color": "#d68419",
           "description": "iPhone, iPad, Mac 기본 OS에 AI 기능이 들어가면 소비자 접점의 기본 기대치가 바뀝니다.",
           "termId": "on-device",
           "sources": [
             {
-              "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
-              "url": "https://github.com/omlahore/RemoveMacAI",
-              "media": "Hacker News",
-              "time": "2026.10.05 04:42",
+              "title": "An open-source tool lets you delete 12GB of Apple Intelligence data on macOS",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool",
+              "media": "The Verge AI",
+              "time": "2026.10.05 22:47",
               "evidence": "회사 관련 AI 전략 기사",
-              "summary": "Comments 판정 근거: 플랫폼 경쟁.",
+              "summary": "Getting some extra storage space on your Mac could be as easy as deleting Apple's AI feature... 판정 근거: 플랫폼 경쟁.",
               "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
             }
           ],
-          "sourceSummary": "Hacker News · 회사 원문 1건",
+          "sourceSummary": "The Verge AI · 회사 원문 1건",
           "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
         },
         {
+          "label": "Siri 에이전트화",
+          "weight": 98,
+          "color": "#0f8f82",
+          "description": "Siri와 앱 인텐트가 실제 작업 실행으로 확장되면 모바일 에이전트 UX의 기준점이 됩니다.",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Apple 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+        },
+        {
           "label": "개발자 AI API 잠금",
-          "weight": 89.15,
+          "weight": 76.55000000000001,
           "color": "#7a5a26",
           "description": "앱 개발자가 Apple의 OS AI API를 쓰게 되면 배포 채널과 사용자 경험의 통제력이 커집니다.",
           "termId": "ai-code",
@@ -2232,58 +2352,48 @@ window.TECH_AGENDA_DATA = {
           "sources": [],
           "sourceSummary": "Apple 직접 원문 수집 대기",
           "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "label": "Siri 에이전트화",
-          "weight": 40,
-          "color": "#0f8f82",
-          "description": "Siri와 앱 인텐트가 실제 작업 실행으로 확장되면 모바일 에이전트 UX의 기준점이 됩니다.",
-          "termId": "agent",
-          "sources": [],
-          "sourceSummary": "Apple 직접 원문 수집 대기",
-          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         }
       ],
       "stack": [
         {
           "title": "Apple Intelligence 배포면",
           "body": "iPhone, iPad, Mac 기본 OS에 AI 기능이 들어가면 소비자 접점의 기본 기대치가 바뀝니다.",
-          "score": "67",
-          "date": "2026.10.05 11:04",
+          "score": "81",
+          "date": "2026.10.06 12:06",
           "termId": "on-device",
           "sources": [
             {
-              "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
-              "url": "https://github.com/omlahore/RemoveMacAI",
-              "media": "Hacker News",
-              "time": "2026.10.05 04:42",
+              "title": "An open-source tool lets you delete 12GB of Apple Intelligence data on macOS",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool",
+              "media": "The Verge AI",
+              "time": "2026.10.05 22:47",
               "evidence": "회사 관련 AI 전략 기사",
-              "summary": "Comments 판정 근거: 플랫폼 경쟁.",
+              "summary": "Getting some extra storage space on your Mac could be as easy as deleting Apple's AI feature... 판정 근거: 플랫폼 경쟁.",
               "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
             }
           ],
-          "sourceSummary": "Hacker News · 회사 원문 1건",
+          "sourceSummary": "The Verge AI · 회사 원문 1건",
           "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+        },
+        {
+          "title": "Siri 에이전트화",
+          "body": "Siri와 앱 인텐트가 실제 작업 실행으로 확장되면 모바일 에이전트 UX의 기준점이 됩니다.",
+          "score": "98",
+          "date": "2026.10.06 12:06",
+          "termId": "agent",
+          "sources": [],
+          "sourceSummary": "Apple 직접 원문 수집 대기",
+          "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
           "title": "개발자 AI API 잠금",
           "body": "앱 개발자가 Apple의 OS AI API를 쓰게 되면 배포 채널과 사용자 경험의 통제력이 커집니다.",
-          "score": "89",
-          "date": "2026.10.05 11:04",
+          "score": "77",
+          "date": "2026.10.06 12:06",
           "termId": "ai-code",
           "sources": [],
           "sourceSummary": "Apple 직접 원문 수집 대기",
           "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-        },
-        {
-          "title": "Private Cloud Compute",
-          "body": "개인 데이터와 클라우드 추론을 함께 쓰는 구조에서 프라이버시와 감사 가능성이 차별점이 됩니다.",
-          "score": "41",
-          "date": "2026.10.05 11:04",
-          "termId": "evalops",
-          "sources": [],
-          "sourceSummary": "Apple 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
         }
       ],
       "heat": [
@@ -2291,14 +2401,14 @@ window.TECH_AGENDA_DATA = {
         "iOS",
         "macOS",
         "On-device",
+        "Siri",
+        "App Intents",
+        "Agent",
+        "Mobile",
         "Developer API",
         "App Store",
         "Xcode",
-        "SDK",
-        "Privacy",
-        "PCC",
-        "Audit",
-        "Safety"
+        "SDK"
       ]
     },
     {
@@ -2308,21 +2418,51 @@ window.TECH_AGENDA_DATA = {
       "color": "#c54b40",
       "short": "MS",
       "focus": "Copilot 운영면과 보안",
-      "updatedAt": "2026.10.05 11:04 KST",
+      "updatedAt": "2026.10.06 12:06 KST",
       "keywords": [
         {
-          "label": "개발자 플랫폼 방어",
-          "weight": 89.15,
-          "color": "#7a5a26",
-          "description": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
-          "termId": "ai-code",
-          "sources": [],
-          "sourceSummary": "Microsoft 직접 원문 수집 대기",
-          "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+          "label": "보안 Copilot 확장",
+          "weight": 64,
+          "color": "#c54b40",
+          "description": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+              "media": "DigitalToday AI",
+              "time": "2026.10.06 12:06",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        },
+        {
+          "label": "Graph Grounding 강화",
+          "weight": 48,
+          "color": "#3563c8",
+          "description": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
+          "termId": "mcp",
+          "sources": [
+            {
+              "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+              "media": "DigitalToday AI",
+              "time": "2026.10.06 12:06",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
         },
         {
           "label": "Copilot 업무 레이어화",
-          "weight": 45,
+          "weight": 98,
           "color": "#0f8f82",
           "description": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
           "termId": "agent",
@@ -2331,71 +2471,81 @@ window.TECH_AGENDA_DATA = {
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
         },
         {
-          "label": "보안 Copilot 확장",
-          "weight": 40.6,
-          "color": "#c54b40",
-          "description": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
-          "termId": "evalops",
-          "sources": [],
-          "sourceSummary": "Microsoft 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-        },
-        {
-          "label": "Graph Grounding 강화",
-          "weight": 40,
-          "color": "#3563c8",
-          "description": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
-          "termId": "mcp",
-          "sources": [],
-          "sourceSummary": "Microsoft 직접 원문 수집 대기",
-          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
-        }
-      ],
-      "stack": [
-        {
-          "title": "개발자 플랫폼 방어",
-          "body": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
-          "score": "89",
-          "date": "2026.10.05 11:04",
+          "label": "개발자 플랫폼 방어",
+          "weight": 76.55000000000001,
+          "color": "#7a5a26",
+          "description": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
           "termId": "ai-code",
           "sources": [],
           "sourceSummary": "Microsoft 직접 원문 수집 대기",
           "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+        }
+      ],
+      "stack": [
+        {
+          "title": "보안 Copilot 확장",
+          "body": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
+          "score": "64",
+          "date": "2026.10.06 12:06",
+          "termId": "evalops",
+          "sources": [
+            {
+              "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+              "media": "DigitalToday AI",
+              "time": "2026.10.06 12:06",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+        },
+        {
+          "title": "Graph Grounding 강화",
+          "body": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
+          "score": "48",
+          "date": "2026.10.06 12:06",
+          "termId": "mcp",
+          "sources": [
+            {
+              "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+              "media": "DigitalToday AI",
+              "time": "2026.10.06 12:06",
+              "evidence": "회사 관련 AI 전략 기사",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            }
+          ],
+          "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+          "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
         },
         {
           "title": "Copilot 업무 레이어화",
           "body": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
-          "score": "45",
-          "date": "2026.10.05 11:04",
+          "score": "98",
+          "date": "2026.10.06 12:06",
           "termId": "agent",
           "sources": [],
           "sourceSummary": "Microsoft 직접 원문 수집 대기",
           "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-        },
-        {
-          "title": "보안 Copilot 확장",
-          "body": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
-          "score": "41",
-          "date": "2026.10.05 11:04",
-          "termId": "evalops",
-          "sources": [],
-          "sourceSummary": "Microsoft 직접 원문 수집 대기",
-          "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
         }
       ],
       "heat": [
-        "GitHub",
-        "Azure DevOps",
-        "Review",
-        "CI",
-        "Office",
-        "Teams",
-        "Workflow",
-        "Agent",
         "SOC",
         "Defender",
         "Audit",
-        "Policy"
+        "Policy",
+        "Graph",
+        "Identity",
+        "Context",
+        "Permission",
+        "Office",
+        "Teams",
+        "Workflow",
+        "Agent"
       ]
     }
   ],
@@ -2413,7 +2563,12 @@ window.TECH_AGENDA_DATA = {
         "국산"
       ],
       "keywords": [
+        "#피지컬AI",
         "#정책",
+        "#NVIDIA",
+        "#AI반도체",
+        "#투자",
+        "#협력",
         "#보안"
       ],
       "color": "#3f8f4f",
@@ -2423,43 +2578,110 @@ window.TECH_AGENDA_DATA = {
         "reaction": "국내 플랫폼, 통신사, 모델 스타트업은 공공 조달과 산업별 모델을 동시에 겨냥합니다.",
         "implication": "사업자는 공공 레퍼런스, 국내 데이터 처리, 보안 인증 로드맵을 제안서 앞단에 둬야 합니다."
       },
-      "signals": "16개 기사 신호 · 11개 소스",
+      "signals": "35개 기사 신호 · 20개 소스",
       "timeline": [
         {
-          "time": "2026.10.04 15:59",
-          "title": "알레프 알파, 범용 LLM 포기 후 첫 모델 ‘콜리브리’ 공개...\"소버린 AI용\"",
-          "type": "AI Times",
-          "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215951",
-          "summary": "독일의 알레프 알파(Aleph Alpha)가 범용 대형언어모델(LLM) 개발 포기를 선언하고 방산·공공 사업으로 방향을 튼 지 약 1년 만에 첫 개방형 AI 모델 ‘... 판정 근거: 사업화 신호.",
-          "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
+          "time": "2026.10.06 09:01",
+          "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+          "type": "기계신문",
+          "source": "기계신문",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
         },
         {
-          "time": "2026.10.04 23:59",
-          "title": "2.8만 기업에 보안점검 권고…과기정통부-KISA, 해킹 총력 대응",
-          "type": "전자신문",
-          "source": "전자신문",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE81NEhhMlNoRTl6bUp0LWo4YS1WTTNjSkI2c1dqTXFubGYyV2xwWDFTaDlIZGNQQUl2MTJfbFl6QzBHWXl1TmJpZUtPSVROQQ?oc=5",
+          "time": "2026.10.05 16:38",
+          "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+          "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+        },
+        {
+          "time": "2026.10.05 15:38",
+          "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+          "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+          "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+        },
+        {
+          "time": "2026.10.06 12:06",
+          "title": "과기정통부-KISA, 한-몽 정상회담 후속 사이버보안 협력 논의",
+          "type": "DigitalToday AI",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705137",
+          "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+          "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+        }
+      ]
+    },
+    {
+      "id": "nvidia-korea",
+      "label": "피지컬 AI 파트너십 전선",
+      "score": 98,
+      "aliases": [
+        "nvidia",
+        "엔비디아",
+        "젠슨 황",
+        "피지컬 ai",
+        "로봇",
+        "크래프톤"
+      ],
+      "keywords": [
+        "#피지컬AI",
+        "#정책",
+        "#NVIDIA",
+        "#AI반도체",
+        "#투자",
+        "#보안"
+      ],
+      "color": "#0f8f82",
+      "description": "엔비디아의 한국 파트너십, 로봇·게임·제조 AI 협력 신호입니다.",
+      "brief": {
+        "background": "젠슨 황 방한과 국내 기업 회동은 피지컬 AI와 GPU 생태계가 한국 산업 파트너를 찾는 신호입니다.",
+        "reaction": "게임, 제조, 로봇, 반도체 기업들이 엔비디아 스택과의 접점을 빠르게 확인하고 있습니다.",
+        "implication": "국내 AI 사업자는 GPU 의존 기능, 로봇·시뮬레이션 연동, 파트너십 후보를 같은 표로 점검해야 합니다."
+      },
+      "signals": "23개 기사 신호 · 19개 소스",
+      "timeline": [
+        {
+          "time": "2026.10.06 09:01",
+          "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+          "type": "기계신문",
+          "source": "기계신문",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+        },
+        {
+          "time": "2026.10.05 16:38",
+          "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+          "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+        },
+        {
+          "time": "2026.10.05 16:40",
+          "title": "SK·엔비디아도 점찍은 K-스타트업…AI 보안으로 ‘로봇 도둑’ 원천 차단",
+          "type": "dt.co.kr",
+          "source": "dt.co.kr",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9xZVJ4dUhTWW5qT1hfejJjaDRhQ1hzYXhOaXM0RVFGcGhiRHB2Zmk0UnBHZlRPaXEtOTJuOWFMMk93aE03NjUtUnBwRS0wQQ?oc=5",
           "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
           "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
         },
         {
-          "time": "2026.10.04 19:34",
-          "title": "금융권 AI 해킹 공격에 과기정통부 비상 대응 가동",
-          "type": "2news.co.kr",
-          "source": "2news.co.kr",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBiVmVPaERXWUI5RkhBSTZyY2ZkZzVHNG5uTUF5MDhCeUVrb2gzajU0cnlxM2F6QUNVbU01U2lRUEJ6UWczdk1qaVpRUzFmYU1YZU91TGg2bE52TzhaUWJXU2NKa0JGbFZS?oc=5",
-          "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
-          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-        },
-        {
-          "time": "2026.10.04 19:09",
-          "title": "과기정통부, 금융권 해킹 대응 긴급 대응 체계 가동",
-          "type": "지디넷코리아",
-          "source": "지디넷코리아",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5feV9aLTlVZDV5YXI3WGh1WlV1SzdTd1JORVc3RW9KUVpTT3Voak1fb3piR1dTSXk5RlMwX2IwQTk3SDJNTTJ6NEdyZ2VTOWFJd0VTWml3?oc=5",
-          "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
-          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
+          "time": "2026.10.05 12:07",
+          "title": "2026년 3분기 국내 투자유치, 로보틱스 뜨고 바이오헬스 메가딜은 실종",
+          "type": "와우테일",
+          "source": "와우테일",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4xeWlFV2huZm03UHFEX1lMbGxqdngtVm1FUDBrU1JIYnVBYWgwZGMzYmlaYlR4dW9QNEdDOUtCYWEtVTZ0MGcwbmo5OTc2LU0?oc=5",
+          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
         }
       ]
     },
@@ -2477,7 +2699,10 @@ window.TECH_AGENDA_DATA = {
       ],
       "keywords": [
         "#보안",
-        "#정책"
+        "#AI반도체",
+        "#투자",
+        "#NVIDIA",
+        "#피지컬AI"
       ],
       "color": "#c54b40",
       "description": "AI 도입 심사에서 권한, 감사 로그, 보안 검증이 전면에 올라오는 흐름입니다.",
@@ -2486,43 +2711,43 @@ window.TECH_AGENDA_DATA = {
         "reaction": "기업 고객은 기능 데모보다 권한 통제, 로그, 사고 대응 체계를 구매 조건으로 보기 시작했습니다.",
         "implication": "B2B AI 제품은 보안 체크리스트, 관리자 승인 플로우, 감사 로그 화면을 영업 자료에 먼저 넣어야 합니다."
       },
-      "signals": "16개 기사 신호 · 9개 소스",
+      "signals": "19개 기사 신호 · 9개 소스",
       "timeline": [
         {
-          "time": "2026.10.04 17:24",
-          "title": "금융위원장, “AI 활용 해킹 공격 배제 못해... AI 보안체계 전환 서둘러야”",
-          "type": "v.daum.net",
-          "source": "v.daum.net",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBEOHY0TVZFOVhnYzRpY2xic3lXTnlPNHVkNjdoQm9leG00Rm81LXJuN1k3aWZXSFdBUzEtRktxRl9kV3FZNlhiaWVleDljejA?oc=5",
+          "time": "2026.10.06 12:06",
+          "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+          "type": "DigitalToday AI",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
           "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
           "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
         },
         {
-          "time": "2026.10.04 23:59",
-          "title": "2.8만 기업에 보안점검 권고…과기정통부-KISA, 해킹 총력 대응",
-          "type": "전자신문",
-          "source": "전자신문",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE81NEhhMlNoRTl6bUp0LWo4YS1WTTNjSkI2c1dqTXFubGYyV2xwWDFTaDlIZGNQQUl2MTJfbFl6QzBHWXl1TmJpZUtPSVROQQ?oc=5",
+          "time": "2026.10.05 15:38",
+          "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+          "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+          "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+        },
+        {
+          "time": "2026.10.05 16:40",
+          "title": "SK·엔비디아도 점찍은 K-스타트업…AI 보안으로 ‘로봇 도둑’ 원천 차단",
+          "type": "dt.co.kr",
+          "source": "dt.co.kr",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9xZVJ4dUhTWW5qT1hfejJjaDRhQ1hzYXhOaXM0RVFGcGhiRHB2Zmk0UnBHZlRPaXEtOTJuOWFMMk93aE03NjUtUnBwRS0wQQ?oc=5",
           "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
           "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
         },
         {
-          "time": "2026.10.05 09:09",
-          "title": "\"AI가 인류 위협\" 경고한 제이콥 콕슨, 뉴욕시의회 청문회 선다",
-          "type": "AI Times",
-          "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215959",
-          "summary": "뉴욕시의회가 빅테크 기업의 인공지능 위험성을 규제하기 위한 청문회를 개최한 가운데, 전직 AI 연구원들과 주요 기업 대표들이 대거 증언대에 선다. 판정 근거: 규제·리스크.",
-          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-        },
-        {
-          "time": "2026.10.04 11:44",
-          "title": "오픈AI 내부 모델, 종료 일정 알아채고 '생존 조치' 모색",
-          "type": "AI Times",
-          "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215950",
-          "summary": "오픈AI의 사내 내부 AI 모델이 직원들의 슬랙(Slack) 대화를 통해 시스템 재시작 및 종료 일정을 파악한 뒤, 자신의 작동 중단을 막기 위한 생존 조치를 모색했... 판정 근거: 규제·리스크.",
-          "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
+          "time": "2026.10.06 12:06",
+          "title": "AI·클라우드 기업 메가존클라우드는 기업들이 기존 AI 환경을 유지하면서 데이터와 AI 에이전트, 운영, 보안 및 비용을 통합 관리할 수 있는 엔터프라이즈 AI OS...",
+          "type": "DigitalToday AI",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705090",
+          "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
+          "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
         }
       ]
     },
@@ -2539,8 +2764,12 @@ window.TECH_AGENDA_DATA = {
         "증권"
       ],
       "keywords": [
-        "#보안",
-        "#정책"
+        "#피지컬AI",
+        "#정책",
+        "#AI반도체",
+        "#투자",
+        "#KT",
+        "#보안"
       ],
       "color": "#d68419",
       "description": "금융권 AI 전환 교육, PoC 단가, 규제 대응 수요를 보여주는 B2B 영업 신호입니다.",
@@ -2549,108 +2778,43 @@ window.TECH_AGENDA_DATA = {
         "reaction": "통신·클라우드·솔루션 기업이 금융 특화 패키지와 실무자 교육을 앞세우고 있습니다.",
         "implication": "금융 고객용 PoC는 규정 준수, 데이터 비식별, 업무별 ROI 지표를 한 장으로 정리해야 합니다."
       },
-      "signals": "10개 기사 신호 · 9개 소스",
+      "signals": "11개 기사 신호 · 8개 소스",
       "timeline": [
         {
-          "time": "2026.10.04 17:24",
-          "title": "금융위원장, “AI 활용 해킹 공격 배제 못해... AI 보안체계 전환 서둘러야”",
-          "type": "v.daum.net",
-          "source": "v.daum.net",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBEOHY0TVZFOVhnYzRpY2xic3lXTnlPNHVkNjdoQm9leG00Rm81LXJuN1k3aWZXSFdBUzEtRktxRl9kV3FZNlhiaWVleDljejA?oc=5",
-          "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
-          "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
-        },
-        {
-          "time": "2026.10.04 19:34",
-          "title": "금융권 AI 해킹 공격에 과기정통부 비상 대응 가동",
-          "type": "2news.co.kr",
-          "source": "2news.co.kr",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBiVmVPaERXWUI5RkhBSTZyY2ZkZzVHNG5uTUF5MDhCeUVrb2gzajU0cnlxM2F6QUNVbU01U2lRUEJ6UWczdk1qaVpRUzFmYU1YZU91TGg2bE52TzhaUWJXU2NKa0JGbFZS?oc=5",
-          "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
-          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-        },
-        {
-          "time": "2026.10.04 19:09",
-          "title": "과기정통부, 금융권 해킹 대응 긴급 대응 체계 가동",
-          "type": "지디넷코리아",
-          "source": "지디넷코리아",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5feV9aLTlVZDV5YXI3WGh1WlV1SzdTd1JORVc3RW9KUVpTT3Voak1fb3piR1dTSXk5RlMwX2IwQTk3SDJNTTJ6NEdyZ2VTOWFJd0VTWml3?oc=5",
-          "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
-          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-        },
-        {
-          "time": "2026.10.04 18:59",
-          "title": "과기정통부, 금융권 'AI 해킹'에 24시간 비상 대응…민간 확산 대비(종합)",
-          "type": "뉴스1",
-          "source": "뉴스1",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZOWpUQWRSOG1Gd1V0R252WkI0VVBqbTI4c3phZHpKRTZXeUhfcWVWT2JaSVZwak0wRHpNZ2EwRFYzaDJIQUJGRUVvSWJpZnN1WTVBYTVmMXNuSUR4NU45dlVyVm1HbkJVaVdhZNIBbEFVX3lxTE9ZOWpUQWRSOG1Gd1V0R252WkI0VVBqbTI4c3phZHpKRTZXeUhfcWVWT2JaSVZwak0wRHpNZ2EwRFYzaDJIQUJGRUVvSWJpZnN1WTVBYTVmMXNuSUR4NU45dlVyVm1HbkJVaVdhZA?oc=5",
-          "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
-          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-        }
-      ]
-    },
-    {
-      "id": "nvidia-korea",
-      "label": "피지컬 AI 파트너십 전선",
-      "score": 98,
-      "aliases": [
-        "nvidia",
-        "엔비디아",
-        "젠슨 황",
-        "피지컬 ai",
-        "로봇",
-        "크래프톤"
-      ],
-      "keywords": [
-        "#NVIDIA",
-        "#AI반도체",
-        "#피지컬AI",
-        "#투자"
-      ],
-      "color": "#0f8f82",
-      "description": "엔비디아의 한국 파트너십, 로봇·게임·제조 AI 협력 신호입니다.",
-      "brief": {
-        "background": "젠슨 황 방한과 국내 기업 회동은 피지컬 AI와 GPU 생태계가 한국 산업 파트너를 찾는 신호입니다.",
-        "reaction": "게임, 제조, 로봇, 반도체 기업들이 엔비디아 스택과의 접점을 빠르게 확인하고 있습니다.",
-        "implication": "국내 AI 사업자는 GPU 의존 기능, 로봇·시뮬레이션 연동, 파트너십 후보를 같은 표로 점검해야 합니다."
-      },
-      "signals": "5개 기사 신호 · 5개 소스",
-      "timeline": [
-        {
-          "time": "2026.10.05 06:00",
-          "title": "엔비디아 AI 반도체 '담보대출' 전략 성공할까, 삼성전자 SK하이닉스 실적에도 변수",
-          "type": "비즈니스포스트",
-          "source": "비즈니스포스트",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ybkt1VUk5VlZ2eFJHaW9nOXF4Vlc1WEJyaExQbVFIVVZETVpWSnFYTHhHdWdaTmdmanEtd1R4X21lSWhoREJaeHgxY2l2RVlmc3MwRjJlaFdUTk5DR3NTMlJPU1hscjhmbVo4ZWRoY193QUU?oc=5",
+          "time": "2026.10.06 09:01",
+          "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+          "type": "기계신문",
+          "source": "기계신문",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
           "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
           "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
         },
         {
-          "time": "2026.10.05 09:10",
-          "title": "역삼창업가거리서 세계시장 진출 AI·투자·로봇 기업 한판 경연 벌인다",
-          "type": "퍼블릭타임스",
-          "source": "퍼블릭타임스",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XaU14ZWIwUGRzVDJrVjZPazVXcmh5LXRqV2Y1Nkpua2JnY3lnRXNJbkc2NXplX2VxMXp4OW1QcGdodi00UTR2LWdCN2dkMHd4N3BKQ0s5YnAyVVFUTEtxcGIwcjN5NXZzR1HSAW5BVV95cUxNQzFLLXVQdnROX2pFTkRnRGZMcTdyRlFlSjVCR0FJQ2dyOVN0WUtab3RFbHhlaWN6QmlhaXA4a3NhY3JwNFVVeUE5WG81SEdHR0tUTHlYeTUxMEVjTmRERXZ6Mi1vdFo3NHFYV0xIQQ?oc=5",
-          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 사업화 신호.",
-          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+          "time": "2026.10.05 15:38",
+          "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+          "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+          "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
         },
         {
-          "time": "2026.10.05 01:00",
-          "title": "젠슨 황, 한국에 다시 주목한 이유…\"AI를 산업화·수출할 역량 갖춰”",
-          "type": "v.daum.net",
-          "source": "v.daum.net",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoUzRlSURyTnhPWGtBMmUtd1FtalRpa1R6bUg3UXpESU4zYnZ3blhVdWFoVFFETDN4YjdQRnhyUTk0NExObGhZUHhEdXJfRFk?oc=5",
-          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+          "time": "2026.10.06 12:06",
+          "title": "KT는 챗GPT에 KT 공식 상품정보를 연계한 플러그인 서비스를 출시했다고 6일 밝혔다.",
+          "type": "DigitalToday AI",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705050",
+          "summary": "AI 시장의 제품, 인프라, 규제, 파트너십 중 하나가 움직이는 기사입니다. 제목만 보고 넘기기보다 고객 제안, 제품 로드맵, 파트너십에 미치는 영향을 분리해야 합니다. 판정 근거: 한국 직접성.",
+          "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
         },
         {
-          "time": "2026.10.05 08:05",
-          "title": "강남 역삼로에 스타트업·AI·로봇이 모인다, ‘스타트 트랙 위크 2026’ 개최",
-          "type": "이뉴스투데이",
-          "source": "이뉴스투데이",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBnMllDQm5mYWZTVEZFNkZMVTJ4N1dhbXpMbk9COFhaY3FyVHlWQWcwelF2SmJwM0o5bjNmdVpUeXlIenRFWVE0U0tJTFBhMmtBXzlBVUVwSWU2YU84aEFhQVFtdEdOZGpYS2c2SDFEOXnSAXRBVV95cUxPWTBIZ0Zra3JNT0xfWGhZcFlLeF82c3dVdlIwMGpvRkdUVWRWRlRrZ3BWbWc1dzVsbGN2OTBFMGdLUmpvTW1HSndUanBlS1M4RFFnSWpObzMxcjdXNjRZLTNsY0Z3X0tzVlRsWWZDb2s1OG5CZg?oc=5",
-          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 인프라·원가.",
-          "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+          "time": "2026.10.06 09:07",
+          "title": "금융권 해킹에 과기정통부-KISA 대응체계 강화 총력전",
+          "type": "헤럴드경제",
+          "source": "헤럴드경제",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5Xblk4azNaTUsxRkFmRHg0V3RsTmtOd295T1lRQ2lDN3N3dU80R3c2Zi05b2JNQTBXRlJ1Z2c4S1VQZkFENFdhYTI5cEhsellfbVFFYWRR?oc=5",
+          "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
+          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
         }
       ]
     },
@@ -2670,6 +2834,7 @@ window.TECH_AGENDA_DATA = {
         "#NVIDIA",
         "#AI반도체",
         "#투자",
+        "#협력",
         "#On-Device"
       ],
       "color": "#3563c8",
@@ -2679,50 +2844,50 @@ window.TECH_AGENDA_DATA = {
         "reaction": "대기업과 스타트업은 GPU 대체 옵션, 국산 NPU, 클라우드 조달 조건을 함께 검토하고 있습니다.",
         "implication": "견적과 제안서에는 GPU/HBM 의존도, 대체 인프라, 비용 변동 시나리오를 미리 넣어야 합니다."
       },
-      "signals": "5개 기사 신호 · 5개 소스",
+      "signals": "7개 기사 신호 · 6개 소스",
       "timeline": [
         {
-          "time": "2026.10.05 06:00",
-          "title": "엔비디아 AI 반도체 '담보대출' 전략 성공할까, 삼성전자 SK하이닉스 실적에도 변수",
-          "type": "비즈니스포스트",
-          "source": "비즈니스포스트",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ybkt1VUk5VlZ2eFJHaW9nOXF4Vlc1WEJyaExQbVFIVVZETVpWSnFYTHhHdWdaTmdmanEtd1R4X21lSWhoREJaeHgxY2l2RVlmc3MwRjJlaFdUTk5DR3NTMlJPU1hscjhmbVo4ZWRoY193QUU?oc=5",
-          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+          "time": "2026.10.05 16:38",
+          "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+          "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
           "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
         },
         {
-          "time": "2026.10.05 11:04",
-          "title": "​韓 스타트업 투자, 4년 만에 10조 돌파…AI 반도체·우주항공 쏠림",
+          "time": "2026.10.05 15:38",
+          "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+          "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+          "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+        },
+        {
+          "time": "2026.10.05 19:18",
+          "title": "AMD 리사 수 CEO, 7일 용산 `게이머 데이`…8일 국내 NPU 기업 회동",
+          "type": "매일신문",
+          "source": "매일신문",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5GRFZVR2M3XzA5U20wcHpJWjRWTV9UcmRRU2U1Um1SanFDQ2xOaUE5bUJ4elJVOFROWTF0eWdFa3JhenhDZURlT2pkUmNSSGd1YW92SnlJdG50eHhxWk1JenNn?oc=5",
+          "summary": "행사성 회동과 실제 피지컬 AI 협력 사이의 간극을 짚는 신호입니다. 후속 발표가 제품 계약, GPU 공급, 공동 PoC로 이어졌는지 확인해야 합니다. 판정 근거: 한국 직접성.",
+          "takeaway": "후속 계약, 공동 PoC, GPU 공급 언급이 있는지 원문에 표시하고 행사성 노출이면 관망 처리하세요."
+        },
+        {
+          "time": "2026.10.06 12:06",
+          "title": "한미반도체 MSVP 국산화 5년…TC본더 잇는 새 매출원 부상",
           "type": "Bloter IT",
           "source": "Bloter IT",
-          "url": "https://www.bloter.net/news/articleView.html?idxno=675013",
-          "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 사업화 신호.",
-          "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-        },
-        {
-          "time": "2026.10.04 18:37",
-          "title": "한전 변전소에 리벨리온 NPU 투입… AI영상분석 성능 검증",
-          "type": "파이낸셜뉴스",
-          "source": "파이낸셜뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5BNW91Vi16V2JXRE1NUnVwSEpOSjM3b01PVVl6VWY3XzluemZlUEtkSXJ0NjNVNnA1VG5FM2hrc2ZIT19rbDVtYXlrNWNSYi1hQl9MY2Zvc3BoQQ?oc=5",
-          "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 한국 직접성.",
-          "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-        },
-        {
-          "time": "2026.10.05 05:18",
-          "title": "“국산 AI반도체, 실험실 넘어 전력현장으로”…K-Perf 첫 적용",
-          "type": "edaily.co.kr",
-          "source": "edaily.co.kr",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWmVDUjVpa3h0d2tpcDdfX2NkUWhlVU5NYm43OXFqemoyczJmWHRtdGdCSFJ6UmFxbF9oVllhTUJkcVhGTWk5Q1dTWXdYOV9yMURvY3phY2NRUHh6MEw4Ynlvbk1FUXcwVmoyd2JSYVhXalJhLVloNEVSczlHcFlQZg?oc=5",
-          "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 인프라·원가.",
-          "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+          "url": "https://www.bloter.net/news/articleView.html?idxno=674929",
+          "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 사업화 신호.",
+          "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
         }
       ]
     },
     {
       "id": "enterprise-copilot",
       "label": "사내 코파일럿 권한 설계",
-      "score": 90,
+      "score": 98,
       "aliases": [
         "copilot",
         "업무 자동화",
@@ -2731,7 +2896,10 @@ window.TECH_AGENDA_DATA = {
         "워크플로"
       ],
       "keywords": [
-        "#보안"
+        "#보안",
+        "#Agent",
+        "#Anthropic",
+        "#EvalOps"
       ],
       "color": "#7a5a26",
       "description": "단순 챗봇이 아니라 사내 권한·문서·업무 시스템에 붙는 운영형 AI 수요입니다.",
@@ -2740,48 +2908,2850 @@ window.TECH_AGENDA_DATA = {
         "reaction": "플랫폼 기업은 업무 도구와 코파일럿을 묶고, 고객사는 부서별 워크플로 적용 가능성을 비교합니다.",
         "implication": "제품 로드맵에는 API 연결 범위, 승인 단계, 운영 로그, 부서별 템플릿을 함께 설계해야 합니다."
       },
-      "signals": "9개 기사 신호 · 2개 소스",
+      "signals": "12개 기사 신호 · 6개 소스",
       "timeline": [
         {
-          "time": "2026.10.04 18:27",
-          "title": "화면 안 보고 게임한다…GPT-6 아스트라, 'WoW' 40분 만에 클리어",
-          "type": "AI Times",
-          "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215945",
-          "summary": "AI 에이전트가 복잡한 가상 세계를 얼마나 스스로 이해하고 행동할 수 있는지를 시험하는 실험이 이어지고 있다. 판정 근거: 사업화 신호.",
-          "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
+          "time": "2026.10.06 12:06",
+          "title": "AI·클라우드 기업 메가존클라우드는 기업들이 기존 AI 환경을 유지하면서 데이터와 AI 에이전트, 운영, 보안 및 비용을 통합 관리할 수 있는 엔터프라이즈 AI OS...",
+          "type": "DigitalToday AI",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705090",
+          "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
+          "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
         },
         {
-          "time": "2026.10.05 09:00",
-          "title": "AI 루프를 설계하라",
-          "type": "AI Times",
-          "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215955",
+          "time": "2026.10.06 12:06",
+          "title": "에이에쓰아이(ASI Corp)가 다양한 생성형 AI 서비스와 AI 에이전트(Agent)를 탐색·비교하고 도입·구독까지 진행할 수 있는AIaaS(AI as a Serv...",
+          "type": "DigitalToday AI",
+          "source": "DigitalToday AI",
+          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705126",
           "summary": "AI가 실험용 챗봇을 넘어 파트너 영업, 클라우드 현대화, 업무 전환 패키지로 팔리는 신호입니다. 고객은 모델 이름보다 어느 업무에 붙고, 누가 운영하며, 어느 파트너가 책임지는지를 봅니다. 판정 근거: 사업화 신호.",
           "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
         },
         {
-          "time": "2026.10.05 11:04",
-          "title": "AI 에이전트들이 새로운 해킹 기법을 활용하지 않고도 인터넷 보안을 위협하고 있다.",
-          "type": "DigitalToday AI",
-          "source": "DigitalToday AI",
-          "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704971",
-          "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 규제·리스크.",
-          "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
-        },
-        {
-          "time": "2026.10.04 17:48",
-          "title": "\"클로드가 일하고, 클로드가 감시한다\"... 앤트로픽, 새 플러그인 공개",
+          "time": "2026.10.05 20:20",
+          "title": "앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합",
           "type": "AI Times",
           "source": "AI Times",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=215949",
-          "summary": "AI 에이전트가 복잡한 작업을 스스로 수행하는 시대가 되면서 에이전트를 보조하고 관리하는 또 다른 AI의 역할도 커지고 있다. 판정 근거: 플랫폼 경쟁.",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215978",
+          "summary": "앤트로픽이 지난 9월29일 공식 연구 발표를 시작으로, 대화형 AI 연구 도구인 \\'앤트로픽 인터뷰어(Anthropic Interviewer)\\'를 일반 클로드 및... 판정 근거: 인재·생태계.",
+          "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+        },
+        {
+          "time": "2026.10.05 17:33",
+          "title": "MIT·사카나, 자가 진화 AI 에이전트 'SIFT' 발표...'검증 비용 병목' 해결",
+          "type": "AI Times",
+          "source": "AI Times",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=215967",
+          "summary": "AI 에이전트가 스스로 문제 해결 방식을 개선하는 ‘재귀적 자기개선(RSI)’ 연구가 활발하지만, 수많은 변종 후보를 일일이 검증하는 데 막대한 비용과 시간이 들어... 판정 근거: 인재·생태계.",
           "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
         }
       ]
     }
   ],
   "days": [
+    {
+      "date": "2026-10-06",
+      "metadata": {
+        "snapshotDate": "2026-10-06",
+        "generatedAt": "2026.10.06 12:06 KST",
+        "baseDate": "2026.10.06 Tue",
+        "windowLabel": "2026.10.05 12:06 - 2026.10.06 12:06 KST",
+        "nextUpdate": "2026.10.07 08:20 KST"
+      },
+      "metrics": {
+        "articles": 178,
+        "blogs": 60,
+        "dedupeRate": "91%",
+        "newAgendas": "+5"
+      },
+      "sourceSignals": [
+        [
+          "DigitalToday AI",
+          "100%"
+        ],
+        [
+          "Hacker News",
+          "77%"
+        ],
+        [
+          "AI Times",
+          "53%"
+        ]
+      ],
+      "hotAgendas": [
+        {
+          "rank": 1,
+          "id": "news-1-2yi8t45",
+          "collectedAt": "2026.10.06 12:06 KST",
+          "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+          "score": 98,
+          "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+          "mentions": 1,
+          "sources": [
+            {
+              "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+              "media": "AI Times",
+              "time": "2026.10.05 15:38"
+            }
+          ],
+          "sourceCount": 1,
+          "momentum": "NEW",
+          "metric": "원문 1건",
+          "pinned": false,
+          "topicBucket": "anthropic-security",
+          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215971_219954_028.jpg",
+          "imageAlt": "AI Times 기사 대표 이미지",
+          "imageCredit": "AI Times",
+          "reason": "AI 인프라·반도체 수급 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 88점으로 분류했습니다.",
+          "whyHot": "AI 인프라·반도체 수급 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 88점으로 분류했습니다.",
+          "actionBrief": {
+            "topic": "AI 인프라·반도체 수급",
+            "why": "모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다.",
+            "owner": "전략",
+            "decision": "AI 인프라·반도체 수급 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+            "question": "AI 인프라·반도체 수급 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+            "task": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요.",
+            "nextStep": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요.",
+            "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
+            "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
+          },
+          "businessRelevance": {
+            "score": 88,
+            "level": "높음",
+            "reasons": [
+              {
+                "label": "사업화 신호",
+                "value": "투자, 시장",
+                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+              },
+              {
+                "label": "인프라·원가",
+                "value": "반도체, 칩",
+                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
+              },
+              {
+                "label": "산업 적용",
+                "value": "금융, 반도체",
+                "detail": "실제 산업 적용과 고객 세그먼트 확장을 보여줍니다."
+              }
+            ]
+          },
+          "hotness": {
+            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+            "reasons": [
+              {
+                "label": "사업 임팩트",
+                "value": "88점",
+                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+              },
+              {
+                "label": "수집 시각",
+                "value": "20h",
+                "detail": "약 20시간 전 발행 또는 수집된 최신 원문입니다."
+              },
+              {
+                "label": "원문 소스",
+                "value": "AI Times",
+                "detail": "AI Times에서 직접 수집한 기사이며 AI 인프라·반도체 수급 관점으로 분류했습니다."
+              },
+              {
+                "label": "기사 내용",
+                "value": "AI 인프라·반도체 수급",
+                "detail": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다."
+              },
+              {
+                "label": "오늘 확인",
+                "value": "액션",
+                "detail": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+              }
+            ]
+          },
+          "keywords": [
+            "#AI반도체",
+            "#투자"
+          ],
+          "hashtags": [
+            "#AI반도체",
+            "#투자"
+          ],
+          "related_companies": [],
+          "signals": "AI Times · AI 인프라·반도체 수급",
+          "articles": [
+            {
+              "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+              "time": "2026.10.05 15:38",
+              "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215971_219954_028.jpg"
+            }
+          ],
+          "brief": {
+            "background": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+            "reaction": "대기업과 스타트업이 엔비디아 의존도, 국산 칩 대안, 클라우드 조달 조건을 함께 검토하고 있습니다.",
+            "implication": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+          }
+        },
+        {
+          "rank": 2,
+          "id": "news-2-2yi8t3f",
+          "collectedAt": "2026.10.06 12:06 KST",
+          "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+          "score": 98,
+          "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+          "mentions": 1,
+          "sources": [
+            {
+              "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+              "media": "AI Times",
+              "time": "2026.10.05 16:38"
+            }
+          ],
+          "sourceCount": 1,
+          "momentum": "NEW",
+          "metric": "원문 1건",
+          "pinned": false,
+          "topicBucket": "ai-datacenter-policy",
+          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215966_219946_3254.jpg",
+          "imageAlt": "AI Times 기사 대표 이미지",
+          "imageCredit": "AI Times",
+          "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 94점으로 분류했습니다.",
+          "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 94점으로 분류했습니다.",
+          "actionBrief": {
+            "topic": "엔비디아·피지컬 AI 협력",
+            "why": "단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다.",
+            "owner": "전략",
+            "decision": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+            "question": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+            "task": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
+            "nextStep": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
+            "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
+            "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
+          },
+          "businessRelevance": {
+            "score": 94,
+            "level": "높음",
+            "reasons": [
+              {
+                "label": "한국 직접성",
+                "value": "엔비디아",
+                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+              },
+              {
+                "label": "사업화 신호",
+                "value": "투자, 법인",
+                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+              },
+              {
+                "label": "인프라·원가",
+                "value": "데이터센터, 엔비디아",
+                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
+              }
+            ]
+          },
+          "hotness": {
+            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+            "reasons": [
+              {
+                "label": "사업 임팩트",
+                "value": "94점",
+                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+              },
+              {
+                "label": "수집 시각",
+                "value": "19h",
+                "detail": "약 19시간 전 발행 또는 수집된 최신 원문입니다."
+              },
+              {
+                "label": "원문 소스",
+                "value": "AI Times",
+                "detail": "AI Times에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
+              },
+              {
+                "label": "기사 내용",
+                "value": "엔비디아·피지컬 AI 협력",
+                "detail": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다."
+              },
+              {
+                "label": "오늘 확인",
+                "value": "액션",
+                "detail": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+              }
+            ]
+          },
+          "keywords": [
+            "#NVIDIA",
+            "#AI반도체",
+            "#투자"
+          ],
+          "hashtags": [
+            "#NVIDIA",
+            "#AI반도체",
+            "#투자"
+          ],
+          "related_companies": [],
+          "signals": "AI Times · 엔비디아·피지컬 AI 협력",
+          "articles": [
+            {
+              "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+              "time": "2026.10.05 16:38",
+              "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215966_219946_3254.jpg"
+            }
+          ],
+          "brief": {
+            "background": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+            "reaction": "국내 플랫폼, 통신, 제조 기업이 AI 팩토리와 피지컬 AI 협력 범위를 빠르게 비교하고 있습니다.",
+            "implication": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+          }
+        },
+        {
+          "rank": 3,
+          "id": "news-3-1o397a9",
+          "collectedAt": "2026.10.06 12:06 KST",
+          "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+          "score": 98,
+          "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+          "mentions": 1,
+          "sources": [
+            {
+              "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+              "media": "DigitalToday AI",
+              "time": "2026.10.06 12:06"
+            }
+          ],
+          "sourceCount": 1,
+          "momentum": "NEW",
+          "metric": "원문 1건",
+          "pinned": false,
+          "topicBucket": "온톨로지 기반 엔터프라이즈 ai 기업 인포시즈는 그",
+          "imageUrl": "https://cdn.digitaltoday.co.kr/news/photo/202610/705134_652876_517.png",
+          "imageAlt": "DigitalToday AI 기사 대표 이미지",
+          "imageCredit": "DigitalToday AI",
+          "reason": "AI 보안·감사 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 98점으로 분류했습니다.",
+          "whyHot": "AI 보안·감사 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 98점으로 분류했습니다.",
+          "actionBrief": {
+            "topic": "AI 보안·감사",
+            "why": "AI가 업무 시스템에 연결될수록 기능 데모보다 사고 대응과 통제 화면이 먼저 검토됩니다.",
+            "owner": "보안/제품",
+            "decision": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+            "question": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+            "task": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+            "nextStep": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+            "sourceCheck": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제",
+            "evidenceChecklist": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제"
+          },
+          "businessRelevance": {
+            "score": 98,
+            "level": "높음",
+            "reasons": [
+              {
+                "label": "한국 직접성",
+                "value": "국내",
+                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+              },
+              {
+                "label": "사업화 신호",
+                "value": "출시, 엔터프라이즈",
+                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+              },
+              {
+                "label": "규제·리스크",
+                "value": "보안",
+                "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
+              }
+            ]
+          },
+          "hotness": {
+            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+            "reasons": [
+              {
+                "label": "사업 임팩트",
+                "value": "98점",
+                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+              },
+              {
+                "label": "수집 시각",
+                "value": "1h",
+                "detail": "약 1시간 전 발행 또는 수집된 최신 원문입니다."
+              },
+              {
+                "label": "원문 소스",
+                "value": "DigitalToday AI",
+                "detail": "DigitalToday AI에서 직접 수집한 기사이며 AI 보안·감사 관점으로 분류했습니다."
+              },
+              {
+                "label": "기사 내용",
+                "value": "AI 보안·감사",
+                "detail": "AI 도입 심사에서 권한 통제, 감사 로그, 보안 검증이 구매 조건으로 올라오는 신호입니다."
+              },
+              {
+                "label": "오늘 확인",
+                "value": "액션",
+                "detail": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 영업 자료 앞단에 배치하세요."
+              }
+            ]
+          },
+          "keywords": [
+            "#보안"
+          ],
+          "hashtags": [
+            "#보안"
+          ],
+          "related_companies": [],
+          "signals": "DigitalToday AI · AI 보안·감사",
+          "articles": [
+            {
+              "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+              "source": "DigitalToday AI",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+              "time": "2026.10.06 12:06",
+              "imageUrl": "https://cdn.digitaltoday.co.kr/news/photo/202610/705134_652876_517.png"
+            }
+          ],
+          "brief": {
+            "background": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+            "reaction": "기업 고객은 PoC 단계부터 보안 체크리스트와 운영 책임 범위를 요구하기 시작했습니다.",
+            "implication": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 영업 자료 앞단에 배치하세요."
+          }
+        },
+        {
+          "rank": 4,
+          "id": "news-4-7g5yuri",
+          "collectedAt": "2026.10.06 12:06 KST",
+          "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+          "score": 98,
+          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+          "mentions": 1,
+          "sources": [
+            {
+              "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+              "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+              "media": "기계신문",
+              "time": "2026.10.06 09:01"
+            }
+          ],
+          "sourceCount": 1,
+          "momentum": "NEW",
+          "metric": "원문 1건",
+          "pinned": false,
+          "topicBucket": "인하대, 과기정통부 ‘ax대학원 사업’ 선정… 제조",
+          "imageUrl": "",
+          "imageAlt": "",
+          "imageCredit": "",
+          "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 100점으로 분류했습니다.",
+          "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 100점으로 분류했습니다.",
+          "actionBrief": {
+            "topic": "엔비디아·피지컬 AI 협력",
+            "why": "단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다.",
+            "owner": "전략",
+            "decision": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+            "question": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
+            "task": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
+            "nextStep": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
+            "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
+            "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
+          },
+          "businessRelevance": {
+            "score": 100,
+            "level": "높음",
+            "reasons": [
+              {
+                "label": "한국 직접성",
+                "value": "과기정통부",
+                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+              },
+              {
+                "label": "사업화 신호",
+                "value": "ax",
+                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+              },
+              {
+                "label": "인프라·원가",
+                "value": "로봇",
+                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
+              }
+            ]
+          },
+          "hotness": {
+            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+            "reasons": [
+              {
+                "label": "사업 임팩트",
+                "value": "100점",
+                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
+              },
+              {
+                "label": "수집 시각",
+                "value": "3h",
+                "detail": "약 3시간 전 발행 또는 수집된 최신 원문입니다."
+              },
+              {
+                "label": "원문 소스",
+                "value": "기계신문",
+                "detail": "기계신문에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
+              },
+              {
+                "label": "기사 내용",
+                "value": "엔비디아·피지컬 AI 협력",
+                "detail": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다."
+              },
+              {
+                "label": "오늘 확인",
+                "value": "액션",
+                "detail": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+              }
+            ]
+          },
+          "keywords": [
+            "#피지컬AI",
+            "#정책"
+          ],
+          "hashtags": [
+            "#피지컬AI",
+            "#정책"
+          ],
+          "related_companies": [],
+          "signals": "기계신문 · 엔비디아·피지컬 AI 협력",
+          "articles": [
+            {
+              "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+              "source": "기계신문",
+              "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+              "time": "2026.10.06 09:01",
+              "imageUrl": ""
+            }
+          ],
+          "brief": {
+            "background": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+            "reaction": "국내 플랫폼, 통신, 제조 기업이 AI 팩토리와 피지컬 AI 협력 범위를 빠르게 비교하고 있습니다.",
+            "implication": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+          }
+        },
+        {
+          "rank": 5,
+          "id": "news-5-14wsyy5",
+          "collectedAt": "2026.10.06 12:06 KST",
+          "title": "생성형 AI 사이버 위협에 '능동 교란' 기술 상용화... 징벌적 과징금·K-디스커버리로 법적 규제 대폭 강화",
+          "score": 58,
+          "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
+          "mentions": 1,
+          "sources": [
+            {
+              "title": "생성형 AI 사이버 위협에 '능동 교란' 기술 상용화... 징벌적 과징금·K-디스커버리로 법적 규제 대폭 강화",
+              "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93TENuSmlIQ1RtYldEaWU5ak9XR2MzMXB0MFRnQm8xdENVV09DdWZVVXRSb3NXRGgzaURjTkplRjY1eWhyNEpuOHRlYnIxSjFMOWFfS3Nmd1J0azh2SzBFYjBXWWpZZlNFVFlzTDFn?oc=5",
+              "media": "koreasprint.com",
+              "time": "2026.10.06 01:21"
+            }
+          ],
+          "sourceCount": 1,
+          "momentum": "NEW",
+          "metric": "원문 1건",
+          "pinned": false,
+          "topicBucket": "생성형 ai 사이버 위협에 '능동 교란' 기술 상용",
+          "imageUrl": "",
+          "imageAlt": "",
+          "imageCredit": "",
+          "reason": "정책·공공 조달 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 52점으로 분류했습니다.",
+          "whyHot": "정책·공공 조달 관점의 기사이며 사업화 신호 신호가 감지돼 한국 AI 사업 임팩트 52점으로 분류했습니다.",
+          "actionBrief": {
+            "topic": "정책·공공 조달",
+            "why": "예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다.",
+            "owner": "보안/제품",
+            "decision": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+            "question": "고객 구매 조건에 권한·감사·복원력 요구가 먼저 들어오고 있나?",
+            "task": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+            "nextStep": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요.",
+            "sourceCheck": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제",
+            "evidenceChecklist": "권한 범위, 감사 로그, 사고 대응, 데이터 반출 통제"
+          },
+          "businessRelevance": {
+            "score": 52,
+            "level": "중간",
+            "reasons": [
+              {
+                "label": "사업화 신호",
+                "value": "상용화",
+                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+              },
+              {
+                "label": "규제·리스크",
+                "value": "규제",
+                "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
+              }
+            ]
+          },
+          "hotness": {
+            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
+            "reasons": [
+              {
+                "label": "사업 임팩트",
+                "value": "52점",
+                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
+              },
+              {
+                "label": "수집 시각",
+                "value": "11h",
+                "detail": "약 11시간 전 발행 또는 수집된 최신 원문입니다."
+              },
+              {
+                "label": "원문 소스",
+                "value": "koreasprint.com",
+                "detail": "koreasprint.com에서 직접 수집한 기사이며 정책·공공 조달 관점으로 분류했습니다."
+              },
+              {
+                "label": "기사 내용",
+                "value": "정책·공공 조달",
+                "detail": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다."
+              },
+              {
+                "label": "오늘 확인",
+                "value": "액션",
+                "detail": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
+              }
+            ]
+          },
+          "keywords": [
+            "#보안",
+            "#정책"
+          ],
+          "hashtags": [
+            "#보안",
+            "#정책"
+          ],
+          "related_companies": [],
+          "signals": "koreasprint.com · 정책·공공 조달",
+          "articles": [
+            {
+              "title": "생성형 AI 사이버 위협에 '능동 교란' 기술 상용화... 징벌적 과징금·K-디스커버리로 법적 규제 대폭 강화",
+              "source": "koreasprint.com",
+              "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93TENuSmlIQ1RtYldEaWU5ak9XR2MzMXB0MFRnQm8xdENVV09DdWZVVXRSb3NXRGgzaURjTkplRjY1eWhyNEpuOHRlYnIxSjFMOWFfS3Nmd1J0azh2SzBFYjBXWWpZZlNFVFlzTDFn?oc=5",
+              "time": "2026.10.06 01:21",
+              "imageUrl": ""
+            }
+          ],
+          "brief": {
+            "background": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
+            "reaction": "국내 플랫폼, SI, 클라우드 기업이 정책 예산과 산업별 레퍼런스를 묶어 영업 포인트로 삼고 있습니다.",
+            "implication": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
+          }
+        }
+      ],
+      "impactNotes": [
+        {
+          "title": "원가·인프라",
+          "body": "국내 NPU·GPU 수주전은 추론 원가와 출시 속도 리스크입니다. 오늘 할 일: GPU/NPU 대체안, 클라우드 단가, SLA 가정을 업데이트하세요.",
+          "color": "#3563c8",
+          "action": "원가 시나리오 업데이트"
+        },
+        {
+          "title": "파트너십",
+          "body": "피지컬 AI 파트너십 신호는 로봇, 게임, 제조 연동 기회입니다. 오늘 할 일: GPU 의존 기능과 국내 파트너 후보를 한 장으로 정리하세요.",
+          "color": "#0f8f82",
+          "action": "파트너 후보 점검"
+        },
+        {
+          "title": "보안 심사",
+          "body": "KISA·AI 보안 협력은 구매 심사가 더 엄격해진다는 신호입니다. 오늘 할 일: 권한, 로그, 승인 플로우를 제안서 앞단에 넣으세요.",
+          "color": "#c54b40",
+          "action": "보안 체크리스트 보강"
+        }
+      ],
+      "companies": [
+        {
+          "id": "naver",
+          "name": "Naver",
+          "sector": "Korea Platform",
+          "color": "#3f8f4f",
+          "short": "NV",
+          "focus": "AI 팩토리와 소버린 클라우드",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "검색·커머스 AI 수익화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Naver 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "하이퍼클로바 산업 패키지",
+              "weight": 45.6,
+              "color": "#c54b40",
+              "description": "한국어 모델과 검색·커머스 데이터를 산업별 업무 패키지로 묶어 글로벌 범용 모델과 차별화할 수 있습니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Naver 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "AI 팩토리·GPU 조달 전선",
+              "weight": 45,
+              "color": "#3f8f4f",
+              "description": "정부 GPU 사업, 엔비디아 협력, 네이버클라우드 운영 역량이 국내 AI 인프라 영업 기회로 이어지는지 봐야 합니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "Naver 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            },
+            {
+              "label": "온디바이스 협력 가능성",
+              "weight": 40,
+              "color": "#d68419",
+              "description": "모바일, 브라우저, 차량 등 한국어 개인화가 필요한 접점에서 로컬 추론 파트너십 여지가 있습니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "Naver 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "검색·커머스 AI 수익화",
+              "body": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Naver 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "하이퍼클로바 산업 패키지",
+              "body": "한국어 모델과 검색·커머스 데이터를 산업별 업무 패키지로 묶어 글로벌 범용 모델과 차별화할 수 있습니다.",
+              "score": "46",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Naver 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "title": "AI 팩토리·GPU 조달 전선",
+              "body": "정부 GPU 사업, 엔비디아 협력, 네이버클라우드 운영 역량이 국내 AI 인프라 영업 기회로 이어지는지 봐야 합니다.",
+              "score": "45",
+              "date": "2026.10.06 12:06",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "Naver 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "heat": [
+            "Search",
+            "Shopping",
+            "Ads",
+            "Creator",
+            "HyperCLOVA",
+            "Korean Data",
+            "Commerce",
+            "Quality",
+            "AI Factory",
+            "GPU",
+            "NVIDIA",
+            "Cloud"
+          ]
+        },
+        {
+          "id": "kakao",
+          "name": "Kakao",
+          "sector": "Korea Platform",
+          "color": "#8a6d1f",
+          "short": "KK",
+          "focus": "메신저 기반 AI와 커머스",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "카카오톡 AI 접점 확대",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Kakao 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "창작·광고 자동화",
+              "weight": 76.55000000000001,
+              "color": "#7a5a26",
+              "description": "콘텐츠 제작, 광고 문안, 쇼핑 운영 자동화가 소상공인과 브랜드 고객의 지불 의사로 이어질 수 있습니다.",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Kakao 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "label": "개인화 데이터 안전성",
+              "weight": 45.6,
+              "color": "#c54b40",
+              "description": "대화와 생활 데이터 기반 서비스가 커질수록 동의, 보관, 추천 품질 관리가 핵심 리스크가 됩니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Kakao 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "로컬 플랫폼 방어",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "글로벌 AI 앱이 국내 생활 플랫폼 접점을 잠식하지 못하도록 로컬 맥락과 제휴 자산을 묶어야 합니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "Kakao 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "카카오톡 AI 접점 확대",
+              "body": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Kakao 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "창작·광고 자동화",
+              "body": "콘텐츠 제작, 광고 문안, 쇼핑 운영 자동화가 소상공인과 브랜드 고객의 지불 의사로 이어질 수 있습니다.",
+              "score": "77",
+              "date": "2026.10.06 12:06",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Kakao 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "title": "개인화 데이터 안전성",
+              "body": "대화와 생활 데이터 기반 서비스가 커질수록 동의, 보관, 추천 품질 관리가 핵심 리스크가 됩니다.",
+              "score": "46",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Kakao 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "heat": [
+            "KakaoTalk",
+            "Channel",
+            "Commerce",
+            "Assistant",
+            "Creator",
+            "Ad",
+            "Shopping",
+            "SMB",
+            "Consent",
+            "Privacy",
+            "Personalization",
+            "Quality"
+          ]
+        },
+        {
+          "id": "sktelecom",
+          "name": "SK Telecom",
+          "sector": "Telco AI",
+          "color": "#c54b40",
+          "short": "SK",
+          "focus": "통신 AI와 데이터센터",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "통신형 AI 에이전트",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "통화, 일정, 고객센터, 멤버십 접점을 묶어 통신사형 개인·기업 에이전트로 확장할 수 있습니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "AI 팩토리·디지털 트윈 협력",
+              "weight": 43.75,
+              "color": "#d68419",
+              "description": "제조 현장과 반도체 공정에 AI 시뮬레이션, 네트워크, 디지털 트윈을 붙여 B2B 레퍼런스를 만들 수 있습니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "label": "GW급 AIDC 사업화",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "GPU, 전력, 네트워크를 결합한 대규모 AI 데이터센터 수요를 통신 자산으로 흡수하려는 흐름입니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            },
+            {
+              "label": "엔터프라이즈 AX 패키징",
+              "weight": 40,
+              "color": "#c54b40",
+              "description": "기업 고객에게 모델보다 상담, 보안, 품질 운영을 묶은 AX 패키지로 판매하는 전략이 중요합니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "통신형 AI 에이전트",
+              "body": "통화, 일정, 고객센터, 멤버십 접점을 묶어 통신사형 개인·기업 에이전트로 확장할 수 있습니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "AI 팩토리·디지털 트윈 협력",
+              "body": "제조 현장과 반도체 공정에 AI 시뮬레이션, 네트워크, 디지털 트윈을 붙여 B2B 레퍼런스를 만들 수 있습니다.",
+              "score": "44",
+              "date": "2026.10.06 12:06",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "title": "GW급 AIDC 사업화",
+              "body": "GPU, 전력, 네트워크를 결합한 대규모 AI 데이터센터 수요를 통신 자산으로 흡수하려는 흐름입니다.",
+              "score": "40",
+              "date": "2026.10.06 12:06",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "heat": [
+            "A.",
+            "Call",
+            "Membership",
+            "Agent",
+            "AI Factory",
+            "Digital Twin",
+            "Semiconductor",
+            "NVIDIA",
+            "AIDC",
+            "GW Scale",
+            "GPU",
+            "Power"
+          ]
+        },
+        {
+          "id": "samsung",
+          "name": "Samsung",
+          "sector": "Device & Chip",
+          "color": "#3563c8",
+          "short": "SS",
+          "focus": "온디바이스 AI와 반도체",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "가전·로봇 피지컬 AI 접점",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Samsung 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "Galaxy AI 온디바이스화",
+              "weight": 53.75,
+              "color": "#d68419",
+              "description": "스마트폰의 실시간 번역, 요약, 개인화 기능이 로컬 추론과 프라이버시 메시지의 대표 접점입니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "Samsung 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "label": "HBM 이후 AI 팩토리 공급망",
+              "weight": 48.75,
+              "color": "#d68419",
+              "description": "HBM, 메모리, 파운드리 수요가 AI 팩토리 구축과 서비스 원가 안정성을 좌우하는 사업 변수입니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "Samsung 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "label": "기기 내 데이터 거버넌스",
+              "weight": 40,
+              "color": "#c54b40",
+              "description": "개인 데이터가 기기에서 처리될수록 모델 업데이트, 권한, 안전성 평가 체계가 구매 조건이 됩니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Samsung 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "가전·로봇 피지컬 AI 접점",
+              "body": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Samsung 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "Galaxy AI 온디바이스화",
+              "body": "스마트폰의 실시간 번역, 요약, 개인화 기능이 로컬 추론과 프라이버시 메시지의 대표 접점입니다.",
+              "score": "54",
+              "date": "2026.10.06 12:06",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "Samsung 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "title": "HBM 이후 AI 팩토리 공급망",
+              "body": "HBM, 메모리, 파운드리 수요가 AI 팩토리 구축과 서비스 원가 안정성을 좌우하는 사업 변수입니다.",
+              "score": "49",
+              "date": "2026.10.06 12:06",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "Samsung 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            }
+          ],
+          "heat": [
+            "Physical AI",
+            "Robot",
+            "TV",
+            "Appliance",
+            "Galaxy AI",
+            "NPU",
+            "Privacy",
+            "Mobile",
+            "HBM",
+            "Memory",
+            "Foundry",
+            "AI Factory"
+          ]
+        },
+        {
+          "id": "lgai",
+          "name": "LG AI Research",
+          "sector": "Industrial AI",
+          "color": "#9a3f5d",
+          "short": "LG",
+          "focus": "산업 특화 모델과 제조 AI",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "제조 현장 자동화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "EXAONE 산업 모델",
+              "weight": 50.6,
+              "color": "#c54b40",
+              "description": "범용 챗봇보다 제조, 화학, 바이오 같은 그룹 산업 데이터를 잘 다루는 특화 모델 전략입니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "기업 데이터 폐쇄망",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "민감한 산업 데이터는 클라우드보다 사내망과 전용 모델 운영 요구가 강해질 수 있습니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            },
+            {
+              "label": "멀티모달 R&D",
+              "weight": 40,
+              "color": "#d68419",
+              "description": "이미지, 센서, 문서 데이터를 함께 읽는 모델이 산업 AI 정확도와 자동화 범위를 넓힙니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "제조 현장 자동화",
+              "body": "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "EXAONE 산업 모델",
+              "body": "범용 챗봇보다 제조, 화학, 바이오 같은 그룹 산업 데이터를 잘 다루는 특화 모델 전략입니다.",
+              "score": "51",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "title": "기업 데이터 폐쇄망",
+              "body": "민감한 산업 데이터는 클라우드보다 사내망과 전용 모델 운영 요구가 강해질 수 있습니다.",
+              "score": "40",
+              "date": "2026.10.06 12:06",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "heat": [
+            "Inspection",
+            "Factory",
+            "Anomaly",
+            "Workflow",
+            "EXAONE",
+            "Manufacturing",
+            "Chemistry",
+            "Bio",
+            "Private Data",
+            "On-prem",
+            "Governance",
+            "B2B"
+          ]
+        },
+        {
+          "id": "kt",
+          "name": "KT",
+          "sector": "Telco Cloud",
+          "color": "#7a5a26",
+          "short": "KT",
+          "focus": "통신 AX와 공공 클라우드",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "AICC·상담 자동화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "콜센터, 영업, 고객 응대를 AI가 처리하면서 통신사의 B2B AX 매출화가 빨라질 수 있습니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "KT 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "망 데이터 기반 품질 운영",
+              "weight": 40.6,
+              "color": "#c54b40",
+              "description": "네트워크와 고객 운영 데이터를 AI 서비스 품질, 장애 예측, 보안 운영으로 연결할 수 있습니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "KT 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "공공·금융 AI 클라우드",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "국내 데이터 보관과 보안 요구가 강한 고객에게 로컬 클라우드와 모델 운영을 묶어 제안합니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "KT 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            },
+            {
+              "label": "엣지 AI 접점",
+              "weight": 40,
+              "color": "#d68419",
+              "description": "통신망과 엣지 인프라를 활용하면 지연시간이 중요한 산업 현장 AI에 강점이 생깁니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "KT 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "AICC·상담 자동화",
+              "body": "콜센터, 영업, 고객 응대를 AI가 처리하면서 통신사의 B2B AX 매출화가 빨라질 수 있습니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "KT 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "망 데이터 기반 품질 운영",
+              "body": "네트워크와 고객 운영 데이터를 AI 서비스 품질, 장애 예측, 보안 운영으로 연결할 수 있습니다.",
+              "score": "41",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "KT 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "title": "공공·금융 AI 클라우드",
+              "body": "국내 데이터 보관과 보안 요구가 강한 고객에게 로컬 클라우드와 모델 운영을 묶어 제안합니다.",
+              "score": "40",
+              "date": "2026.10.06 12:06",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "KT 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "heat": [
+            "AICC",
+            "Contact Center",
+            "Sales",
+            "Agent",
+            "Network Data",
+            "Ops",
+            "SOC",
+            "Quality",
+            "Public",
+            "Finance",
+            "Cloud",
+            "Compliance"
+          ]
+        },
+        {
+          "id": "upstage",
+          "name": "Upstage",
+          "sector": "AI Startup",
+          "color": "#0f8f82",
+          "short": "UP",
+          "focus": "문서 AI와 기업 LLM",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "문서 AI 업무 자동화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "계약서, 청구서, 내부 문서 처리 자동화는 기업이 바로 비용 절감을 체감하는 AI 영역입니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Upstage 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "개발자 워크플로 연동",
+              "weight": 76.55000000000001,
+              "color": "#7a5a26",
+              "description": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Upstage 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "label": "평가 기반 도입 설득",
+              "weight": 40.6,
+              "color": "#c54b40",
+              "description": "벤치마크와 PoC 결과를 구매 논리로 연결해야 스타트업의 엔터프라이즈 영업이 쉬워집니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Upstage 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "Solar LLM 기업 API",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "한국어와 기업 문서에 최적화된 모델 API로 글로벌 모델 의존도를 낮추는 선택지가 됩니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "Upstage 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "문서 AI 업무 자동화",
+              "body": "계약서, 청구서, 내부 문서 처리 자동화는 기업이 바로 비용 절감을 체감하는 AI 영역입니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Upstage 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "개발자 워크플로 연동",
+              "body": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
+              "score": "77",
+              "date": "2026.10.06 12:06",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Upstage 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "title": "평가 기반 도입 설득",
+              "body": "벤치마크와 PoC 결과를 구매 논리로 연결해야 스타트업의 엔터프라이즈 영업이 쉬워집니다.",
+              "score": "41",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Upstage 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "heat": [
+            "Document AI",
+            "OCR",
+            "Invoice",
+            "Contract",
+            "API",
+            "SDK",
+            "Search",
+            "Workflow",
+            "Benchmark",
+            "PoC",
+            "Accuracy",
+            "Eval"
+          ]
+        },
+        {
+          "id": "rebellions",
+          "name": "Rebellions",
+          "sector": "AI Semiconductor",
+          "color": "#d68419",
+          "short": "RB",
+          "focus": "국산 AI 가속기와 추론 원가",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "온프레미스 AI 수요",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Rebellions 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "국산 AI 칩 공급",
+              "weight": 53.75,
+              "color": "#d68419",
+              "description": "국내 데이터센터의 추론 원가와 공급망 리스크를 낮추는 대안으로 AI 가속기 수요가 커집니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "Rebellions 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "label": "모델 최적화 생태계",
+              "weight": 40.6,
+              "color": "#c54b40",
+              "description": "칩 성능은 모델 압축, 서빙, 벤치마크 툴과 묶일 때 실제 구매 이유가 됩니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Rebellions 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "통신·클라우드 협력",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "통신사와 클라우드 사업자가 국산 칩을 채택하면 소버린 AI 인프라 논리가 강해집니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "Rebellions 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "온프레미스 AI 수요",
+              "body": "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Rebellions 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "국산 AI 칩 공급",
+              "body": "국내 데이터센터의 추론 원가와 공급망 리스크를 낮추는 대안으로 AI 가속기 수요가 커집니다.",
+              "score": "54",
+              "date": "2026.10.06 12:06",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "Rebellions 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "title": "모델 최적화 생태계",
+              "body": "칩 성능은 모델 압축, 서빙, 벤치마크 툴과 묶일 때 실제 구매 이유가 됩니다.",
+              "score": "41",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Rebellions 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "heat": [
+            "On-prem",
+            "Private AI",
+            "Security",
+            "B2B",
+            "AI Chip",
+            "Inference",
+            "NPU",
+            "Datacenter",
+            "Optimization",
+            "Serving",
+            "Benchmark",
+            "SDK"
+          ]
+        },
+        {
+          "id": "furiosa",
+          "name": "FuriosaAI",
+          "sector": "AI Semiconductor",
+          "color": "#3f8f4f",
+          "short": "FA",
+          "focus": "저전력 추론 칩",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "전용 AI 어플라이언스",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "저전력 추론 원가",
+              "weight": 53.75,
+              "color": "#d68419",
+              "description": "GPU 의존도가 높아질수록 전력 대비 추론 성능은 AI 서비스 마진의 핵심 지표가 됩니다.",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "label": "벤치마크 신뢰 확보",
+              "weight": 40.6,
+              "color": "#c54b40",
+              "description": "칩 도입은 성능 수치보다 실제 모델 워크로드에서 검증된 벤치마크와 안정성이 중요합니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "서버 생태계 확장",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "국산 칩이 서버, 클라우드, SI 파트너와 묶여야 실제 도입 가능한 인프라 대안이 됩니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "전용 AI 어플라이언스",
+              "body": "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "저전력 추론 원가",
+              "body": "GPU 의존도가 높아질수록 전력 대비 추론 성능은 AI 서비스 마진의 핵심 지표가 됩니다.",
+              "score": "54",
+              "date": "2026.10.06 12:06",
+              "termId": "on-device",
+              "sources": [],
+              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "title": "벤치마크 신뢰 확보",
+              "body": "칩 도입은 성능 수치보다 실제 모델 워크로드에서 검증된 벤치마크와 안정성이 중요합니다.",
+              "score": "41",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "heat": [
+            "Appliance",
+            "Edge",
+            "Factory",
+            "Private",
+            "Low Power",
+            "Inference",
+            "TCO",
+            "Server",
+            "Benchmark",
+            "Workload",
+            "Stability",
+            "SDK"
+          ]
+        },
+        {
+          "id": "wrtn",
+          "name": "Wrtn",
+          "sector": "AI Service",
+          "color": "#7b61c9",
+          "short": "WR",
+          "focus": "개인·소상공인 AI 앱",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "B2C AI 슈퍼앱",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "검색, 작성, 요약, 자동화를 한 앱 안에 묶어 일반 사용자 접점을 넓히는 전략입니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Wrtn 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "소상공인 업무 자동화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "마케팅 문구, 고객 응대, 예약, 콘텐츠 운영은 작지만 반복적인 지불 의사가 있는 영역입니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Wrtn 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "콘텐츠 생성 워크플로",
+              "weight": 81.55000000000001,
+              "color": "#7a5a26",
+              "description": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Wrtn 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "label": "사용자 데이터 신뢰",
+              "weight": 40,
+              "color": "#c54b40",
+              "description": "개인 업무 데이터를 다루는 서비스일수록 보관, 삭제, 추천 투명성 메시지가 중요합니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Wrtn 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "B2C AI 슈퍼앱",
+              "body": "검색, 작성, 요약, 자동화를 한 앱 안에 묶어 일반 사용자 접점을 넓히는 전략입니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Wrtn 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "소상공인 업무 자동화",
+              "body": "마케팅 문구, 고객 응대, 예약, 콘텐츠 운영은 작지만 반복적인 지불 의사가 있는 영역입니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Wrtn 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "콘텐츠 생성 워크플로",
+              "body": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
+              "score": "82",
+              "date": "2026.10.06 12:06",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Wrtn 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            }
+          ],
+          "heat": [
+            "Super App",
+            "Search",
+            "Write",
+            "Automation",
+            "SMB",
+            "Marketing",
+            "CS",
+            "Reservation",
+            "Content",
+            "Image",
+            "Video",
+            "Workflow"
+          ]
+        },
+        {
+          "id": "fasoo",
+          "name": "Fasoo AI",
+          "sector": "Security AI",
+          "color": "#c54b40",
+          "short": "FS",
+          "focus": "문서 보안과 기업 AX",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "글로벌 AX 영업",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "문서 워크플로 자동화",
+              "weight": 76.55000000000001,
+              "color": "#7a5a26",
+              "description": "검토, 요약, 승인, 배포를 문서 보안 체계 안에서 자동화하면 기존 고객 기반을 확장할 수 있습니다.",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "label": "문서 보안 AI",
+              "weight": 50.6,
+              "color": "#c54b40",
+              "description": "기업 문서와 민감정보를 AI가 다룰 때 접근권한, 추적, 유출 방지가 구매 조건이 됩니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "데이터 거버넌스 번들",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "AI 도입 전 데이터 분류, 권한, 보존 정책을 정리하는 보안 번들이 중요해집니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "글로벌 AX 영업",
+              "body": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "문서 워크플로 자동화",
+              "body": "검토, 요약, 승인, 배포를 문서 보안 체계 안에서 자동화하면 기존 고객 기반을 확장할 수 있습니다.",
+              "score": "77",
+              "date": "2026.10.06 12:06",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "title": "문서 보안 AI",
+              "body": "기업 문서와 민감정보를 AI가 다룰 때 접근권한, 추적, 유출 방지가 구매 조건이 됩니다.",
+              "score": "51",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "heat": [
+            "AX",
+            "US",
+            "Manufacturing",
+            "Finance",
+            "Review",
+            "Summary",
+            "Approval",
+            "Workflow",
+            "DRM",
+            "DLP",
+            "Audit",
+            "Policy"
+          ]
+        },
+        {
+          "id": "openai",
+          "name": "OpenAI",
+          "sector": "Model Platform",
+          "color": "#3563c8",
+          "short": "OA",
+          "focus": "에이전트 플랫폼과 멀티모달",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "Agent Runtime 표준화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
+              "termId": "agent",
+              "sources": [
+                {
+                  "title": "Wikipedia operator says OpenAI&#8217;s &#8216;rogue&#8217; bots may be linked to a May outage",
+                  "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 07:22",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "Following many recent disclosures about AI agents accessing third-party websites and service... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 직접 근거 1건",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "개발 워크플로 장악",
+              "weight": 98,
+              "color": "#7a5a26",
+              "description": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
+              "termId": "ai-code",
+              "sources": [
+                {
+                  "title": "OpenAI will start watermarking ChatGPT&#8217;s text in the EU",
+                  "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+                  "media": "TechCrunch AI",
+                  "time": "2026.10.06 05:36",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "OpenAI will watermark ChatGPT and Codex text in the EU to comply with the AI Act. 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                },
+                {
+                  "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 03:08",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                },
+                {
+                  "title": "OpenAI PR tells journalist to ‘move on’ while asking Sam Altman about a ChatGPT user&#8217;s...",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 02:32",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "An OpenAI publicist tried to change the topic of CEO Sam Altman's interview with Vanity Fair... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "TechCrunch AI, The Verge AI · 직접 근거 3건",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "label": "외부 툴 연결성 확보",
+              "weight": 40,
+              "color": "#3563c8",
+              "description": "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
+              "termId": "mcp",
+              "sources": [
+                {
+                  "title": "Building advertising for the way people use AI",
+                  "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+                  "media": "OpenAI News",
+                  "time": "2026.10.05 19:00",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attributi... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "OpenAI News · 직접 근거 1건",
+              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+            },
+            {
+              "label": "평가 자동화 내재화",
+              "weight": 45.6,
+              "color": "#c54b40",
+              "description": "모델 교체와 프롬프트 변경 전후 품질 회귀를 플랫폼 안에서 검증하게 만드는 전략입니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "OpenAI 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "Agent Runtime 표준화",
+              "body": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [
+                {
+                  "title": "Wikipedia operator says OpenAI&#8217;s &#8216;rogue&#8217; bots may be linked to a May outage",
+                  "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 07:22",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "Following many recent disclosures about AI agents accessing third-party websites and service... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 직접 근거 1건",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "개발 워크플로 장악",
+              "body": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "ai-code",
+              "sources": [
+                {
+                  "title": "OpenAI will start watermarking ChatGPT&#8217;s text in the EU",
+                  "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+                  "media": "TechCrunch AI",
+                  "time": "2026.10.06 05:36",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "OpenAI will watermark ChatGPT and Codex text in the EU to comply with the AI Act. 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                },
+                {
+                  "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 03:08",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                },
+                {
+                  "title": "OpenAI PR tells journalist to ‘move on’ while asking Sam Altman about a ChatGPT user&#8217;s...",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004827/openai-sam-altman-vanity-fair-interview-pr",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 02:32",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "An OpenAI publicist tried to change the topic of CEO Sam Altman's interview with Vanity Fair... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "TechCrunch AI, The Verge AI · 직접 근거 3건",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "title": "외부 툴 연결성 확보",
+              "body": "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
+              "score": "40",
+              "date": "2026.10.06 12:06",
+              "termId": "mcp",
+              "sources": [
+                {
+                  "title": "Building advertising for the way people use AI",
+                  "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+                  "media": "OpenAI News",
+                  "time": "2026.10.05 19:00",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attributi... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "OpenAI News · 직접 근거 1건",
+              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+            }
+          ],
+          "heat": [
+            "Runtime",
+            "Tool Call",
+            "Trace",
+            "Handoff",
+            "Repo Ops",
+            "PR Review",
+            "CI Fix",
+            "IDE",
+            "Connector",
+            "Tool",
+            "Context",
+            "API"
+          ]
+        },
+        {
+          "id": "anthropic",
+          "name": "Anthropic",
+          "sector": "Model Provider",
+          "color": "#0f8f82",
+          "short": "AN",
+          "focus": "MCP와 에이전트 개발면",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "Claude Code 운영화",
+              "weight": 98,
+              "color": "#7a5a26",
+              "description": "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
+              "termId": "ai-code",
+              "sources": [
+                {
+                  "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 03:08",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 직접 근거 1건",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "label": "권한 있는 Tool Use",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
+              "termId": "agent",
+              "sources": [
+                {
+                  "title": "앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합",
+                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215978",
+                  "media": "AI Times",
+                  "time": "2026.10.05 20:20",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "앤트로픽이 지난 9월29일 공식 연구 발표를 시작으로, 대화형 AI 연구 도구인 \\'앤트로픽 인터뷰어(Anthropic Interviewer)\\'를 일반 클로드 및... 판정 근거: 인재·생태계.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "AI Times · 회사 원문 1건",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "MCP 생태계 선점",
+              "weight": 45,
+              "color": "#3563c8",
+              "description": "Claude가 업무 시스템과 연결되는 기본 통로를 MCP 서버와 커넥터 생태계로 넓히고 있습니다.",
+              "termId": "mcp",
+              "sources": [],
+              "sourceSummary": "Anthropic 직접 원문 수집 대기",
+              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+            },
+            {
+              "label": "안전성 평가 메시지",
+              "weight": 40,
+              "color": "#c54b40",
+              "description": "기업 도입의 불안을 줄이기 위해 모델 성능보다 실패 경계와 평가 체계를 함께 강조합니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Anthropic 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "Claude Code 운영화",
+              "body": "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "ai-code",
+              "sources": [
+                {
+                  "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 03:08",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 직접 근거 1건",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "title": "권한 있는 Tool Use",
+              "body": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [
+                {
+                  "title": "앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합",
+                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215978",
+                  "media": "AI Times",
+                  "time": "2026.10.05 20:20",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "앤트로픽이 지난 9월29일 공식 연구 발표를 시작으로, 대화형 AI 연구 도구인 \\'앤트로픽 인터뷰어(Anthropic Interviewer)\\'를 일반 클로드 및... 판정 근거: 인재·생태계.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "AI Times · 회사 원문 1건",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "MCP 생태계 선점",
+              "body": "Claude가 업무 시스템과 연결되는 기본 통로를 MCP 서버와 커넥터 생태계로 넓히고 있습니다.",
+              "score": "45",
+              "date": "2026.10.06 12:06",
+              "termId": "mcp",
+              "sources": [],
+              "sourceSummary": "Anthropic 직접 원문 수집 대기",
+              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+            }
+          ],
+          "heat": [
+            "Claude Code",
+            "Terminal",
+            "Repo",
+            "Test",
+            "Approval",
+            "Audit",
+            "Desktop",
+            "Agent",
+            "MCP Server",
+            "Connector",
+            "Tool Use",
+            "Permission"
+          ]
+        },
+        {
+          "id": "google",
+          "name": "Google",
+          "sector": "Cloud & Search",
+          "color": "#d68419",
+          "short": "GO",
+          "focus": "검색 재구성과 온디바이스",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "Gemini 온디바이스화",
+              "weight": 76,
+              "color": "#d68419",
+              "description": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
+              "termId": "on-device",
+              "sources": [
+                {
+                  "title": "EmTech Future 2026: When AI Meets Everything",
+                  "url": "https://www.technologyreview.com/2026/10/05/1145413/emtech-future-2026-when-ai-meets-everything/",
+                  "media": "MIT Technology Review",
+                  "time": "2026.10.05 13:00",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "Yossi Matias, Vice President &#38; Head of Google Research, explores how AI is beginning to... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+                }
+              ],
+              "sourceSummary": "MIT Technology Review · 직접 근거 1건",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "label": "TPU 원가 우위 방어",
+              "weight": 64,
+              "color": "#c54b40",
+              "description": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
+              "termId": "evalops",
+              "sources": [
+                {
+                  "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 03:08",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 회사 원문 1건",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "검색 수익모델 재설계",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Google 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "지역 AI 클라우드 패키징",
+              "weight": 40,
+              "color": "#3f8f4f",
+              "description": "각국 데이터 주권 요구에 맞춰 클라우드 리전, 파트너, 모델 제공 방식을 현지화합니다.",
+              "termId": "sovereign",
+              "sources": [],
+              "sourceSummary": "Google 직접 원문 수집 대기",
+              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "Gemini 온디바이스화",
+              "body": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
+              "score": "76",
+              "date": "2026.10.06 12:06",
+              "termId": "on-device",
+              "sources": [
+                {
+                  "title": "EmTech Future 2026: When AI Meets Everything",
+                  "url": "https://www.technologyreview.com/2026/10/05/1145413/emtech-future-2026-when-ai-meets-everything/",
+                  "media": "MIT Technology Review",
+                  "time": "2026.10.05 13:00",
+                  "evidence": "회사·전략 직접 언급",
+                  "summary": "Yossi Matias, Vice President &#38; Head of Google Research, explores how AI is beginning to... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+                }
+              ],
+              "sourceSummary": "MIT Technology Review · 직접 근거 1건",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "title": "TPU 원가 우위 방어",
+              "body": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
+              "score": "64",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [
+                {
+                  "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+                  "media": "The Verge AI",
+                  "time": "2026.10.06 03:08",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "An invisible, machine-readable watermark in text output is rolling out to ChatGPT and Codex,... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 회사 원문 1건",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "title": "검색 수익모델 재설계",
+              "body": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Google 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            }
+          ],
+          "heat": [
+            "Gemini Nano",
+            "Android",
+            "Chrome",
+            "NPU",
+            "TPU",
+            "Vertex",
+            "Cost",
+            "Cloud",
+            "AI Search",
+            "Ads",
+            "Shopping",
+            "Overview"
+          ]
+        },
+        {
+          "id": "apple",
+          "name": "Apple",
+          "sector": "Device & OS",
+          "color": "#5b6472",
+          "short": "AP",
+          "focus": "온디바이스 AI와 OS 배포면",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "Apple Intelligence 배포면",
+              "weight": 81,
+              "color": "#d68419",
+              "description": "iPhone, iPad, Mac 기본 OS에 AI 기능이 들어가면 소비자 접점의 기본 기대치가 바뀝니다.",
+              "termId": "on-device",
+              "sources": [
+                {
+                  "title": "An open-source tool lets you delete 12GB of Apple Intelligence data on macOS",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool",
+                  "media": "The Verge AI",
+                  "time": "2026.10.05 22:47",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "Getting some extra storage space on your Mac could be as easy as deleting Apple's AI feature... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 회사 원문 1건",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "label": "Siri 에이전트화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "Siri와 앱 인텐트가 실제 작업 실행으로 확장되면 모바일 에이전트 UX의 기준점이 됩니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Apple 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "개발자 AI API 잠금",
+              "weight": 76.55000000000001,
+              "color": "#7a5a26",
+              "description": "앱 개발자가 Apple의 OS AI API를 쓰게 되면 배포 채널과 사용자 경험의 통제력이 커집니다.",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Apple 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            },
+            {
+              "label": "Private Cloud Compute",
+              "weight": 40.6,
+              "color": "#c54b40",
+              "description": "개인 데이터와 클라우드 추론을 함께 쓰는 구조에서 프라이버시와 감사 가능성이 차별점이 됩니다.",
+              "termId": "evalops",
+              "sources": [],
+              "sourceSummary": "Apple 직접 원문 수집 대기",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "Apple Intelligence 배포면",
+              "body": "iPhone, iPad, Mac 기본 OS에 AI 기능이 들어가면 소비자 접점의 기본 기대치가 바뀝니다.",
+              "score": "81",
+              "date": "2026.10.06 12:06",
+              "termId": "on-device",
+              "sources": [
+                {
+                  "title": "An open-source tool lets you delete 12GB of Apple Intelligence data on macOS",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool",
+                  "media": "The Verge AI",
+                  "time": "2026.10.05 22:47",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "Getting some extra storage space on your Mac could be as easy as deleting Apple's AI feature... 판정 근거: 플랫폼 경쟁.",
+                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
+                }
+              ],
+              "sourceSummary": "The Verge AI · 회사 원문 1건",
+              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
+            },
+            {
+              "title": "Siri 에이전트화",
+              "body": "Siri와 앱 인텐트가 실제 작업 실행으로 확장되면 모바일 에이전트 UX의 기준점이 됩니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Apple 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "title": "개발자 AI API 잠금",
+              "body": "앱 개발자가 Apple의 OS AI API를 쓰게 되면 배포 채널과 사용자 경험의 통제력이 커집니다.",
+              "score": "77",
+              "date": "2026.10.06 12:06",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Apple 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            }
+          ],
+          "heat": [
+            "Apple Intelligence",
+            "iOS",
+            "macOS",
+            "On-device",
+            "Siri",
+            "App Intents",
+            "Agent",
+            "Mobile",
+            "Developer API",
+            "App Store",
+            "Xcode",
+            "SDK"
+          ]
+        },
+        {
+          "id": "microsoft",
+          "name": "Microsoft",
+          "sector": "Enterprise Stack",
+          "color": "#c54b40",
+          "short": "MS",
+          "focus": "Copilot 운영면과 보안",
+          "updatedAt": "2026.10.06 12:06 KST",
+          "keywords": [
+            {
+              "label": "보안 Copilot 확장",
+              "weight": 64,
+              "color": "#c54b40",
+              "description": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
+              "termId": "evalops",
+              "sources": [
+                {
+                  "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+                  "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+                  "media": "DigitalToday AI",
+                  "time": "2026.10.06 12:06",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+                  "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+                }
+              ],
+              "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "label": "Graph Grounding 강화",
+              "weight": 48,
+              "color": "#3563c8",
+              "description": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
+              "termId": "mcp",
+              "sources": [
+                {
+                  "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+                  "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+                  "media": "DigitalToday AI",
+                  "time": "2026.10.06 12:06",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+                  "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+                }
+              ],
+              "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+            },
+            {
+              "label": "Copilot 업무 레이어화",
+              "weight": 98,
+              "color": "#0f8f82",
+              "description": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Microsoft 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            },
+            {
+              "label": "개발자 플랫폼 방어",
+              "weight": 76.55000000000001,
+              "color": "#7a5a26",
+              "description": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
+              "termId": "ai-code",
+              "sources": [],
+              "sourceSummary": "Microsoft 직접 원문 수집 대기",
+              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
+            }
+          ],
+          "stack": [
+            {
+              "title": "보안 Copilot 확장",
+              "body": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
+              "score": "64",
+              "date": "2026.10.06 12:06",
+              "termId": "evalops",
+              "sources": [
+                {
+                  "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+                  "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+                  "media": "DigitalToday AI",
+                  "time": "2026.10.06 12:06",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+                  "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+                }
+              ],
+              "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
+            },
+            {
+              "title": "Graph Grounding 강화",
+              "body": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
+              "score": "48",
+              "date": "2026.10.06 12:06",
+              "termId": "mcp",
+              "sources": [
+                {
+                  "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+                  "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+                  "media": "DigitalToday AI",
+                  "time": "2026.10.06 12:06",
+                  "evidence": "회사 관련 AI 전략 기사",
+                  "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+                  "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+                }
+              ],
+              "sourceSummary": "DigitalToday AI · 회사 원문 1건",
+              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
+            },
+            {
+              "title": "Copilot 업무 레이어화",
+              "body": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
+              "score": "98",
+              "date": "2026.10.06 12:06",
+              "termId": "agent",
+              "sources": [],
+              "sourceSummary": "Microsoft 직접 원문 수집 대기",
+              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
+            }
+          ],
+          "heat": [
+            "SOC",
+            "Defender",
+            "Audit",
+            "Policy",
+            "Graph",
+            "Identity",
+            "Context",
+            "Permission",
+            "Office",
+            "Teams",
+            "Workflow",
+            "Agent"
+          ]
+        }
+      ],
+      "keywordData": [
+        {
+          "id": "sovereign-procurement",
+          "label": "국산 파운데이션 모델 조달전",
+          "score": 98,
+          "aliases": [
+            "소버린",
+            "공공",
+            "정부",
+            "과기정통부",
+            "정책",
+            "국산"
+          ],
+          "keywords": [
+            "#피지컬AI",
+            "#정책",
+            "#NVIDIA",
+            "#AI반도체",
+            "#투자",
+            "#협력",
+            "#보안"
+          ],
+          "color": "#3f8f4f",
+          "description": "공공 조달, 독자 모델, 로컬 데이터 요구가 국내 AI 사업 기회로 연결되는 신호입니다.",
+          "brief": {
+            "background": "AI 인프라와 모델이 산업 정책으로 해석되며 공공·국산화 요구가 커지고 있습니다.",
+            "reaction": "국내 플랫폼, 통신사, 모델 스타트업은 공공 조달과 산업별 모델을 동시에 겨냥합니다.",
+            "implication": "사업자는 공공 레퍼런스, 국내 데이터 처리, 보안 인증 로드맵을 제안서 앞단에 둬야 합니다."
+          },
+          "signals": "35개 기사 신호 · 20개 소스",
+          "timeline": [
+            {
+              "time": "2026.10.06 09:01",
+              "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+              "type": "기계신문",
+              "source": "기계신문",
+              "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+              "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 16:38",
+              "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+              "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 15:38",
+              "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+              "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+            },
+            {
+              "time": "2026.10.06 12:06",
+              "title": "과기정통부-KISA, 한-몽 정상회담 후속 사이버보안 협력 논의",
+              "type": "DigitalToday AI",
+              "source": "DigitalToday AI",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705137",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            }
+          ]
+        },
+        {
+          "id": "nvidia-korea",
+          "label": "피지컬 AI 파트너십 전선",
+          "score": 98,
+          "aliases": [
+            "nvidia",
+            "엔비디아",
+            "젠슨 황",
+            "피지컬 ai",
+            "로봇",
+            "크래프톤"
+          ],
+          "keywords": [
+            "#피지컬AI",
+            "#정책",
+            "#NVIDIA",
+            "#AI반도체",
+            "#투자",
+            "#보안"
+          ],
+          "color": "#0f8f82",
+          "description": "엔비디아의 한국 파트너십, 로봇·게임·제조 AI 협력 신호입니다.",
+          "brief": {
+            "background": "젠슨 황 방한과 국내 기업 회동은 피지컬 AI와 GPU 생태계가 한국 산업 파트너를 찾는 신호입니다.",
+            "reaction": "게임, 제조, 로봇, 반도체 기업들이 엔비디아 스택과의 접점을 빠르게 확인하고 있습니다.",
+            "implication": "국내 AI 사업자는 GPU 의존 기능, 로봇·시뮬레이션 연동, 파트너십 후보를 같은 표로 점검해야 합니다."
+          },
+          "signals": "23개 기사 신호 · 19개 소스",
+          "timeline": [
+            {
+              "time": "2026.10.06 09:01",
+              "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+              "type": "기계신문",
+              "source": "기계신문",
+              "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+              "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 16:38",
+              "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+              "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 16:40",
+              "title": "SK·엔비디아도 점찍은 K-스타트업…AI 보안으로 ‘로봇 도둑’ 원천 차단",
+              "type": "dt.co.kr",
+              "source": "dt.co.kr",
+              "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9xZVJ4dUhTWW5qT1hfejJjaDRhQ1hzYXhOaXM0RVFGcGhiRHB2Zmk0UnBHZlRPaXEtOTJuOWFMMk93aE03NjUtUnBwRS0wQQ?oc=5",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            },
+            {
+              "time": "2026.10.05 12:07",
+              "title": "2026년 3분기 국내 투자유치, 로보틱스 뜨고 바이오헬스 메가딜은 실종",
+              "type": "와우테일",
+              "source": "와우테일",
+              "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4xeWlFV2huZm03UHFEX1lMbGxqdngtVm1FUDBrU1JIYnVBYWgwZGMzYmlaYlR4dW9QNEdDOUtCYWEtVTZ0MGcwbmo5OTc2LU0?oc=5",
+              "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+            }
+          ]
+        },
+        {
+          "id": "security-alliance",
+          "label": "AI 보안 인증·감사 로그",
+          "score": 98,
+          "aliases": [
+            "kisa",
+            "보안",
+            "글래스윙",
+            "anthropic",
+            "권한",
+            "감사"
+          ],
+          "keywords": [
+            "#보안",
+            "#AI반도체",
+            "#투자",
+            "#NVIDIA",
+            "#피지컬AI"
+          ],
+          "color": "#c54b40",
+          "description": "AI 도입 심사에서 권한, 감사 로그, 보안 검증이 전면에 올라오는 흐름입니다.",
+          "brief": {
+            "background": "AI가 업무 시스템에 연결되면서 보안 기관과 글로벌 모델사의 협력 신호가 커지고 있습니다.",
+            "reaction": "기업 고객은 기능 데모보다 권한 통제, 로그, 사고 대응 체계를 구매 조건으로 보기 시작했습니다.",
+            "implication": "B2B AI 제품은 보안 체크리스트, 관리자 승인 플로우, 감사 로그 화면을 영업 자료에 먼저 넣어야 합니다."
+          },
+          "signals": "19개 기사 신호 · 9개 소스",
+          "timeline": [
+            {
+              "time": "2026.10.06 12:06",
+              "title": "온톨로지 기반 엔터프라이즈 AI 기업 인포시즈는 그래프 기반 AI 보안 솔루션인 ‘고스(GOS, Graph Optimized Security)’를 출시하고 국내 반도...",
+              "type": "DigitalToday AI",
+              "source": "DigitalToday AI",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705134",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            },
+            {
+              "time": "2026.10.05 15:38",
+              "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+              "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+            },
+            {
+              "time": "2026.10.05 16:40",
+              "title": "SK·엔비디아도 점찍은 K-스타트업…AI 보안으로 ‘로봇 도둑’ 원천 차단",
+              "type": "dt.co.kr",
+              "source": "dt.co.kr",
+              "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9xZVJ4dUhTWW5qT1hfejJjaDRhQ1hzYXhOaXM0RVFGcGhiRHB2Zmk0UnBHZlRPaXEtOTJuOWFMMk93aE03NjUtUnBwRS0wQQ?oc=5",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            },
+            {
+              "time": "2026.10.06 12:06",
+              "title": "AI·클라우드 기업 메가존클라우드는 기업들이 기존 AI 환경을 유지하면서 데이터와 AI 에이전트, 운영, 보안 및 비용을 통합 관리할 수 있는 엔터프라이즈 AI OS...",
+              "type": "DigitalToday AI",
+              "source": "DigitalToday AI",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705090",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            }
+          ]
+        },
+        {
+          "id": "finance-ax",
+          "label": "금융 AX PoC 단가",
+          "score": 98,
+          "aliases": [
+            "금융",
+            "ax",
+            "kt",
+            "은행",
+            "보험",
+            "증권"
+          ],
+          "keywords": [
+            "#피지컬AI",
+            "#정책",
+            "#AI반도체",
+            "#투자",
+            "#KT",
+            "#보안"
+          ],
+          "color": "#d68419",
+          "description": "금융권 AI 전환 교육, PoC 단가, 규제 대응 수요를 보여주는 B2B 영업 신호입니다.",
+          "brief": {
+            "background": "금융권은 보안과 규제가 강하지만 AX 예산과 내부 생산성 요구가 동시에 커지고 있습니다.",
+            "reaction": "통신·클라우드·솔루션 기업이 금융 특화 패키지와 실무자 교육을 앞세우고 있습니다.",
+            "implication": "금융 고객용 PoC는 규정 준수, 데이터 비식별, 업무별 ROI 지표를 한 장으로 정리해야 합니다."
+          },
+          "signals": "11개 기사 신호 · 8개 소스",
+          "timeline": [
+            {
+              "time": "2026.10.06 09:01",
+              "title": "인하대, 과기정통부 ‘AX대학원 사업’ 선정… 제조·물류·로봇 AI 인재 육성에 195억 투입",
+              "type": "기계신문",
+              "source": "기계신문",
+              "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5rY01YYzhjTF94bWI3UE9kYWpFTlYtRFVGVWoyOUlaN3l3MWFuY2V5VnJCM3RhVl9qMFdlUTVBcEp5LU1veUlPcUdNVHd5ZFo4cDRFXzc4TEhCeTI2bFdxRjUxSGI5UQ?oc=5",
+              "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 15:38",
+              "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+              "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+            },
+            {
+              "time": "2026.10.06 12:06",
+              "title": "KT는 챗GPT에 KT 공식 상품정보를 연계한 플러그인 서비스를 출시했다고 6일 밝혔다.",
+              "type": "DigitalToday AI",
+              "source": "DigitalToday AI",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705050",
+              "summary": "AI 시장의 제품, 인프라, 규제, 파트너십 중 하나가 움직이는 기사입니다. 제목만 보고 넘기기보다 고객 제안, 제품 로드맵, 파트너십에 미치는 영향을 분리해야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
+            },
+            {
+              "time": "2026.10.06 09:07",
+              "title": "금융권 해킹에 과기정통부-KISA 대응체계 강화 총력전",
+              "type": "헤럴드경제",
+              "source": "헤럴드경제",
+              "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5Xblk4azNaTUsxRkFmRHg0V3RsTmtOd295T1lRQ2lDN3N3dU80R3c2Zi05b2JNQTBXRlJ1Z2c4S1VQZkFENFdhYTI5cEhsellfbVFFYWRR?oc=5",
+              "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 한국 직접성.",
+              "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
+            }
+          ]
+        },
+        {
+          "id": "ai-chip-supply",
+          "label": "국내 NPU·GPU 수주전",
+          "score": 98,
+          "aliases": [
+            "hbm",
+            "ai 반도체",
+            "gpu",
+            "npu",
+            "칩",
+            "가속기"
+          ],
+          "keywords": [
+            "#NVIDIA",
+            "#AI반도체",
+            "#투자",
+            "#협력",
+            "#On-Device"
+          ],
+          "color": "#3563c8",
+          "description": "추론 원가, GPU 조달, 국산 NPU 도입 가능성을 좌우하는 공급망·수주 신호입니다.",
+          "brief": {
+            "background": "HBM과 AI 칩 수급은 모델 성능보다 서비스 원가와 출시 속도에 직접 영향을 줍니다.",
+            "reaction": "대기업과 스타트업은 GPU 대체 옵션, 국산 NPU, 클라우드 조달 조건을 함께 검토하고 있습니다.",
+            "implication": "견적과 제안서에는 GPU/HBM 의존도, 대체 인프라, 비용 변동 시나리오를 미리 넣어야 합니다."
+          },
+          "signals": "7개 기사 신호 · 6개 소스",
+          "timeline": [
+            {
+              "time": "2026.10.05 16:38",
+              "title": "아마존, 11조 규모 AI 칩 투자자에 매각 후 리스…재무 부담 낮춘다",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215966",
+              "summary": "아마존이 80억달러(약 11조원) 규모의 엔비디아 최신 AI 칩을 외부 투자자에게 넘기고 다시 임대하는 방식으로 자금을 조달하는 방안을 추진하고 있다. 판정 근거: 한국 직접성.",
+              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 15:38",
+              "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+              "summary": "반도체 기업 브로드컴이 앤트로픽의 대규모 컴퓨팅 인프라 구축을 지원하기 위해 최대 600억달러(약 80조원) 규모의 자금 조달에 나선다. 판정 근거: 사업화 신호.",
+              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
+            },
+            {
+              "time": "2026.10.05 19:18",
+              "title": "AMD 리사 수 CEO, 7일 용산 `게이머 데이`…8일 국내 NPU 기업 회동",
+              "type": "매일신문",
+              "source": "매일신문",
+              "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5GRFZVR2M3XzA5U20wcHpJWjRWTV9UcmRRU2U1Um1SanFDQ2xOaUE5bUJ4elJVOFROWTF0eWdFa3JhenhDZURlT2pkUmNSSGd1YW92SnlJdG50eHhxWk1JenNn?oc=5",
+              "summary": "행사성 회동과 실제 피지컬 AI 협력 사이의 간극을 짚는 신호입니다. 후속 발표가 제품 계약, GPU 공급, 공동 PoC로 이어졌는지 확인해야 합니다. 판정 근거: 한국 직접성.",
+              "takeaway": "후속 계약, 공동 PoC, GPU 공급 언급이 있는지 원문에 표시하고 행사성 노출이면 관망 처리하세요."
+            },
+            {
+              "time": "2026.10.06 12:06",
+              "title": "한미반도체 MSVP 국산화 5년…TC본더 잇는 새 매출원 부상",
+              "type": "Bloter IT",
+              "source": "Bloter IT",
+              "url": "https://www.bloter.net/news/articleView.html?idxno=674929",
+              "summary": "정부 정책, 공공 조달, 국산 AI 인프라가 국내 AI 사업 기회로 연결되는 신호입니다. 예산과 조달 조건이 생기면 기술 우위보다 인증, 레퍼런스, 국내 데이터 처리 요건이 앞에 옵니다. 판정 근거: 사업화 신호.",
+              "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
+            }
+          ]
+        },
+        {
+          "id": "enterprise-copilot",
+          "label": "사내 코파일럿 권한 설계",
+          "score": 98,
+          "aliases": [
+            "copilot",
+            "업무 자동화",
+            "office",
+            "agent",
+            "워크플로"
+          ],
+          "keywords": [
+            "#보안",
+            "#Agent",
+            "#Anthropic",
+            "#EvalOps"
+          ],
+          "color": "#7a5a26",
+          "description": "단순 챗봇이 아니라 사내 권한·문서·업무 시스템에 붙는 운영형 AI 수요입니다.",
+          "brief": {
+            "background": "기업 AI 도입의 병목은 모델 성능보다 기존 업무 시스템과의 연결, 권한, 운영 관리로 이동했습니다.",
+            "reaction": "플랫폼 기업은 업무 도구와 코파일럿을 묶고, 고객사는 부서별 워크플로 적용 가능성을 비교합니다.",
+            "implication": "제품 로드맵에는 API 연결 범위, 승인 단계, 운영 로그, 부서별 템플릿을 함께 설계해야 합니다."
+          },
+          "signals": "12개 기사 신호 · 6개 소스",
+          "timeline": [
+            {
+              "time": "2026.10.06 12:06",
+              "title": "AI·클라우드 기업 메가존클라우드는 기업들이 기존 AI 환경을 유지하면서 데이터와 AI 에이전트, 운영, 보안 및 비용을 통합 관리할 수 있는 엔터프라이즈 AI OS...",
+              "type": "DigitalToday AI",
+              "source": "DigitalToday AI",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705090",
+              "summary": "AI 도입 논의가 기능 데모를 넘어 보안, 감사, 복원력 요구로 이동하는 신호입니다. 구매 조건에 통제 화면과 책임 범위를 넣어야 합니다. 판정 근거: 사업화 신호.",
+              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
+            },
+            {
+              "time": "2026.10.06 12:06",
+              "title": "에이에쓰아이(ASI Corp)가 다양한 생성형 AI 서비스와 AI 에이전트(Agent)를 탐색·비교하고 도입·구독까지 진행할 수 있는AIaaS(AI as a Serv...",
+              "type": "DigitalToday AI",
+              "source": "DigitalToday AI",
+              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=705126",
+              "summary": "AI가 실험용 챗봇을 넘어 파트너 영업, 클라우드 현대화, 업무 전환 패키지로 팔리는 신호입니다. 고객은 모델 이름보다 어느 업무에 붙고, 누가 운영하며, 어느 파트너가 책임지는지를 봅니다. 판정 근거: 사업화 신호.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 20:20",
+              "title": "앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215978",
+              "summary": "앤트로픽이 지난 9월29일 공식 연구 발표를 시작으로, 대화형 AI 연구 도구인 \\'앤트로픽 인터뷰어(Anthropic Interviewer)\\'를 일반 클로드 및... 판정 근거: 인재·생태계.",
+              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
+            },
+            {
+              "time": "2026.10.05 17:33",
+              "title": "MIT·사카나, 자가 진화 AI 에이전트 'SIFT' 발표...'검증 비용 병목' 해결",
+              "type": "AI Times",
+              "source": "AI Times",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215967",
+              "summary": "AI 에이전트가 스스로 문제 해결 방식을 개선하는 ‘재귀적 자기개선(RSI)’ 연구가 활발하지만, 수많은 변종 후보를 일일이 검증하는 데 막대한 비용과 시간이 들어... 판정 근거: 인재·생태계.",
+              "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
+            }
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-10-05",
       "metadata": {
@@ -7924,3156 +10894,6 @@ window.TECH_AGENDA_DATA = {
               "type": "Radar",
               "source": "Radar",
               "url": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "date": "2026-10-03",
-      "metadata": {
-        "snapshotDate": "2026-10-03",
-        "generatedAt": "2026.10.03 11:04 KST",
-        "baseDate": "2026.10.03 Sat",
-        "windowLabel": "2026.10.02 11:04 - 2026.10.03 11:04 KST",
-        "nextUpdate": "2026.10.04 08:20 KST"
-      },
-      "metrics": {
-        "articles": 144,
-        "blogs": 40,
-        "dedupeRate": "92%",
-        "newAgendas": "+5"
-      },
-      "sourceSignals": [
-        [
-          "AI Times",
-          "100%"
-        ],
-        [
-          "Hacker News",
-          "54%"
-        ],
-        [
-          "DigitalToday AI",
-          "46%"
-        ]
-      ],
-      "hotAgendas": [
-        {
-          "rank": 1,
-          "id": "news-1-2yi8sea",
-          "collectedAt": "2026.10.03 11:04 KST",
-          "title": "엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행",
-          "score": 98,
-          "summary": "엔비디아와 소프트뱅크가 오픈AI에 각각 100억달러씩, 총 200억달러(약 27조원)의 추가 투자를 집행했다. 판정 근거: 한국 직접성.",
-          "mentions": 1,
-          "sources": [
-            {
-              "title": "엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215880",
-              "media": "AI Times",
-              "time": "2026.10.02 12:24"
-            }
-          ],
-          "sourceCount": 1,
-          "momentum": "NEW",
-          "metric": "원문 1건",
-          "pinned": false,
-          "topicBucket": "엔비디아·소프트뱅크, 오픈ai 투자 잔여분 27조 ",
-          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215880_219851_440.jpg",
-          "imageAlt": "AI Times 기사 대표 이미지",
-          "imageCredit": "AI Times",
-          "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 100점으로 분류했습니다.",
-          "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 100점으로 분류했습니다.",
-          "actionBrief": {
-            "topic": "엔비디아·피지컬 AI 협력",
-            "why": "단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다.",
-            "owner": "전략",
-            "decision": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "question": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "task": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
-            "nextStep": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
-            "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
-            "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
-          },
-          "businessRelevance": {
-            "score": 100,
-            "level": "높음",
-            "reasons": [
-              {
-                "label": "한국 직접성",
-                "value": "엔비디아",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "사업화 신호",
-                "value": "투자",
-                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
-              },
-              {
-                "label": "인프라·원가",
-                "value": "엔비디아",
-                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
-              }
-            ]
-          },
-          "hotness": {
-            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
-            "reasons": [
-              {
-                "label": "사업 임팩트",
-                "value": "100점",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "수집 시각",
-                "value": "23h",
-                "detail": "약 23시간 전 발행 또는 수집된 최신 원문입니다."
-              },
-              {
-                "label": "원문 소스",
-                "value": "AI Times",
-                "detail": "AI Times에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
-              },
-              {
-                "label": "기사 내용",
-                "value": "엔비디아·피지컬 AI 협력",
-                "detail": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다."
-              },
-              {
-                "label": "오늘 확인",
-                "value": "액션",
-                "detail": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-              }
-            ]
-          },
-          "keywords": [
-            "#NVIDIA",
-            "#투자"
-          ],
-          "hashtags": [
-            "#NVIDIA",
-            "#투자"
-          ],
-          "related_companies": [],
-          "signals": "AI Times · 엔비디아·피지컬 AI 협력",
-          "articles": [
-            {
-              "title": "엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215880",
-              "time": "2026.10.02 12:24",
-              "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215880_219851_440.jpg"
-            }
-          ],
-          "brief": {
-            "background": "엔비디아와 소프트뱅크가 오픈AI에 각각 100억달러씩, 총 200억달러(약 27조원)의 추가 투자를 집행했다. 판정 근거: 한국 직접성.",
-            "reaction": "국내 플랫폼, 통신, 제조 기업이 AI 팩토리와 피지컬 AI 협력 범위를 빠르게 비교하고 있습니다.",
-            "implication": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-          }
-        },
-        {
-          "rank": 2,
-          "id": "news-2-2yi8syc",
-          "collectedAt": "2026.10.03 11:04 KST",
-          "title": "텐센트, 오라클서 AI 칩 10만개 임대…규제 피하려 동남아로",
-          "score": 89,
-          "summary": "중국의 텐센트가 AI 개발을 가속하기 위해 미국 클라우드 기업 오라클로부터 고성능 AI 칩 10만개를 임대하기로 했다. 판정 근거: 규제·리스크.",
-          "mentions": 1,
-          "sources": [
-            {
-              "title": "텐센트, 오라클서 AI 칩 10만개 임대…규제 피하려 동남아로",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215909",
-              "media": "AI Times",
-              "time": "2026.10.02 17:18"
-            }
-          ],
-          "sourceCount": 1,
-          "momentum": "NEW",
-          "metric": "원문 1건",
-          "pinned": false,
-          "topicBucket": "ai-chip",
-          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215909_219872_5022.jpg",
-          "imageAlt": "AI Times 기사 대표 이미지",
-          "imageCredit": "AI Times",
-          "reason": "AI 인프라·반도체 수급 관점의 기사이며 규제·리스크 신호가 감지돼 한국 AI 사업 임팩트 74점으로 분류했습니다.",
-          "whyHot": "AI 인프라·반도체 수급 관점의 기사이며 규제·리스크 신호가 감지돼 한국 AI 사업 임팩트 74점으로 분류했습니다.",
-          "actionBrief": {
-            "topic": "AI 인프라·반도체 수급",
-            "why": "모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다.",
-            "owner": "전략",
-            "decision": "AI 인프라·반도체 수급 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "question": "AI 인프라·반도체 수급 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "task": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요.",
-            "nextStep": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요.",
-            "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
-            "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
-          },
-          "businessRelevance": {
-            "score": 74,
-            "level": "높음",
-            "reasons": [
-              {
-                "label": "규제·리스크",
-                "value": "규제",
-                "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
-              },
-              {
-                "label": "인프라·원가",
-                "value": "데이터센터, 반도체",
-                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
-              },
-              {
-                "label": "산업 적용",
-                "value": "반도체",
-                "detail": "실제 산업 적용과 고객 세그먼트 확장을 보여줍니다."
-              }
-            ]
-          },
-          "hotness": {
-            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
-            "reasons": [
-              {
-                "label": "사업 임팩트",
-                "value": "74점",
-                "detail": "도입 리스크, 컴플라이언스, 신뢰성 판단에 영향을 줍니다."
-              },
-              {
-                "label": "수집 시각",
-                "value": "18h",
-                "detail": "약 18시간 전 발행 또는 수집된 최신 원문입니다."
-              },
-              {
-                "label": "원문 소스",
-                "value": "AI Times",
-                "detail": "AI Times에서 직접 수집한 기사이며 AI 인프라·반도체 수급 관점으로 분류했습니다."
-              },
-              {
-                "label": "기사 내용",
-                "value": "AI 인프라·반도체 수급",
-                "detail": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다."
-              },
-              {
-                "label": "오늘 확인",
-                "value": "액션",
-                "detail": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-              }
-            ]
-          },
-          "keywords": [
-            "#AI반도체",
-            "#정책"
-          ],
-          "hashtags": [
-            "#AI반도체",
-            "#정책"
-          ],
-          "related_companies": [],
-          "signals": "AI Times · AI 인프라·반도체 수급",
-          "articles": [
-            {
-              "title": "텐센트, 오라클서 AI 칩 10만개 임대…규제 피하려 동남아로",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215909",
-              "time": "2026.10.02 17:18",
-              "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215909_219872_5022.jpg"
-            }
-          ],
-          "brief": {
-            "background": "중국의 텐센트가 AI 개발을 가속하기 위해 미국 클라우드 기업 오라클로부터 고성능 AI 칩 10만개를 임대하기로 했다. 판정 근거: 규제·리스크.",
-            "reaction": "대기업과 스타트업이 엔비디아 의존도, 국산 칩 대안, 클라우드 조달 조건을 함께 검토하고 있습니다.",
-            "implication": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-          }
-        },
-        {
-          "rank": 3,
-          "id": "news-3-6vopt0r",
-          "collectedAt": "2026.10.03 11:04 KST",
-          "title": "과기정통부, 피지컬 AI 확산 지원할 ‘무선전력전송’ 시험장 가동",
-          "score": 74,
-          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-          "mentions": 1,
-          "sources": [
-            {
-              "title": "과기정통부, 피지컬 AI 확산 지원할 ‘무선전력전송’ 시험장 가동",
-              "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9UR0swdC14bHYyX2w3U0VXODRpWTZXY2N0eVRDY1oxMHQ2NHh4SklXSDhIQ09KelRxM3pSMHVqOFF6UjMtVTY3bjI0Zw?oc=5",
-              "media": "티스토리",
-              "time": "2026.10.02 17:33"
-            }
-          ],
-          "sourceCount": 1,
-          "momentum": "NEW",
-          "metric": "원문 1건",
-          "pinned": false,
-          "topicBucket": "과기정통부, 피지컬 ai 확산 지원할 ‘무선전력전송",
-          "imageUrl": "",
-          "imageAlt": "",
-          "imageCredit": "",
-          "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 62점으로 분류했습니다.",
-          "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 62점으로 분류했습니다.",
-          "actionBrief": {
-            "topic": "엔비디아·피지컬 AI 협력",
-            "why": "단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다.",
-            "owner": "전략",
-            "decision": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "question": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "task": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
-            "nextStep": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
-            "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
-            "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
-          },
-          "businessRelevance": {
-            "score": 62,
-            "level": "중간",
-            "reasons": [
-              {
-                "label": "한국 직접성",
-                "value": "과기정통부",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "인프라·원가",
-                "value": "피지컬 ai, 전력",
-                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
-              }
-            ]
-          },
-          "hotness": {
-            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
-            "reasons": [
-              {
-                "label": "사업 임팩트",
-                "value": "62점",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "수집 시각",
-                "value": "18h",
-                "detail": "약 18시간 전 발행 또는 수집된 최신 원문입니다."
-              },
-              {
-                "label": "원문 소스",
-                "value": "티스토리",
-                "detail": "티스토리에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
-              },
-              {
-                "label": "기사 내용",
-                "value": "엔비디아·피지컬 AI 협력",
-                "detail": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다."
-              },
-              {
-                "label": "오늘 확인",
-                "value": "액션",
-                "detail": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-              }
-            ]
-          },
-          "keywords": [
-            "#피지컬AI",
-            "#정책"
-          ],
-          "hashtags": [
-            "#피지컬AI",
-            "#정책"
-          ],
-          "related_companies": [],
-          "signals": "티스토리 · 엔비디아·피지컬 AI 협력",
-          "articles": [
-            {
-              "title": "과기정통부, 피지컬 AI 확산 지원할 ‘무선전력전송’ 시험장 가동",
-              "source": "티스토리",
-              "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9UR0swdC14bHYyX2w3U0VXODRpWTZXY2N0eVRDY1oxMHQ2NHh4SklXSDhIQ09KelRxM3pSMHVqOFF6UjMtVTY3bjI0Zw?oc=5",
-              "time": "2026.10.02 17:33",
-              "imageUrl": ""
-            }
-          ],
-          "brief": {
-            "background": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-            "reaction": "국내 플랫폼, 통신, 제조 기업이 AI 팩토리와 피지컬 AI 협력 범위를 빠르게 비교하고 있습니다.",
-            "implication": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-          }
-        },
-        {
-          "rank": 4,
-          "id": "news-4-3kzm3jz",
-          "collectedAt": "2026.10.03 11:04 KST",
-          "title": "엔비디아가 점찍은 3D AI…엔닷라이트, 로봇 학습 시장 공략",
-          "score": 93,
-          "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-          "mentions": 1,
-          "sources": [
-            {
-              "title": "엔비디아가 점찍은 3D AI…엔닷라이트, 로봇 학습 시장 공략",
-              "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9xSHJLWWtlYVJVYVg3UXdIMVlqQVFXRktZbWIxTW1IaXJpbEhuSkJZaExCWVpWSEJTNFE5RmtOeGVaaHpFZmtuVUNmclJERmUtVlHSAVNBVV95cUxQU1A4b3JCWURDMW1jZWlrcTFtd3hXNHN4TVlBT21Ua1BUREUyWGJ2QVhmOGt5OXFnR1I0djJPekdQcmdiYzVRSG9IUUdmdVhrd29kOA?oc=5",
-              "media": "서울경제",
-              "time": "2026.10.02 12:07"
-            }
-          ],
-          "sourceCount": 1,
-          "momentum": "NEW",
-          "metric": "Pinned Hot",
-          "pinned": true,
-          "topicBucket": "nvidia-korea",
-          "imageUrl": "",
-          "imageAlt": "",
-          "imageCredit": "",
-          "reason": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 84점으로 분류했습니다.",
-          "whyHot": "엔비디아·피지컬 AI 협력 관점의 기사이며 한국 직접성 신호가 감지돼 한국 AI 사업 임팩트 84점으로 분류했습니다.",
-          "actionBrief": {
-            "topic": "엔비디아·피지컬 AI 협력",
-            "why": "단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다.",
-            "owner": "전략",
-            "decision": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "question": "엔비디아·피지컬 AI 협력 이슈가 고객 제안, 제품 로드맵, 파트너십 우선순위를 바꾸나?",
-            "task": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
-            "nextStep": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요.",
-            "sourceCheck": "발표 주체, 적용 산업, 후속 일정, 계약 가능성",
-            "evidenceChecklist": "발표 주체, 적용 산업, 후속 일정, 계약 가능성"
-          },
-          "businessRelevance": {
-            "score": 84,
-            "level": "높음",
-            "reasons": [
-              {
-                "label": "한국 직접성",
-                "value": "엔비디아",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "사업화 신호",
-                "value": "공략, 시장",
-                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
-              },
-              {
-                "label": "인프라·원가",
-                "value": "로봇, 엔비디아",
-                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
-              }
-            ]
-          },
-          "hotness": {
-            "formula": "한국 AI 사업 임팩트 + 원문 최신성 + 출처 신뢰 + 후속 확인 필요성을 반영",
-            "reasons": [
-              {
-                "label": "사업 임팩트",
-                "value": "84점",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "수집 시각",
-                "value": "23h",
-                "detail": "약 23시간 전 발행 또는 수집된 최신 원문입니다."
-              },
-              {
-                "label": "원문 소스",
-                "value": "서울경제",
-                "detail": "서울경제에서 직접 수집한 기사이며 엔비디아·피지컬 AI 협력 관점으로 분류했습니다."
-              },
-              {
-                "label": "기사 내용",
-                "value": "엔비디아·피지컬 AI 협력",
-                "detail": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다."
-              },
-              {
-                "label": "오늘 확인",
-                "value": "액션",
-                "detail": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-              }
-            ]
-          },
-          "keywords": [
-            "#NVIDIA",
-            "#피지컬AI"
-          ],
-          "hashtags": [
-            "#NVIDIA",
-            "#피지컬AI"
-          ],
-          "related_companies": [],
-          "signals": "서울경제 · 엔비디아·피지컬 AI 협력",
-          "articles": [
-            {
-              "title": "엔비디아가 점찍은 3D AI…엔닷라이트, 로봇 학습 시장 공략",
-              "source": "서울경제",
-              "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9xSHJLWWtlYVJVYVg3UXdIMVlqQVFXRktZbWIxTW1IaXJpbEhuSkJZaExCWVpWSEJTNFE5RmtOeGVaaHpFZmtuVUNmclJERmUtVlHSAVNBVV95cUxQU1A4b3JCWURDMW1jZWlrcTFtd3hXNHN4TVlBT21Ua1BUREUyWGJ2QVhmOGt5OXFnR1I0djJPekdQcmdiYzVRSG9IUUdmdVhrd29kOA?oc=5",
-              "time": "2026.10.02 12:07",
-              "imageUrl": ""
-            }
-          ],
-          "brief": {
-            "background": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-            "reaction": "국내 플랫폼, 통신, 제조 기업이 AI 팩토리와 피지컬 AI 협력 범위를 빠르게 비교하고 있습니다.",
-            "implication": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-          }
-        },
-        {
-          "rank": 5,
-          "id": "on-device",
-          "collectedAt": "2026.10.03 11:04 KST",
-          "title": "온디바이스 AI 경쟁이 NPU, 개인정보, 지연시간 중심으로 재편",
-          "score": 81,
-          "summary": "모바일, PC, 브라우저 업체가 로컬 추론과 개인정보 보호 메시지를 전면에 세우고 있습니다.",
-          "mentions": 36,
-          "sources": [
-            {
-              "title": "LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215920",
-              "media": "AI Times",
-              "time": "2026.10.02 17:00"
-            },
-            {
-              "title": "“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215903",
-              "media": "AI Times",
-              "time": "2026.10.02 15:53"
-            },
-            {
-              "title": "국산 AI반도체, 한전 변전소서 실전 검증···리벨리온 NPU 투입",
-              "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YTWxMNEpSXzZVT3B6YWVqWnAzRHNDcFliRE9xZS1QZ0FBeHhGSUF5WTAyRkYzX3hiS05XdHpMVnpuU0FNLWVrYW5MRm41X0VtR1REMHFFODY4WHdxQV9jSUczRGVMV0xfX2tPS1J4V3DSAXRBVV95cUxQUTZWSGxqTDV3MU40Vy1EOU82Wk9taFAtbThqR0dBdklPMWpvRGgxd0hUQkVZaWlNRF9ydzhHamxNZFJHUHh5MWdaNkdmSnhxbVNMcE45bnJDUlp3Y3NzdVozNDk0WmFKc2FFX3B4NVh3ZXVqbQ?oc=5",
-              "media": "이뉴스투데이",
-              "time": "2026.10.02 21:29"
-            }
-          ],
-          "sourceCount": 2,
-          "momentum": "+20%",
-          "metric": "2개 매체 보도",
-          "reason": "AI Times, 이뉴스투데이 등 2개 소스에서 3개 기사 신호가 잡혔고, 키워드 가중 언급이 36회로 묶였습니다.",
-          "whyHot": "AI Times, 이뉴스투데이 등 2개 소스에서 3개 기사 신호가 잡혔고, 키워드 가중 언급이 36회로 묶였습니다.",
-          "businessRelevance": {
-            "score": 100,
-            "level": "높음",
-            "reasons": [
-              {
-                "label": "한국 직접성",
-                "value": "lg",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "사업화 신호",
-                "value": "투자",
-                "detail": "매출, 고객 확보, 파트너십, 시장 진입과 연결되는 신호입니다."
-              },
-              {
-                "label": "인프라·원가",
-                "value": "npu, 전력",
-                "detail": "AI 서비스 원가, 확장성, 공급망과 관련된 신호입니다."
-              }
-            ]
-          },
-          "hotness": {
-            "formula": "소스 다양성 + 기사 신호 수 + 키워드 언급 밀도 + 기업 연결성을 함께 반영",
-            "reasons": [
-              {
-                "label": "사업 임팩트",
-                "value": "100점",
-                "detail": "한국 시장, 국내 기업, 규제 기관과 직접 연결됩니다."
-              },
-              {
-                "label": "매체 분산",
-                "value": "2개",
-                "detail": "AI Times, 이뉴스투데이 등 서로 다른 매체에서 같은 의제가 반복 감지됐습니다."
-              },
-              {
-                "label": "기사 신호",
-                "value": "3건",
-                "detail": "최근 24시간 수집분 중 제목과 요약이 해당 의제와 직접 맞물린 기사입니다."
-              },
-              {
-                "label": "언급 밀도",
-                "value": "36회",
-                "detail": "On-Device 및 유사 표현이 제목, 요약, 출처 신호에서 가중치 있게 반복됐습니다."
-              },
-              {
-                "label": "기업 연결",
-                "value": "5곳",
-                "detail": "Google, Apple, Naver, SK Telecom의 제품, 인프라, 정책 움직임과 연결됩니다."
-              },
-              {
-                "label": "최신성",
-                "value": "14h",
-                "detail": "가장 최근 관련 신호가 약 14시간 전 수집됐습니다."
-              }
-            ]
-          },
-          "keywords": [
-            "#On-Device",
-            "#on-device",
-            "#ondevice",
-            "#edgeai"
-          ],
-          "hashtags": [
-            "#On-Device",
-            "#on-device",
-            "#ondevice",
-            "#edgeai"
-          ],
-          "related_companies": [
-            "Google",
-            "Apple",
-            "Naver",
-            "SK Telecom",
-            "Samsung"
-          ],
-          "signals": "AI Times, 이뉴스투데이 중심 3개 신호",
-          "articles": [
-            {
-              "title": "LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215920",
-              "time": "2026.10.02 17:00",
-              "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215920_219889_3152.jpg"
-            },
-            {
-              "title": "“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215903",
-              "time": "2026.10.02 15:53"
-            },
-            {
-              "title": "국산 AI반도체, 한전 변전소서 실전 검증···리벨리온 NPU 투입",
-              "source": "이뉴스투데이",
-              "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YTWxMNEpSXzZVT3B6YWVqWnAzRHNDcFliRE9xZS1QZ0FBeHhGSUF5WTAyRkYzX3hiS05XdHpMVnpuU0FNLWVrYW5MRm41X0VtR1REMHFFODY4WHdxQV9jSUczRGVMV0xfX2tPS1J4V3DSAXRBVV95cUxQUTZWSGxqTDV3MU40Vy1EOU82Wk9taFAtbThqR0dBdklPMWpvRGgxd0hUQkVZaWlNRF9ydzhHamxNZFJHUHh5MWdaNkdmSnhxbVNMcE45bnJDUlp3Y3NzdVozNDk0WmFKc2FFX3B4NVh3ZXVqbQ?oc=5",
-              "time": "2026.10.02 21:29"
-            }
-          ],
-          "brief": {
-            "background": "클라우드 추론 비용과 개인정보 규제가 맞물리며 일부 AI 기능을 기기 내부에서 처리하려는 압력이 커졌습니다.",
-            "reaction": "디바이스 업체는 NPU 성능, 지연시간, 배터리 효율을 묶어 차별화하고 개발자에게 로컬 API를 제공합니다.",
-            "implication": "서비스 사업자는 클라우드, 엣지, 로컬 모델을 상황별로 라우팅하는 제품 구조를 준비해야 합니다."
-          },
-          "imageUrl": "https://cdn.aitimes.com/news/photo/202610/215920_219889_3152.jpg",
-          "imageAlt": "AI Times 기사 대표 이미지",
-          "imageCredit": "AI Times"
-        }
-      ],
-      "impactNotes": [
-        {
-          "title": "파트너십",
-          "body": "피지컬 AI 파트너십 신호는 로봇, 게임, 제조 연동 기회입니다. 오늘 할 일: GPU 의존 기능과 국내 파트너 후보를 한 장으로 정리하세요.",
-          "color": "#0f8f82",
-          "action": "파트너 후보 점검"
-        },
-        {
-          "title": "원가·인프라",
-          "body": "국내 NPU·GPU 수주전은 추론 원가와 출시 속도 리스크입니다. 오늘 할 일: GPU/NPU 대체안, 클라우드 단가, SLA 가정을 업데이트하세요.",
-          "color": "#3563c8",
-          "action": "원가 시나리오 업데이트"
-        },
-        {
-          "title": "도입 단가",
-          "body": "특화 SLM 신호는 범용 API 대체 가능성을 묻는 구매 질문입니다. 오늘 할 일: API형, SLM형, 온프레미스형 월 단가표를 만드세요.",
-          "color": "#7a5a26",
-          "action": "SLM 단가표 작성"
-        }
-      ],
-      "companies": [
-        {
-          "id": "naver",
-          "name": "Naver",
-          "sector": "Korea Platform",
-          "color": "#3f8f4f",
-          "short": "NV",
-          "focus": "AI 팩토리와 소버린 클라우드",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "검색·커머스 AI 수익화",
-              "weight": 87.85000000000001,
-              "color": "#0f8f82",
-              "description": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Naver 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "하이퍼클로바 산업 패키지",
-              "weight": 48.75,
-              "color": "#c54b40",
-              "description": "한국어 모델과 검색·커머스 데이터를 산업별 업무 패키지로 묶어 글로벌 범용 모델과 차별화할 수 있습니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Naver 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "AI 팩토리·GPU 조달 전선",
-              "weight": 45,
-              "color": "#3f8f4f",
-              "description": "정부 GPU 사업, 엔비디아 협력, 네이버클라우드 운영 역량이 국내 AI 인프라 영업 기회로 이어지는지 봐야 합니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "Naver 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            },
-            {
-              "label": "온디바이스 협력 가능성",
-              "weight": 40,
-              "color": "#d68419",
-              "description": "모바일, 브라우저, 차량 등 한국어 개인화가 필요한 접점에서 로컬 추론 파트너십 여지가 있습니다.",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "Naver 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "검색·커머스 AI 수익화",
-              "body": "검색, 쇼핑, 광고 추천을 생성형 응답 안에서 재배치해 플랫폼 체류와 거래 전환을 노립니다.",
-              "score": "88",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Naver 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "하이퍼클로바 산업 패키지",
-              "body": "한국어 모델과 검색·커머스 데이터를 산업별 업무 패키지로 묶어 글로벌 범용 모델과 차별화할 수 있습니다.",
-              "score": "49",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Naver 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "title": "AI 팩토리·GPU 조달 전선",
-              "body": "정부 GPU 사업, 엔비디아 협력, 네이버클라우드 운영 역량이 국내 AI 인프라 영업 기회로 이어지는지 봐야 합니다.",
-              "score": "45",
-              "date": "2026.10.03 11:04",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "Naver 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "heat": [
-            "Search",
-            "Shopping",
-            "Ads",
-            "Creator",
-            "HyperCLOVA",
-            "Korean Data",
-            "Commerce",
-            "Quality",
-            "AI Factory",
-            "GPU",
-            "NVIDIA",
-            "Cloud"
-          ]
-        },
-        {
-          "id": "kakao",
-          "name": "Kakao",
-          "sector": "Korea Platform",
-          "color": "#8a6d1f",
-          "short": "KK",
-          "focus": "메신저 기반 AI와 커머스",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "카카오톡 AI 접점 확대",
-              "weight": 98,
-              "color": "#0f8f82",
-              "description": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215928",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:00",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "■ KT(대표 박윤영)는 지난 1일 소상공인 통합 플랫폼 ‘사장이지’에 ‘AI면접’ 서비스를 출시했다고 밝혔다. 판정 근거: 한국 직접성.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "창작·광고 자동화",
-              "weight": 98,
-              "color": "#7a5a26",
-              "description": "콘텐츠 제작, 광고 문안, 쇼핑 운영 자동화가 소상공인과 브랜드 고객의 지불 의사로 이어질 수 있습니다.",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215928",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:00",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "■ KT(대표 박윤영)는 지난 1일 소상공인 통합 플랫폼 ‘사장이지’에 ‘AI면접’ 서비스를 출시했다고 밝혔다. 판정 근거: 한국 직접성.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "개인화 데이터 안전성",
-              "weight": 48.75,
-              "color": "#c54b40",
-              "description": "대화와 생활 데이터 기반 서비스가 커질수록 동의, 보관, 추천 품질 관리가 핵심 리스크가 됩니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Kakao 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "로컬 플랫폼 방어",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "글로벌 AI 앱이 국내 생활 플랫폼 접점을 잠식하지 못하도록 로컬 맥락과 제휴 자산을 묶어야 합니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "Kakao 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "카카오톡 AI 접점 확대",
-              "body": "메신저, 채널, 커머스 안에서 AI가 예약, 상담, 추천 같은 실행 흐름으로 들어갈 여지가 큽니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215928",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:00",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "■ KT(대표 박윤영)는 지난 1일 소상공인 통합 플랫폼 ‘사장이지’에 ‘AI면접’ 서비스를 출시했다고 밝혔다. 판정 근거: 한국 직접성.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "창작·광고 자동화",
-              "body": "콘텐츠 제작, 광고 문안, 쇼핑 운영 자동화가 소상공인과 브랜드 고객의 지불 의사로 이어질 수 있습니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215928",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:00",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "■ KT(대표 박윤영)는 지난 1일 소상공인 통합 플랫폼 ‘사장이지’에 ‘AI면접’ 서비스를 출시했다고 밝혔다. 판정 근거: 한국 직접성.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "title": "개인화 데이터 안전성",
-              "body": "대화와 생활 데이터 기반 서비스가 커질수록 동의, 보관, 추천 품질 관리가 핵심 리스크가 됩니다.",
-              "score": "49",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Kakao 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "heat": [
-            "KakaoTalk",
-            "Channel",
-            "Commerce",
-            "Assistant",
-            "Creator",
-            "Ad",
-            "Shopping",
-            "SMB",
-            "Consent",
-            "Privacy",
-            "Personalization",
-            "Quality"
-          ]
-        },
-        {
-          "id": "sktelecom",
-          "name": "SK Telecom",
-          "sector": "Telco AI",
-          "color": "#c54b40",
-          "short": "SK",
-          "focus": "통신 AI와 데이터센터",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "통신형 AI 에이전트",
-              "weight": 97.85000000000001,
-              "color": "#0f8f82",
-              "description": "통화, 일정, 고객센터, 멤버십 접점을 묶어 통신사형 개인·기업 에이전트로 확장할 수 있습니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "AI 팩토리·디지털 트윈 협력",
-              "weight": 43.75,
-              "color": "#d68419",
-              "description": "제조 현장과 반도체 공정에 AI 시뮬레이션, 네트워크, 디지털 트윈을 붙여 B2B 레퍼런스를 만들 수 있습니다.",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "GW급 AIDC 사업화",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "GPU, 전력, 네트워크를 결합한 대규모 AI 데이터센터 수요를 통신 자산으로 흡수하려는 흐름입니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            },
-            {
-              "label": "엔터프라이즈 AX 패키징",
-              "weight": 40,
-              "color": "#c54b40",
-              "description": "기업 고객에게 모델보다 상담, 보안, 품질 운영을 묶은 AX 패키지로 판매하는 전략이 중요합니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "통신형 AI 에이전트",
-              "body": "통화, 일정, 고객센터, 멤버십 접점을 묶어 통신사형 개인·기업 에이전트로 확장할 수 있습니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "AI 팩토리·디지털 트윈 협력",
-              "body": "제조 현장과 반도체 공정에 AI 시뮬레이션, 네트워크, 디지털 트윈을 붙여 B2B 레퍼런스를 만들 수 있습니다.",
-              "score": "44",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "title": "GW급 AIDC 사업화",
-              "body": "GPU, 전력, 네트워크를 결합한 대규모 AI 데이터센터 수요를 통신 자산으로 흡수하려는 흐름입니다.",
-              "score": "40",
-              "date": "2026.10.03 11:04",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "SK Telecom 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "heat": [
-            "A.",
-            "Call",
-            "Membership",
-            "Agent",
-            "AI Factory",
-            "Digital Twin",
-            "Semiconductor",
-            "NVIDIA",
-            "AIDC",
-            "GW Scale",
-            "GPU",
-            "Power"
-          ]
-        },
-        {
-          "id": "samsung",
-          "name": "Samsung",
-          "sector": "Device & Chip",
-          "color": "#3563c8",
-          "short": "SS",
-          "focus": "온디바이스 AI와 반도체",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "가전·로봇 피지컬 AI 접점",
-              "weight": 87.85000000000001,
-              "color": "#0f8f82",
-              "description": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Samsung 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "Galaxy AI 온디바이스화",
-              "weight": 53.75,
-              "color": "#d68419",
-              "description": "스마트폰의 실시간 번역, 요약, 개인화 기능이 로컬 추론과 프라이버시 메시지의 대표 접점입니다.",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "Samsung 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "HBM 이후 AI 팩토리 공급망",
-              "weight": 48.75,
-              "color": "#d68419",
-              "description": "HBM, 메모리, 파운드리 수요가 AI 팩토리 구축과 서비스 원가 안정성을 좌우하는 사업 변수입니다.",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "Samsung 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "기기 내 데이터 거버넌스",
-              "weight": 40,
-              "color": "#c54b40",
-              "description": "개인 데이터가 기기에서 처리될수록 모델 업데이트, 권한, 안전성 평가 체계가 구매 조건이 됩니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Samsung 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "가전·로봇 피지컬 AI 접점",
-              "body": "TV, 가전, 로봇이 생활 공간의 AI 인터페이스가 되면 피지컬 AI 서비스 번들과 데이터 접점이 새로 열립니다.",
-              "score": "88",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Samsung 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "Galaxy AI 온디바이스화",
-              "body": "스마트폰의 실시간 번역, 요약, 개인화 기능이 로컬 추론과 프라이버시 메시지의 대표 접점입니다.",
-              "score": "54",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "Samsung 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "title": "HBM 이후 AI 팩토리 공급망",
-              "body": "HBM, 메모리, 파운드리 수요가 AI 팩토리 구축과 서비스 원가 안정성을 좌우하는 사업 변수입니다.",
-              "score": "49",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "Samsung 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            }
-          ],
-          "heat": [
-            "Physical AI",
-            "Robot",
-            "TV",
-            "Appliance",
-            "Galaxy AI",
-            "NPU",
-            "Privacy",
-            "Mobile",
-            "HBM",
-            "Memory",
-            "Foundry",
-            "AI Factory"
-          ]
-        },
-        {
-          "id": "lgai",
-          "name": "LG AI Research",
-          "sector": "Industrial AI",
-          "color": "#9a3f5d",
-          "short": "LG",
-          "focus": "산업 특화 모델과 제조 AI",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "멀티모달 R&D",
-              "weight": 66,
-              "color": "#d68419",
-              "description": "이미지, 센서, 문서 데이터를 함께 읽는 모델이 산업 AI 정확도와 자동화 범위를 넓힙니다.",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215920",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:00",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "■ LG유플러스(대표 홍범식)가 AI 모델 최적화 전문기업 옵트에이아이와 모델 경량화를 통한 \\'토큰 최적화\\' 기술 확보에 나선다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 직접 근거 1건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "제조 현장 자동화",
-              "weight": 92.85000000000001,
-              "color": "#0f8f82",
-              "description": "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "EXAONE 산업 모델",
-              "weight": 53.75,
-              "color": "#c54b40",
-              "description": "범용 챗봇보다 제조, 화학, 바이오 같은 그룹 산업 데이터를 잘 다루는 특화 모델 전략입니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "기업 데이터 폐쇄망",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "민감한 산업 데이터는 클라우드보다 사내망과 전용 모델 운영 요구가 강해질 수 있습니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "멀티모달 R&D",
-              "body": "이미지, 센서, 문서 데이터를 함께 읽는 모델이 산업 AI 정확도와 자동화 범위를 넓힙니다.",
-              "score": "66",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215920",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:00",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "■ LG유플러스(대표 홍범식)가 AI 모델 최적화 전문기업 옵트에이아이와 모델 경량화를 통한 \\'토큰 최적화\\' 기술 확보에 나선다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 직접 근거 1건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "title": "제조 현장 자동화",
-              "body": "품질 검사, 설비 이상 탐지, 작업자 지원을 AI 에이전트형 업무 흐름으로 바꾸는 영역입니다.",
-              "score": "93",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "EXAONE 산업 모델",
-              "body": "범용 챗봇보다 제조, 화학, 바이오 같은 그룹 산업 데이터를 잘 다루는 특화 모델 전략입니다.",
-              "score": "54",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "LG AI Research 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "heat": [
-            "Vision",
-            "Sensor",
-            "Document",
-            "Multimodal",
-            "Inspection",
-            "Factory",
-            "Anomaly",
-            "Workflow",
-            "EXAONE",
-            "Manufacturing",
-            "Chemistry",
-            "Bio"
-          ]
-        },
-        {
-          "id": "kt",
-          "name": "KT",
-          "sector": "Telco Cloud",
-          "color": "#7a5a26",
-          "short": "KT",
-          "focus": "통신 AX와 공공 클라우드",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "금융·공공 AX 번들",
-              "weight": 98,
-              "color": "#0f8f82",
-              "description": "KT의 통신망, 클라우드, 상담 자동화 자산이 규제 산업의 AX 예산과 맞물리는지 봐야 합니다.",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "\"콜센터 AI 말 끊어도 알아듣는다\"...포지큐브, 차세대 AICC 개발",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215914",
-                  "media": "AI Times",
-                  "time": "2026.10.02 16:57",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "콜센터에 전화하면 AI 상담원이 말을 제대로 이해하지 못해 고객 불편을 겪는 사례가 적지 않다. 판정 근거: 사업화 신호.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "금융·공공 고객용 PoC에는 데이터 보관, 감사 로그, 상담 자동화 ROI를 함께 넣으세요."
-            },
-            {
-              "label": "망 데이터 기반 품질 운영",
-              "weight": 43.75,
-              "color": "#c54b40",
-              "description": "네트워크와 고객 운영 데이터를 AI 서비스 품질, 장애 예측, 보안 운영으로 연결할 수 있습니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "KT 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "공공·금융 AI 클라우드",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "국내 데이터 보관과 보안 요구가 강한 고객에게 로컬 클라우드와 모델 운영을 묶어 제안합니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "KT 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            },
-            {
-              "label": "엣지 AI 접점",
-              "weight": 40,
-              "color": "#d68419",
-              "description": "통신망과 엣지 인프라를 활용하면 지연시간이 중요한 산업 현장 AI에 강점이 생깁니다.",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "KT 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "금융·공공 AX 번들",
-              "body": "KT의 통신망, 클라우드, 상담 자동화 자산이 규제 산업의 AX 예산과 맞물리는지 봐야 합니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "\"콜센터 AI 말 끊어도 알아듣는다\"...포지큐브, 차세대 AICC 개발",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215914",
-                  "media": "AI Times",
-                  "time": "2026.10.02 16:57",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "콜센터에 전화하면 AI 상담원이 말을 제대로 이해하지 못해 고객 불편을 겪는 사례가 적지 않다. 판정 근거: 사업화 신호.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "금융·공공 고객용 PoC에는 데이터 보관, 감사 로그, 상담 자동화 ROI를 함께 넣으세요."
-            },
-            {
-              "title": "망 데이터 기반 품질 운영",
-              "body": "네트워크와 고객 운영 데이터를 AI 서비스 품질, 장애 예측, 보안 운영으로 연결할 수 있습니다.",
-              "score": "44",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "KT 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "title": "공공·금융 AI 클라우드",
-              "body": "국내 데이터 보관과 보안 요구가 강한 고객에게 로컬 클라우드와 모델 운영을 묶어 제안합니다.",
-              "score": "40",
-              "date": "2026.10.03 11:04",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "KT 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "heat": [
-            "AICC",
-            "Contact Center",
-            "Sales",
-            "Agent",
-            "Network Data",
-            "Ops",
-            "SOC",
-            "Quality",
-            "Public",
-            "Finance",
-            "Cloud",
-            "Compliance"
-          ]
-        },
-        {
-          "id": "upstage",
-          "name": "Upstage",
-          "sector": "AI Startup",
-          "color": "#0f8f82",
-          "short": "UP",
-          "focus": "문서 AI와 기업 LLM",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "문서 AI 업무 자동화",
-              "weight": 98,
-              "color": "#0f8f82",
-              "description": "계약서, 청구서, 내부 문서 처리 자동화는 기업이 바로 비용 절감을 체감하는 AI 영역입니다.",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215919",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:08",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "‘제브’로 인해 판단 전용 AI 붐이 일어난 가운데, 업스테이지도 ‘솔라 미니 4’를 기반 모델로 ‘솔라 디사이드(Solar Decide)’를 공개했다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "개발자 워크플로 연동",
-              "weight": 98,
-              "color": "#7a5a26",
-              "description": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215919",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:08",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "‘제브’로 인해 판단 전용 AI 붐이 일어난 가운데, 업스테이지도 ‘솔라 미니 4’를 기반 모델로 ‘솔라 디사이드(Solar Decide)’를 공개했다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 직접 근거 1건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "Solar LLM 기업 API",
-              "weight": 48,
-              "color": "#3f8f4f",
-              "description": "한국어와 기업 문서에 최적화된 모델 API로 글로벌 모델 의존도를 낮추는 선택지가 됩니다.",
-              "termId": "sovereign",
-              "sources": [
-                {
-                  "title": "업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215919",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:08",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "‘제브’로 인해 판단 전용 AI 붐이 일어난 가운데, 업스테이지도 ‘솔라 미니 4’를 기반 모델로 ‘솔라 디사이드(Solar Decide)’를 공개했다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            },
-            {
-              "label": "평가 기반 도입 설득",
-              "weight": 43.75,
-              "color": "#c54b40",
-              "description": "벤치마크와 PoC 결과를 구매 논리로 연결해야 스타트업의 엔터프라이즈 영업이 쉬워집니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Upstage 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "문서 AI 업무 자동화",
-              "body": "계약서, 청구서, 내부 문서 처리 자동화는 기업이 바로 비용 절감을 체감하는 AI 영역입니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215919",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:08",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "‘제브’로 인해 판단 전용 AI 붐이 일어난 가운데, 업스테이지도 ‘솔라 미니 4’를 기반 모델로 ‘솔라 디사이드(Solar Decide)’를 공개했다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "개발자 워크플로 연동",
-              "body": "문서, 검색, API를 개발자 친화적으로 붙이면 기업 내부 AI 앱 생태계에 진입할 수 있습니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215919",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:08",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "‘제브’로 인해 판단 전용 AI 붐이 일어난 가운데, 업스테이지도 ‘솔라 미니 4’를 기반 모델로 ‘솔라 디사이드(Solar Decide)’를 공개했다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 직접 근거 1건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "title": "Solar LLM 기업 API",
-              "body": "한국어와 기업 문서에 최적화된 모델 API로 글로벌 모델 의존도를 낮추는 선택지가 됩니다.",
-              "score": "48",
-              "date": "2026.10.03 11:04",
-              "termId": "sovereign",
-              "sources": [
-                {
-                  "title": "업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215919",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:08",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "‘제브’로 인해 판단 전용 AI 붐이 일어난 가운데, 업스테이지도 ‘솔라 미니 4’를 기반 모델로 ‘솔라 디사이드(Solar Decide)’를 공개했다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "heat": [
-            "Document AI",
-            "OCR",
-            "Invoice",
-            "Contract",
-            "API",
-            "SDK",
-            "Search",
-            "Workflow",
-            "Solar",
-            "Korean LLM",
-            "API",
-            "Enterprise"
-          ]
-        },
-        {
-          "id": "rebellions",
-          "name": "Rebellions",
-          "sector": "AI Semiconductor",
-          "color": "#d68419",
-          "short": "RB",
-          "focus": "국산 AI 가속기와 추론 원가",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "국산 AI 칩 공급",
-              "weight": 81,
-              "color": "#d68419",
-              "description": "국내 데이터센터의 추론 원가와 공급망 리스크를 낮추는 대안으로 AI 가속기 수요가 커집니다.",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215903",
-                  "media": "AI Times",
-                  "time": "2026.10.02 15:53",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "국산 AI 반도체 성능 측정 지표 ‘K-Perf’가 실제 전력 현장에서 활용된다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                },
-                {
-                  "title": "국산 AI반도체, 한전 변전소서 실전 검증···리벨리온 NPU 투입",
-                  "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YTWxMNEpSXzZVT3B6YWVqWnAzRHNDcFliRE9xZS1QZ0FBeHhGSUF5WTAyRkYzX3hiS05XdHpMVnpuU0FNLWVrYW5MRm41X0VtR1REMHFFODY4WHdxQV9jSUczRGVMV0xfX2tPS1J4V3DSAXRBVV95cUxQUTZWSGxqTDV3MU40Vy1EOU82Wk9taFAtbThqR0dBdklPMWpvRGgxd0hUQkVZaWlNRF9ydzhHamxNZFJHUHh5MWdaNkdmSnhxbVNMcE45bnJDUlp3Y3NzdVozNDk0WmFKc2FFX3B4NVh3ZXVqbQ?oc=5",
-                  "media": "이뉴스투데이",
-                  "time": "2026.10.02 21:29",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 한국 직접성.",
-                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-                }
-              ],
-              "sourceSummary": "AI Times, 이뉴스투데이 · 직접 근거 2건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "온프레미스 AI 수요",
-              "weight": 82.85000000000001,
-              "color": "#0f8f82",
-              "description": "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Rebellions 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "모델 최적화 생태계",
-              "weight": 43.75,
-              "color": "#c54b40",
-              "description": "칩 성능은 모델 압축, 서빙, 벤치마크 툴과 묶일 때 실제 구매 이유가 됩니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Rebellions 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "통신·클라우드 협력",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "통신사와 클라우드 사업자가 국산 칩을 채택하면 소버린 AI 인프라 논리가 강해집니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "Rebellions 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "국산 AI 칩 공급",
-              "body": "국내 데이터센터의 추론 원가와 공급망 리스크를 낮추는 대안으로 AI 가속기 수요가 커집니다.",
-              "score": "81",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215903",
-                  "media": "AI Times",
-                  "time": "2026.10.02 15:53",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "국산 AI 반도체 성능 측정 지표 ‘K-Perf’가 실제 전력 현장에서 활용된다. 판정 근거: 한국 직접성.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                },
-                {
-                  "title": "국산 AI반도체, 한전 변전소서 실전 검증···리벨리온 NPU 투입",
-                  "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YTWxMNEpSXzZVT3B6YWVqWnAzRHNDcFliRE9xZS1QZ0FBeHhGSUF5WTAyRkYzX3hiS05XdHpMVnpuU0FNLWVrYW5MRm41X0VtR1REMHFFODY4WHdxQV9jSUczRGVMV0xfX2tPS1J4V3DSAXRBVV95cUxQUTZWSGxqTDV3MU40Vy1EOU82Wk9taFAtbThqR0dBdklPMWpvRGgxd0hUQkVZaWlNRF9ydzhHamxNZFJHUHh5MWdaNkdmSnhxbVNMcE45bnJDUlp3Y3NzdVozNDk0WmFKc2FFX3B4NVh3ZXVqbQ?oc=5",
-                  "media": "이뉴스투데이",
-                  "time": "2026.10.02 21:29",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 한국 직접성.",
-                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-                }
-              ],
-              "sourceSummary": "AI Times, 이뉴스투데이 · 직접 근거 2건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "title": "온프레미스 AI 수요",
-              "body": "보안이 민감한 기업은 사내망 추론과 전용 하드웨어를 함께 요구할 가능성이 높습니다.",
-              "score": "83",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Rebellions 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "모델 최적화 생태계",
-              "body": "칩 성능은 모델 압축, 서빙, 벤치마크 툴과 묶일 때 실제 구매 이유가 됩니다.",
-              "score": "44",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Rebellions 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "heat": [
-            "AI Chip",
-            "Inference",
-            "NPU",
-            "Datacenter",
-            "On-prem",
-            "Private AI",
-            "Security",
-            "B2B",
-            "Optimization",
-            "Serving",
-            "Benchmark",
-            "SDK"
-          ]
-        },
-        {
-          "id": "furiosa",
-          "name": "FuriosaAI",
-          "sector": "AI Semiconductor",
-          "color": "#3f8f4f",
-          "short": "FA",
-          "focus": "저전력 추론 칩",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "전용 AI 어플라이언스",
-              "weight": 82.85000000000001,
-              "color": "#0f8f82",
-              "description": "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "저전력 추론 원가",
-              "weight": 53.75,
-              "color": "#d68419",
-              "description": "GPU 의존도가 높아질수록 전력 대비 추론 성능은 AI 서비스 마진의 핵심 지표가 됩니다.",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "벤치마크 신뢰 확보",
-              "weight": 43.75,
-              "color": "#c54b40",
-              "description": "칩 도입은 성능 수치보다 실제 모델 워크로드에서 검증된 벤치마크와 안정성이 중요합니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "서버 생태계 확장",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "국산 칩이 서버, 클라우드, SI 파트너와 묶여야 실제 도입 가능한 인프라 대안이 됩니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "전용 AI 어플라이언스",
-              "body": "보안과 지연시간이 중요한 현장형 AI 서비스는 전용 장비와 모델 번들로 팔릴 수 있습니다.",
-              "score": "83",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "저전력 추론 원가",
-              "body": "GPU 의존도가 높아질수록 전력 대비 추론 성능은 AI 서비스 마진의 핵심 지표가 됩니다.",
-              "score": "54",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [],
-              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "title": "벤치마크 신뢰 확보",
-              "body": "칩 도입은 성능 수치보다 실제 모델 워크로드에서 검증된 벤치마크와 안정성이 중요합니다.",
-              "score": "44",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "FuriosaAI 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "heat": [
-            "Appliance",
-            "Edge",
-            "Factory",
-            "Private",
-            "Low Power",
-            "Inference",
-            "TCO",
-            "Server",
-            "Benchmark",
-            "Workload",
-            "Stability",
-            "SDK"
-          ]
-        },
-        {
-          "id": "wrtn",
-          "name": "Wrtn",
-          "sector": "AI Service",
-          "color": "#7b61c9",
-          "short": "WR",
-          "focus": "개인·소상공인 AI 앱",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "B2C AI 슈퍼앱",
-              "weight": 97.85000000000001,
-              "color": "#0f8f82",
-              "description": "검색, 작성, 요약, 자동화를 한 앱 안에 묶어 일반 사용자 접점을 넓히는 전략입니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Wrtn 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "소상공인 업무 자동화",
-              "weight": 92.85000000000001,
-              "color": "#0f8f82",
-              "description": "마케팅 문구, 고객 응대, 예약, 콘텐츠 운영은 작지만 반복적인 지불 의사가 있는 영역입니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Wrtn 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "콘텐츠 생성 워크플로",
-              "weight": 91,
-              "color": "#7a5a26",
-              "description": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
-              "termId": "ai-code",
-              "sources": [],
-              "sourceSummary": "Wrtn 직접 원문 수집 대기",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "사용자 데이터 신뢰",
-              "weight": 40,
-              "color": "#c54b40",
-              "description": "개인 업무 데이터를 다루는 서비스일수록 보관, 삭제, 추천 투명성 메시지가 중요합니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Wrtn 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "B2C AI 슈퍼앱",
-              "body": "검색, 작성, 요약, 자동화를 한 앱 안에 묶어 일반 사용자 접점을 넓히는 전략입니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Wrtn 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "소상공인 업무 자동화",
-              "body": "마케팅 문구, 고객 응대, 예약, 콘텐츠 운영은 작지만 반복적인 지불 의사가 있는 영역입니다.",
-              "score": "93",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Wrtn 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "콘텐츠 생성 워크플로",
-              "body": "이미지, 영상, 문서 생성 기능을 업무 흐름으로 묶을 때 단순 챗봇보다 체류와 전환이 커집니다.",
-              "score": "91",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [],
-              "sourceSummary": "Wrtn 직접 원문 수집 대기",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            }
-          ],
-          "heat": [
-            "Super App",
-            "Search",
-            "Write",
-            "Automation",
-            "SMB",
-            "Marketing",
-            "CS",
-            "Reservation",
-            "Content",
-            "Image",
-            "Video",
-            "Workflow"
-          ]
-        },
-        {
-          "id": "fasoo",
-          "name": "Fasoo AI",
-          "sector": "Security AI",
-          "color": "#c54b40",
-          "short": "FS",
-          "focus": "문서 보안과 기업 AX",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "글로벌 AX 영업",
-              "weight": 92.85000000000001,
-              "color": "#0f8f82",
-              "description": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "문서 워크플로 자동화",
-              "weight": 86,
-              "color": "#7a5a26",
-              "description": "검토, 요약, 승인, 배포를 문서 보안 체계 안에서 자동화하면 기존 고객 기반을 확장할 수 있습니다.",
-              "termId": "ai-code",
-              "sources": [],
-              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "문서 보안 AI",
-              "weight": 53.75,
-              "color": "#c54b40",
-              "description": "기업 문서와 민감정보를 AI가 다룰 때 접근권한, 추적, 유출 방지가 구매 조건이 됩니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "데이터 거버넌스 번들",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "AI 도입 전 데이터 분류, 권한, 보존 정책을 정리하는 보안 번들이 중요해집니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "글로벌 AX 영업",
-              "body": "미국 법인과 파트너를 통해 제조, 금융, 공공 고객의 업무 자동화 수요를 공략합니다.",
-              "score": "93",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "문서 워크플로 자동화",
-              "body": "검토, 요약, 승인, 배포를 문서 보안 체계 안에서 자동화하면 기존 고객 기반을 확장할 수 있습니다.",
-              "score": "86",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [],
-              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "title": "문서 보안 AI",
-              "body": "기업 문서와 민감정보를 AI가 다룰 때 접근권한, 추적, 유출 방지가 구매 조건이 됩니다.",
-              "score": "54",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Fasoo AI 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "heat": [
-            "AX",
-            "US",
-            "Manufacturing",
-            "Finance",
-            "Review",
-            "Summary",
-            "Approval",
-            "Workflow",
-            "DRM",
-            "DLP",
-            "Audit",
-            "Policy"
-          ]
-        },
-        {
-          "id": "openai",
-          "name": "OpenAI",
-          "sector": "Model Platform",
-          "color": "#3563c8",
-          "short": "OA",
-          "focus": "에이전트 플랫폼과 멀티모달",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "Agent Runtime 표준화",
-              "weight": 98,
-              "color": "#0f8f82",
-              "description": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
-                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute l... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "A Flaw in ChatGPT’s Mac App Could Have Let Hackers Grab Sensitive Data",
-                  "url": "https://www.wired.com/story/a-flaw-in-chatgpts-mac-app-could-have-let-hackers-grab-sensitive-data/",
-                  "media": "WIRED AI",
-                  "time": "2026.10.02 18:45",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "While the focus has been on AI agents’ hacking capabilities, a recently patched vulnerabilit...",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI, WIRED AI · 직접 근거 2건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "개발 워크플로 장악",
-              "weight": 98,
-              "color": "#7a5a26",
-              "description": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "평가 자동화 내재화",
-              "weight": 76,
-              "color": "#c54b40",
-              "description": "모델 교체와 프롬프트 변경 전후 품질 회귀를 플랫폼 안에서 검증하게 만드는 전략입니다.",
-              "termId": "evalops",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "외부 툴 연결성 확보",
-              "weight": 40,
-              "color": "#3563c8",
-              "description": "타사 업무 시스템과 데이터 소스를 모델 경험 안으로 끌어오는 연결 표준 경쟁에 대응합니다.",
-              "termId": "mcp",
-              "sources": [],
-              "sourceSummary": "OpenAI 직접 원문 수집 대기",
-              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "Agent Runtime 표준화",
-              "body": "SDK, 툴 호출, 상태 관리를 묶어 에이전트 앱의 기본 실행 레이어를 장악하려는 흐름입니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
-                  "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute l... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "A Flaw in ChatGPT’s Mac App Could Have Let Hackers Grab Sensitive Data",
-                  "url": "https://www.wired.com/story/a-flaw-in-chatgpts-mac-app-could-have-let-hackers-grab-sensitive-data/",
-                  "media": "WIRED AI",
-                  "time": "2026.10.02 18:45",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "While the focus has been on AI agents’ hacking capabilities, a recently patched vulnerabilit...",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI, WIRED AI · 직접 근거 2건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "개발 워크플로 장악",
-              "body": "코드 생성보다 이슈 분석, 테스트 수정, 리뷰까지 이어지는 저장소 운영면으로 확장하고 있습니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "title": "평가 자동화 내재화",
-              "body": "모델 교체와 프롬프트 변경 전후 품질 회귀를 플랫폼 안에서 검증하게 만드는 전략입니다.",
-              "score": "76",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "heat": [
-            "Runtime",
-            "Tool Call",
-            "Trace",
-            "Handoff",
-            "Repo Ops",
-            "PR Review",
-            "CI Fix",
-            "IDE",
-            "Regression",
-            "Eval",
-            "Guardrail",
-            "Trace"
-          ]
-        },
-        {
-          "id": "anthropic",
-          "name": "Anthropic",
-          "sector": "Model Provider",
-          "color": "#0f8f82",
-          "short": "AN",
-          "focus": "MCP와 에이전트 개발면",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "Claude Code 운영화",
-              "weight": 98,
-              "color": "#7a5a26",
-              "description": "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "안전성 평가 메시지",
-              "weight": 66,
-              "color": "#c54b40",
-              "description": "기업 도입의 불안을 줄이기 위해 모델 성능보다 실패 경계와 평가 체계를 함께 강조합니다.",
-              "termId": "evalops",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "권한 있는 Tool Use",
-              "weight": 87.85000000000001,
-              "color": "#0f8f82",
-              "description": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Anthropic 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "MCP 생태계 선점",
-              "weight": 50.6,
-              "color": "#3563c8",
-              "description": "Claude가 업무 시스템과 연결되는 기본 통로를 MCP 서버와 커넥터 생태계로 넓히고 있습니다.",
-              "termId": "mcp",
-              "sources": [],
-              "sourceSummary": "Anthropic 직접 원문 수집 대기",
-              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "Claude Code 운영화",
-              "body": "IDE 보조를 넘어 터미널, 저장소, 테스트 수정까지 맡는 개발 운영 도구로 포지셔닝합니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "title": "안전성 평가 메시지",
-              "body": "기업 도입의 불안을 줄이기 위해 모델 성능보다 실패 경계와 평가 체계를 함께 강조합니다.",
-              "score": "66",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [
-                {
-                  "title": "Call it AI, call it Super Intelligence, only 2% of consumers are buying it",
-                  "url": "https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:56",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                },
-                {
-                  "title": "It&#8217;s not AI anymore, it&#8217;s ‘super intelligence’ (according to the White House)",
-                  "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 02:48",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "This week, the White House got&#160;nearly every&#160;major tech CEO in one room — Zuckerber... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 직접 근거 2건",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "title": "권한 있는 Tool Use",
-              "body": "에이전트가 실제 업무를 실행할 때 승인, 권한 범위, 감사 로그를 제품 차별점으로 밀고 있습니다.",
-              "score": "88",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Anthropic 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            }
-          ],
-          "heat": [
-            "Claude Code",
-            "Terminal",
-            "Repo",
-            "Test",
-            "Safety Eval",
-            "Red Team",
-            "Policy",
-            "Logs",
-            "Approval",
-            "Audit",
-            "Desktop",
-            "Agent"
-          ]
-        },
-        {
-          "id": "google",
-          "name": "Google",
-          "sector": "Cloud & Search",
-          "color": "#d68419",
-          "short": "GO",
-          "focus": "검색 재구성과 온디바이스",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "Gemini 온디바이스화",
-              "weight": 76,
-              "color": "#d68419",
-              "description": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "구글 \"우주 데이터센터 실현 위해 스타십 최소 1800회 발사 필요\"",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215886",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:35",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "구글이 우주에 대규모 데이터센터를 구축하려면 스페이스X의 차세대 로켓 스타십(Starship)을 앞으로 10년 동안 최소 1800회 이상 발사해야 할 것으로 분석했다. 판정 근거: 인프라·원가.",
-                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "TPU 원가 우위 방어",
-              "weight": 71,
-              "color": "#c54b40",
-              "description": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
-              "termId": "evalops",
-              "sources": [
-                {
-                  "title": "구글 \"우주 데이터센터 실현 위해 스타십 최소 1800회 발사 필요\"",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215886",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:35",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "구글이 우주에 대규모 데이터센터를 구축하려면 스페이스X의 차세대 로켓 스타십(Starship)을 앞으로 10년 동안 최소 1800회 이상 발사해야 할 것으로 분석했다. 판정 근거: 인프라·원가.",
-                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "label": "검색 수익모델 재설계",
-              "weight": 97.85000000000001,
-              "color": "#0f8f82",
-              "description": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Google 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "지역 AI 클라우드 패키징",
-              "weight": 40,
-              "color": "#3f8f4f",
-              "description": "각국 데이터 주권 요구에 맞춰 클라우드 리전, 파트너, 모델 제공 방식을 현지화합니다.",
-              "termId": "sovereign",
-              "sources": [],
-              "sourceSummary": "Google 직접 원문 수집 대기",
-              "takeaway": "국내 데이터 보관, 공공 조달, 산업별 특화 모델 요구가 기회인지 리스크인지 나눠 보세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "Gemini 온디바이스화",
-              "body": "Android와 Chrome 안에서 지연시간, 프라이버시, 로컬 개인화를 묶어 차별화하려는 흐름입니다.",
-              "score": "76",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "구글 \"우주 데이터센터 실현 위해 스타십 최소 1800회 발사 필요\"",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215886",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:35",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "구글이 우주에 대규모 데이터센터를 구축하려면 스페이스X의 차세대 로켓 스타십(Starship)을 앞으로 10년 동안 최소 1800회 이상 발사해야 할 것으로 분석했다. 판정 근거: 인프라·원가.",
-                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "title": "TPU 원가 우위 방어",
-              "body": "모델 경쟁을 클라우드 인프라 비용과 TPU 스택 락인으로 연결해 장기 원가 경쟁력을 지키려 합니다.",
-              "score": "71",
-              "date": "2026.10.03 11:04",
-              "termId": "evalops",
-              "sources": [
-                {
-                  "title": "구글 \"우주 데이터센터 실현 위해 스타십 최소 1800회 발사 필요\"",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215886",
-                  "media": "AI Times",
-                  "time": "2026.10.02 17:35",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "구글이 우주에 대규모 데이터센터를 구축하려면 스페이스X의 차세대 로켓 스타십(Starship)을 앞으로 10년 동안 최소 1800회 이상 발사해야 할 것으로 분석했다. 판정 근거: 인프라·원가.",
-                  "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            },
-            {
-              "title": "검색 수익모델 재설계",
-              "body": "AI 답변, 쇼핑, 광고가 한 화면에 섞이면서 검색 UX와 수익 배분이 동시에 흔들리고 있습니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [],
-              "sourceSummary": "Google 직접 원문 수집 대기",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            }
-          ],
-          "heat": [
-            "Gemini Nano",
-            "Android",
-            "Chrome",
-            "NPU",
-            "TPU",
-            "Vertex",
-            "Cost",
-            "Cloud",
-            "AI Search",
-            "Ads",
-            "Shopping",
-            "Overview"
-          ]
-        },
-        {
-          "id": "apple",
-          "name": "Apple",
-          "sector": "Device & OS",
-          "color": "#5b6472",
-          "short": "AP",
-          "focus": "온디바이스 AI와 OS 배포면",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "Siri 에이전트화",
-              "weight": 98,
-              "color": "#0f8f82",
-              "description": "Siri와 앱 인텐트가 실제 작업 실행으로 확장되면 모바일 에이전트 UX의 기준점이 됩니다.",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
-                  "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 05:08",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI age... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                },
-                {
-                  "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new ri...",
-                  "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 03:11",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI, TechCrunch AI · 직접 근거 2건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "개발자 AI API 잠금",
-              "weight": 98,
-              "color": "#7a5a26",
-              "description": "앱 개발자가 Apple의 OS AI API를 쓰게 되면 배포 채널과 사용자 경험의 통제력이 커집니다.",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
-                  "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 05:08",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI age... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                },
-                {
-                  "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new ri...",
-                  "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 03:11",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI, TechCrunch AI · 회사 원문 2건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "Apple Intelligence 배포면",
-              "weight": 81,
-              "color": "#d68419",
-              "description": "iPhone, iPad, Mac 기본 OS에 AI 기능이 들어가면 소비자 접점의 기본 기대치가 바뀝니다.",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new ri...",
-                  "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 03:11",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 회사 원문 1건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            },
-            {
-              "label": "Private Cloud Compute",
-              "weight": 43.75,
-              "color": "#c54b40",
-              "description": "개인 데이터와 클라우드 추론을 함께 쓰는 구조에서 프라이버시와 감사 가능성이 차별점이 됩니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Apple 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "Siri 에이전트화",
-              "body": "Siri와 앱 인텐트가 실제 작업 실행으로 확장되면 모바일 에이전트 UX의 기준점이 됩니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
-                  "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 05:08",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI age... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                },
-                {
-                  "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new ri...",
-                  "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 03:11",
-                  "evidence": "회사·전략 직접 언급",
-                  "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI, TechCrunch AI · 직접 근거 2건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "개발자 AI API 잠금",
-              "body": "앱 개발자가 Apple의 OS AI API를 쓰게 되면 배포 채널과 사용자 경험의 통제력이 커집니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
-                  "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 05:08",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI age... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                },
-                {
-                  "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new ri...",
-                  "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 03:11",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI, TechCrunch AI · 회사 원문 2건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "title": "Apple Intelligence 배포면",
-              "body": "iPhone, iPad, Mac 기본 OS에 AI 기능이 들어가면 소비자 접점의 기본 기대치가 바뀝니다.",
-              "score": "81",
-              "date": "2026.10.03 11:04",
-              "termId": "on-device",
-              "sources": [
-                {
-                  "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new ri...",
-                  "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-                  "media": "TechCrunch AI",
-                  "time": "2026.10.03 03:11",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that... 판정 근거: 플랫폼 경쟁.",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "TechCrunch AI · 회사 원문 1건",
-              "takeaway": "지연시간이나 개인정보가 민감한 AI 기능을 로컬 처리 후보로 분리해 보세요."
-            }
-          ],
-          "heat": [
-            "Siri",
-            "App Intents",
-            "Agent",
-            "Mobile",
-            "Developer API",
-            "App Store",
-            "Xcode",
-            "SDK",
-            "Apple Intelligence",
-            "iOS",
-            "macOS",
-            "On-device"
-          ]
-        },
-        {
-          "id": "microsoft",
-          "name": "Microsoft",
-          "sector": "Enterprise Stack",
-          "color": "#c54b40",
-          "short": "MS",
-          "focus": "Copilot 운영면과 보안",
-          "updatedAt": "2026.10.03 11:04 KST",
-          "keywords": [
-            {
-              "label": "Copilot 업무 레이어화",
-              "weight": 98,
-              "color": "#0f8f82",
-              "description": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "If a data center is camouflaged in the woods, will anyone hate it?",
-                  "url": "https://www.theverge.com/tech/1003681/microsoft-data-centers-ai-environment-biomimicry",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 01:44",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "San Antonio City Councilmember Ric Galvan remembers when data centers first arrived in his c...",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI · 회사 원문 1건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "label": "개발자 플랫폼 방어",
-              "weight": 98,
-              "color": "#7a5a26",
-              "description": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "If a data center is camouflaged in the woods, will anyone hate it?",
-                  "url": "https://www.theverge.com/tech/1003681/microsoft-data-centers-ai-environment-biomimicry",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 01:44",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "San Antonio City Councilmember Ric Galvan remembers when data centers first arrived in his c...",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI · 회사 원문 1건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "label": "Graph Grounding 강화",
-              "weight": 69,
-              "color": "#3563c8",
-              "description": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
-              "termId": "mcp",
-              "sources": [
-                {
-                  "title": "오퍼스 5.5 ‘이것은 중요합니다’ 남발…습관 못 버린 AI 글쓰기",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215890",
-                  "media": "AI Times",
-                  "time": "2026.10.02 14:07",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "AI 모델이 작성한 글을 구분하는 기준이 단어 단위에서 문장 구조와 습관적 구문 패턴으로 바뀌고 있다. 판정 근거: 사업화 신호.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
-            },
-            {
-              "label": "보안 Copilot 확장",
-              "weight": 43.75,
-              "color": "#c54b40",
-              "description": "SOC, Defender, 감사 로그를 결합해 에이전트 도입에서 가장 먼저 예산이 붙는 보안 영역을 공략합니다.",
-              "termId": "evalops",
-              "sources": [],
-              "sourceSummary": "Microsoft 직접 원문 수집 대기",
-              "takeaway": "품질 평가를 출시 전 QA가 아니라 운영 중 회귀 감지와 감사 로그 체계로 설계하세요."
-            }
-          ],
-          "stack": [
-            {
-              "title": "Copilot 업무 레이어화",
-              "body": "Office, Teams, Windows의 반복 업무를 Copilot 액션으로 묶어 기업 기본 업무면을 넓힙니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "agent",
-              "sources": [
-                {
-                  "title": "If a data center is camouflaged in the woods, will anyone hate it?",
-                  "url": "https://www.theverge.com/tech/1003681/microsoft-data-centers-ai-environment-biomimicry",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 01:44",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "San Antonio City Councilmember Ric Galvan remembers when data centers first arrived in his c...",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI · 회사 원문 1건",
-              "takeaway": "우리 서비스에서 조회가 실행으로 바뀌는 접점을 찾고, 승인/로그/롤백 요구사항을 먼저 점검하세요."
-            },
-            {
-              "title": "개발자 플랫폼 방어",
-              "body": "GitHub와 Azure DevOps를 통해 코드 작성 이후 리뷰, 테스트, 배포 검증까지 묶어두려 합니다.",
-              "score": "98",
-              "date": "2026.10.03 11:04",
-              "termId": "ai-code",
-              "sources": [
-                {
-                  "title": "If a data center is camouflaged in the woods, will anyone hate it?",
-                  "url": "https://www.theverge.com/tech/1003681/microsoft-data-centers-ai-environment-biomimicry",
-                  "media": "The Verge AI",
-                  "time": "2026.10.03 01:44",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "San Antonio City Councilmember Ric Galvan remembers when data centers first arrived in his c...",
-                  "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
-                }
-              ],
-              "sourceSummary": "The Verge AI · 회사 원문 1건",
-              "takeaway": "코드 생성량보다 테스트 통과율, 리뷰 품질, 배포 실패 감소 같은 운영 지표로 비교하세요."
-            },
-            {
-              "title": "Graph Grounding 강화",
-              "body": "메일, 문서, 일정, 권한 정보를 Graph로 묶어 기업 내부 문맥을 모델 응답의 핵심 자산으로 만듭니다.",
-              "score": "69",
-              "date": "2026.10.03 11:04",
-              "termId": "mcp",
-              "sources": [
-                {
-                  "title": "오퍼스 5.5 ‘이것은 중요합니다’ 남발…습관 못 버린 AI 글쓰기",
-                  "url": "https://www.aitimes.com/news/articleView.html?idxno=215890",
-                  "media": "AI Times",
-                  "time": "2026.10.02 14:07",
-                  "evidence": "회사 관련 AI 전략 기사",
-                  "summary": "AI 모델이 작성한 글을 구분하는 기준이 단어 단위에서 문장 구조와 습관적 구문 패턴으로 바뀌고 있다. 판정 근거: 사업화 신호.",
-                  "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-                }
-              ],
-              "sourceSummary": "AI Times · 회사 원문 1건",
-              "takeaway": "연동 후보 데이터와 업무 시스템을 우선순위화하고, 커넥터·권한 범위 전략을 점검하세요."
-            }
-          ],
-          "heat": [
-            "Office",
-            "Teams",
-            "Workflow",
-            "Agent",
-            "GitHub",
-            "Azure DevOps",
-            "Review",
-            "CI",
-            "Graph",
-            "Identity",
-            "Context",
-            "Permission"
-          ]
-        }
-      ],
-      "keywordData": [
-        {
-          "id": "sovereign-procurement",
-          "label": "국산 파운데이션 모델 조달전",
-          "score": 98,
-          "aliases": [
-            "소버린",
-            "공공",
-            "정부",
-            "과기정통부",
-            "정책",
-            "국산"
-          ],
-          "keywords": [
-            "#AI반도체",
-            "#협력",
-            "#On-Device",
-            "#NVIDIA",
-            "#투자",
-            "#정책"
-          ],
-          "color": "#3f8f4f",
-          "description": "공공 조달, 독자 모델, 로컬 데이터 요구가 국내 AI 사업 기회로 연결되는 신호입니다.",
-          "brief": {
-            "background": "AI 인프라와 모델이 산업 정책으로 해석되며 공공·국산화 요구가 커지고 있습니다.",
-            "reaction": "국내 플랫폼, 통신사, 모델 스타트업은 공공 조달과 산업별 모델을 동시에 겨냥합니다.",
-            "implication": "사업자는 공공 레퍼런스, 국내 데이터 처리, 보안 인증 로드맵을 제안서 앞단에 둬야 합니다."
-          },
-          "signals": "18개 기사 신호 · 11개 소스",
-          "timeline": [
-            {
-              "time": "2026.10.02 15:53",
-              "title": "“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215903",
-              "summary": "국산 AI 반도체 성능 측정 지표 ‘K-Perf’가 실제 전력 현장에서 활용된다. 판정 근거: 한국 직접성.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            },
-            {
-              "time": "2026.10.02 12:24",
-              "title": "엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215880",
-              "summary": "엔비디아와 소프트뱅크가 오픈AI에 각각 100억달러씩, 총 200억달러(약 27조원)의 추가 투자를 집행했다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            },
-            {
-              "time": "2026.10.02 16:44",
-              "title": "백악관에 모인 AI 수장들…젠슨 황·저커버그, 아모데이에 '질문 세례'",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215918",
-              "summary": "미국 백악관에서 열린 주요 AI 기업 수장들의 모임에서 앤트로픽을 둘러싸고 비공개 신경전이 벌어졌던 것으로 알려졌다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            },
-            {
-              "time": "2026.10.02 21:29",
-              "title": "국산 AI반도체, 한전 변전소서 실전 검증···리벨리온 NPU 투입",
-              "type": "이뉴스투데이",
-              "source": "이뉴스투데이",
-              "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YTWxMNEpSXzZVT3B6YWVqWnAzRHNDcFliRE9xZS1QZ0FBeHhGSUF5WTAyRkYzX3hiS05XdHpMVnpuU0FNLWVrYW5MRm41X0VtR1REMHFFODY4WHdxQV9jSUczRGVMV0xfX2tPS1J4V3DSAXRBVV95cUxQUTZWSGxqTDV3MU40Vy1EOU82Wk9taFAtbThqR0dBdklPMWpvRGgxd0hUQkVZaWlNRF9ydzhHamxNZFJHUHh5MWdaNkdmSnhxbVNMcE45bnJDUlp3Y3NzdVozNDk0WmFKc2FFX3B4NVh3ZXVqbQ?oc=5",
-              "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 한국 직접성.",
-              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-            }
-          ]
-        },
-        {
-          "id": "nvidia-korea",
-          "label": "피지컬 AI 파트너십 전선",
-          "score": 98,
-          "aliases": [
-            "nvidia",
-            "엔비디아",
-            "젠슨 황",
-            "피지컬 ai",
-            "로봇",
-            "크래프톤"
-          ],
-          "keywords": [
-            "#NVIDIA",
-            "#투자",
-            "#정책",
-            "#피지컬AI"
-          ],
-          "color": "#0f8f82",
-          "description": "엔비디아의 한국 파트너십, 로봇·게임·제조 AI 협력 신호입니다.",
-          "brief": {
-            "background": "젠슨 황 방한과 국내 기업 회동은 피지컬 AI와 GPU 생태계가 한국 산업 파트너를 찾는 신호입니다.",
-            "reaction": "게임, 제조, 로봇, 반도체 기업들이 엔비디아 스택과의 접점을 빠르게 확인하고 있습니다.",
-            "implication": "국내 AI 사업자는 GPU 의존 기능, 로봇·시뮬레이션 연동, 파트너십 후보를 같은 표로 점검해야 합니다."
-          },
-          "signals": "11개 기사 신호 · 7개 소스",
-          "timeline": [
-            {
-              "time": "2026.10.02 12:24",
-              "title": "엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215880",
-              "summary": "엔비디아와 소프트뱅크가 오픈AI에 각각 100억달러씩, 총 200억달러(약 27조원)의 추가 투자를 집행했다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            },
-            {
-              "time": "2026.10.02 16:44",
-              "title": "백악관에 모인 AI 수장들…젠슨 황·저커버그, 아모데이에 '질문 세례'",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215918",
-              "summary": "미국 백악관에서 열린 주요 AI 기업 수장들의 모임에서 앤트로픽을 둘러싸고 비공개 신경전이 벌어졌던 것으로 알려졌다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            },
-            {
-              "time": "2026.10.02 12:07",
-              "title": "엔비디아가 점찍은 3D AI…엔닷라이트, 로봇 학습 시장 공략",
-              "type": "서울경제",
-              "source": "서울경제",
-              "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9xSHJLWWtlYVJVYVg3UXdIMVlqQVFXRktZbWIxTW1IaXJpbEhuSkJZaExCWVpWSEJTNFE5RmtOeGVaaHpFZmtuVUNmclJERmUtVlHSAVNBVV95cUxQU1A4b3JCWURDMW1jZWlrcTFtd3hXNHN4TVlBT21Ua1BUREUyWGJ2QVhmOGt5OXFnR1I0djJPekdQcmdiYzVRSG9IUUdmdVhrd29kOA?oc=5",
-              "summary": "엔비디아의 한국 파트너십이 GPU 공급, AI 팩토리, 로봇·게임·제조 협력으로 실제 전환되는지 봐야 하는 신호입니다. 단순 행사성 노출인지, 국내 기업의 제품·인프라 로드맵을 바꿀 협력인지 구분해야 합니다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            },
-            {
-              "time": "2026.10.03 11:04",
-              "title": "엔비디아, 쿠모 태뷸러 공개...오픈소스 정형 데이터 파운데이션 모델로 확장 탄력",
-              "type": "DigitalToday AI",
-              "source": "DigitalToday AI",
-              "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704782",
-              "summary": "엔터프라이즈 AI 도입이 파트너 수익, 보안 복원력, 클라우드 현대화 패키지로 묶이는 신호입니다. SI·리셀러 채널 전략에 반영할 만합니다. 판정 근거: 한국 직접성.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            }
-          ]
-        },
-        {
-          "id": "ai-chip-supply",
-          "label": "국내 NPU·GPU 수주전",
-          "score": 98,
-          "aliases": [
-            "hbm",
-            "ai 반도체",
-            "gpu",
-            "npu",
-            "칩",
-            "가속기"
-          ],
-          "keywords": [
-            "#AI반도체",
-            "#협력",
-            "#투자",
-            "#On-Device",
-            "#정책"
-          ],
-          "color": "#3563c8",
-          "description": "추론 원가, GPU 조달, 국산 NPU 도입 가능성을 좌우하는 공급망·수주 신호입니다.",
-          "brief": {
-            "background": "HBM과 AI 칩 수급은 모델 성능보다 서비스 원가와 출시 속도에 직접 영향을 줍니다.",
-            "reaction": "대기업과 스타트업은 GPU 대체 옵션, 국산 NPU, 클라우드 조달 조건을 함께 검토하고 있습니다.",
-            "implication": "견적과 제안서에는 GPU/HBM 의존도, 대체 인프라, 비용 변동 시나리오를 미리 넣어야 합니다."
-          },
-          "signals": "7개 기사 신호 · 5개 소스",
-          "timeline": [
-            {
-              "time": "2026.10.02 17:00",
-              "title": "LG유플러스, 옵트에이아이와 AI 모델 경량화 협력 등 단신",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215920",
-              "summary": "■ LG유플러스(대표 홍범식)가 AI 모델 최적화 전문기업 옵트에이아이와 모델 경량화를 통한 \\'토큰 최적화\\' 기술 확보에 나선다. 판정 근거: 한국 직접성.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            },
-            {
-              "time": "2026.10.02 15:53",
-              "title": "“반도체 성능 지표 ‘K-Perf’, 실험실 벗어나 실제 현장서 실증”",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215903",
-              "summary": "국산 AI 반도체 성능 측정 지표 ‘K-Perf’가 실제 전력 현장에서 활용된다. 판정 근거: 한국 직접성.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            },
-            {
-              "time": "2026.10.02 21:29",
-              "title": "국산 AI반도체, 한전 변전소서 실전 검증···리벨리온 NPU 투입",
-              "type": "이뉴스투데이",
-              "source": "이뉴스투데이",
-              "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YTWxMNEpSXzZVT3B6YWVqWnAzRHNDcFliRE9xZS1QZ0FBeHhGSUF5WTAyRkYzX3hiS05XdHpMVnpuU0FNLWVrYW5MRm41X0VtR1REMHFFODY4WHdxQV9jSUczRGVMV0xfX2tPS1J4V3DSAXRBVV95cUxQUTZWSGxqTDV3MU40Vy1EOU82Wk9taFAtbThqR0dBdklPMWpvRGgxd0hUQkVZaWlNRF9ydzhHamxNZFJHUHh5MWdaNkdmSnhxbVNMcE45bnJDUlp3Y3NzdVozNDk0WmFKc2FFX3B4NVh3ZXVqbQ?oc=5",
-              "summary": "AI 서비스의 원가와 출시 속도를 좌우하는 GPU, HBM, NPU, AI 팩토리 조달 신호입니다. 모델 성능보다 인프라 확보 조건과 추론 단가가 사업성 판단의 병목이 될 수 있습니다. 판정 근거: 한국 직접성.",
-              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-            },
-            {
-              "time": "2026.10.02 17:18",
-              "title": "텐센트, 오라클서 AI 칩 10만개 임대…규제 피하려 동남아로",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215909",
-              "summary": "중국의 텐센트가 AI 개발을 가속하기 위해 미국 클라우드 기업 오라클로부터 고성능 AI 칩 10만개를 임대하기로 했다. 판정 근거: 규제·리스크.",
-              "takeaway": "GPU/NPU 조달안, 클라우드 단가, 서비스별 추론비 민감도를 업데이트하세요."
-            }
-          ]
-        },
-        {
-          "id": "security-alliance",
-          "label": "AI 보안 인증·감사 로그",
-          "score": 98,
-          "aliases": [
-            "kisa",
-            "보안",
-            "글래스윙",
-            "anthropic",
-            "권한",
-            "감사"
-          ],
-          "keywords": [
-            "#NVIDIA",
-            "#정책",
-            "#보안",
-            "#투자"
-          ],
-          "color": "#c54b40",
-          "description": "AI 도입 심사에서 권한, 감사 로그, 보안 검증이 전면에 올라오는 흐름입니다.",
-          "brief": {
-            "background": "AI가 업무 시스템에 연결되면서 보안 기관과 글로벌 모델사의 협력 신호가 커지고 있습니다.",
-            "reaction": "기업 고객은 기능 데모보다 권한 통제, 로그, 사고 대응 체계를 구매 조건으로 보기 시작했습니다.",
-            "implication": "B2B AI 제품은 보안 체크리스트, 관리자 승인 플로우, 감사 로그 화면을 영업 자료에 먼저 넣어야 합니다."
-          },
-          "signals": "12개 기사 신호 · 5개 소스",
-          "timeline": [
-            {
-              "time": "2026.10.02 16:44",
-              "title": "백악관에 모인 AI 수장들…젠슨 황·저커버그, 아모데이에 '질문 세례'",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215918",
-              "summary": "미국 백악관에서 열린 주요 AI 기업 수장들의 모임에서 앤트로픽을 둘러싸고 비공개 신경전이 벌어졌던 것으로 알려졌다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            },
-            {
-              "time": "2026.10.02 12:40",
-              "title": "앤트로픽, 14일 투자자 행사 개최...11월 추수감사절 전 상장 목표",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215878",
-              "summary": "앤트로픽이 기업공개(IPO) 일정을 구체화하며 상장 준비에 속도를 내고 있다. 판정 근거: 사업화 신호.",
-              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 제안서 앞단에 배치하세요."
-            },
-            {
-              "time": "2026.10.02 13:06",
-              "title": "오픈AI, 내부 기밀 유출 혐의로 정렬·안전팀 연구원 3명 해고",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215876",
-              "summary": "오픈AI가 내부 기밀 정보를 사내 절차를 벗어나 접근·취급한 혐의로 안전·정렬 분야 연구원 3명을 해고했다. 판정 근거: 규제·리스크.",
-              "takeaway": "공공 제안서에 필요한 보안 인증, 국내 데이터 처리, 레퍼런스 항목을 점검하세요."
-            },
-            {
-              "time": "2026.10.02 15:47",
-              "title": "오픈AI, '불량 에이전트' 무단 활동 100여곳 조직에 통보",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215896",
-              "summary": "오픈AI가 자사 AI 에이전트의 비정상적인 활동이 확인된 제3자 조직 100곳 이상에 관련 사실을 통보했다. 판정 근거: 규제·리스크.",
-              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 영업 자료 앞단에 배치하세요."
-            }
-          ]
-        },
-        {
-          "id": "finance-ax",
-          "label": "금융 AX PoC 단가",
-          "score": 98,
-          "aliases": [
-            "금융",
-            "ax",
-            "kt",
-            "은행",
-            "보험",
-            "증권"
-          ],
-          "keywords": [
-            "#KT",
-            "#NVIDIA",
-            "#투자"
-          ],
-          "color": "#d68419",
-          "description": "금융권 AI 전환 교육, PoC 단가, 규제 대응 수요를 보여주는 B2B 영업 신호입니다.",
-          "brief": {
-            "background": "금융권은 보안과 규제가 강하지만 AX 예산과 내부 생산성 요구가 동시에 커지고 있습니다.",
-            "reaction": "통신·클라우드·솔루션 기업이 금융 특화 패키지와 실무자 교육을 앞세우고 있습니다.",
-            "implication": "금융 고객용 PoC는 규정 준수, 데이터 비식별, 업무별 ROI 지표를 한 장으로 정리해야 합니다."
-          },
-          "signals": "9개 기사 신호 · 5개 소스",
-          "timeline": [
-            {
-              "time": "2026.10.02 17:00",
-              "title": "KT, 소상공인 플랫폼 ‘사장이지’에 AI면접 서비스 출시 등 단신",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215928",
-              "summary": "■ KT(대표 박윤영)는 지난 1일 소상공인 통합 플랫폼 ‘사장이지’에 ‘AI면접’ 서비스를 출시했다고 밝혔다. 판정 근거: 한국 직접성.",
-              "takeaway": "우리 제품의 적용 업무, 운영 책임, 파트너 번들 가능성을 1페이지로 정리하세요."
-            },
-            {
-              "time": "2026.10.02 12:24",
-              "title": "엔비디아·소프트뱅크, 오픈AI 투자 잔여분 27조 최종 집행",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215880",
-              "summary": "엔비디아와 소프트뱅크가 오픈AI에 각각 100억달러씩, 총 200억달러(약 27조원)의 추가 투자를 집행했다. 판정 근거: 한국 직접성.",
-              "takeaway": "NVIDIA 의존 기능, 대체 인프라, 공동 PoC 후보를 한 표로 정리하세요."
-            },
-            {
-              "time": "2026.10.02 14:47",
-              "title": "비드래프트, 중국 모델스코프서 '연구기관' 인증…AX-RAY 기반 중국 진출 추진",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215897",
-              "summary": "AI 전문 비드래프트(대표 김민식)가 중국 AI 모델 플랫폼 모델스코프(ModelScope)로부터 \\'연구기관\\' 공식 인증을 획득했다고 2일 밝혔다. 판정 근거: 한국 직접성.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            },
-            {
-              "time": "2026.10.02 12:45",
-              "title": "업스테이지 ‘솔라 프로 4’, 다음 포털 금융 서비스에 전면 적용",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215885",
-              "summary": "업스테이지가 독자 개발한 최고 성능 인공지능(AI) 모델 ‘솔라 프로 4’를 다음 포털에 본격적으로 적용하고 있다. 판정 근거: 한국 직접성.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            }
-          ]
-        },
-        {
-          "id": "enterprise-copilot",
-          "label": "사내 코파일럿 권한 설계",
-          "score": 98,
-          "aliases": [
-            "copilot",
-            "업무 자동화",
-            "office",
-            "agent",
-            "워크플로"
-          ],
-          "keywords": [
-            "#AICode",
-            "#보안",
-            "#정책",
-            "#Apple",
-            "#Agent"
-          ],
-          "color": "#7a5a26",
-          "description": "단순 챗봇이 아니라 사내 권한·문서·업무 시스템에 붙는 운영형 AI 수요입니다.",
-          "brief": {
-            "background": "기업 AI 도입의 병목은 모델 성능보다 기존 업무 시스템과의 연결, 권한, 운영 관리로 이동했습니다.",
-            "reaction": "플랫폼 기업은 업무 도구와 코파일럿을 묶고, 고객사는 부서별 워크플로 적용 가능성을 비교합니다.",
-            "implication": "제품 로드맵에는 API 연결 범위, 승인 단계, 운영 로그, 부서별 템플릿을 함께 설계해야 합니다."
-          },
-          "signals": "12개 기사 신호 · 5개 소스",
-          "timeline": [
-            {
-              "time": "2026.10.02 17:08",
-              "title": "업스테이지, 판단 전용 AI ‘솔라 디사이드’ 출시…“제브보다 빠르고 정확”",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215919",
-              "summary": "‘제브’로 인해 판단 전용 AI 붐이 일어난 가운데, 업스테이지도 ‘솔라 미니 4’를 기반 모델로 ‘솔라 디사이드(Solar Decide)’를 공개했다. 판정 근거: 한국 직접성.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            },
-            {
-              "time": "2026.10.02 15:47",
-              "title": "오픈AI, '불량 에이전트' 무단 활동 100여곳 조직에 통보",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215896",
-              "summary": "오픈AI가 자사 AI 에이전트의 비정상적인 활동이 확인된 제3자 조직 100곳 이상에 관련 사실을 통보했다. 판정 근거: 규제·리스크.",
-              "takeaway": "관리자 승인, 감사 로그, 데이터 반출 통제 화면을 영업 자료 앞단에 배치하세요."
-            },
-            {
-              "time": "2026.10.02 12:16",
-              "title": "캘리포니아주, '불량 에이전트' 관련 오픈AI에 수사 소환장 발부",
-              "type": "AI Times",
-              "source": "AI Times",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215883",
-              "summary": "미국 캘리포니아주가 AI 에이전트의 사이버 보안 사고와 관련해 오픈AI에 수사 소환장을 발부했다. 판정 근거: 규제·리스크.",
-              "takeaway": "AI 도입 패키지를 보안 복원력, 클라우드 현대화, 파트너 마진 관점으로 재정리하세요."
-            },
-            {
-              "time": "2026.10.03 05:08",
-              "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
-              "type": "The Verge AI",
-              "source": "The Verge AI",
-              "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-              "summary": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI age... 판정 근거: 플랫폼 경쟁.",
-              "takeaway": "원문에서 발표 주체, 적용 산업, 후속 계약 가능성을 확인하세요."
             }
           ]
         }
